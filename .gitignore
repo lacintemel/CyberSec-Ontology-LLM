@@ -7,7 +7,7 @@
 **/.pytest_cache/
 
 # Preserved metadata from repositories nested in this thesis workspace
-**/.git.nested-backup/
+**/.git.nested-backup
 
 # Editor and operating-system files
 .vscode/
