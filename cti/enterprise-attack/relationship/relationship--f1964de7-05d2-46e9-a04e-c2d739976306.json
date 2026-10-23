@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--adf6bdc1-7f66-4356-a3c4-6e8263f80293",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f1964de7-05d2-46e9-a04e-c2d739976306",
+            "created": "2026-04-17T20:31:56.173Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA SPAWNCHIMERA RESURGE February 2026",
+                    "description": "DHS/CISA. (2026, February 26). MAR-25993211-r1.v2 Ivanti Connect Secure (RESURGE): AR25-087A. Retrieved April 17, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-087a"
+                },
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.254Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has generated RSA keys against modified files to sign the manifest file, so they appear legitimate.(Citation: CISA SPAWNCHIMERA RESURGE February 2026)(Citation: Google UNC5221 Ivanti January 2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--32901740-b42c-4fdd-bc02-345b5dc57082",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

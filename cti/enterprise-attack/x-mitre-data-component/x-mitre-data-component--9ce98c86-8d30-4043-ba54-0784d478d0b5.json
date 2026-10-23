@@ -1,0 +1,377 @@
+{
+    "type": "bundle",
+    "id": "bundle--5df3d2b1-a20f-4c04-8ec4-b3b2e0a0f983",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+            "created": "2021-10-20T15:05:19.274Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0067",
+                    "external_id": "DC0067"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:46.287Z",
+            "name": "Logon Session Creation",
+            "description": "The successful establishment of a new user session following a successful authentication attempt. This typically signifies that a user has provided valid credentials or authentication tokens, and the system has initiated a session associated with that user account. This data is crucial for tracking authentication events and identifying potential unauthorized access. Examples: \n\n- Windows Systems\n    - Event ID: 4624\n        - Logon Type: 2 (Interactive) or 10 (Remote Interactive via RDP).\n        - Account Name: JohnDoe\n        - Source Network Address: 192.168.1.100\n        - Authentication Package: NTLM\n- Linux Systems\n    - /var/log/utmp or /var/log/wtmp:\n        - Log format: login user [tty] from [source_ip]\n        - User: jane\n        - IP: 10.0.0.5\n        - Timestamp: 2024-12-28 08:30:00\n- macOS Systems\n    - /var/log/asl.log or unified logging framework:\n        - Log: com.apple.securityd: Authentication succeeded for user 'admin'\n- Cloud Environments\n    - Azure Sign-In Logs:\n        - Activity: Sign-in successful\n        - Client App: Browser\n        - Location: Unknown (Country: X)\n- Google Workspace\n    - Activity: Login\n        - Event Type: successful_login\n        - Source IP: 203.0.113.55",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "device:auth",
+                    "channel": "SSH/Telnet/console or vendor remote-management session "
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "capset or setns"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "ConsoleLogin, AssumeRole, ListResources"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "ConsoleLogin"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "Web console logins using session cookies without corresponding MFA event"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "ConsoleLogin: If IdP backed by cloud provider, Console login from new IP/agent after correlated endpoint compromise"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "SendSSHPublicKey, StartSession (SSM), EC2InstanceConnect"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "Temporary security credentials used to authenticate into management console or APIs"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "AWS ConsoleLogin, StartSession"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "GetConsoleOutput"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "sudden role assumption after credential file access"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "AssumeRole,AssumeRoleWithSAML,AssumeRoleWithWebIdentity"
+                },
+                {
+                    "name": "azure:ad",
+                    "channel": "SignInEvents"
+                },
+                {
+                    "name": "azure:signin",
+                    "channel": "UserLoginSuccess, TokenIssued"
+                },
+                {
+                    "name": "azure:signin",
+                    "channel": "Microsoft.Compute/virtualMachines/serialConsole/connect/action"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "Abnormal sign-in from scripting tools (PowerShell, AADInternals)"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "Suspicious login to cloud mailbox system"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "Failed MFA attempts, unusual conditional access triggers, login attempts from unexpected IP ranges"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "InteractiveUserLogin: Discovery behavior linked to privileged logins from atypical IP ranges"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "InteractiveUser, ServicePrincipalSignIn"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "InteractiveUser, NonInteractiveUser"
+                },
+                {
+                    "name": "azure:signinlogs",
+                    "channel": "UserLogin, ConditionalAccessPolicyEvaluated"
+                },
+                {
+                    "name": "CloudTrail:Signin",
+                    "channel": "SAML login without corresponding IdP authentication log"
+                },
+                {
+                    "name": "esxi:auth",
+                    "channel": "Shell login or escalation"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "vim.fault.*, DCUI login, SSH shell"
+                },
+                {
+                    "name": "gcp:audit",
+                    "channel": "LoginAudit, DriveAudit"
+                },
+                {
+                    "name": "gcp:audit",
+                    "channel": "cloud.ssh.publicKey.inserted, compute.instances.osLogin"
+                },
+                {
+                    "name": "gcp:audit",
+                    "channel": "admin.googleapis.com"
+                },
+                {
+                    "name": "idp:session ",
+                    "channel": "New session established from source/device inconsistent with account baseline "
+                },
+                {
+                    "name": "linux:auth",
+                    "channel": "User login event followed by unexpected process tree"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "auth.log/secure.log; SSH or console session context "
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "sshd: Accepted password/publickey"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "authentication success after file access"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "auth.log / secure.log"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "Accepted publickey/password for * from * port * ssh2"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "None"
+                },
+                {
+                    "name": "Logon Session",
+                    "channel": "None"
+                },
+                {
+                    "name": "m365:sharepoint",
+                    "channel": "File access with forged or anomalous SAML claims"
+                },
+                {
+                    "name": "m365:signinlogs",
+                    "channel": "SignInSuccess, RoleAssignmentRead"
+                },
+                {
+                    "name": "m365:signinlogs",
+                    "channel": "Token usage events with device/user mismatch"
+                },
+                {
+                    "name": "m365:signinlogs",
+                    "channel": "UserLogin: Discovery operations shortly after account logins from new geolocations"
+                },
+                {
+                    "name": "m365:signinlogs",
+                    "channel": "UserLoggedIn"
+                },
+                {
+                    "name": "m365:unified",
+                    "channel": "UserLoggedIn"
+                },
+                {
+                    "name": "m365:unified",
+                    "channel": "ViewAdminReport"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "UserLoggedIn"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Authentication inconsistencies where commands are executed without corresponding login events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "authentication"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Session reuse without new auth event"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Access to Keychain items or browser credential stores"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "eventMessage CONTAINS 'screensharingd' or 'AuthorizationRefCreate'"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Keychain or user login post-access"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "authentication plugin load or modification events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "loginwindow or sshd successful login events"
+                },
+                {
+                    "name": "networkdevice:auth",
+                    "channel": "SSH/Telnet/console authentication and session creation"
+                },
+                {
+                    "name": "networkdevice:Firewall",
+                    "channel": "Login from untrusted IP, or new admin account accessing firewall console/API"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Mismatch between recorded user logon and active sessions (e.g., wtmp/utmp entries without corresponding authentication in auth.log)"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Missing new login event but session activity continues"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Accepted publickey for user from unusual IP or without tty"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "simultaneous or anomalous logon sessions across multiple systems"
+                },
+                {
+                    "name": "Okta:SystemLog",
+                    "channel": "user.authentication.sso, app.oauth.grant"
+                },
+                {
+                    "name": "saas:access",
+                    "channel": "Multiple concurrent logins using same cookie from different locations"
+                },
+                {
+                    "name": "saas:auth",
+                    "channel": "LoginSuccess, APIKeyUse, AdminAction"
+                },
+                {
+                    "name": "saas:auth",
+                    "channel": "Login, TokenGranted: Discovery actions tied to anomalous login sessions or tokens"
+                },
+                {
+                    "name": "saas:confluence",
+                    "channel": "logon"
+                },
+                {
+                    "name": "saas:github",
+                    "channel": "Login from unusual IP, device fingerprint, or location; access token creation from new client"
+                },
+                {
+                    "name": "saas:okta",
+                    "channel": "user.session.start"
+                },
+                {
+                    "name": "saas:okta",
+                    "channel": "session.token.reuse"
+                },
+                {
+                    "name": "saas:session ",
+                    "channel": "New authenticated session associated with changed source/client context "
+                },
+                {
+                    "name": "saas:zoom",
+                    "channel": "Zoom Admin Dashboard accessed from unfamiliar IP/device"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4624, 4648"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Anomalous logon without MFA enforcement"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4624"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): sudo/su success for Industrial Control Systems (ICS) service account UID without the expected automated invocation pattern"
+                },
+                {
+                    "name": "syslog:auth",
+                    "channel": "Secure Shell (SSH) session between Industrial Control Systems (ICS) hosts not in approved lateral movement pairs"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 by account not in authorized engineer accounts"
+                },
+                {
+                    "name": "wireless:radius",
+                    "channel": "Extensible Authentication Protocol (EAP) authentication success for device Media Access Control (MAC)/certificate not in approved wireless device inventory"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 from a device Media Access Control (MAC) address/hardware-ID first observed on the network, not in approved device inventory"
+                },
+                {
+                    "name": "syslog:auth",
+                    "channel": "sshd Accepted for username matching default vendor credential list from source not in approved admin Classless Inter-Domain Routing (CIDR) subnet"
+                },
+                {
+                    "name": "syslog:auth",
+                    "channel": "sshd Accepted for username matching default or hardcoded credential patterns from source not in approved admin Classless Inter-Domain Routing (CIDR) subnet"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 for Industrial Control Systems (ICS)-role account from workstation not in approved host list or outside office hours window"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 for account matching default vendor credential list from source not in approved host list"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624, Type 2/10 to Industrial Control Systems (ICS) host from source not in approved operator workstations or account not in approved operator list"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 for Industrial Control Systems (ICS)-role account from Virtual Private Network (VPN)-assigned Internet Protocol (IP) address correlated with remote access authentication anomaly"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624, Type 3/10 between Industrial Control Systems (ICS) hosts not in approved lateral movement pairs"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 for account matching default or hardcoded credential patterns from source not in approved host list"
+                }
+            ]
+        }
+    ]
+}

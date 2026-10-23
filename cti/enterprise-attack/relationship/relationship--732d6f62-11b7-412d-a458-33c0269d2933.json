@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--01638fed-c647-4b07-b4a9-5138e0cd05d2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--732d6f62-11b7-412d-a458-33c0269d2933",
+            "created": "2026-04-16T23:48:39.172Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CrowdStrike BRICKSTORM WARP PANDA UNC5221 December 2025",
+                    "description": "CrowdStrike. (2025, December 4). Unveiling WARP PANDA: A New Sophisticated China-Nexus Adversary. Retrieved April 16, 2026.",
+                    "url": "https://www.crowdstrike.com/en-us/blog/warp-panda-cloud-threats/"
+                },
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                },
+                {
+                    "source_name": "Picus Security BRICKSTORM UNC5221 October 2025",
+                    "description": "Huseyin Can Yuceel. (2025, October 1). BRICKSTORM Malware: UNC5221 Targets Tech and Legal Sectors in the United States. Retrieved April 16, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/brickstorm-malware-unc5221-targets-tech-and-legal-sectors-in-the-united-states"
+                },
+                {
+                    "source_name": "Resecurity UNC5221 BRICKSTORM F5 Big-IP October 2025",
+                    "description": "Resecurity Threat Intelligence & Incident Analysis. (2025, October 22). F5 BIG-IP Source Code Leak Tied to State-Linked Campaigns Using BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.resecurity.com/blog/article/f5-big-ip-source-code-leak-tied-to-state-linked-campaigns-using-brickstorm-backdoor"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:09:43.075Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has communicated with C2 infrastructure via TLS.(Citation: CrowdStrike BRICKSTORM WARP PANDA UNC5221 December 2025)(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)(Citation: Picus Security BRICKSTORM UNC5221 October 2025)(Citation: Resecurity UNC5221 BRICKSTORM F5 Big-IP October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--4763a966-b346-4512-b90e-6aa4a2bbf431",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cf056f03-bc7b-4630-8673-ee1a9f2a64f0",
+            "created": "2026-03-09T15:22:22.373Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "K7Dhanalakshmi_VajraSpy_April2022",
+                    "description": "Dhanalakshmi. (2022, April 19).  VajraSpy \u2013 An Android RAT. Retrieved November 5, 2025.",
+                    "url": "https://labs.k7computing.com/index.php/vajraspy-an-android-rat/"
+                },
+                {
+                    "source_name": "ESET_VajraSpy_Feb2024",
+                    "description": "Stefanko, L. (2024, February 1). VajraSpy: A Patchwork of espionage apps. Retrieved October 27, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/vajraspy-patchwork-espionage-apps/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:46:41.027Z",
+            "description": "[VajraSpy](https://attack.mitre.org/software/S9006) has masqueraded as messaging and news applications.(Citation: ESET_VajraSpy_Feb2024)(Citation: K7Dhanalakshmi_VajraSpy_April2022) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "target_ref": "attack-pattern--f856eaab-e84a-4265-a8a2-7bf37e5dc2fc",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

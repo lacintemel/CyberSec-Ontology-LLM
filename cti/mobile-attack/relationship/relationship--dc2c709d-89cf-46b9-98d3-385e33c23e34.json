@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--66a4e0ce-723e-4e54-9b7e-ad968cfe277c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dc2c709d-89cf-46b9-98d3-385e33c23e34",
+            "created": "2026-02-06T21:24:48.107Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_June2025",
+                    "description": "ThreatFabric. (2025, June 3). Crocodilus Mobile Malware: Evolving Fast, Going Global. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/crocodilus-mobile-malware-evolving-fast-going-global"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.226Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) dropper and payload have been packed to hinder detection.(Citation: ThreatFabric_Crocodilus_June2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--51636761-2e35-44bf-9e56-e337adf97174",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

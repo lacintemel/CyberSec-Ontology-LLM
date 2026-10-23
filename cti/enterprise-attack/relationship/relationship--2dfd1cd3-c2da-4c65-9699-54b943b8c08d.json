@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--47f8bf93-aca1-4ca5-8d2d-3552a447d66b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2dfd1cd3-c2da-4c65-9699-54b943b8c08d",
+            "created": "2026-04-20T12:47:42.721Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.967Z",
+            "description": "[IronWind](https://attack.mitre.org/software/S9029) can capture the OS version and computer name of the compromised host.(Citation: Check Point Wirte NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--089aa00a-99ac-46b4-9cf8-4224d463566d",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

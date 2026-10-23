@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--3ecee5f1-30ab-42fd-bc55-8a4c9144f843",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dba52e3c-fb05-4001-9fa4-39d4cd673ad0",
+            "created": "2026-04-18T23:33:48.622Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                },
+                {
+                    "source_name": "Aryaka Kimsuky July 2025",
+                    "description": "Varadharajan Krishnasamy, Aditya K Sood. (2025, July 29). From Reconnaissance  to Control: The Operational Blueprint of Kimsuky APT  for Cyber Espionage. Retrieved April 18, 2026.",
+                    "url": "https://www.aryaka.com/docs/reports/aryaka-kimsuky-apt-operational-blueprint.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:25.543Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has utilized a mutex to detect whether its malware is actively running on the victim host.(Citation: Gen Digital Kimsuky HTTPTroy October 2025)(Citation: Aryaka Kimsuky July 2025) [Kimsuky](https://attack.mitre.org/groups/G0094) has leveraged PowerShell to store the Process ID (PID) of the currently running malicious PowerShell script into a file named pid.txt which is saved locally on the victim host in the %TEMP% Directory and is queried prior to execution of subsequent PowerShell script to prevent duplication.(Citation: Aryaka Kimsuky July 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--49fca0d2-685d-41eb-8bd4-05451cc3a742",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1425405a-1955-4fde-8574-c27bc96f65c2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c3827f83-e909-4911-87ca-af039b369480",
+            "created": "2026-04-20T12:30:29.065Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:52.539Z",
+            "description": "[WIRTE](https://attack.mitre.org/groups/G0090) has used utilized look-alike domains and graphics of trusted security solution providers to entice victims to click on phishing links.(Citation: Check Point Wirte NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--f8cb7b36-62ef-4488-8a6d-a7033e3271c1",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

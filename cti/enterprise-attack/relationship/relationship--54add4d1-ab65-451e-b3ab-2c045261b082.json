@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--fc370f59-c193-4855-8f7b-a86231e5a216",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--54add4d1-ab65-451e-b3ab-2c045261b082",
+            "created": "2020-08-10T13:59:38.601Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.041Z",
+            "description": "Consider modifying host firewall rules to prevent egress traffic from verclsid.exe.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--20f6a9df-37c4-4e20-9e47-025983b1b39d",
+            "target_ref": "attack-pattern--808e6329-ca91-4b87-ac2d-8eadc5f8f327",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

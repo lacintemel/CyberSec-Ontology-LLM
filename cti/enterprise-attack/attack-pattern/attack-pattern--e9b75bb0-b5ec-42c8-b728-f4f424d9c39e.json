@@ -1,0 +1,85 @@
+{
+    "type": "bundle",
+    "id": "bundle--2503518b-03d0-4019-861c-e3d7a71ed572",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--e9b75bb0-b5ec-42c8-b728-f4f424d9c39e",
+            "created": "2026-04-22T19:18:41.169Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1027/018",
+                    "external_id": "T1027.018"
+                },
+                {
+                    "source_name": "GlassWorm - Unicode",
+                    "description": " Idan Dardikman. (2025, October 18). GlassWorm: First Self-Propagating Worm Using Invisible Code Hits OpenVSX Marketplace. Retrieved April 21, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-first-self-propagating-worm-using-invisible-code-hits-openvsx-marketplace#heading-5"
+                },
+                {
+                    "source_name": "PUAs Unicode - Eriksen",
+                    "description": "Charlie Eriksen. (2025, May 13). You're Invited: Delivering malware via Google Calendar invites and PUAs. Retrieved April 21, 2026.",
+                    "url": "https://www.aikido.dev/blog/youre-invited-delivering-malware-via-google-calendar-invites-and-puas"
+                },
+                {
+                    "source_name": "Invisible Prompt Injection - Trend Micro",
+                    "description": "Ian Ch Lui. (2025, January 22). Invisible Prompt Injection: A Threat to AI Security. Retrieved April 21, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/a/invisible-prompt-injection-secure-ai.html"
+                },
+                {
+                    "source_name": "LLMs and Unicode - Medium",
+                    "description": "Idan Habler. (2025, September 12). Hiding in Plain Sight: Weaponizing Invisible Unicode to Attack LLMs. Retrieved April 21, 2026.",
+                    "url": "https://idanhabler.medium.com/hiding-in-plain-sight-weaponizing-invisible-unicode-to-attack-llms-f9033865ec10"
+                },
+                {
+                    "source_name": "Tycoon2FA - Unicode",
+                    "description": "Rodel Mendrez. (2025, April 10). Tycoon2FA New Evasion Technique for 2025. Retrieved April 21, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/tycoon2fa-new-evasion-technique-for-2025"
+                },
+                {
+                    "source_name": "Unicode and Hidden Prompts - Perets",
+                    "description": "Shaked Perets. (2025, December 7). Invisible Code & Hidden Prompts \u2013 How Attackers Weaponize Unicode in Repos (and How SAST Can Help). Retrieved April 21, 2026.",
+                    "url": "https://cycode.com/blog/invisible-code-hidden-prompts-unicode-attacks-sast/"
+                },
+                {
+                    "source_name": "Unicode - Veracode",
+                    "description": "Veracode Threat Research. (2025, June 9). Down the Rabbit Hole of Unicode Obfuscation. Retrieved April 21, 2026.",
+                    "url": "https://www.veracode.com/blog/down-the-rabbit-hole-of-unicode-obfuscation/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.723Z",
+            "name": "Invisible Unicode",
+            "description": "Adversaries may abuse invisible or non-printing Unicode characters to conceal malicious content within files, scripts, or text. By inserting characters that do not visibly render, adversaries may hide data, alter how content is interpreted, or make malicious code appear as benign text or whitespace. Adversaries may encode these malicious payloads, using binary, Base64, or custom schemes, to be reconstructed at runtime through scripting features such as [JavaScript](https://attack.mitre.org/techniques/T1059/007) Proxy traps, `eval()`, or other dynamic execution methods. This technique enables adversaries to evade visual inspection and basic static analysis by hiding malicious encoded content in innocuous text.(Citation: PUAs Unicode - Eriksen)(Citation: Tycoon2FA - Unicode)(Citation: Unicode - Veracode) \n\nUnicode is a standardized character encoding model that assigns a unique numerical value, known as a code point, to every character across writing systems, enabling consistent text representation across platforms, applications, and languages. Code points are represented as `U+` followed by a hexadecimal value and may be encoded using formats such as `UTF-8` or `UTF-16`. Adversaries may abuse the valid code points in Unicode that are not visibly rendered but still take up bytes, such as zero-width spaces, variation selectors, or bidirectional formatting controls, to conceal malicious payloads.(Citation: Tycoon2FA - Unicode)(Citation: GlassWorm - Unicode)(Citation: Unicode and Hidden Prompts - Perets)\n\nAdversaries may additionally exploit Private Use Area (PUA) characters, a range of code points reserved for custom assignment. PUA characters that are not defined by a font or application are typically rendered blank.(Citation: PUAs Unicode - Eriksen)\n\nUnicode characters may also be leveraged in support of other techniques such as [Phishing](https://attack.mitre.org/techniques/T1660), [Right-to-Left Override](https://attack.mitre.org/techniques/T1036/002), or [User Execution](https://attack.mitre.org/techniques/T1204). For example, some adversaries may embed artificial intelligence (AI) prompt injections using invisible Unicode characters in emails or documents that appear benign when processed by AI systems.(Citation: LLMs and Unicode - Medium)(Citation: Invisible Prompt Injection - Trend Micro)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Menachem Goldstein",
+                "Rich Rafferty (NR Labs)"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

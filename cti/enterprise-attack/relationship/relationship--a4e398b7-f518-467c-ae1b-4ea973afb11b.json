@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--fdb93d57-4d32-4490-9214-4fe15f314317",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a4e398b7-f518-467c-ae1b-4ea973afb11b",
+            "created": "2026-10-01T18:25:41.289Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                },
+                {
+                    "source_name": "CheckPoint_NimbusManticore_May2026",
+                    "description": "Check Point. (2026, May 22). Fast and Furious \u2013 Nimbus Manticore Operations During the Iranian Conflict. Retrieved September 23, 2026.",
+                    "url": "https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/"
+                },
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                },
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-02T13:18:38.803Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has utilized malicious links in phishing emails that direct users to download a malicious payload.(Citation: CheckPoint_NimbusManticore_May2026)(Citation: CheckPoint_NimbusManticoreEurope_Sept2025)(Citation: Mandiant_UNC1549_Feb2024)(Citation: Mandiant_UNC1549TTPsTools_Nov2025)            ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--2b742742-28c3-4e1b-bab7-8350d6300fa7",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

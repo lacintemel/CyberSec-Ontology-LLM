@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--ba34d18a-5d3d-4113-9bd2-c4b27622f531",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c6fb992c-387e-49ee-beaf-a1351aded262",
+            "created": "2026-04-16T17:00:04.135Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0900#AN2039",
+                    "external_id": "AN2039"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.382Z",
+            "name": "Analytic 2039",
+            "description": "Detects exploitation attempts against security daemons or kernel security modules followed by daemon termination, disabled logging, module unload, audit stoppage, or reduced endpoint telemetry. Correlates local execution or network input with control degradation.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "auditd:EXECVE",
+                    "channel": "execve, kill, ptrace, insmod, rmmod targeting security processes"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--74fa567d-bc90-425c-8a41-3c703abb221c",
+                    "name": "auditd:DAEMON",
+                    "channel": "auditd stopped, config changed, logging suspended"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ProtectedProcessNames",
+                    "description": "Names of EDR, audit, AV, firewall daemons"
+                },
+                {
+                    "field": "ModuleUnloadAllowlist",
+                    "description": "Approved maintenance unload operations"
+                },
+                {
+                    "field": "HealthGapThreshold",
+                    "description": "Expected telemetry heartbeat tolerance"
+                }
+            ]
+        }
+    ]
+}

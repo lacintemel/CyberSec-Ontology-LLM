@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--729a0715-5fdd-4a6d-9262-ab769bfbe414",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c40ddd75-f2fc-4899-bda1-bff164c96622",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0774#AN1906",
+                    "external_id": "AN1906"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:54.639Z",
+            "name": "Analytic 1906",
+            "description": "Real-time monitoring identifies a single Industrial Control System (ICS) protocol session reading the complete Input/Output (I/O) image from a field device, rather than the sparse, fixed tag subset that legitimate Supervisory Control and Data Acquisition (SCADA) polling queries, from a source not in the approved control server list. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "single session reads address range covering above full image coverage threshold percent of device total Input/Output (I/O) space, from source not in approved Supervisory Control and Data Acquisition (SCADA) servers"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate polling sources."
+                },
+                {
+                    "field": "FullImageCoverageThreshold",
+                    "description": "Percentage of total device address space read within a single session constituting a full I/O image read."
+                }
+            ]
+        }
+    ]
+}

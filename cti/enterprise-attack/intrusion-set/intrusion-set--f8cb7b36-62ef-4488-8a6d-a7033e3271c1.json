@@ -1,0 +1,70 @@
+{
+    "type": "bundle",
+    "id": "bundle--f969cc8d-7c04-47a4-97ae-2a3e706586c2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--f8cb7b36-62ef-4488-8a6d-a7033e3271c1",
+            "created": "2019-05-24T17:02:44.226Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/groups/G0090",
+                    "external_id": "G0090"
+                },
+                {
+                    "source_name": "WIRTE",
+                    "description": "(Citation: Lab52 WIRTE Apr 2019)"
+                },
+                {
+                    "source_name": "Ashen Lepus",
+                    "description": "(Citation: Palo Alto Ashen Lepus DEC 2025)"
+                },
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                },
+                {
+                    "source_name": "Lab52 WIRTE Apr 2019",
+                    "description": "S2 Grupo. (2019, April 2). WIRTE Group attacking the Middle East. Retrieved May 24, 2019.",
+                    "url": "https://lab52.io/blog/wirte-group-attacking-the-middle-east/"
+                },
+                {
+                    "source_name": "Palo Alto Ashen Lepus DEC 2025",
+                    "description": "Unit 42. (2025, December 11). Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+                },
+                {
+                    "source_name": "Kaspersky WIRTE November 2021",
+                    "description": "Yamout, M. (2021, November 29). WIRTE\u2019s campaign in the Middle East \u2018living off the land\u2019 since at least 2019. Retrieved February 1, 2022.",
+                    "url": "https://securelist.com/wirtes-campaign-in-the-middle-east-living-off-the-land-since-at-least-2019/105044"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:52.082Z",
+            "name": "WIRTE",
+            "description": "[WIRTE](https://attack.mitre.org/groups/G0090) is a cyberespionage actor, believed to be a subgroup of the Hamas-affiliated Gaza Cybergang, that has been active since at least August 2018. [WIRTE](https://attack.mitre.org/groups/G0090) has targeted diplomatic, financial, military, legal, and technology organizations across the Middle East, North Africa, and in Europe to gather intelligence. [WIRTE](https://attack.mitre.org/groups/G0090) has remained persistently active despite the ongoing Israel-Hamas conflict and has expanded their operations to include wiper malware attacks against Israeli targets.(Citation: Lab52 WIRTE Apr 2019)(Citation: Kaspersky WIRTE November 2021)(Citation: Check Point Wirte NOV 2024)(Citation: Palo Alto Ashen Lepus DEC 2025)",
+            "aliases": [
+                "WIRTE",
+                "Ashen Lepus"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack",
+                "mobile-attack"
+            ],
+            "x_mitre_version": "3.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Lab52 by S2 Grupo"
+            ]
+        }
+    ]
+}

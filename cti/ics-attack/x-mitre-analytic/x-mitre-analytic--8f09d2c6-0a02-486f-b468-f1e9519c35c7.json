@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--48cbe18e-ee64-4543-863b-0e4786156664",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8f09d2c6-0a02-486f-b468-f1e9519c35c7",
+            "created": "2026-10-13T17:46:14.348Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0742#AN2208",
+                    "external_id": "AN2208"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:14.348Z",
+            "name": "Analytic 2208",
+            "description": "Monitor OPC UA server audit events for state-changing Write or Method service invocations and compare ClientUserId, ClientApplicationUri, SourceNode/MethodId, status, and arguments with the approved client/method baseline. For servers that support auditing, AuditWriteUpdateEventType and AuditUpdateMethodEventType provide an analyst-visible record of writes and state-changing method calls. Alert on successful or attempted control operations from unapproved clients/users or against methods/nodes outside the documented engineering workflow; do not describe this as Windows OS API telemetry.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "opcua:AuditEvent",
+                    "channel": "OPC UA AuditUpdateMethodEventType/AuditWriteUpdateEventType: ClientUserId, ClientApplicationUri, SourceNode/MethodId, Status and arguments for a state-changing method/write"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--c0a4a086-cc20-4e1e-b7cb-29d99dfa3fb1",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=7 where an ICS/vendor DLL is loaded by an image outside the authorized ICS application baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedApplicationList",
+                    "description": "Allowlist of application identities authorized to issue OPC UA or IEC 61850 write/control service requests."
+                },
+                {
+                    "field": "ApprovedOPCClients",
+                    "description": "Allowlist of OPC client application identities authorized to invoke write/control methods."
+                },
+                {
+                    "field": "AuthorizedICSApplications",
+                    "description": "Allowlist of process executables permitted to load ICS vendor automation API libraries."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

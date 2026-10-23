@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0d3f1688-e2b3-434a-9e0f-f1e72a26bc0d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--63cb5def-6905-45b0-9f14-9958eb39758e",
+            "created": "2026-10-01T21:21:14.563Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T21:21:14.563Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has gathered data from internal service ticketing systems to include credentials.(Citation: Mandiant_UNC1549TTPsTools_Nov2025)    ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--d28ef391-8ed4-45dc-bc4a-2f43abf54416",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

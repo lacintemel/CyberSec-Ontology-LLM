@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--13c84d35-c821-4b21-a39d-027ef30c1b58",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8da03207-ceff-4791-ab21-730b0445fe6f",
+            "created": "2026-04-16T22:09:27.638Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CloudSEK_RustyWater_Jan2026",
+                    "description": "Awasthi, P. (2026, January 8). Reborn in Rust: Muddy Water Evolves Tooling with RustyWater Implant. Retrieved March 19, 2026.",
+                    "url": "https://www.cloudsek.com/blog/reborn-in-rust-muddywater-evolves-tooling-with-rustywater-implant"
+                },
+                {
+                    "source_name": "NaumaanProofpoint_GlobalClickFix_April2025",
+                    "description": "Naumaan, S., et al. (2025, April 17). Around the World in 90 Days: State-Sponsored Actors Try ClickFix . Retrieved January 21, 2026.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:29.998Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has used support@microsoftonlines[.]com to send phishing emails that masqueraded as security updates from Microsoft.(Citation: NaumaanProofpoint_GlobalClickFix_April2025) [MuddyWater](https://attack.mitre.org/groups/G0069) has also impersonated TMCell (Altyn Asyr CJSC), the primary mobile operator in Turkmenistan, sending phishing emails with the email domain info@tmcell.(Citation: CloudSEK_RustyWater_Jan2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

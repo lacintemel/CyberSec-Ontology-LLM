@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--653c1daa-eaa8-4ed3-ad99-9690c47d6457",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dc580eb2-72fc-4516-9ef0-202da9209e80",
+            "created": "2026-04-22T21:30:47.049Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:20.015Z",
+            "description": "During the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063), the adversaries created rules that mimicked the name of an institution already present in the network device configuration to avoid detection.(Citation: CERT Polska)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

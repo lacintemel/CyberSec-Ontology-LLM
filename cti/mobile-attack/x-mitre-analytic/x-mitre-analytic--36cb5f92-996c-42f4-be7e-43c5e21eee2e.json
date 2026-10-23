@@ -1,0 +1,84 @@
+{
+    "type": "bundle",
+    "id": "bundle--5e78da70-1324-451e-8e6d-eae523306c81",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--36cb5f92-996c-42f4-be7e-43c5e21eee2e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0682#AN1788",
+                    "external_id": "AN1788"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:14.639Z",
+            "name": "Analytic 1788",
+            "description": "For Android, detect File and Directory Discovery by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application State via Android Enterprise / EMM [Managed package inventory/status and package metadata]; File Access via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: opendir() or File.listFiles() on path IN $ExternalStoragePaths$ called > $FileEnumThreshold$ times within $EnumWindow$ by app NOT IN $FileEnumAllowList$]; Network Traffic Flow via Android Enterprise Network Logging / Enterprise VPN [DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: opendir() or File.listFiles() on path IN $ExternalStoragePaths$ called > $FileEnumThreshold$ times within $EnumWindow$ by app NOT IN $FileEnumAllowList$"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExternalStoragePaths",
+                    "description": "/sdcard/, /storage/emulated/0/, /mnt/sdcard/. Vary by device."
+                },
+                {
+                    "field": "FileEnumThreshold",
+                    "description": "Default 100 directory operations within window. Derive from baseline file manager behavior."
+                },
+                {
+                    "field": "EnumWindow",
+                    "description": "Default 60s."
+                },
+                {
+                    "field": "FileEnumAllowList",
+                    "description": "Approved file managers, media apps, MDM agent."
+                },
+                {
+                    "field": "UplinkThreshold",
+                    "description": "Default 500KB."
+                },
+                {
+                    "field": "AppCDNList",
+                    "description": "Per-app CDN. Derive by measurement."
+                },
+                {
+                    "field": "ExfilWindow",
+                    "description": "Default 120s."
+                }
+            ]
+        }
+    ]
+}

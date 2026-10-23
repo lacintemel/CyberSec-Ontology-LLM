@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--bd5e0044-375c-4675-beff-6fccb3b50573",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4cdabda2-8895-45fb-bbb9-11733f347e27",
+            "created": "2026-01-30T21:40:57.230Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Breakdev Evilginx 2.4 SEP 2020",
+                    "description": "Gretzky, K. (2020, September 14). Evilginx 2.4 - Gone Phishing. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-2-4-gone-phishing/"
+                },
+                {
+                    "source_name": "Breakdev Evilginx 3.3 APR 2024",
+                    "description": "Gretzky, K. (2024, April 2). Evilginx 3.3 - Go & Phish. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-3-3-go-phish/"
+                },
+                {
+                    "source_name": "Evilginx 2 July 2018",
+                    "description": "Gretzky, K.. (2018, July 26). Evilginx 2 - Next Generation of Phishing 2FA Tokens. Retrieved October 14, 2019.",
+                    "url": "https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:59.483Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can proxy HTTPS connections between victims and destination websites.(Citation: Evilginx 2 July 2018)(Citation: Breakdev Evilginx 2.4 SEP 2020)(Citation: Breakdev Evilginx 3.3 APR 2024)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

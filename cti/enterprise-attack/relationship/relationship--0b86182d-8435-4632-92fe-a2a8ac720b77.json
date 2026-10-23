@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f9d70f27-0e28-496f-a2a5-068913153899",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0b86182d-8435-4632-92fe-a2a8ac720b77",
+            "created": "2026-04-19T17:05:44.784Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace 2025",
+                    "description": " Dominik Breitenbacher. (2025, March 18). Operation AkaiRy\u016b: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor. Retrieved May 22, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.919Z",
+            "description": "[AsyncRAT](https://attack.mitre.org/software/S1087) can be deployed via batch script.(Citation: ESET MirrorFace 2025)",
+            "relationship_type": "uses",
+            "source_ref": "tool--6a5947f3-1a36-4653-8734-526df3e1d28d",
+            "target_ref": "attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

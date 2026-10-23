@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--70f54f34-8311-4c5b-a2ef-1a8f7bcafb72",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--68166b59-ac4b-4bdc-928d-01e945611a5e",
+            "created": "2026-04-17T09:36:37.371Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                },
+                {
+                    "source_name": "Zscaler PureCrypter JUN 2022",
+                    "description": "Dumont, R. (2022, June 13). Technical Analysis of PureCrypter: A Fully-Functional Loader Distributing Remote Access Trojans and Information Stealers. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.067Z",
+            "description": "[PureCrypter](https://attack.mitre.org/software/S9019) can decrypt downloaded resources and parse internal files to determine its settings.(Citation: Zscaler PureCrypter JUN 2022)(Citation: Check Point Blind Eagle MAR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

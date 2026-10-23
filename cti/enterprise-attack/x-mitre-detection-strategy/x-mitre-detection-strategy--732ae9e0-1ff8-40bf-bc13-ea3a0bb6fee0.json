@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--2a61a239-5e85-4891-816b-bf94e2c7f7ac",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--732ae9e0-1ff8-40bf-bc13-ea3a0bb6fee0",
+            "created": "2026-04-23T14:53:10.855Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0916",
+                    "external_id": "DET0916"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:35.317Z",
+            "name": "Detection of Generate Content",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--360eb601-28db-4418-8474-ad2a432ce534"
+            ]
+        }
+    ]
+}

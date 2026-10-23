@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7ab72e72-5530-4c4c-b26e-6f1fc3edc99f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a8f136ed-4ab7-4dbc-ba22-db57ace5ed6e",
+            "created": "2020-09-21T17:59:24.739Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.155Z",
+            "description": "All devices or systems changes, including all administrative functions, should require authentication. Consider using access management technologies to enforce authorization on all management interface access attempts, especially when the device does not inherently provide strong authentication and authorization functions.\n",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--3992ce42-43e9-4bea-b8db-a102ec3ec1e3",
+            "target_ref": "attack-pattern--75587e49-ab7e-44df-9549-faeb1da57f39",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "type": "bundle",
+    "id": "bundle--8176267a-83a3-4778-aec4-8b4fce32f2fe",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--77015a55-eef8-4f71-a071-b152f82ec1ef",
+            "created": "2026-04-20T20:54:23.982Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T0843/001",
+                    "external_id": "T0843.001"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:59.072Z",
+            "name": "Download All",
+            "description": "Adversaries may execute a full program download to a PLC to overwrite the entire PLC program and configuration to deploy a new project or make major changes. This typically requires stopping the PLC and adversely impacting control processes.\n\nThe ability to perform a full program download to the PLC typically relies on access to a workstation with the vendor-specific PLC programming software installed.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-ics-attack",
+                    "phase_name": "lateral-movement"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

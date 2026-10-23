@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--310ffb7d-1b4a-48bd-adc2-5ffa9b71bae6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--67810ade-edd1-4d33-9677-b8bd8a175638",
+            "created": "2025-12-15T23:34:48.313Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BlackBasta",
+                    "description": "Antonio Cocomazzi and Antonio Pirozzi. (2022, November 3). Black Basta Ransomware | Attacks Deploy Custom EDR Evasion Tools Tied to FIN7 Threat Actor. Retrieved March 14, 2023.",
+                    "url": "https://www.sentinelone.com/labs/black-basta-ransomware-attacks-deploy-custom-edr-evasion-tools-tied-to-fin7-threat-actor/"
+                },
+                {
+                    "source_name": "SophosGnGal_SystemBC_Dec2020",
+                    "description": "Gallagher, S., Gn, S. (2020, December 16). Ransomware operators use SystemBC RAT as off-the-shelf Tor backdoor. Retrieved May 16, 2025.",
+                    "url": "https://news.sophos.com/en-us/2020/12/16/systembc/"
+                },
+                {
+                    "source_name": "HarmonProofpoint_SystemBC_Aug2019",
+                    "description": "Harmon, K., et al. (2019, August 1). SystemBC is like Christmas in July for SOCKS5 Malware and Exploit Kits . Retrieved June 13, 2025.",
+                    "url": "https://www.proofpoint.com/us/threat-insight/post/systembc-christmas-july-socks5-malware-and-exploit-kits"
+                },
+                {
+                    "source_name": "TrumanKroll_SYSTEMBCServer_Jan2024",
+                    "description": "Truman, D. (2024, January 19). Inside the SYSTEMBC Command-and-Control Server. Retrieved June 18, 2025.",
+                    "url": "https://www.kroll.com/en/publications/cyber/inside-the-systembc-malware-server"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.066Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has used multiple proxy layers, such as SOCKS5 and [Tor](https://attack.mitre.org/software/S0183), for C2 communication.(Citation: HarmonProofpoint_SystemBC_Aug2019)(Citation: SophosGnGal_SystemBC_Dec2020)(Citation: TrumanKroll_SYSTEMBCServer_Jan2024)(Citation: BlackBasta) [SystemBC](https://attack.mitre.org/software/S9001) has also leveraged [Tor](https://attack.mitre.org/software/S0183) for encrypting and concealing C2 traffic.(Citation: SophosGnGal_SystemBC_Dec2020) The server component of [SystemBC](https://attack.mitre.org/software/S9001) has used SOCKS5 for C2 communication.(Citation: TrumanKroll_SYSTEMBCServer_Jan2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--a782ebe2-daba-42c7-bc82-e8e9d923162d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

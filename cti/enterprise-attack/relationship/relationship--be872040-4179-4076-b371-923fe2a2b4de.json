@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8464da4d-9b7a-4e51-8493-e39ef9e47057",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--be872040-4179-4076-b371-923fe2a2b4de",
+            "created": "2026-04-16T19:59:53.014Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Fortinet Remcos Campaign NOV 2024",
+                    "description": "Zhang, X. (2024, November 8). New Campaign Uses Remcos RAT to Exploit Victims. Retrieved April 16, 2026.",
+                    "url": "https://www.fortinet.com/blog/threat-research/new-campaign-uses-remcos-rat-to-exploit-victims"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.186Z",
+            "description": "[Remcos](https://attack.mitre.org/software/S0332) has been executed by luring victims into opening malicious email attachments including Excel files.(Citation: Fortinet Remcos Campaign NOV 2024)\n",
+            "relationship_type": "uses",
+            "source_ref": "tool--7cd0bc75-055b-4098-a00e-83dc8beaff14",
+            "target_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

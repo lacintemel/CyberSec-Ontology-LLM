@@ -1,0 +1,80 @@
+{
+    "type": "bundle",
+    "id": "bundle--abeae388-4b53-40ce-a65b-0b1babed6176",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--983ae9ea-a125-498a-862d-00d5bed2087a",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0713#AN1840",
+                    "external_id": "AN1840"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:32.334Z",
+            "name": "Analytic 1840",
+            "description": "For Android, detect Data from Local System from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; File Access via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: App reads files across $MinDirectoryCount$+ distinct parent directories with file_read_count > $FileReadRateThreshold$ within $DataCollectionWindow$ in background or low-interaction state \u2014 bulk cross-directory read is the collection signal]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App invokes ContentResolver or SAF (Storage Access Framework) queries across multiple user-data paths outside its own sandbox in background state]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App reads files across $MinDirectoryCount$+ distinct parent directories with file_read_count > $FileReadRateThreshold$ within $DataCollectionWindow$ in background or low-interaction state \u2014 bulk cross-directory read is the collection signal"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App invokes ContentResolver or SAF (Storage Access Framework) queries across multiple user-data paths outside its own sandbox in background state"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDataCollectionApps",
+                    "description": "Approved backup, sync, file manager, and media apps. Derive from MDM catalog. Tightening: strict list \u2014 any unapproved app with broad file access is flagged."
+                },
+                {
+                    "field": "FileReadRateThreshold",
+                    "description": "Default 50 file reads within window across 3+ directories. Derive from approved backup app baseline. Tightening: 10 reads \u2014 catches targeted collection."
+                },
+                {
+                    "field": "MinDirectoryCount",
+                    "description": "Default 3 distinct parent directories. Single-directory reads may be legitimate (photo editor); cross-directory reads indicate collection sweep."
+                },
+                {
+                    "field": "DataCollectionWindow",
+                    "description": "Default 60s observation window."
+                },
+                {
+                    "field": "AppCDNList",
+                    "description": "Per-app CDN baseline."
+                },
+                {
+                    "field": "ExfilWindow",
+                    "description": "Default 120s between staging and upload."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--55503ecd-d8dd-42cf-b411-8cbacce8840b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--eaa0b30e-1dea-4dad-9a1e-33da933a8158",
+            "created": "2020-09-21T17:59:24.739Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.244Z",
+            "description": "Devices should verify that firmware has been properly signed by the vendor before allowing installation.\n",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--71eb7dad-07eb-4bbc-9df0-ac57bf2fba4a",
+            "target_ref": "attack-pattern--68a9324d-a524-4766-a899-a026f68a33df",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

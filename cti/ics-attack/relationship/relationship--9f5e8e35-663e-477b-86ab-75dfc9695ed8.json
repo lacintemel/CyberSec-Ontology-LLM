@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--0f78ddf4-d509-4d22-bb81-88f81fde0458",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9f5e8e35-663e-477b-86ab-75dfc9695ed8",
+            "created": "2026-09-25T16:50:47.761Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T16:50:47.761Z",
+            "description": "Consider removing or restricting features that are unnecessary to an asset's intended function within the control environment.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--d0909119-2f71-4923-87db-b649881672d7",
+            "target_ref": "attack-pattern--abc2529d-70c0-4971-b25f-0dce8cffb427",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

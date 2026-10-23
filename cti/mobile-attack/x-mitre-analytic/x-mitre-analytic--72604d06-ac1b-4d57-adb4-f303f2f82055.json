@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--d89d6381-e1eb-4b9d-b55b-ddb43692ba01",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--72604d06-ac1b-4d57-adb4-f303f2f82055",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0681#AN1787",
+                    "external_id": "AN1787"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:46.569Z",
+            "name": "Analytic 1787",
+            "description": "For iOS, detect Protected User Data by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate API Calls via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: CNContactStore.enumerateContacts or EKEventStore.fetchEvents or CLLocationManager.startUpdatingLocation called with broad scope by app NOT IN $ApprovedDataApps$]; Network Traffic Flow via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]; Permissions Request via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--5ae32c6a-2d12-4b8f-81ca-f862f2be0962",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: CNContactStore.enumerateContacts or EKEventStore.fetchEvents or CLLocationManager.startUpdatingLocation called with broad scope by app NOT IN $ApprovedDataApps$"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e2f72131-14d1-411f-8e8c-aa3453dd5456",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDataApps",
+                    "description": "Approved sync, CRM, navigation apps per permission type. Derive from MDM catalog."
+                },
+                {
+                    "field": "UplinkThreshold",
+                    "description": "Default 100KB."
+                },
+                {
+                    "field": "AppCDNList",
+                    "description": "Per-app CDN. Derive by measurement."
+                },
+                {
+                    "field": "ExfilWindow",
+                    "description": "Default 120s."
+                }
+            ]
+        }
+    ]
+}

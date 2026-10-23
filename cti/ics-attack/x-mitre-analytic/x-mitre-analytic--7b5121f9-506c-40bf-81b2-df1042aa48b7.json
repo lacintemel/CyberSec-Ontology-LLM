@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--a07c065d-ade3-4150-8587-357db5daa20e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7b5121f9-506c-40bf-81b2-df1042aa48b7",
+            "created": "2026-10-13T17:46:53.325Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0764#AN2238",
+                    "external_id": "AN2238"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:53.325Z",
+            "name": "Analytic 2238",
+            "description": "Real-time network monitoring identifies a field device's source Media Access Control (MAC) address changing without a corresponding documented hardware replacement, combined with protocol-level anomalies (transaction identifier reuse, function-code patterns deviating from baseline) for traffic associated with that device Internet Protocol (IP) address. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Content",
+                    "channel": "device_ip observed with src_mac differing from enrolled hardware address without corresponding topology change ticket"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "transaction identifier reuse pattern or function-code distribution deviates from established per-device baseline within Adversary in the Middle (AiTM) correlation window of the Media Access Control (MAC) address binding change"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AiTMCorrelationWindow",
+                    "description": "Time window within which a MAC binding change and protocol baseline deviation are considered correlated."
+                },
+                {
+                    "field": "ExpectedNextHopBaseline",
+                    "description": "Documented expected network path for device subnet traffic."
+                },
+                {
+                    "field": "TopologyChangeTicket",
+                    "description": "Change-management reference confirming an authorized hardware replacement or topology modification."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

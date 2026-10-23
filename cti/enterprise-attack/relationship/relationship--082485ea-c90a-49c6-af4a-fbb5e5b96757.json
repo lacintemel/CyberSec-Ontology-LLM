@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--88947928-cb66-4d9a-b6c1-d77e04bac715",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--082485ea-c90a-49c6-af4a-fbb5e5b96757",
+            "created": "2026-09-30T17:37:36.198Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft CYBERWARCON NOV 2024",
+                    "description": "Microsoft Threat Intelligence. (2024, November 22). Microsoft shares latest intelligence on North Korean and Chinese threat actors at CYBERWARCON. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T17:37:36.198Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has conducted cryptocurrency theft.(Citation: Microsoft CYBERWARCON NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--851e071f-208d-4c79-adc6-5974c85c78f3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

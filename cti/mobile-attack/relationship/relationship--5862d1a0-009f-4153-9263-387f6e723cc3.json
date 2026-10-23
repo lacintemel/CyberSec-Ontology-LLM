@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b27c82ca-9ce2-4f4b-84c3-54b9658ff8ff",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5862d1a0-009f-4153-9263-387f6e723cc3",
+            "created": "2026-03-09T14:59:11.768Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_VajraSpy_Feb2024",
+                    "description": "Stefanko, L. (2024, February 1). VajraSpy: A Patchwork of espionage apps. Retrieved October 27, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/vajraspy-patchwork-espionage-apps/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:26.269Z",
+            "description": "(Citation: ESET_VajraSpy_Feb2024)  ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--17862c7d-9e60-48a0-b48e-da4dc4c3f6b0",
+            "target_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

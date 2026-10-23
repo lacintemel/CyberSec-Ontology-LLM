@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9787524e-91d9-4024-b130-e5026f121d43",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9ac05264-8d82-4a84-a4ab-db80638f09f4",
+            "created": "2026-05-13T20:29:23.286Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESETStefanko_NGateVariant_Apr2026",
+                    "description": "Stefanko, L. (2026, April 21). New NGate variant hides in a trojanized NFC payment app. Retrieved May 6, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/new-ngate-variant-hides-in-a-trojanized-nfc-payment-app/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:32:27.666Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has used a WhatsApp profile image that impersonated Caixa Econ\u00f4mica Federal, Brazil\u2019s government-owned bank that manages majority of lotteries.(Citation: ESETStefanko_NGateVariant_Apr2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--114fed8b-7eed-4136-8b9c-411c5c7fff4b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--1fe94019-7236-448e-b134-ff02d0859a5d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3680ab7a-254b-426c-b417-460712c2f357",
+            "created": "2026-04-22T20:43:20.666Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.994Z",
+            "description": "Ensure proper network segmentation is followed to protect critical servers and devices.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--1e7ccfc0-94c8-496e-8d27-032120892291",
+            "target_ref": "attack-pattern--64bbc1b2-101f-4322-af1d-0c9cc25cef91",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

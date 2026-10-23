@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2b4eb5c7-cb5a-48e2-aba9-cd2f88e9a17e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--af3fa17b-e789-4522-af82-663a6d7bcaa3",
+            "created": "2026-09-23T21:23:59.190Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T21:23:59.190Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has utilized a wipe feature that writes 64 MB chunks of data to a targeted drive to exhaust all free space and overwrites previously deleted file content, reducing recovery capabilities.(Citation: CheckPointResearch_TheGentlemen_April2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--fb640c43-aa6b-431e-a961-a279010424ac",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

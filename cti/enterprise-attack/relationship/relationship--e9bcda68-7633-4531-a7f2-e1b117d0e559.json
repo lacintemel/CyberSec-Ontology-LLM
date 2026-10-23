@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--566c14b5-8c45-478a-b65c-6e6ead95bd7b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e9bcda68-7633-4531-a7f2-e1b117d0e559",
+            "created": "2025-12-15T23:49:01.667Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FortinetEtAl_IranianIntrusion_Mar2025",
+                    "description": "Robson, M., et al. (2025, March 7). Investigating Iranian Intrusion into Strategic Middle East Critical Infrastructure. Retrieved June 18, 2025.",
+                    "url": "https://www.fortinet.com/content/dam/fortinet/assets/reports/report-incident-response-middle-east.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:17.866Z",
+            "description": "(Citation: FortinetEtAl_IranianIntrusion_Mar2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c21dd6f1-1364-4a70-a1f7-783080ec34ee",
+            "target_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

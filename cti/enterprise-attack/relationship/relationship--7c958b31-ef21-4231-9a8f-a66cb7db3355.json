@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4aa1acde-60c7-4d39-8cc8-15ded1467312",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7c958b31-ef21-4231-9a8f-a66cb7db3355",
+            "created": "2020-11-30T17:38:40.944Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "US District Court Indictment GRU Unit 74455 October 2020",
+                    "description": "Scott W. Brady. (2020, October 15). United States vs. Yuriy Sergeyevich Andrienko et al.. Retrieved November 25, 2020.",
+                    "url": "https://www.justice.gov/opa/press-release/file/1328521/download"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.096Z",
+            "description": "[NotPetya](https://attack.mitre.org/software/S0368) searches for files ending with dozens of different file extensions prior to encryption.(Citation: US District Court Indictment GRU Unit 74455 October 2020)",
+            "relationship_type": "uses",
+            "source_ref": "malware--5719af9d-6b16-46f9-9b28-fb019541ddbb",
+            "target_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

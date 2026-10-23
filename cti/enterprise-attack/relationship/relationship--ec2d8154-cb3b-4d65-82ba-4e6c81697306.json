@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--d7d8c590-bf11-4335-812a-70049d1ecc2e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ec2d8154-cb3b-4d65-82ba-4e6c81697306",
+            "created": "2026-04-20T17:30:43.753Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point VOID MANTICORE Handala Hack March 2026",
+                    "description": "Check Point Research. (2026, March 12). \u201cHandala Hack\u201d \u2013 Unveiling Group\u2019s Modus Operandi. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+                },
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "DOJ FBI Handala Hack March 2026",
+                    "description": "DOJ/FBI. (2026, March 19). Case 1:26-mj-00683-CDA: Affidavit in Support of Seizure Warrant: In the Matter of the Seizure of Domain Names Justicehomeland[.]org; karmabelow80[.]org; handala-hack[.]to; and handala-redwatned[.]to. Retrieved April 20, 2026.",
+                    "url": "https://www.justice.gov/opa/media/1431956/dl?inline"
+                },
+                {
+                    "source_name": "Palo Alto VOID MANTICORE Iran Cyber Threats March 2026",
+                    "description": "Justin Moore. (2026, March 16). Iranian Cyber Threat Evolution: From MBR Wipers to Identity Weaponization. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-threats/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:26.135Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has conducted data wiping attacks on compromised systems.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)(Citation: DOJ FBI Handala Hack March 2026)(Citation: Palo Alto VOID MANTICORE Iran Cyber Threats March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has also manually deleted files from compromised hosts, to include selecting all files and then deleting them.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)(Citation: DOJ FBI Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--d45a3d09-b3cf-48f4-9f0f-f521ee5cb05c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

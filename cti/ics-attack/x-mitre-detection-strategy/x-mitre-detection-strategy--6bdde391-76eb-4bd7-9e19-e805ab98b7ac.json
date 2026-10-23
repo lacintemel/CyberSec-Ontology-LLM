@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--ff2a6d00-db15-4b7e-afe8-ff458b74e24b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--6bdde391-76eb-4bd7-9e19-e805ab98b7ac",
+            "created": "2026-04-22T18:52:19.941Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0907",
+                    "external_id": "DET0907"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:42.791Z",
+            "name": "Detection of Port Scan",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--51a094bf-b7eb-452a-9b7a-ffac16fce1ac",
+                "x-mitre-analytic--b03ff220-3bf8-41bd-a443-0ae287fa8e74",
+                "x-mitre-analytic--ff0f3e46-3817-4b77-a188-74720d721c03",
+                "x-mitre-analytic--bed265af-6f51-42c1-b4d2-691535a32d67"
+            ]
+        }
+    ]
+}

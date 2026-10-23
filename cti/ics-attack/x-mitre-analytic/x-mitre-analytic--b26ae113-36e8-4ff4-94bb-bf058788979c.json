@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--a7353543-f454-43f9-ab23-bdda5cede57e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b26ae113-36e8-4ff4-94bb-bf058788979c",
+            "created": "2026-10-13T17:44:11.584Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0750#AN2113",
+                    "external_id": "AN2113"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:11.584Z",
+            "name": "Analytic 2113",
+            "description": "Real-time monitoring identifies truncation or deletion of Industrial Control System (ICS) application or auth log files, or modification of bash history, by a User Identifier (UID) that does not normally manage log rotation. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: modification of bash_history file by uid not normally performing interactive shell sessions"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e905dad2-00d6-477c-97e8-800427abd0e8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: truncate/shred/rm on Industrial Control Systems (ICS) application log files or auth.log by User Identifier (UID) not in authorized log admin UIDs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedLogManagementTools",
+                    "description": "Allowlist of processes/accounts authorized to delete or truncate ICS application logs."
+                },
+                {
+                    "field": "LogClearLookbackWindow",
+                    "description": "Time window prior to a log-clear event within which other suspicious activity is considered correlated."
+                },
+                {
+                    "field": "ScheduledLogRotationWindow",
+                    "description": "Documented schedule for legitimate, automated log rotation/archival."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

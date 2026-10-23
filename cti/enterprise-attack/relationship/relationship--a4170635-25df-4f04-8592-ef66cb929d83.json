@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0fcd1386-ae6a-4b79-9d0c-4ce6b4e8d363",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a4170635-25df-4f04-8592-ef66cb929d83",
+            "created": "2026-09-22T22:02:18.022Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA_AA25-239ASaltTyphoon_Sept2025",
+                    "description": "CISA. (2025, September 3). Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System. Retrieved September 22, 2026.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T22:02:18.022Z",
+            "description": "[Salt Typhoon](https://attack.mitre.org/groups/G1045) has modified container service configurations using `Guest Shell`.(Citation: CISA_AA25-239ASaltTyphoon_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1c3dcf91-b859-4aae-a09c-ae26dc8b6390",
+            "target_ref": "attack-pattern--b0e54bf7-835e-4f44-bd8e-62f431b9b76a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

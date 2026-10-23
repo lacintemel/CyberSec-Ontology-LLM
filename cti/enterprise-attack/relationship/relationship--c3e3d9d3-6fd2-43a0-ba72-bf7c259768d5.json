@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3f9927ad-d3e8-4e6a-9920-0fadf28b91f9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c3e3d9d3-6fd2-43a0-ba72-bf7c259768d5",
+            "created": "2022-04-09T15:04:35.511Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Meteor Aug 2021",
+                    "description": "Check Point Research Team. (2021, August 14). Indra - Hackers Behind Recent Attacks on Iran. Retrieved February 17, 2022.",
+                    "url": "https://research.checkpoint.com/2021/indra-hackers-behind-recent-attacks-on-iran/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.193Z",
+            "description": "[Meteor](https://attack.mitre.org/software/S0688) can hide its console window upon execution to decrease its visibility to a victim.(Citation: Check Point Meteor Aug 2021)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d79e7a60-5de9-448e-a074-f95d2d80f8d0",
+            "target_ref": "attack-pattern--cbb66055-0325-4111-aca0-40547b6ad5b0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

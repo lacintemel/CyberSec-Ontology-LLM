@@ -1,0 +1,90 @@
+{
+    "type": "bundle",
+    "id": "bundle--75282e20-fc34-48f0-9d7a-bdeb912c12b2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4cb75669-f88d-4374-be51-e4b99e22b64e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0669#AN1766",
+                    "external_id": "AN1766"
+                },
+                {
+                    "source_name": "unit42_strat_aged_domain_det",
+                    "description": "Chen, Z. et al. (2021, December 29). Strategically Aged Domain Detection: Capture APT Attacks With DNS Traffic Trends. Retrieved July 31, 2023.",
+                    "url": "https://unit42.paloaltonetworks.com/strategically-aged-domain-detection/"
+                },
+                {
+                    "source_name": "Data Driven Security DGA",
+                    "description": "Jacobs, J. (2014, October 2). Building a DGA Classifier: Part 2, Feature Engineering. Retrieved February 18, 2019.",
+                    "url": "https://datadrivensecurity.info/blog/posts/2014/Oct/dga-part2/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:55.866Z",
+            "name": "Analytic 1766",
+            "description": "For iOS, detect Domain Generation Algorithms by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application Permission via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]; Network Traffic Content via Enterprise Secure Web Gateway / Proxy [DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed]; Network Traffic Flow via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "webproxy:applog",
+                    "channel": "DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "MDMApprovedCatalog",
+                    "description": "MDM-managed app list."
+                },
+                {
+                    "field": "DGAEntropyThreshold",
+                    "description": "Default 3.5 bits Shannon."
+                },
+                {
+                    "field": "DGALabelLength",
+                    "description": "Default 12 characters."
+                },
+                {
+                    "field": "DGACandidateThreshold",
+                    "description": "Default 10 high-entropy queries."
+                },
+                {
+                    "field": "DGAWindow",
+                    "description": "Default 60s."
+                },
+                {
+                    "field": "DomainAgeThreshold",
+                    "description": "Default 30 days."
+                }
+            ]
+        }
+    ]
+}

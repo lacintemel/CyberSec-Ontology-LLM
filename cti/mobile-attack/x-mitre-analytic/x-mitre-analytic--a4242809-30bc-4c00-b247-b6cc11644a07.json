@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--4048aa91-0ae8-4ec8-bf07-ca00a0dabdb8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a4242809-30bc-4c00-b247-b6cc11644a07",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0655#AN1741",
+                    "external_id": "AN1741"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:43.130Z",
+            "name": "Analytic 1741",
+            "description": "For Android, detect Command and Scripting Interpreter from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Command Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App spawns sh, bash, toybox, toolbox, or su child process with command arguments within $ShellActivityWindow$ of shell launch \u2014 child shell process with arguments is the script execution signal]; Process Creation via Application Vetting / Managed Device Telemetry [App invokes Runtime.exec(), ProcessBuilder.start(), or JNI-backed command execution framework to spawn shell or command interpreter process NOT IN $ApprovedShellApps$ \u2014 programmatic shell spawn is the interpreter invocation]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App spawns sh, bash, toybox, toolbox, or su child process with command arguments within $ShellActivityWindow$ of shell launch \u2014 child shell process with arguments is the script execution signal"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "App invokes Runtime.exec(), ProcessBuilder.start(), or JNI-backed command execution framework to spawn shell or command interpreter process NOT IN $ApprovedShellApps$ \u2014 programmatic shell spawn is the interpreter invocation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedShellApps",
+                    "description": "Terminal emulator apps (on non-production developer devices only), ADB-connected sessions. Production fleet: empty \u2014 no app should spawn shells. Derive from IT device classification."
+                },
+                {
+                    "field": "ShellActivityWindow",
+                    "description": "Default 30s between shell spawn and follow-on file/network activity. Shell execution and follow-on activity are near-synchronous."
+                }
+            ]
+        }
+    ]
+}

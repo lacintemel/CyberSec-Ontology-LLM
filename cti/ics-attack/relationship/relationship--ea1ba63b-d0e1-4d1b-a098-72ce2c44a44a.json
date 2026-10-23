@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--9e80f6c3-9f6d-419a-b818-f662cb818a24",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ea1ba63b-d0e1-4d1b-a098-72ce2c44a44a",
+            "created": "2026-04-22T13:50:28.914Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.244Z",
+            "description": "Protocols used for control functions should provide authenticity through MAC functions or digital signatures. If not, utilize bump-in-the-wire devices or VPNs to enforce communication authenticity between devices that are not capable of supporting this (e.g., legacy controllers, RTUs).",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--c7257b6e-4159-4771-b1f3-2bb93adaecac",
+            "target_ref": "attack-pattern--e17cdc00-8b58-4e5f-9d50-4cad1592c4c3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "type": "bundle",
+    "id": "bundle--8b8953d4-7dc2-4ff3-8657-6b7c07b52a90",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--fe926152-f431-4baf-956c-4ad3cb0bf23b",
+            "created": "2018-04-18T17:59:24.739Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1211",
+                    "external_id": "T1211"
+                },
+                {
+                    "source_name": "Bypassing CloudTrail in AWS Service Catalog",
+                    "description": "Nick Frichette. (2023, March 20). Bypassing CloudTrail in AWS Service Catalog, and Other Logging Research. Retrieved September 18, 2023.",
+                    "url": "https://securitylabs.datadoghq.com/articles/bypass-cloudtrail-aws-service-catalog-and-other/"
+                },
+                {
+                    "source_name": "GhostToken GCP flaw",
+                    "description": "Sergiu Gatlan. (2023, April 21). GhostToken GCP flaw let attackers backdoor Google accounts. Retrieved September 18, 2023.",
+                    "url": "https://www.bleepingcomputer.com/news/security/ghosttoken-gcp-flaw-let-attackers-backdoor-google-accounts/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.726Z",
+            "name": "Exploitation for Stealth",
+            "description": "Adversaries may exploit vulnerabilities to evade detection by hiding activity, suppressing logging, or operating within trusted or unmonitored components. \n\nAdversaries may exploit a system or application vulnerability to avoid detection while maintaining access within an environment. Exploitation occurs when an adversary leverages a programming flaw to execute code in a manner that minimizes visibility or blends in with legitimate activity. \n\nRather than directly disabling defenses, adversaries may use exploitation to circumvent monitoring and logging mechanisms. This can include abusing vulnerabilities in logging pipelines, security tools, or cloud infrastructure to evade audit trails, suppress alerts, or operate without generating telemetry. \n\nAdversaries may identify these opportunities through prior reconnaissance or by performing discovery of security controls after initial access. In some cases, vulnerabilities in SaaS or public cloud environments may be exploited to evade logging, obscure activity, or deploy infrastructure that remains hidden from standard monitoring tools.(Citation: Bypassing CloudTrail in AWS Service Catalog)(Citation: GhostToken GCP flaw)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "John Lambert, Microsoft Threat Intelligence Center"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Linux",
+                "Windows",
+                "macOS",
+                "SaaS",
+                "IaaS"
+            ],
+            "x_mitre_version": "2.0"
+        }
+    ]
+}

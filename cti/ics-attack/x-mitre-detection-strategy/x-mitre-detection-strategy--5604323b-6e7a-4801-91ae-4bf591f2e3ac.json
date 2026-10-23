@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--baa5bcb8-7590-4171-b1d4-b7c996465e4f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--5604323b-6e7a-4801-91ae-4bf591f2e3ac",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0788",
+                    "external_id": "DET0788"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:18.578Z",
+            "name": "Detection of Point & Tag Identification",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--484023ea-6fea-4f91-b40d-c6d87188cbfe",
+                "x-mitre-analytic--8713afc6-95d2-4064-a047-a9be0cc486dd",
+                "x-mitre-analytic--d5cdbfae-d4c3-4379-9330-de223f74fb09",
+                "x-mitre-analytic--ac890be9-5686-42bf-9a1c-ac7fd8bb283a"
+            ]
+        }
+    ]
+}

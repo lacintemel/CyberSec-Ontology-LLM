@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0025c892-dd7c-4bc9-b64a-c04d5c97e76f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7050acd5-637b-4581-b58e-dcfac3eb1bb5",
+            "created": "2026-10-08T21:35:55.577Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Tenable Minnesota Water Utilities",
+                    "description": "Research Special Operations. (2026, July 28). Coordinated \"cyberattack\" on U.S. water utilities: What you need to know. Retrieved September 26, 2026.",
+                    "url": "https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-08T21:35:55.577Z",
+            "description": "During the [2026 U.S. Water Utilities Attacks](https://attack.mitre.org/campaigns/C0066), the adversary logged in to internet-exposed PLCs using default credentials.(Citation: Tenable Minnesota Water Utilities)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5cae2d7e-ce03-4a20-b7a7-32e846d26121",
+            "target_ref": "attack-pattern--5658ad88-7510-490e-a351-95d50b1bcd91",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

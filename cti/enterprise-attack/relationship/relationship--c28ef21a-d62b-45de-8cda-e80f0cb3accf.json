@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--6b3bc255-2eda-4ad1-9122-ab1c82ff561a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c28ef21a-d62b-45de-8cda-e80f0cb3accf",
+            "created": "2026-04-17T15:51:37.982Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.191Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) has used Registry run keys to set persistence.(Citation: ESET MirrorFace DEC 2022)(Citation: Trend Micro Earth Kasha NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

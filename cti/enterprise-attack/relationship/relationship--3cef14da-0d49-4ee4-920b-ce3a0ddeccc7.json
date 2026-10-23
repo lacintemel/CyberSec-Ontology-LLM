@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e3c53cbb-1526-499d-82d9-ac5fc86417d2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3cef14da-0d49-4ee4-920b-ce3a0ddeccc7",
+            "created": "2026-04-20T12:48:42.694Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.008Z",
+            "description": "[IronWind](https://attack.mitre.org/software/S9029) can enumerate the username on victim's systems.(Citation: Check Point Wirte NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--089aa00a-99ac-46b4-9cf8-4224d463566d",
+            "target_ref": "attack-pattern--03d7999c-1f4c-42cc-8373-e7690d318104",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

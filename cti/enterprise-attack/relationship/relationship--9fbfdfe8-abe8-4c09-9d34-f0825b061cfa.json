@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--8fbc6604-e03b-49b8-81ec-36753e7ed723",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9fbfdfe8-abe8-4c09-9d34-f0825b061cfa",
+            "created": "2023-08-08T19:30:16.396Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.143Z",
+            "description": "Threat intelligence helps defenders and users be aware of and defend against common lures and active campaigns that have been used for impersonation.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--874c0166-e407-45c2-a1d9-e4e3a6570fd8",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

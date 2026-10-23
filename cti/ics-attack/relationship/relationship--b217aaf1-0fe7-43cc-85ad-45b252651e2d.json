@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1f9fcc78-905b-4069-8f12-28e992016163",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b217aaf1-0fe7-43cc-85ad-45b252651e2d",
+            "created": "2026-04-23T14:11:52.981Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anton Cherepanov, ESET June 2017",
+                    "description": "Anton Cherepanov, ESET 2017, June 12 Win32/Industroyer: A new threat for industrial control systems Retrieved. 2017/09/15 ",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2017/06/Win32_Industroyer.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.168Z",
+            "description": "The [Industroyer](https://attack.mitre.org/software/S0604) IEC 61850 payload component has the ability to discover relevant devices in the infected host's network subnet by attempting to connect on port 102.(Citation: Anton Cherepanov, ESET June 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e401d4fe-f0c9-44f0-98e6-f93487678808",
+            "target_ref": "attack-pattern--5d24bb1d-4487-4923-ae3a-8e679092ac7a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--848b21b3-d981-4e05-8902-91ab40287c2a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d99e23f0-16ae-4391-a3e4-a38181114a22",
+            "created": "2026-09-26T01:59:07.450Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T01:59:07.450Z",
+            "description": "Restrict Python execution to approved interpreters, scripts, libraries, accounts, and paths. On engineering systems where Python is required, use positive allowlisting rather than disabling the interpreter.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4fa717d9-cabe-47c8-8cdd-86e9e2e37f30",
+            "target_ref": "attack-pattern--2cbed5e4-65e3-40bf-a376-82c7a23e3665",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

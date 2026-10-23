@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--9cd97779-2173-4f6c-905f-51d9630b5172",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--48d2023b-469d-4f9f-a4e6-010be72436b9",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0776#AN1908",
+                    "external_id": "AN1908"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:29.074Z",
+            "name": "Analytic 1908",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol write to a parameter/setpoint register where the written value falls outside the documented safe operating range, or where the write originates from a source not in the approved write-source list, correlated with subsequent historian tag drift. Documented precedent: FrostyGoop directly modified Modbus holding register values on ENCO heating controllers in Lviv, Ukraine, causing a two-day remediation outage. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--931b3fc6-ad68-42a8-9018-e98515eedc95",
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "tag value deviates from rolling baseline mean by more than parameter drift threshold percent within time window following a flagged write"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "write function code (FC 6/16) to setpoint address range with value outside baseline value range, or from source not in approved write sources"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "scada:applog",
+                    "channel": "parameter write logged without corresponding operator_id in the Human-Machine Interface (HMI) audit trail"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to parameter/setpoint registers."
+                },
+                {
+                    "field": "BaselineValueRange",
+                    "description": "Documented safe operating range for each monitored parameter."
+                },
+                {
+                    "field": "ParameterDriftThreshold",
+                    "description": "Percentage deviation from rolling baseline considered significant drift."
+                },
+                {
+                    "field": "SetpointAddressRange",
+                    "description": "Register/address ranges corresponding to parameter and setpoint values for the device type."
+                },
+                {
+                    "field": "TimeWindow",
+                    "description": "Time window over which post-write drift is measured."
+                }
+            ]
+        }
+    ]
+}

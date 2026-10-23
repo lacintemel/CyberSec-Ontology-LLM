@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b3fdbf97-1b23-44c0-bd1d-8388f033f793",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--de38c540-354f-4ac7-b79a-b5a4b40567f3",
+            "created": "2026-09-30T21:28:39.528Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T21:28:39.528Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has utilized Base64 encoded PowerShell scripts.(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--d511a6f6-4a33-41d5-bc95-c343875d1377",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

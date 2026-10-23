@@ -1,0 +1,33 @@
+name: Publish GitHub Release
+
+on:
+  push:
+    tags:
+      - "ATT&CK-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out tagged commit
+        uses: actions/checkout@v4
+
+      - name: Publish release from tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NOTES: See release notes and version history for ATT&CK [here](https://attack.mitre.org/resources/versions/)
+        run: |
+          version="${GITHUB_REF_NAME#ATT&CK-v}"
+
+          gh release create "${GITHUB_REF_NAME}" \
+            enterprise-attack/enterprise-attack.json \
+            mobile-attack/mobile-attack.json \
+            ics-attack/ics-attack.json \
+            --repo "${GITHUB_REPOSITORY}" \
+            --verify-tag \
+            --title "ATT&CK version ${version}" \
+            --notes "${RELEASE_NOTES}"

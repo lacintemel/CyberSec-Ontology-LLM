@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--179100d4-7363-4525-ac1f-0fe5267180d1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1395dbee-5ed2-45d4-a807-19fb707e9dab",
+            "created": "2026-04-20T14:52:48.810Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Ashen Lepus DEC 2025",
+                    "description": "Unit 42. (2025, December 11). Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.931Z",
+            "description": "[AshTag](https://attack.mitre.org/software/S9031) can use a .NET program to execute WMI queries and send unique victim IDs to  C2.(Citation: Palo Alto Ashen Lepus DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bb6f2a5c-dbc9-45b0-bd3f-a0b7849959c2",
+            "target_ref": "attack-pattern--01a5a209-b94c-450b-b7f9-946497d91055",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

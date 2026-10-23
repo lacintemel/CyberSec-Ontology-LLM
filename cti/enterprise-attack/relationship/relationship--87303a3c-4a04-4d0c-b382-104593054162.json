@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--cbfafc3c-d36c-43e4-8dc9-24dc19122533",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--87303a3c-4a04-4d0c-b382-104593054162",
+            "created": "2026-04-15T15:42:38.361Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Proofpoint TA427 April 2024",
+                    "description": "Lesnewich, G. et al. (2024, April 16). From Social Engineering to DMARC Abuse: TA427\u2019s Art of Information Gathering. Retrieved May 3, 2024.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/social-engineering-dmarc-abuse-ta427s-art-information-gathering"
+                },
+                {
+                    "source_name": "Unit 42 Global Incident Response Report 2026",
+                    "description": "Palo Alto Networks Unit 42. (n.d.). Global Incident Response Report 2026. Retrieved April 15, 2026.",
+                    "url": "https://www.paloaltonetworks.com/resources/research/unit-42-incident-response-report#:~:text=The%20Browser%20Attack%20Surface:%20Attacks%20at%20the%20Human%20Interface&text=The%20site%20used%20social-engineering,deployment%20and%20broader%20operational%20disruption"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.110Z",
+            "description": "Enables correlation of email/identity/SaaS/endpoint activity that appears legitimate.(Citation: Proofpoint TA427 April 2024)(Citation: Unit 42 Global Incident Response Report 2026)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--cc2399fd-3cd3-4319-8d0a-fbd6420cdaf8",
+            "target_ref": "attack-pattern--41e4d77a-6275-4976-9e35-785985598519",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

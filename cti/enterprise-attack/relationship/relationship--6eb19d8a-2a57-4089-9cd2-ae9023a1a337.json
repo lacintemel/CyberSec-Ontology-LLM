@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--77dd58a9-334e-4d22-baca-a05701659349",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6eb19d8a-2a57-4089-9cd2-ae9023a1a337",
+            "created": "2026-04-21T21:23:16.489Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.076Z",
+            "description": "[LP-Notes](https://attack.mitre.org/software/S9036) has encrypted collected credentials using AES-CBC from the CNG API and the key ED15C8344B45DAED1E0578F8BC1A32411812C61F4CB45D89B107287DE0E09FFC\nand the initialization vector 91A4E6F6D51DAEE773A8F00279792578.(Citation: ESET_MuddyWater_Dec2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7fbf1f1e-cbd8-4060-8e3b-7ca0e56ce3fe",
+            "target_ref": "attack-pattern--53ac20cd-aca3-406e-9aa0-9fc7fdc60a5a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

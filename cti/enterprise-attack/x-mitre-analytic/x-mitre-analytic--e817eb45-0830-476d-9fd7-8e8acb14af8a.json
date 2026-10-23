@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--b7e5ee5a-5536-4f12-bc0a-0e55148309a4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--e817eb45-0830-476d-9fd7-8e8acb14af8a",
+            "created": "2026-04-16T16:27:31.873Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0899#AN2034",
+                    "external_id": "AN2034"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.383Z",
+            "name": "Analytic 2034",
+            "description": "Detects consent grants, password resets, role changes, external sharing, or token creation shortly after user interaction with messages, invites, or help desk workflows. Emphasis is placed on unusual requester relationships, new device context, or off-hours approvals.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "saas:okta",
+                    "channel": "user.account.reset_password; user.mfa.factor.activate; app.oauth2.authorize"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "saas:slack",
+                    "channel": "xternal DM or workspace invite preceding credential or approval actions"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "saas:zoom",
+                    "channel": "Unexpected contact interaction preceding follow-on admin requests"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "RequesterNoveltyDays",
+                    "description": "How long since requestor last interacted with user"
+                },
+                {
+                    "field": "GeoVelocityThreshold",
+                    "description": "Distance/time anomaly for follow-on login"
+                },
+                {
+                    "field": "AfterHoursDefinition",
+                    "description": "Organization-specific off-hours period"
+                }
+            ]
+        }
+    ]
+}

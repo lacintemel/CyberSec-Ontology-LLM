@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--608350ab-5d5b-49ec-8b94-a225010ad735",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4b5922d7-d1cf-4e5d-84c9-4e7e8ac4a6a5",
+            "created": "2026-01-30T21:35:48.203Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sophos Evilginx MAR 2025",
+                    "description": "Everts, M. (2025, March 28). Stealing user credentials with evilginx. Retrieved January 27, 2026.",
+                    "url": "https://www.sophos.com/en-us/blog/stealing-user-credentials-with-evilginx"
+                },
+                {
+                    "source_name": "Evilginx 2 July 2018",
+                    "description": "Gretzky, K.. (2018, July 26). Evilginx 2 - Next Generation of Phishing 2FA Tokens. Retrieved October 14, 2019.",
+                    "url": "https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.028Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can collect information on each session with a victim including the session cookie.(Citation: Evilginx 2 July 2018)(Citation: Sophos Evilginx MAR 2025)\n",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

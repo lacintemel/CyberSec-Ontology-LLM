@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--33767c76-5a43-4766-b4cd-8e017c27fe1a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5be3f2db-60c4-4ddc-85a0-866f7b55f715",
+            "created": "2026-09-25T15:32:15.162Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T15:32:15.162Z",
+            "description": "During the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary utilized Claude Code to gather data within bash histories.(Citation: AI-Mexico-Govt-Breach)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--199f5568-ca25-4892-b7a5-870503e4d0f4",
+            "target_ref": "attack-pattern--8187bd2a-866f-4457-9009-86b0ddedffa3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

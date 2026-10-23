@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b9b36477-7181-4578-b2f9-37269229662e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3d923980-6a59-4051-bc96-5c64d3a7aa15",
+            "created": "2026-09-24T22:22:30.401Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T22:22:30.401Z",
+            "description": "[MiniJunk](https://attack.mitre.org/software/S9053) has leveraged legitimate digital signatures from SSL[.]com to appear legitimate.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7eaf437c-cde7-475b-87dd-d8573ca5406b",
+            "target_ref": "attack-pattern--32901740-b42c-4fdd-bc02-345b5dc57082",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

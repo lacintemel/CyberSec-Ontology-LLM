@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--80e893e8-917a-4990-8fdd-1a648a806253",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3b3d9d74-02b4-4c4b-b5a7-12c0e7a9cad7",
+            "created": "2026-04-16T22:38:14.557Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Huntio_IranInfra_Mar2026",
+                    "description": "Hunt.io. (2026, March 4). Iranian APT Infrastructure in Focus:  Mapping State-Aligned Clusters During Geopolitical Escalation. Retrieved April 16, 2026.",
+                    "url": "https://hunt.io/blog/iranian-apt-infrastructure-state-aligned-clusters"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T17:55:53.092Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has used publicly available malware for operations, likely to blend in with other cybercriminals.(Citation: Huntio_IranInfra_Mar2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--7807d3a4-a885-4639-a786-c1ed41484970",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

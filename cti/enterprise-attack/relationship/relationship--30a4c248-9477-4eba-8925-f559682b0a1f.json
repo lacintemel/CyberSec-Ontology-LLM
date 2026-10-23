@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--101ad2bd-bf8c-4597-a108-611be5367762",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--30a4c248-9477-4eba-8925-f559682b0a1f",
+            "created": "2026-04-17T15:11:07.761Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky LODEINFO Part II OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part II. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-ii/107745/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:07:46.340Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) can encrypt C2 communication with a hardcoded (NV4HDOeOVyL) Vigenere cipher key.(Citation: Kaspersky LODEINFO Part II OCT 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

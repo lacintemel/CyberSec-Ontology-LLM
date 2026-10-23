@@ -1,0 +1,60 @@
+{
+    "type": "bundle",
+    "id": "bundle--59706038-1870-4977-af83-7a90b9d42fb9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--11a350cf-1ea0-4065-877b-c3bb410bf3a0",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0784#AN1916",
+                    "external_id": "AN1916"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:29.860Z",
+            "name": "Analytic 1916",
+            "description": "Real-time monitoring identifies the absence of expected command-message delivery confirmation -- a Supervisory Control and Data Acquisition (SCADA)-issued command that does not produce the expected corresponding state-change response within the normal response latency window, while the device remains reachable for other traffic. Documented in the 2015 Ukraine attack, where Sandworm used malicious firmware to render serial-to-Ethernet converters inoperable. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--931b3fc6-ad68-42a8-9018-e98515eedc95",
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "process value expected to change following a command does not change within command confirmation window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Connections",
+                    "channel": "command-type traffic to device_ip absent while other traffic types (polling, reporting) to the same device continue normally"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "scada:applog",
+                    "channel": "command issued to device_ip with no corresponding state-change confirmation received within command confirmation window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "CommandConfirmationWindow",
+                    "description": "Maximum expected latency between a command being issued and its corresponding state-change confirmation."
+                }
+            ]
+        }
+    ]
+}

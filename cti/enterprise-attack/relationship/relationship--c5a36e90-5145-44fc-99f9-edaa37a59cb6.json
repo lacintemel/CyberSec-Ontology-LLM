@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9175648d-0454-4ba7-8129-47ae5f4347d0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c5a36e90-5145-44fc-99f9-edaa37a59cb6",
+            "created": "2026-04-20T12:13:59.245Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:52.546Z",
+            "description": "[WIRTE](https://attack.mitre.org/groups/G0090) has used the `RtlIpv4StringToAddressA` to convert IP-formatted string to a byte array.(Citation: Check Point Wirte NOV 2024)\n",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--f8cb7b36-62ef-4488-8a6d-a7033e3271c1",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

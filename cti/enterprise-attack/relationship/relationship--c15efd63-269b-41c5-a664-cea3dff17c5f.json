@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--0b4af4a9-e58e-437a-903d-838d8179673d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c15efd63-269b-41c5-a664-cea3dff17c5f",
+            "created": "2026-04-14T13:46:00.535Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                },
+                {
+                    "source_name": "Picus Security UNC5221 Ivanti May 2025",
+                    "description": "Sila Ozeren Hacioglu. (2025, May 5). UNC5221\u2019s Latest Exploit: Weaponizing CVE-2025-22457 in Ivanti Connect Secure. Retrieved April 13, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/unc5221-cve-2025-22457-ivanti-connect-secure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.190Z",
+            "description": "[DRYHOOK](https://attack.mitre.org/software/S9013) has intercepted and logged user credentials by modifying the Perl module in Ivanti Connect Secure VPN edge-devices located within `/home/perl/DSAuth.pm`.(Citation: Google UNC5221 Ivanti January 2025)(Citation: Picus Security UNC5221 Ivanti May 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e9c72c02-b55a-4852-b2eb-c7031d215414",
+            "target_ref": "attack-pattern--f4c1826f-a322-41cd-9557-562100848c84",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

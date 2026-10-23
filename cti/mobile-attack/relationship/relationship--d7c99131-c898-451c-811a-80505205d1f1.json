@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9b3a9b3f-0234-4d2f-a517-20b52a2985b9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d7c99131-c898-451c-811a-80505205d1f1",
+            "created": "2026-05-13T20:26:03.730Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERTPL_NGate_Nov2025",
+                    "description": "Ratajczak, K. (2025, November 3). Analysis of NGate malware campaign (NFC relay). Retrieved November 10, 2025.",
+                    "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:35:36.333Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has decrypted ASCII-hex data from the `assets/___` resource, which resulted in a config file that has the host IP address, port, `sharedToken`, and more.(Citation: CERTPL_NGate_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--d13fa042-8f26-44e1-a2a8-af0bf8e2ac9a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

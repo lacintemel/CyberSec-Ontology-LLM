@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--5ba9b8db-eb23-4502-8424-05a7ad208686",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2049ea95-0a5e-4b85-87c6-a8307d4cf738",
+            "created": "2026-09-26T01:58:36.986Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T01:58:36.987Z",
+            "description": "Inventory and audit Python interpreters, packages, virtual environments, execution paths, and ICS protocol libraries on assets where Python is authorized. Alert on new interpreters or packages outside approved engineering baselines.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--bcf91ebc-f316-4e19-b2f6-444e9940c697",
+            "target_ref": "attack-pattern--2cbed5e4-65e3-40bf-a376-82c7a23e3665",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

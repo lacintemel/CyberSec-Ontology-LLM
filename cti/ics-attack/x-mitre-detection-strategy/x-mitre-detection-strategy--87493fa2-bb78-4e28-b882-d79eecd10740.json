@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--565454fc-2c0d-46f5-a126-665b7d9e174e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--87493fa2-bb78-4e28-b882-d79eecd10740",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0772",
+                    "external_id": "DET0772"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:11.255Z",
+            "name": "Detection of Graphical User Interface",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--dc014060-5116-4a2f-bac5-35ac1db8fabb",
+                "x-mitre-analytic--a4594062-42a7-448f-99fb-5e4b2c005410",
+                "x-mitre-analytic--d27cebed-41c5-46b8-8c98-a57d6c40805e",
+                "x-mitre-analytic--21e2074e-f7d9-4a41-87e6-d365ac99a972"
+            ]
+        }
+    ]
+}

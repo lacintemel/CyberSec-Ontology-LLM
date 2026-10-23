@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c82bcb9c-124f-4a4c-9eae-738af60d91f8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b804627f-f89d-442d-bcea-15c21b1508b6",
+            "created": "2026-04-17T00:27:53.398Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google BRICKSTORM September 2025",
+                    "description": "Sarah Yoder, John Wolfram, Ashley Pearson, Doug Bienstock, Josh Madeley, Josh Murchie, Brad Slaybaugh, Matt Lin, Geoff Carstairs, Austin Larsen. (2025, September 24). Another BRICKSTORM: Stealthy Backdoor Enabling Espionage into Tech and Legal Sectors. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.176Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has utilized DNS services sslip.io and nip.io to resolve C2 IP addresses.(Citation: Google BRICKSTORM September 2025)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--7bd9c723-2f78-4309-82c5-47cad406572b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

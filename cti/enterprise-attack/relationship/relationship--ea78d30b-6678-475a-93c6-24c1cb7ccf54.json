@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--32eaae33-5689-4c0a-a734-5bb1a4b0a02b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ea78d30b-6678-475a-93c6-24c1cb7ccf54",
+            "created": "2026-04-20T17:49:54.597Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point VOID MANTICORE Handala Hack March 2026",
+                    "description": "Check Point Research. (2026, March 12). \u201cHandala Hack\u201d \u2013 Unveiling Group\u2019s Modus Operandi. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+                },
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "DOJ FBI Handala Hack March 2026",
+                    "description": "DOJ/FBI. (2026, March 19). Case 1:26-mj-00683-CDA: Affidavit in Support of Seizure Warrant: In the Matter of the Seizure of Domain Names Justicehomeland[.]org; karmabelow80[.]org; handala-hack[.]to; and handala-redwatned[.]to. Retrieved April 20, 2026.",
+                    "url": "https://www.justice.gov/opa/media/1431956/dl?inline"
+                },
+                {
+                    "source_name": "Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026",
+                    "description": "DomainTools Investigations. (2026, April 6). Handala: MOIS Linked Cyber Influence Ecosystem Threat Intelligence Assessment. Retrieved April 20, 2026.",
+                    "url": "https://dti.domaintools.com/research/handala-mois-linked-cyber-influence-ecosystem-threat-intelligence-assessment"
+                },
+                {
+                    "source_name": "FBI IC3 Flash VOID MANTICORE Handala Hack March 2026",
+                    "description": "FBI. (2026, March 20). FBI Flash: FLASH-20260320-001:Government of Iran Cyber Actors Deploy Telegram C2 to  Push Malware to Identified Targets. Retrieved April 20, 2026.",
+                    "url": "https://www.ic3.gov/CSA/2026/260320.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:26.120Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has created Telegram Accounts.(Citation: FBI IC3 Flash VOID MANTICORE Handala Hack March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has also leveraged online personas such as Handala Hack, Karma, and Homeland Justice on social media to include Telegram.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)(Citation: DOJ FBI Handala Hack March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has established and maintained social media accounts on Twitter/X and Telegram to amplify operational claims and stolen data disclosures.(Citation: Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--b1ccd744-3f78-4a0e-9bb2-2002057f7928",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

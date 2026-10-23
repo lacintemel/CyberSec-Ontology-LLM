@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4fbcaa08-b74b-444f-8491-c7e5fd26341d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--699faca5-f170-4413-89ce-7fb7a69ca2d5",
+            "created": "2026-04-17T20:58:05.082Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:27.037Z",
+            "description": "During [Operation AkaiRy\u016b](https://attack.mitre.org/campaigns/C0060), [MirrorFace](https://attack.mitre.org/groups/G1054) used [Arp](https://attack.mitre.org/software/S0099) and `dir` for discovery in compromised environments.(Citation: Trend Micro Earth Kasha Anel NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--8a7c55ea-f363-4a03-b4c5-fa3fdb132d8f",
+            "target_ref": "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

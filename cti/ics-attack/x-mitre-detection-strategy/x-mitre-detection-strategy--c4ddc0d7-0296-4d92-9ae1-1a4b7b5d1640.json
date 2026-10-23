@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--efc67276-a2c5-4681-a873-250f0c59bc16",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--c4ddc0d7-0296-4d92-9ae1-1a4b7b5d1640",
+            "created": "2026-04-22T20:32:50.322Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0908",
+                    "external_id": "DET0908"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:01.766Z",
+            "name": "Detection of Broadcast Discovery",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--f6324642-d17d-49d4-90b2-bab9d229d6fa",
+                "x-mitre-analytic--b3107fc4-e41d-4e1c-a895-6e6cdc9182ca",
+                "x-mitre-analytic--beefb21a-0c89-4472-8a35-b1ac557018b5",
+                "x-mitre-analytic--99652f40-1f48-4a01-9e09-0585e02ce534"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f52ab38a-7e90-4992-98af-d61a7e44f518",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--09bef668-b821-4228-adb3-35a4605ac3e9",
+            "created": "2026-04-21T17:44:42.465Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CloudSEK_RustyWater_Jan2026",
+                    "description": "Awasthi, P. (2026, January 8). Reborn in Rust: Muddy Water Evolves Tooling with RustyWater Implant. Retrieved March 19, 2026.",
+                    "url": "https://www.cloudsek.com/blog/reborn-in-rust-muddywater-evolves-tooling-with-rustywater-implant"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.917Z",
+            "description": "[RustyWater](https://attack.mitre.org/software/S9037) has\u202fimpersonated\u202fTMCell\u202f(Altyn\u202fAsyr\u202fCJSC), the primary mobile operator in Turkmenistan,\u202fsending\u202fphishing emails\u202fwith the email domain `info@tmcell`.(Citation: CloudSEK_RustyWater_Jan2026)\u202f ",
+            "relationship_type": "uses",
+            "source_ref": "malware--50be4e81-db74-41a2-a9aa-423314082bea",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

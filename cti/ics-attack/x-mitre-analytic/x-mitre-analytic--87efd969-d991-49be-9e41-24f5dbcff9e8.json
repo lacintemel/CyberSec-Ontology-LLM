@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--210be7ca-2e7c-43cb-be93-6be6eefba180",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--87efd969-d991-49be-9e41-24f5dbcff9e8",
+            "created": "2026-10-13T17:47:42.651Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0748#AN2273",
+                    "external_id": "AN2273"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:42.651Z",
+            "name": "Analytic 2273",
+            "description": "Real-time monitoring identifies a registry write to Windows autorun keys or an AutoPlay/AutoRun configuration change referencing a binary path that is not part of the authorized Industrial Control System (ICS) software inventory, particularly in combination with removable media insertion. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4663 (requires Object Access auditing and SACL on monitored paths): repeated ReadData/ListDirectory access across ICS data paths by an unapproved process/account"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d6e6b3b-4aa8-40e1-8c47-91db0f313d9f",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=20001 correlated with autorun registry modification within autorun modification window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedICSSoftwareInventory",
+                    "description": "Inventory of binaries legitimately authorized to be referenced by autorun/startup mechanisms on ICS hosts."
+                },
+                {
+                    "field": "AutorunModificationWindow",
+                    "description": "Time window correlating removable media insertion with a subsequent autorun configuration change."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8bc2a98d-9bce-4e24-896b-37fd4ba77595",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dc27cb61-8dcf-4cc6-b166-b6faf6504c21",
+            "created": "2026-02-03T19:58:46.562Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Evilginx 2 July 2018",
+                    "description": "Gretzky, K.. (2018, July 26). Evilginx 2 - Next Generation of Phishing 2FA Tokens. Retrieved October 14, 2019.",
+                    "url": "https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:54.683Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can modify the Origin and Referrer fields in HTTPS headers it relays between intended victims and legitimate websites to comply with cross-origin resource sharing (CORS) restrictions.(Citation: Evilginx 2 July 2018)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--ad255bfe-a9e6-4b52-a258-8d3462abe842",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

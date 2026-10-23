@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--93b9003b-ff9f-4c77-8914-ea953c2c6cd9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7fbbab0b-8e78-4352-ad0b-ae9a2eeffba5",
+            "created": "2020-06-23T17:59:53.341Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Tick November 2019",
+                    "description": "Chen, J. et al. (2019, November). Operation ENDTRADE: TICK\u2019s Multi-Stage Backdoors for Attacking Industries and Stealing Classified Data. Retrieved June 9, 2020.",
+                    "url": "https://documents.trendmicro.com/assets/pdf/Operation-ENDTRADE-TICK-s-Multi-Stage-Backdoors-for-Attacking-Industries-and-Stealing-Classified-Data.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.100Z",
+            "description": "[Avenger](https://attack.mitre.org/software/S0473) can identify the domain of the compromised host.(Citation: Trend Micro Tick November 2019)",
+            "relationship_type": "uses",
+            "source_ref": "malware--36ede314-7db4-4d09-b53d-81bbfbe5f6f8",
+            "target_ref": "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

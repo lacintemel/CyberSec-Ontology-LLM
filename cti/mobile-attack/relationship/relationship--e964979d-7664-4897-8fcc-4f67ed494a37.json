@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--db16a1d5-8fa3-43b4-9702-2bfe76df6526",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e964979d-7664-4897-8fcc-4f67ed494a37",
+            "created": "2026-02-16T16:10:01.860Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "S2W_DocSwap_Mar2025",
+                    "description": "Kim, H., S2W TALON. (2025, March 13). Detailed Analysis of DocSwap Malware Disguised as Security Document Viewer. Retrieved January 12, 2026.",
+                    "url": "https://medium.com/s2wblog/detailed-analysis-of-docswap-malware-disguised-as-security-document-viewer-218a728c36ff"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:49:27.141Z",
+            "description": "[DocSwap](https://attack.mitre.org/software/S9005) has the ability to send installed application information, including application name, package name, installation timestamp, icon, and properties.(Citation: S2W_DocSwap_Mar2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--3dbef387-12df-4547-9dd3-075c7ffec9e3",
+            "target_ref": "attack-pattern--198ce408-1470-45ee-b47f-7056050d4fc2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

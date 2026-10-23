@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--f5c9927f-1e2d-47dd-ac95-4ff9c3b45a34",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d2210d87-3bd9-4455-b1de-2ff3772172ce",
+            "created": "2026-03-09T15:33:56.116Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "K7Dhanalakshmi_VajraSpy_April2022",
+                    "description": "Dhanalakshmi. (2022, April 19).  VajraSpy \u2013 An Android RAT. Retrieved November 5, 2025.",
+                    "url": "https://labs.k7computing.com/index.php/vajraspy-an-android-rat/"
+                },
+                {
+                    "source_name": "ESET_VajraSpy_Feb2024",
+                    "description": "Stefanko, L. (2024, February 1). VajraSpy: A Patchwork of espionage apps. Retrieved October 27, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/vajraspy-patchwork-espionage-apps/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:33:42.707Z",
+            "description": "[VajraSpy](https://attack.mitre.org/software/S9006) has used Firebase and Google Cloud Storage to send and receive C2 communications and to send collected data.(Citation: ESET_VajraSpy_Feb2024)(Citation: K7Dhanalakshmi_VajraSpy_April2022) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "target_ref": "attack-pattern--939808a7-121d-467a-b028-4441ee8b7cee",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "type": "bundle",
+    "id": "bundle--8bed77bb-6f9a-4684-8e79-d692af614f09",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--f42df6f0-6395-4f0c-9376-525a031f00c3",
+            "created": "2021-10-20T15:05:19.271Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0001",
+                    "external_id": "DC0001"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:53.278Z",
+            "name": "Scheduled Job Creation",
+            "description": "The establishment of a task or job that will execute at a predefined time or based on specific triggers.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "enterprise-attack",
+                "mobile-attack"
+            ],
+            "x_mitre_version": "3.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Scheduled Job",
+                    "channel": "None"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4698"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "Execution of non-standard script or binary by cron"
+                },
+                {
+                    "name": "WinEventLog:TaskScheduler",
+                    "channel": "EventCode=106"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "crontab, systemd_timers"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "launchd_jobs"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "Startup script and task execution logs"
+                },
+                {
+                    "name": "kubernetes:apiserver",
+                    "channel": "verb=create, resource=cronjobs, group=batch"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "process: crontab edits, launch of cron job"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "file_events - cron, launchd"
+                },
+                {
+                    "name": "esxi:cron",
+                    "channel": "execution of scheduled job"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "task creation events"
+                },
+                {
+                    "name": "macos:cron",
+                    "channel": "cron/launchd"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4699"
+                },
+                {
+                    "name": "linux:cron",
+                    "channel": "Scheduled execution of unknown or unusual script/binary"
+                },
+                {
+                    "name": "MobiledEDR:telemetry",
+                    "channel": "Scheduled task execution creates cache, staged payload, local output, or collected data artifact immediately after wake or job trigger"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Scheduled task execution creates file, accesses sensor, or initiates network connection immediately after firing, with no recent user interaction triggering the task"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Scheduled task execution produces network, local-write, or sensor artifact while app_state=background or device_locked=true without user trigger"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4698/4702: EventCode=4698 referencing Industrial Control Systems (ICS) vendor binary name from unauthorized process"
+                }
+            ]
+        }
+    ]
+}

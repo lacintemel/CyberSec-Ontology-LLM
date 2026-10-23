@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--d99b43e5-acb7-4aad-af04-9d8cf9fbdf8d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--e13d662d-a496-4997-b26a-39e71eb17fc2",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0687#AN1797",
+                    "external_id": "AN1797"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:48.880Z",
+            "name": "Analytic 1797",
+            "description": "For Android, detect Impair Defenses from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App invokes package management, DevicePolicyManager, or settings operations capable of disabling security tooling \u2014 API invocation to disable security control]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App invokes package management, DevicePolicyManager, or settings operations capable of disabling security tooling \u2014 API invocation to disable security control"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ElevationAllowList",
+                    "description": "MDM agent and approved Device Admin apps only. Any other app acquiring Device Admin then modifying security settings is Impair Defenses."
+                },
+                {
+                    "field": "SecurityToolPackageList",
+                    "description": "MDM agent, AV, MTD packages deployed on managed fleet. Derive from MDM enrollment configuration."
+                }
+            ]
+        }
+    ]
+}

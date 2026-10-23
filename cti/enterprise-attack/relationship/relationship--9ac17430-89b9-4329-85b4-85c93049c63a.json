@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1ecbdc47-d6c6-4e62-b60a-004b02c0bae1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9ac17430-89b9-4329-85b4-85c93049c63a",
+            "created": "2026-10-07T20:29:06.874Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:29:06.874Z",
+            "description": "During the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary abused Claude Code by utilizing a file-write operation within the prompt that created a `claude.md` file that contained a pre-written 1,084-line document containing penetration testing scripts that were used in the campaign.(Citation: AI-Mexico-Govt-Breach)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--199f5568-ca25-4892-b7a5-870503e4d0f4",
+            "target_ref": "attack-pattern--d7e9cba9-3b43-4208-8e90-fdb18bff4a6a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

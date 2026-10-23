@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--71e2f94c-d57a-4126-a2bd-a40d295bd2c9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b048b681-7bce-468e-896b-da76f8b81d49",
+            "created": "2026-10-13T17:46:44.589Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0733#AN2228",
+                    "external_id": "AN2228"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:44.589Z",
+            "name": "Analytic 2228",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol file-transfer service such as Distributed Network Protocol 3 (DNP3) File Transfer Object or Internet Electrotechnical Commision (IEC) 61850 file service being used to place files on a field device from a source not in the approved engineering workstation list, outside a scheduled maintenance window, where the transfer source is a device not previously enrolled. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "otids:ProtocolDecoder",
+                    "channel": "Decoded OT/file-transfer transaction: transfer operation, source/destination, object/file identifier where exposed by the protocol, outside approved engineering/change window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedUSBAllowlist",
+                    "description": "Hardware ID inventory of USB storage devices authorized for use on ICS engineering and HMI workstations."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform file transfers to field devices."
+                },
+                {
+                    "field": "USBExecutionWindow",
+                    "description": "Time window after device insertion/mount within which process execution is considered directly connected to the insertion event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

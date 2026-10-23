@@ -1,0 +1,90 @@
+{
+    "type": "bundle",
+    "id": "bundle--ae2668ae-423a-45eb-b29b-ec39585ccd41",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d5926b94-833c-4b29-b611-059f72fcda84",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0650#AN1731",
+                    "external_id": "AN1731"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.382Z",
+            "name": "Analytic 1731",
+            "description": "An application performs repeated symmetric cryptographic operations (e.g., AES/RC4) on collected or staged data using locally accessible or reusable keys, followed by structured outbound communication. Detection correlates symmetric crypto API invocation + key reuse patterns + data staging + background execution context + network transmission, especially when inconsistent with expected application functionality.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Symmetric key material reused across multiple encryption operations within short interval OR derived locally without secure hardware-backed storage"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App invokes symmetric encryption routines (e.g., AES/RC4 cipher initialization + encrypt operations) with repeated key usage across multiple data buffers"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App writes high-entropy encrypted blobs to local storage or memory buffers prior to transmission"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Crypto + data staging occurs while app_state=background OR device_locked=true OR no recent user interaction"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:MDMLog",
+                    "channel": "App not in enterprise-approved list performing network + crypto behavior inconsistent with declared functionality"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Time correlation between symmetric encryption operations and outbound communication"
+                },
+                {
+                    "field": "EntropyThreshold",
+                    "description": "Threshold for detecting encrypted payloads based on entropy scoring"
+                },
+                {
+                    "field": "KeyReuseThreshold",
+                    "description": "Number of repeated uses of the same symmetric key within a defined interval"
+                },
+                {
+                    "field": "AllowedCryptoApps",
+                    "description": "Apps expected to use symmetric encryption (e.g., messaging, VPN)"
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Whether encryption activity should occur only during active user interaction"
+                },
+                {
+                    "field": "BeaconIntervalVariance",
+                    "description": "Expected jitter vs periodic encrypted communication"
+                }
+            ]
+        }
+    ]
+}

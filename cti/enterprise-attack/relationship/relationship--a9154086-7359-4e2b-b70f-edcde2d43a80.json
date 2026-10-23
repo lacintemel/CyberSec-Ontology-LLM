@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d4afa883-821c-41cf-bc50-b19d0fb36cc6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a9154086-7359-4e2b-b70f-edcde2d43a80",
+            "created": "2026-04-16T20:33:21.622Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Fortinet Remcos Campaign NOV 2024",
+                    "description": "Zhang, X. (2024, November 8). New Campaign Uses Remcos RAT to Exploit Victims. Retrieved April 16, 2026.",
+                    "url": "https://www.fortinet.com/blog/threat-research/new-campaign-uses-remcos-rat-to-exploit-victims"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.155Z",
+            "description": "[Remcos](https://attack.mitre.org/software/S0332) can clean saved cookies and logins from the web browser.(Citation: Fortinet Remcos Campaign NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "tool--7cd0bc75-055b-4098-a00e-83dc8beaff14",
+            "target_ref": "attack-pattern--799ace7f-e227-4411-baa0-8868704f2a69",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

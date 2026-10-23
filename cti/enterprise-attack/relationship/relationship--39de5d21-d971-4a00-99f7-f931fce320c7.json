@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--09354454-bee7-4d8a-9086-fd4fe44b535f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--39de5d21-d971-4a00-99f7-f931fce320c7",
+            "created": "2026-09-24T18:53:27.019Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticore_May2026",
+                    "description": "Check Point. (2026, May 22). Fast and Furious \u2013 Nimbus Manticore Operations During the Iranian Conflict. Retrieved September 23, 2026.",
+                    "url": "https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T18:53:27.019Z",
+            "description": "[MiniFast](https://attack.mitre.org/software/S9052) has the ability to terminate a process using its PID.(Citation: CheckPoint_NimbusManticore_May2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--363bc9c0-6e9b-4815-a072-1a92d0ad7502",
+            "target_ref": "attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

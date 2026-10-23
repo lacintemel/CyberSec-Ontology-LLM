@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--b797630b-5e27-4ac8-8c70-60c68a053f24",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--28bb99c4-ac44-406c-bd5d-cabb273363fb",
+            "created": "2026-04-23T00:28:35.816Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.960Z",
+            "description": "Authenticate connections from software and devices to prevent unauthorized systems from accessing protected management functions.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--72e46e53-e12d-4106-9c70-33241b6ed549",
+            "target_ref": "attack-pattern--574d5bfb-9a7a-4b28-ab5c-743ac704c135",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

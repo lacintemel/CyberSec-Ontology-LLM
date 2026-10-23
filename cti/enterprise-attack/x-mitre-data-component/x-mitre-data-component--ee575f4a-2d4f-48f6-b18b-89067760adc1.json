@@ -1,0 +1,258 @@
+{
+    "type": "bundle",
+    "id": "bundle--d014ebba-20c6-4802-a69c-0737bff95eab",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+            "created": "2021-10-20T15:05:19.272Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0034",
+                    "external_id": "DC0034"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:44.003Z",
+            "name": "Process Metadata",
+            "description": "Contextual data about a running process, which may include information such as environment variables, image name, user/owner, etc.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "mobile-attack",
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "2.2",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "WinEventLog:PowerShell",
+                    "channel": "EventCode=400/403; engine lifecycle/context"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve call for sudo where euid != uid"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Use of fork/exec with DISPLAY unset or redirected"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve, prctl, or ptrace activity affecting process memory or command-line arguments"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve with UID \u2260 EUID"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve with escalated privileges"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "cross-account or unexpected assume role"
+                },
+                {
+                    "name": "containerd:events",
+                    "channel": "Docker or containerd image pulls and process executions"
+                },
+                {
+                    "name": "EDR:hunting",
+                    "channel": "Correlation of signer info, parent-child lineage, rare invocation context (user host role), and API surfaces (CreateProcess*, LoadLibrary*)"
+                },
+                {
+                    "name": "EDR:Telemetry",
+                    "channel": "Process lineage and API usage enrichment (GetSystemTime, GetTimeZoneInformation, NtQuerySystemTime)"
+                },
+                {
+                    "name": "esxi:auth",
+                    "channel": "user session"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "/var/log/hostd.log API calls reading/altering time/ntp settings"
+                },
+                {
+                    "name": "etw:Microsoft-Windows-ClickOnce",
+                    "channel": "provider: Event Tracing for Windows (ETW) events associated with ClickOnce deployment (dfsvc.exe activity)"
+                },
+                {
+                    "name": "etw:Microsoft-Windows-Kernel-Process",
+                    "channel": "process_start: EventHeader.ProcessId true parent vs reported PPID mismatch"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "Cross-reference argv[0] with actual executable path and parent process metadata"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "select: path LIKE '/dev/video%'"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "state=attached/debugged"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "process metadata mismatch between /proc and runtime attributes"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "process environment variables containing LD_PRELOAD"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "sudo or service accounts invoking loaders with suspicious env vars"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "Kernel or daemon warnings of downgraded TLS or cryptographic settings"
+                },
+                {
+                    "name": "macos:endpointsecurity",
+                    "channel": "ES_EVENT_TYPE_NOTIFY_EXEC, ES_EVENT_TYPE_NOTIFY_MMAP"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "Process Context"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "Process Execution + Hash"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "subsystem=com.apple.process"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "subsystem=com.apple.TCC"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "exec of binary with setuid/setgid and EUID != UID"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "process"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Code Execution & Entitlement Access"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Process opening SSH_AUTH_SOCK or /tmp/ssh-* socket not owned by same UID"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "code signature/memory protection"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "log collect from launchd and process start"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modifications or writes to EFI system partition for downgraded bootloaders"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "non-shell process tree accessing bash history"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Crash or abnormal termination of security agent or system extension host"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "Admin activity"
+                },
+                {
+                    "name": "Process",
+                    "channel": "None"
+                },
+                {
+                    "name": "WinEventLog:AppLocker",
+                    "channel": "AppLocker audit/blocks showing developer utilities executing scripts/binaries outside policy"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-CodeIntegrity/Operational",
+                    "channel": "CodeIntegrity/WDAC events indicating unsigned/invalid DLL loads"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-CodeIntegrity/Operational",
+                    "channel": "Unsigned/invalid signature modules or images loaded by msbuild.exe or its children"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-CodeIntegrity/Operational",
+                    "channel": "Unsigned or untrusted modules loaded during JamPlus.exe runtime"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-DeviceGuard/Operational",
+                    "channel": "WDAC policy audit/block affecting msbuild.exe spawned payloads"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-Security-Mitigations/KernelMode",
+                    "channel": "ETW telemetry indicating ClickOnce deployment (dfsvc.exe) launching payloads"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-SmartAppControl/Operational",
+                    "channel": "Smart App Control decisions (audit/block) for msbuild.exe-launched executables"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-Windows Camera Frame Server/Operational",
+                    "channel": "Process session start/stop events for camera pipeline by unexpected executables"
+                },
+                {
+                    "name": "WinEventLog:PowerShell",
+                    "channel": "EventCode=400, 403"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: running process names read from /proc/<PID>/status or /proc/<PID>/cmdline by app NOT IN $ProcessDiscoveryAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: process executing with effective UID=0"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve with env containing LD_PRELOAD where exe matches Industrial Control Systems (ICS) service binary list and preload library not in vendor package manifest"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve where exe basename matches Industrial Control Systems (ICS) daemon names but path outside vendor install paths"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve of wireless configuration utility setting monitor/promiscuous mode outside change management window"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): setuid/setgid to root from a process owned by Industrial Control Systems (ICS) service User Identifier (UID) that was not invoked via sudo"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve of wireless configuration utility setting monitor mode on Industrial Control Systems (ICS) Linux asset by User Identifier (UID) not in authorized wireless admin UIDs"
+                },
+                {
+                    "name": "edr:ProcessIntegrity",
+                    "channel": "Process integrity/hash mismatch detected on Industrial Control Systems (ICS) communication process post-hook-install event"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 where image filename matches Industrial Control Systems (ICS) vendor process names but hash not in vendor hash baseline or current directory outside vendor install paths"
+                }
+            ]
+        }
+    ]
+}

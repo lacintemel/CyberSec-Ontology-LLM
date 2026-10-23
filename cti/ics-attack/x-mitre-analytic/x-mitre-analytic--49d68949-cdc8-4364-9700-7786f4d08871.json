@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--85998e47-c7ec-4822-a35a-3d637cdbca5e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--49d68949-cdc8-4364-9700-7786f4d08871",
+            "created": "2026-10-13T17:46:11.116Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0912#AN2205",
+                    "external_id": "AN2205"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:11.116Z",
+            "name": "Analytic 2205",
+            "description": "Real-time monitoring identifies a mass deauthentication event targeting multiple enrolled Industrial Control System (ICS) wireless devices simultaneously, or a wireless access point configuration change excluding enrolled device Media Access Control (MAC) address from the association list. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "deauthentication targeting more than mass deauth threshold enrolled devices within deauth time window, or Media Access Control (MAC) address filter config change excluding enrolled devices, from source not in approved wireless admin list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessAdminList",
+                    "description": "Accounts/sources authorized to modify wireless infrastructure configuration."
+                },
+                {
+                    "field": "DeauthTimeWindow",
+                    "description": "Time window within which multiple deauthentication events are considered a coordinated mass event."
+                },
+                {
+                    "field": "MassDeauthThreshold",
+                    "description": "Number of simultaneously deauthenticated enrolled devices that constitutes a mass event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

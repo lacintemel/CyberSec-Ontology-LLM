@@ -1,0 +1,69 @@
+{
+    "type": "bundle",
+    "id": "bundle--8632f2f4-230f-4149-b624-3a6b69f29d55",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4ec34db8-7214-4059-925e-bdcd58bca391",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0717#AN1847",
+                    "external_id": "AN1847"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:35.808Z",
+            "name": "Analytic 1847",
+            "description": "For Android, detect Native API from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; Application State via Android Enterprise / EMM [Managed package inventory/status and package metadata]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App loads native library (.so) or resolves JNI bridge NOT IN $ApprovedNativeLibraries$ immediately before suspicious lower-level activity (sensor access, file write, network connection) \u2014 native code loading before anomalous activity is the]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App loads native library (.so) or resolves JNI bridge NOT IN $ApprovedNativeLibraries$ immediately before suspicious lower-level activity (sensor access, file write, network connection) \u2014 native code loading before anomalous activity is the"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App transitions from managed-code execution into JNI/native function context or attaches native thread,"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNativeLibraries",
+                    "description": "Expected native libraries for each app (game engines: Unity/libil2cpp, Unreal; media: libffmpeg; React Native: libreactnative). Derive from app package manifest and vendor documentation. Tightening: strict per-app allowlist."
+                },
+                {
+                    "field": "NativeActivityWindow",
+                    "description": "Default 30s between native library load and anomalous activity. Native code executes synchronously after load."
+                }
+            ]
+        }
+    ]
+}

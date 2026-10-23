@@ -1,0 +1,55 @@
+{
+    "type": "bundle",
+    "id": "bundle--65a41589-0cba-4b64-94d8-3d5cd00c8d22",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--613b28ef-88dd-4008-8d7e-206ce55a7cde",
+            "created": "2026-04-22T14:53:50.597Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0902#AN2045",
+                    "external_id": "AN2045"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:44.737Z",
+            "name": "Analytic 2045",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol message arriving at a device from a source whose identity is not in the approved communication baseline for that destination, where the message is structurally valid but originates outside the documented set of legitimate communicators. This technique-level analytic synthesizes Command Message (T1692.001) and Reporting Message (T1692.002). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): first-seen connection from a source to an Industrial Control System (ICS) device outside the documented approved communication matrix"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "structurally valid Industrial Control System (ICS) protocol message from source not in approved communication baseline for the destination device_ip"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedCommunicationBaseline",
+                    "description": "The complete, maintained inventory of every legitimate source-to-destination communication pair in the ICS environment."
+                }
+            ]
+        }
+    ]
+}

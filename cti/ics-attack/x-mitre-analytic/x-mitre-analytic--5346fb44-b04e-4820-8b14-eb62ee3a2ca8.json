@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--58d06e9d-ee42-4fd2-86f8-ef2e1f80d951",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--5346fb44-b04e-4820-8b14-eb62ee3a2ca8",
+            "created": "2026-10-13T17:46:01.007Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0765#AN2195",
+                    "external_id": "AN2195"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:01.007Z",
+            "name": "Analytic 2195",
+            "description": "Real-time monitoring identifies Simple Network Management Protocol (SNMP) SET commands to service-stop Object Identifiers (OIDs) or Command Line Interface (CLI) commands stopping routing/switching processes critical to Industrial Control System (ICS) communication, from sources not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "Simple Network Management Protocol (SNMP) SET to service stop Object Identifier (OID) or Command Line Interface (CLI) command stopping critical service from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedServiceAdmins",
+                    "description": "Accounts authorized to stop/start critical ICS services."
+                },
+                {
+                    "field": "BulkRestartTimeWindow",
+                    "description": "Time window within which multiple device restarts are considered a coordinated event."
+                },
+                {
+                    "field": "CriticalICSServiceList",
+                    "description": "List of Windows services whose stoppage constitutes a high-impact event."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue device restart commands."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

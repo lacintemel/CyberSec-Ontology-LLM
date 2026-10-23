@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--57ce3528-d957-4ffd-8692-f9f1c19ee0d6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--039373a2-84b0-4780-b3ca-475ce5207a94",
+            "created": "2026-04-17T20:16:04.671Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace 2025",
+                    "description": " Dominik Breitenbacher. (2025, March 18). Operation AkaiRy\u016b: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor. Retrieved May 22, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor/"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:26.723Z",
+            "description": "During [Operation AkaiRy\u016b](https://attack.mitre.org/campaigns/C0060), [MirrorFace](https://attack.mitre.org/groups/G1054) lured users into executing malicious payloads with links to resources hosted on OneDrive.(Citation: Trend Micro Earth Kasha Anel NOV 2024)(Citation: ESET MirrorFace 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--8a7c55ea-f363-4a03-b4c5-fa3fdb132d8f",
+            "target_ref": "attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

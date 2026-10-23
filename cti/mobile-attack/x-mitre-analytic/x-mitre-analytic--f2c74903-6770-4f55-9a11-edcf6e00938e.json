@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--f3c68d42-63ec-42cc-b052-a89e36a6b869",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f2c74903-6770-4f55-9a11-edcf6e00938e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0607#AN1657",
+                    "external_id": "AN1657"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:45.764Z",
+            "name": "Analytic 1657",
+            "description": "For Android, detect Unix Shell from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Command Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: Unix shell process (sh, bash, busybox sh, toybox) spawns as child of app process with command-line arguments indicating scripted operation \u2014 shell with arguments confirms script execution not interactive terminal]; Process Creation via Application Vetting / Managed Device Telemetry [Application invokes Runtime.exec(), ProcessBuilder.start(), or JNI-backed launcher with sh, bash, toybox, toolbox, or su as command argument NOT IN $ApprovedShellApps$ \u2014 explicit Unix shell invocation]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Unix shell process (sh, bash, busybox sh, toybox) spawns as child of app process with command-line arguments indicating scripted operation \u2014 shell with arguments confirms script execution not interactive terminal"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Application invokes Runtime.exec(), ProcessBuilder.start(), or JNI-backed launcher with sh, bash, toybox, toolbox, or su as command argument NOT IN $ApprovedShellApps$ \u2014 explicit Unix shell invocation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedShellApps",
+                    "description": "Terminal emulator apps (developer fleet only). Production managed devices: empty \u2014 no app should spawn Unix shells. Derive from IT device classification."
+                },
+                {
+                    "field": "ShellActivityWindow",
+                    "description": "Default 30s between shell spawn and follow-on file/network activity."
+                }
+            ]
+        }
+    ]
+}

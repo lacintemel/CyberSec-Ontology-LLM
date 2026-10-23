@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--45a38f11-5ddf-4fff-9fca-4658efaa11d0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--692d7e4a-1208-4626-9bd2-209bc6b2d4f5",
+            "created": "2026-04-20T18:51:17.536Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "Palo Alto VOID MANTICORE Iran Cyber Threats March 2026",
+                    "description": "Justin Moore. (2026, March 16). Iranian Cyber Threat Evolution: From MBR Wipers to Identity Weaponization. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-threats/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.603Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has leveraged legitimate built-in features of cloud-based management platforms to include mobile device management (MDM) and Remote Monitoring and Management (RMM) solutions.(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)(Citation: Palo Alto VOID MANTICORE Iran Cyber Threats March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has also initiated built-in remote wipe instructions using a privileged account within Microsoft Intune.(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)(Citation: Palo Alto VOID MANTICORE Iran Cyber Threats March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--92a78814-b191-47ca-909c-1ccfe3777414",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

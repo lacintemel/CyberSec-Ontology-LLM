@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--078c56ac-e2a0-4a49-bdb6-cf8493a54f61",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e49fb083-b1aa-4ac9-a99e-7e9ea1542e32",
+            "created": "2026-04-22T20:11:05.522Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:20.061Z",
+            "description": "During the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063), the adversaries used `nslookup` and `ping` to conduct remote system discovery activities.(Citation: CERT Polska)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "attack-pattern--d5a69cfb-fc2a-46cb-99eb-74b236db5061",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

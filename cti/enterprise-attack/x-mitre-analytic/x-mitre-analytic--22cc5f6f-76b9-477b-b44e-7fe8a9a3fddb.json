@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--0d605662-3ea5-4ed5-adaf-535a1a33cde6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--22cc5f6f-76b9-477b-b44e-7fe8a9a3fddb",
+            "created": "2026-09-21T23:18:16.174Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0923#AN2070",
+                    "external_id": "AN2070"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T20:50:11.807Z",
+            "name": "Analytic 2070",
+            "description": "An analyst observes an authenticated AI interaction initiate resource access, tool invocation, API operation, or privileged activity outside\u00a0$AuthorizedAIWorkflow$\u00a0or\u00a0$AICapabilityScope$, without an authorized workflow transition permitting the operation.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.actionGroupInvocationInput"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.knowledgeBaseLookupInput"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "GuardrailTrace"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedAIWorkflow",
+                    "description": "valid AI workflow\u2192tool/resource transitions derived from deployed agent/application design"
+                },
+                {
+                    "field": "AICapabilityScope",
+                    "description": "resources/actions available to each user/agent role; derive from IAM/application configuration"
+                }
+            ]
+        }
+    ]
+}

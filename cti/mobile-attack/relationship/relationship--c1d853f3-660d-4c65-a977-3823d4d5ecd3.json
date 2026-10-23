@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--d2af295e-7adb-43d2-9abc-d73abbd3aab6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c1d853f3-660d-4c65-a977-3823d4d5ecd3",
+            "created": "2026-03-09T15:35:06.322Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "K7Dhanalakshmi_VajraSpy_April2022",
+                    "description": "Dhanalakshmi. (2022, April 19).  VajraSpy \u2013 An Android RAT. Retrieved November 5, 2025.",
+                    "url": "https://labs.k7computing.com/index.php/vajraspy-an-android-rat/"
+                },
+                {
+                    "source_name": "ESET_VajraSpy_Feb2024",
+                    "description": "Stefanko, L. (2024, February 1). VajraSpy: A Patchwork of espionage apps. Retrieved October 27, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/vajraspy-patchwork-espionage-apps/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.190Z",
+            "description": "[VajraSpy](https://attack.mitre.org/software/S9006) has collected messages in WhatsApp, WhatsApp Business, and Signal.(Citation: ESET_VajraSpy_Feb2024)(Citation: K7Dhanalakshmi_VajraSpy_April2022) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "target_ref": "attack-pattern--702055ac-4e54-4ae9-9527-e23a38e0b160",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

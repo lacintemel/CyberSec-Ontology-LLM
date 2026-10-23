@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7dc4891b-146f-4a75-8032-989ab105a652",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--337c9a57-3dbb-4ffd-9393-ade1b8ff89a6",
+            "created": "2026-04-17T20:52:13.372Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA SPAWNCHIMERA RESURGE February 2026",
+                    "description": "DHS/CISA. (2026, February 26). MAR-25993211-r1.v2 Ivanti Connect Secure (RESURGE): AR25-087A. Retrieved April 17, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-087a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.986Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has modified the boot process files within `/tmp/coreboot_fs/bin/init` to establish persistence.(Citation: CISA SPAWNCHIMERA RESURGE February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--03259939-0b57-482f-8eb5-87c0e0d54334",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

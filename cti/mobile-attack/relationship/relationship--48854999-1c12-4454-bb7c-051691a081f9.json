@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--4e40c299-4d82-4c98-9540-dc29dfeb0ff2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--48854999-1c12-4454-bb7c-051691a081f9",
+            "created": "2022-03-28T19:25:49.640Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.024Z",
+            "description": "Ensure Verified Boot is enabled on devices with that capability.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--7b1cf46f-784b-405a-a8dd-4624c19d8321",
+            "target_ref": "attack-pattern--9558a84e-2d5e-4872-918e-d847494a8ffc",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--c11f430f-294c-427c-a8a1-911ff86c64be",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f571ba94-73ab-4590-ba2c-739a93cde075",
+            "created": "2026-10-13T17:44:57.810Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0782#AN2147",
+                    "external_id": "AN2147"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:57.810Z",
+            "name": "Analytic 2147",
+            "description": "Real-time monitoring identifies a browser process on an Industrial Control System (ICS) Linux workstation spawning child processes that execute with arguments inconsistent with normal browsing, or writing binaries to /tmp or user home directories. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; browser process spawns a command shell, script interpreter, or executable child inconsistent with the approved browser-child baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ICSWorkstationInventory",
+                    "description": "Inventory of ICS engineering/operator workstations from which routine vendor software downloads occur."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

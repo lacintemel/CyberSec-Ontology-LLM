@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4d7279d9-8399-4c8b-990e-00a9aa8c6718",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c5186dde-b30d-4471-a90e-9c834e35c40d",
+            "created": "2026-05-13T20:27:56.042Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERTPL_NGate_Nov2025",
+                    "description": "Ratajczak, K. (2025, November 3). Analysis of NGate malware campaign (NFC relay). Retrieved November 10, 2025.",
+                    "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-13T20:27:56.042Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has requested for the `ACCESS_NETWORK_STATE` permission.(Citation: CERTPL_NGate_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--dd818ea5-adf5-41c7-93b5-f3b839a219fb",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

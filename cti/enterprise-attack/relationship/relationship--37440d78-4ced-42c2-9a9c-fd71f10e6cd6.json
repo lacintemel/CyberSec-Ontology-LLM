@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--74042d76-a99e-45b4-9a94-2178a2e8c204",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--37440d78-4ced-42c2-9a9c-fd71f10e6cd6",
+            "created": "2026-04-19T15:22:12.584Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.995Z",
+            "description": "[ANELLDR](https://attack.mitre.org/software/S9027) can enumerate files in the current directory to search for encrypted payload files.(Citation: Trend Micro Earth Kasha Anel NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--c21edbd1-a0a4-4c3c-9b22-4a49634186c3",
+            "target_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

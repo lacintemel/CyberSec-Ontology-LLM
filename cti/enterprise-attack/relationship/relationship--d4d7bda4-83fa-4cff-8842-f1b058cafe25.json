@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e2df71a1-c45a-4088-b125-983c6d9dbf0c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d4d7bda4-83fa-4cff-8842-f1b058cafe25",
+            "created": "2026-09-11T19:32:56.879Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Intrinsec_Vidar_April2026",
+                    "description": "Intrinsec. (2026, April). \"Chaos is a ladder\": Vidar's recent rise to the top. Retrieved April 27, 2026.",
+                    "url": "https://www.intrinsec.com/wp-content/uploads/2026/04/TLP_CLEAR-20260424-New_Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T17:01:56.377Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has also used control flow flattening to slow down static analysis.(Citation: Intrinsec_Vidar_April2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

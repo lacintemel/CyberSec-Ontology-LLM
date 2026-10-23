@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1dcbd6ef-fb36-4d68-8d05-8821cb3a4c67",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--70d9fcbc-3fad-4a6e-a246-e893ee5568a6",
+            "created": "2026-04-09T21:00:48.106Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.079Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has suppressed NPM warnings by silently exiting through the use of the NPM success code that has a setting that all errors exit with `code 0`.(Citation: Socket Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--4a2975db-414e-4c0c-bd92-775987514b4b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

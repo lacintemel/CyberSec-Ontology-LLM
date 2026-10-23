@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--19011c86-0d90-43dd-9185-3c54e1fc040f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b4b66413-59b9-45bb-93d4-a0a99da9e9a4",
+            "created": "2026-10-13T17:44:46.087Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0753#AN2138",
+                    "external_id": "AN2138"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:46.087Z",
+            "name": "Analytic 2138",
+            "description": "Real-time monitoring identifies a process making direct ioctl or mmap syscalls against Industrial Control System (ICS) hardware device files, bypassing the vendor's documented Application Programming Interface (API) layer, from a process not in the recognized ICS application list. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): ioctl or mmap syscall against Industrial Control Systems (ICS) hardware device file from process not in authorized ICS applications"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedICSApplications",
+                    "description": "Allowlist of processes expected to interact with ICS hardware/protocols."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

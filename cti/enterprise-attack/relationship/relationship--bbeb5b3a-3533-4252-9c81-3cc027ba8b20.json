@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--35b6c558-fb8a-4db5-b000-d1a6e0c8bf7d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--bbeb5b3a-3533-4252-9c81-3cc027ba8b20",
+            "created": "2026-09-11T19:19:57.401Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Intrinsec_Vidar_April2026",
+                    "description": "Intrinsec. (2026, April). \"Chaos is a ladder\": Vidar's recent rise to the top. Retrieved April 27, 2026.",
+                    "url": "https://www.intrinsec.com/wp-content/uploads/2026/04/TLP_CLEAR-20260424-New_Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T17:54:51.991Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has been distributed via a malicious link that redirects to a filesharing website.(Citation: Intrinsec_Vidar_April2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

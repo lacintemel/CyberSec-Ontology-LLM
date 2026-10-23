@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c74f0c19-0d90-440c-b7bc-1b5a39f4a09a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b145e291-ce58-4174-b0e2-e0c5bc51e151",
+            "created": "2026-04-21T14:36:21.717Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SecureListUbiedo_Tsundere_Nov2025",
+                    "description": "Ubiedo, L. (2025, November 20). Blockchain and Node.js abused by Tsundere: an emerging botnet. Retrieved April 6, 2026.",
+                    "url": "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.167Z",
+            "description": "[Tsundere Botnet](https://attack.mitre.org/software/S9034)\u2019s MSI installer has Base64-encoded command execution.(Citation: SecureListUbiedo_Tsundere_Nov2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--18f5f8c6-bba5-4aba-93e7-3539fe565883",
+            "target_ref": "attack-pattern--d511a6f6-4a33-41d5-bc95-c343875d1377",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "type": "bundle",
+    "id": "bundle--c4ff5279-7a19-4f83-aa12-56475b6b5ade",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "created": "2026-09-18T19:02:39.017Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/groups/G1058",
+                    "external_id": "G1058"
+                },
+                {
+                    "source_name": "Storm-2697",
+                    "description": "(Citation: MSTI_GentelmenRansomware_May2026)"
+                },
+                {
+                    "source_name": "GOLD SHERWOOD",
+                    "description": "(Citation: Sophos_TheGentlemen_Sept2026)"
+                },
+                {
+                    "source_name": "BradyUnit42_TheGentlemen_July2026",
+                    "description": "Brady, M. (2026, July 10). No Manners Here: The Ruthless Rise of The Gentlemen Ransomware. Retrieved September 18, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"
+                },
+                {
+                    "source_name": "CarveyODonnellWelchHuntress_TheGentlemen_May2026",
+                    "description": "Carvey, H., O'Donnell-Welch, L. (2026, May 21). The Gentlemen (Ransomware) in Disguise: Defense Evasion and other TTPs. Retrieved September 18, 2026.",
+                    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+                },
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "Intel471_TheGentlemen_Aug2026",
+                    "description": "Intel 471. (2026, August 11). Threat Hunting Case Study: The Gentlemen. Retrieved September 18, 2026.",
+                    "url": "https://www.intel471.com/blog/threat-hunting-case-study-the-gentlemen"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                },
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                },
+                {
+                    "source_name": "Sophos_TheGentlemen_Sept2026",
+                    "description": "Sophos Counter Threat Unit Research Team. (2026, September 1). Ungentlemanly behavior: Insights into a ransomware operation. Retrieved September 18, 2026.",
+                    "url": "https://www.sophos.com/en-gb/blog/ungentlemanly-behavior-insights-into-a-ransomware-operation"
+                },
+                {
+                    "source_name": "Sou\u010dekESET_Gentlemen_Jun2026",
+                    "description": "Sou\u010dek, J. (2026, June 18). Killing me gently: Inside Gentlemen\u2019s EDR killer framework. Retrieved September 18, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T17:41:50.958Z",
+            "name": "The Gentlemen",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) is a group that maintains the [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051)-as-a-service (RaaS). [The Gentlemen](https://attack.mitre.org/groups/G1058) was\u202ffirst\u202fobserved in mid-2025 who had posed [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) as a closed ransomware and shortly later opened the ransomware as a RaaS to affiliates in September 2025. [The Gentlemen](https://attack.mitre.org/groups/G1058) has been affiliated with the threat group Storm-2697 and GOLD SHERWOOD.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: Intel471_TheGentlemen_Aug2026)(Citation: Sophos_TheGentlemen_Sept2026)(Citation: Sou\u010dekESET_Gentlemen_Jun2026)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: BradyUnit42_TheGentlemen_July2026)(Citation: CarveyODonnellWelchHuntress_TheGentlemen_May2026)(Citation: TrendAI_TheGentlemen_Sept2025) ",
+            "aliases": [
+                "The Gentlemen",
+                "Storm-2697",
+                "GOLD SHERWOOD"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

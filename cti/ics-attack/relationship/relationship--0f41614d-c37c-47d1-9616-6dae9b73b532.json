@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--398a6a74-655d-4d9a-9bcf-e0249659583e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0f41614d-c37c-47d1-9616-6dae9b73b532",
+            "created": "2026-04-22T17:51:17.695Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.924Z",
+            "description": "Allow for code signing of any project files stored at rest to prevent unauthorized tampering. Ensure the signing keys are not easily accessible on the same system.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--71eb7dad-07eb-4bbc-9df0-ac57bf2fba4a",
+            "target_ref": "attack-pattern--354ca909-b54d-4c41-b597-9c296b344a43",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

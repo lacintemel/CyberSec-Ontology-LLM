@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--07465745-dc8f-4776-8d29-ef422826eab9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--ca871237-8615-47b7-9981-92d1d920d346",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0142",
+                    "external_id": "DET0142"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:34:50.692Z",
+            "name": "Behavioral Detection of CLI Abuse on Network Devices",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--3dc28690-699a-4f6d-ad4b-278aa2dd8c59"
+            ]
+        }
+    ]
+}

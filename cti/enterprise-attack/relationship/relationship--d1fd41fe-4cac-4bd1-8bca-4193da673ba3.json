@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--06662447-2c12-46d5-9778-fd21b2ce1241",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d1fd41fe-4cac-4bd1-8bca-4193da673ba3",
+            "created": "2024-12-31T22:49:23.015Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google Cloud BOLDMOVE 2023",
+                    "description": "Scott Henderson, Cristiana Kittner, Sarah Hawley & Mark Lechtik, Google Cloud. (2023, January 19). Suspected Chinese Threat Actors Exploiting FortiOS Vulnerability (CVE-2022-42475). Retrieved December 31, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/chinese-actors-exploit-fortios-flaw/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.213Z",
+            "description": "[BOLDMOVE](https://attack.mitre.org/software/S1184) can disable the Fortinet daemons `moglogd` and `syslogd` to evade detection and logging.(Citation: Google Cloud BOLDMOVE 2023)",
+            "relationship_type": "uses",
+            "source_ref": "malware--325fa466-4a2a-45a0-acc6-f6bed9b45ebe",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

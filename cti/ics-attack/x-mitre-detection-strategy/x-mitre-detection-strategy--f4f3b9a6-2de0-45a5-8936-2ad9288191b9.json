@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--8e1d7a97-694f-4c2e-9d0e-b21a90fe95a8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--f4f3b9a6-2de0-45a5-8936-2ad9288191b9",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0800",
+                    "external_id": "DET0800"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:07.587Z",
+            "name": "Detection of Network Sniffing",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--28eb77c1-1834-4b7a-a06f-afebb7f2e756",
+                "x-mitre-analytic--9fac6c8a-9320-47d1-aa1d-3bdd4f5856d3",
+                "x-mitre-analytic--795181c0-57b0-4c2f-ac9a-1c6a1c62b813",
+                "x-mitre-analytic--9b1bb08d-5aba-47f4-86d7-a5788c99e1ac"
+            ]
+        }
+    ]
+}

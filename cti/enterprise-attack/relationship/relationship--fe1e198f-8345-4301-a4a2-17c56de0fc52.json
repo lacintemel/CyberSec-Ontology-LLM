@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--39b5a718-f428-415c-9c16-878bef4ba73f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fe1e198f-8345-4301-a4a2-17c56de0fc52",
+            "created": "2026-09-28T16:47:22.879Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T16:47:22.879Z",
+            "description": "[SIGHTGRAB](https://attack.mitre.org/software/S9058) has gathered the compromised victims time to be used in the naming conventions of created folders.(Citation: Mandiant_UNC1549_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--53450019-1b2f-4912-bb3a-004bb1d7f177",
+            "target_ref": "attack-pattern--f3c544dc-673c-4ef3-accb-53229f1ae077",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

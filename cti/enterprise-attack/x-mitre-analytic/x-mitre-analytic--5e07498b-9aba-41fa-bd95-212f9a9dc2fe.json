@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--a9b1367b-9d10-4594-8639-26ddc557d40b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--5e07498b-9aba-41fa-bd95-212f9a9dc2fe",
+            "created": "2026-09-24T00:15:20.589Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0927#AN2080",
+                    "external_id": "AN2080"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T00:16:13.840Z",
+            "name": "Analytic 2080",
+            "description": "An analyst observes an AI-associated process access data outside\u00a0$AuthorizedAIDataScope$, followed within\u00a0$EndpointExfilWindow$\u00a0by transfer-capable execution and an outbound connection from the same lineage to a destination outside\u00a0$AuthorizedAIEndpoints$.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/read"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "EXECVE"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "auditd:SYSCALL",
+                    "channel": "connect"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedAIDataScope",
+                    "description": "data paths/classes the AI application/service identity is permitted to access; derive from application design, IAM and data policy"
+                },
+                {
+                    "field": "ExpectedAIProcessTree",
+                    "description": "approved AI parent/child relationships from clean executions"
+                },
+                {
+                    "field": "AuthorizedAIEndpoints",
+                    "description": "legitimate service/repository/API destinations"
+                },
+                {
+                    "field": "EndpointExfilWindow",
+                    "description": "access\u2192execution\u2192egress timing derived from clean workflows"
+                }
+            ]
+        }
+    ]
+}

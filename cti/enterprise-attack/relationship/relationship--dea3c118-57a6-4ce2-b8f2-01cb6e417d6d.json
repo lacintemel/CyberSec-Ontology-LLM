@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--bcf3ee8c-360d-47bf-8374-8fcd7e367ce9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dea3c118-57a6-4ce2-b8f2-01cb6e417d6d",
+            "created": "2026-09-28T18:46:41.344Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T18:46:41.344Z",
+            "description": "[MiniBike](https://attack.mitre.org/software/S9059) has collected system information from the victim machine.(Citation: Mandiant_UNC1549_Feb2024) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--1cf09c8f-32e1-404c-bb1e-4ac9ee7c5191",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

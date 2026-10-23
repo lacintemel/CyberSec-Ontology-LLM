@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--4a88ba93-d336-478f-9045-bb9ad3522c36",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3e249f0a-5755-4e0f-96ce-f3ce6376fed5",
+            "created": "2020-09-21T17:59:24.739Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.010Z",
+            "description": "Provide an alternative method for sending critical report messages to operators, this could include using radio/cell communication to obtain messages from field technicians that can locally obtain telemetry and status data.\n",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--b11cad63-ef30-4eb8-af0d-6cc46eef3f3e",
+            "target_ref": "attack-pattern--7866bb5f-98ee-45c2-984c-8a328c5176b2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

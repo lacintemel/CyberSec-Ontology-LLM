@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--fbc1b48b-d1b9-4da2-9608-c6669e192d10",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--27e8a172-0682-4d23-a7c2-e2eac526ea9c",
+            "created": "2026-10-13T17:46:46.388Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0765#AN2230",
+                    "external_id": "AN2230"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:46.388Z",
+            "name": "Analytic 2230",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol restart command directed at a field device from a source not in the approved engineering workstation list, where multiple devices receive restart commands within a short window. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "restart/reset service from source not in engineering workstation list, with more than one device receiving the command within bulk restart time window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedServiceAdmins",
+                    "description": "Accounts authorized to stop/start critical ICS services."
+                },
+                {
+                    "field": "BulkRestartTimeWindow",
+                    "description": "Time window within which multiple device restarts are considered a coordinated event."
+                },
+                {
+                    "field": "CriticalICSServiceList",
+                    "description": "List of Windows services whose stoppage constitutes a high-impact event."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue device restart commands."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

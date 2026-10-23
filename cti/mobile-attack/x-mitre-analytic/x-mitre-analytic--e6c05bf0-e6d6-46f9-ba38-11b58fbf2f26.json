@@ -1,0 +1,89 @@
+{
+    "type": "bundle",
+    "id": "bundle--3146a88e-9d66-44e1-842a-761b764ff447",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--e6c05bf0-e6d6-46f9-ba38-11b58fbf2f26",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0695#AN1809",
+                    "external_id": "AN1809"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.383Z",
+            "name": "Analytic 1809",
+            "description": "The defender correlates managed-app or supervised-device camera access with app and device context showing that the capture is inconsistent with expected user-driven recording behavior. The strongest iOS evidence is camera access or camera-adjacent capture activity followed by app-state evidence such as background or low-interaction operation, optional media artifact creation, and optional post-capture network transfer. Because direct low-level runtime visibility is weaker than Android for many enterprises, the primary iOS analytic should anchor on managed app context, device state, and downstream effects around camera use, with local subsystem telemetry treated as enrichment rather than sole proof.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before app-attributed session using non-standard protocol-to-port pairing"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Background activity, low-interaction device state, or DeviceLockState=locked was observed during sustained camera session or immediately before camera access from same bundle context"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "iOS:unifiedlog",
+                    "channel": "Camera, media capture, app-activation, or background-task subsystem event occurred immediately before or during sustained camera session from same managed-app or device context"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "iOS:MDMLog",
+                    "channel": "Bundle performing camera session was not present in approved managed-app baseline or was not permitted to use camera for video or interval image capture"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window linking camera access, device state, artifact creation, and optional network transfer."
+                },
+                {
+                    "field": "CaptureDurationThreshold",
+                    "description": "Minimum sustained camera session duration considered unusual for the bundle role."
+                },
+                {
+                    "field": "SupervisedRequired",
+                    "description": "Strongest bundle-baseline and managed-app analytics depend on supervised iOS devices."
+                },
+                {
+                    "field": "AllowedManagedApps",
+                    "description": "Approved managed bundle identities with camera capability vary by organization and device profile."
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Some managed apps should only access the camera during visible foreground use."
+                },
+                {
+                    "field": "RecentUserInteractionWindow",
+                    "description": "Defines how close camera activation must be to user interaction to be considered expected."
+                },
+                {
+                    "field": "AllowedBackgroundCaptureApps",
+                    "description": "Specific approved workflows may legitimately capture media under constrained background-like conditions."
+                }
+            ]
+        }
+    ]
+}

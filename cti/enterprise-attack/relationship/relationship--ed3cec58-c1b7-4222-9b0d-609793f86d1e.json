@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--0d1c69bf-f7ef-4eac-8f63-98654416a8c8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ed3cec58-c1b7-4222-9b0d-609793f86d1e",
+            "created": "2026-04-17T19:27:05.487Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha Updates APR 2025",
+                    "description": "Hiroaki, H. (2025, April 30). Earth Kasha Updates TTPs in Latest Campaign Targeting Taiwan and Japan. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/d/earth-kasha-updates-ttps.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.248Z",
+            "description": "[UPPERCUT](https://attack.mitre.org/software/S0275) can use a sleep function to delay execution.(Citation: Trend Micro Earth Kasha Updates APR 2025)(Citation: Trend Micro Earth Kasha Anel NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--fb4e3792-e915-4fdd-a9cd-92dfa2ace7aa",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

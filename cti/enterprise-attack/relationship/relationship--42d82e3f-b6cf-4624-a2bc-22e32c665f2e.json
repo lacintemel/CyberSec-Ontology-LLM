@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ad631f57-7e5a-45d1-aba4-a0c13f5e2ad9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--42d82e3f-b6cf-4624-a2bc-22e32c665f2e",
+            "created": "2026-09-30T20:48:13.464Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:48:13.464Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has set up anonymous emails to use in publishing poisoned software packages such as sergey2016@tutamail[.]com.(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--65013dd2-bc61-43e3-afb5-a14c4fa7437a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

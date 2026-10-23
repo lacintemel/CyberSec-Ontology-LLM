@@ -1,0 +1,88 @@
+{
+    "type": "bundle",
+    "id": "bundle--92df9aff-6df2-4b0a-9b3c-2eac034324ea",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--6c62144a-cd5c-401c-ada9-58c4c74cd9d2",
+            "created": "2023-03-13T20:00:38.029Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0115",
+                    "external_id": "DC0115"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:34.763Z",
+            "name": "Protected Configuration",
+            "description": "Protected Configuration represents security-sensitive device settings, security policies, or operating system configurations that are normally restricted to administrators, system services, or device management platforms.\nMonitoring these configurations enables detection of adversaries attempting to weaken device security controls or alter trusted device relationships.\n\nExamples\nAndroid:\n\n- USB debugging enabled\n- Unknown app installation allowed\n- Developer options enabled\n\niOS:\n\n- Developer mode enabled\n- Device pairing trust relationships established\n- Configuration profile restrictions modified\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "profile with payload_type LIKE 'com.apple.security.*' installed where mdm_origin=false \u2014 security payload from non-MDM source is the policy modification event"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Biometric, credential, lockscreen, trust-agent, Smart Lock, or device-admin-related protected device configuration changed"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed Wi-Fi, VPN, cellular, or location-related policy state remains unchanged while network capability degrades"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed storage, backup, enterprise file access, or device policy state remains unchanged while bulk destructive file transformation occurs"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app catalog, enterprise update policy, or trusted distribution posture remains unchanged while a known app exhibits materially different post-update behavior"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app distribution, enterprise catalog trust, and update policy remain expected while a known package exhibits materially different post-install or post-update behavior"
+                },
+                {
+                    "name": "Application Vetting",
+                    "channel": "None"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Developer Mode enabled, supervised-device restriction changed, or trust-related protected device posture changed"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Passcode, biometrics, attention-aware authentication, or supervised-device lock policy changed in a way that weakens or alters the authentication boundary"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Managed Wi-Fi, VPN, cellular, or location-service policy remains unchanged while device connectivity repeatedly degrades"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Managed app distribution, supervised install posture, or provisioning trust context remains expected while a known app exhibits materially different behavior after version change"
+                },
+                {
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported"
+                },
+                {
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                }
+            ]
+        }
+    ]
+}

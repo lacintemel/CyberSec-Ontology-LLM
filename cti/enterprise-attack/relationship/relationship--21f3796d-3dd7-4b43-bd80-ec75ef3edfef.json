@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--7e08796e-b399-470d-9104-e022ec31a140",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--21f3796d-3dd7-4b43-bd80-ec75ef3edfef",
+            "created": "2026-04-19T00:58:33.855Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FBI_KimsukyQR_Jan2026",
+                    "description": "FBI. (2026, January 8). FBI Flash AC-000001-MW North Korean Kimsuky Actors Leverage Malicious QR  Codes in Spearphishing Campaigns Targeting U.S. Entities. Retrieved April 18, 2026.",
+                    "url": "https://www.ic3.gov/CSA/2026/260108.pdf"
+                },
+                {
+                    "source_name": "NaumaanProofpoint_GlobalClickFix_April2025",
+                    "description": "Naumaan, S., et al. (2025, April 17). Around the World in 90 Days: State-Sponsored Actors Try ClickFix . Retrieved January 21, 2026.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:24.605Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has also impersonated legitimate people, such as a foreign advisor, an embassy employee, and a think tank employee.(Citation: FBI_KimsukyQR_Jan2026) [Kimsuky](https://attack.mitre.org/groups/G0094) has also purported to be a Japanese diplomat to communicate with the victims.(Citation: NaumaanProofpoint_GlobalClickFix_April2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

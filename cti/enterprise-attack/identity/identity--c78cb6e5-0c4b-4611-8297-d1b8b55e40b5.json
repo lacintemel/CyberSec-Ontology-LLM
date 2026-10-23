@@ -1,0 +1,19 @@
+{
+    "type": "bundle",
+    "id": "bundle--4b4a8404-9082-4605-8159-fe4a9e9039b0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "identity",
+            "id": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-06-01T00:00:00.000Z",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:33:30.227Z",
+            "name": "The MITRE Corporation",
+            "identity_class": "organization",
+            "x_mitre_attack_spec_version": "3.2.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--30941526-db2e-4efb-ba00-32ffa7fafaab",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--aea68064-afb4-4748-9b7b-f10113f347ab",
+            "created": "2026-04-15T16:52:58.567Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Black Hills Information Security TruffleHog January 2024",
+                    "description": "Chris Traynor. (2024, January 18). Rooting For Secrets with TruffleHog. Retrieved April 15, 2026.",
+                    "url": "https://www.blackhillsinfosec.com/rooting-for-secrets-with-trufflehog/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.163Z",
+            "description": "[TruffleHog](https://attack.mitre.org/software/S9009) has gathered access tokens and API tokens from CI/CD pipeline solutions and repositories.(Citation: Black Hills Information Security TruffleHog January 2024)",
+            "relationship_type": "uses",
+            "source_ref": "tool--76f8a686-3157-481f-9af6-e8558883a8d6",
+            "target_ref": "attack-pattern--890c9858-598c-401d-a4d5-c67ebcdd703a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

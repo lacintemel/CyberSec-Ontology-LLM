@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--dbc81106-fbe1-4f63-82d0-28218c267e2e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f1df2991-428f-4ed0-9173-07609e2142c8",
+            "created": "2026-04-17T00:05:29.128Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.254Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has terminated an existing process to ensure that its own new process can execute.(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

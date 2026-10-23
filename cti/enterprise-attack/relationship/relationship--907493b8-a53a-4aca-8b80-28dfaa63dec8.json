@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d49b7227-711d-468e-be30-9c4399b077a5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--907493b8-a53a-4aca-8b80-28dfaa63dec8",
+            "created": "2026-04-17T21:26:05.408Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.122Z",
+            "description": "[ROAMINGHOUSE](https://attack.mitre.org/software/S9026) can check for specific mouse movements and user activity before initiating malicious activity.(Citation: Trend Micro Earth Kasha Anel NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--251f1715-fc97-4487-b939-5c8823ef7a39",
+            "target_ref": "attack-pattern--91541e7e-b969-40c6-bbd8-1b5352ec2938",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--82a8803a-d36a-4ee5-8e03-86f4182e6096",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0b38630d-1363-4817-9788-e5848e1f0f36",
+            "created": "2026-10-07T20:09:14.203Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:09:14.203Z",
+            "description": "Deploy inline application-layer protections capable of identifying and preventing automated activity before requests reach protected application functionality. Use multiple automation signals rather than relying exclusively on successful CAPTCHA completion.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--12241367-a8b7-49b4-b86e-2236901ba50c",
+            "target_ref": "attack-pattern--c5e8ef5d-e9b4-46b2-9dd8-afbb1c42090f",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

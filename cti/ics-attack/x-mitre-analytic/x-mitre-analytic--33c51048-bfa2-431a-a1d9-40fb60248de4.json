@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--ab16af3f-0823-4147-9d74-ffaadfd04e9d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--33c51048-bfa2-431a-a1d9-40fb60248de4",
+            "created": "2026-10-13T17:45:06.815Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0795#AN2154",
+                    "external_id": "AN2154"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:06.815Z",
+            "name": "Analytic 2154",
+            "description": "Real-time monitoring identifies ptrace syscalls or /proc/pid/mem write operations targeting Industrial Control System (ICS) service processes from a process that is not a debugger or vendor diagnostic tool. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--1887a270-576a-4049-84de-ef746b2572d6",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=ptrace/process_vm_readv; process accesses an ICS service process PID from an image or UID not in the debugger/diagnostic allowlist"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window correlating a memory access event with a subsequent crash."
+                },
+                {
+                    "field": "TrustedSecurityToolList",
+                    "description": "Allowlist of legitimate security/diagnostic tools authorized to perform cross-process memory access."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

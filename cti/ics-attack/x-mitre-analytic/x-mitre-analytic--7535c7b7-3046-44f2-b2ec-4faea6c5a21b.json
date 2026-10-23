@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--84d42ef0-97f7-4e75-90c0-a2927a3e52ad",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7535c7b7-3046-44f2-b2ec-4faea6c5a21b",
+            "created": "2026-09-26T02:17:19.452Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0934#AN2097",
+                    "external_id": "AN2097"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:45:49.464Z",
+            "name": "Analytic 2097",
+            "description": "Real-time monitoring identifies ICS clients sending DNS directly to unauthorized resolvers, native DNS with tunneling characteristics, or HTTPS/TLS connections to known/identified DoH infrastructure that bypass the site resolver/proxy architecture. Alert on policy violation plus content/flow corroboration; do not alert solely on high DNS volume.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NetworkDevice:IDS",
+                    "channel": "DoH/DoT identification, SNI/HTTP host when observable, DNS tunneling signatures"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:DNS",
+                    "channel": "DNS query/response metadata and content"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "Client-to-resolver or client-to-DoH endpoint flow"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedResolvers",
+                    "description": "Authorized recursive resolvers/forwarders"
+                },
+                {
+                    "field": "ApprovedDoHProviders",
+                    "description": "Permitted encrypted DNS services"
+                },
+                {
+                    "field": "ApprovedCommunicationMatrix",
+                    "description": "Which ICS zones/assets may resolve externally"
+                },
+                {
+                    "field": "QueryPattern",
+                    "description": "Encoded/long labels, unusual types, entropy and periodicity as corroboration"
+                },
+                {
+                    "field": "KnownDoHEndpoints",
+                    "description": "Resolver/API destinations used to identify bypass"
+                }
+            ]
+        }
+    ]
+}

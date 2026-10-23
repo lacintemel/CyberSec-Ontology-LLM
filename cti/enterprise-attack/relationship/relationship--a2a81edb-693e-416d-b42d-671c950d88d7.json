@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--9f7c7daf-d078-4613-b904-3b0b50da0d44",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a2a81edb-693e-416d-b42d-671c950d88d7",
+            "created": "2020-03-29T21:52:43.303Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.146Z",
+            "description": "Ensure proper Registry permissions are in place to prevent adversaries from disabling or interfering with security services.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--a2c36a5d-4058-475e-8e77-fff75e50d3b9",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

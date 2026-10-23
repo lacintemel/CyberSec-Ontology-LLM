@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--67cf9edc-3d96-4d3d-ad91-8a5208130586",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--dc014060-5116-4a2f-bac5-35ac1db8fabb",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0772#AN1904",
+                    "external_id": "AN1904"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:29.050Z",
+            "name": "Analytic 1904",
+            "description": "Real-time monitoring identifies an interactive desktop session Remote Desktop Protocol (RDP), Virtual Network Computing (VNC), or vendor remote console to an Human-Machine Interface (HMI) or engineering station from a source Internet Protocol (IP) addresses outside the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, or from an account not in the approved operator/engineer list, where the session subsequently interacts with Industrial Control System (ICS) control elements. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624, Type 2/10 to Industrial Control Systems (ICS) host from source not in approved operator workstations or account not in approved operator list"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 process execution associated with a remote session targets ICS application directories or initiates device-subnet activity"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=3 network connection to an RDP/VNC service on an ICS Windows host from a source outside the approved management CIDR baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedManagementCIDR",
+                    "description": "IP ranges authorized for remote desktop/console access to ICS hosts."
+                },
+                {
+                    "field": "ApprovedOperatorList",
+                    "description": "Accounts with documented operator/engineer roles."
+                },
+                {
+                    "field": "ApprovedOperatorWorkstations",
+                    "description": "Inventory of workstations from which operator/engineer interactive sessions are expected to originate."
+                }
+            ]
+        }
+    ]
+}

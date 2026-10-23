@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--275fb258-816f-4036-9487-f14eb66a333a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--98e017f6-93cd-46d0-8923-13a7697965a7",
+            "created": "2026-09-25T19:02:09.023Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0930#AN2087",
+                    "external_id": "AN2087"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T19:05:32.264Z",
+            "name": "Analytic 2087",
+            "description": "Real-time monitoring identifies cmd.exe or .bat/.cmd execution from an unexpected parent or user context, execution from transient/user-writable paths, suspicious command chaining, or shell activity followed by OT-relevant discovery, credential, remote-access, or configuration behavior. Alert only when the interpreter is not part of the asset's approved software/automation baseline or its execution context violates an approved signer/hash/path/parent/user rule, and require OT-relevant corroboration such as access to engineering files, ICS software/API use, communications with protected OT assets, configuration change, or another suspicious follow-on behavior. Suppress documented vendor software, engineering workflows, diagnostics, backup, patching, and approved maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4688; cmd.exe/batch execution with parent and command line "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1; process lineage and command line"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ParentProcessName",
+                    "description": "Approved vendor applications/services that legitimately spawn cmd.exe"
+                },
+                {
+                    "field": "CommandLinePattern",
+                    "description": "Chaining, discovery, remote execution, file transfer, or ICS tool/API invocation"
+                },
+                {
+                    "field": "ScriptStoragePath",
+                    "description": "Approved batch/script locations"
+                },
+                {
+                    "field": "UserContext",
+                    "description": "Authorized operator/engineer/service identities"
+                },
+                {
+                    "field": "MaintenanceWindow",
+                    "description": "Approved changes and support Windows"
+                }
+            ]
+        }
+    ]
+}

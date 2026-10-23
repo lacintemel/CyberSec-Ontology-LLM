@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--677a5760-cf5f-4d84-9995-00d962f252fc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--df731d6e-b199-468c-b29f-7af3546e6fb4",
+            "created": "2026-09-22T00:19:27.433Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T00:19:27.433Z",
+            "description": "Prevent AI-assisted analysis agents from exercising privileged capabilities solely as a consequence of artifact-derived instructions. Require independent authorization for privileged or consequential operations outside the expected analysis workflow. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--9bb9e696-bff8-4ae1-9454-961fc7d91d5f",
+            "target_ref": "attack-pattern--6aa4bc38-0713-4d40-ad0b-949d912da852",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

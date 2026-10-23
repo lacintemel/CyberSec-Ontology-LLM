@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9f5526c4-1a6a-48ca-af83-66e5442fa744",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4321e96d-8a92-498c-9b7a-b134cd8cb7a9",
+            "created": "2026-04-09T20:57:11.520Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.017Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has replaced DNS configuration from `/tmp/resolved.conf` in order to gain control of network-level control within CI environments and has flushed iptables rules using `sudo iptables -F OUTPUT` and `sudo iptables -F DOCKER-USER`.(Citation: Socket Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

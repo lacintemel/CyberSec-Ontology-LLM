@@ -1,0 +1,74 @@
+{
+    "type": "bundle",
+    "id": "bundle--99ab31ff-4f0c-4864-8154-5d8168f0237d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--1f5ec3e0-2b7d-4b6d-992b-c5849911df1e",
+            "created": "2026-10-13T17:44:29.546Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0731#AN2126",
+                    "external_id": "AN2126"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:29.546Z",
+            "name": "Analytic 2126",
+            "description": "Real-time monitoring identifies a firmware update utility on an Industrial Control System (ICS) Linux engineering host initiating a connection to a device Internet Protocol (IP) address on its firmware update port, by a User Identifier (UID) not in the approved firmware manager UIDs, outside a scheduled maintenance window. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): firmware updater connecting to device on firmware port, by User Identifier (UID) not in authorized firmware manager UIDs, outside maintenance window schedule"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFirmwareInventory",
+                    "description": "Cryptographic hash inventory of authorized firmware versions per device model."
+                },
+                {
+                    "field": "AuthorizedFirmwareManagers",
+                    "description": "Accounts authorized to perform firmware update operations."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which firmware updates are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform firmware updates."
+                },
+                {
+                    "field": "FirmwareSessionSizeThreshold",
+                    "description": "Minimum byte count for a session to be considered a firmware transfer rather than routine configuration traffic, derived from known firmware image sizes."
+                },
+                {
+                    "field": "FirmwareUpdateWindow",
+                    "description": "Time window within which a device reboot following a large session is considered part of the same firmware update event."
+                },
+                {
+                    "field": "MaintenanceWindowSchedule",
+                    "description": "Recurring scheduled periods when firmware updates are expected to occur."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "type": "bundle",
+    "id": "bundle--56965be4-e2ca-4cbd-b726-54317bf97e32",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--26659f1a-7557-4833-a42e-b6dba9104f4a",
+            "created": "2026-09-25T20:09:19.593Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1701/003",
+                    "external_id": "T1701.003"
+                },
+                {
+                    "source_name": "Apple ZShell",
+                    "description": "Apple. (2020, January 28). Use zsh as the default shell on your Mac. Retrieved June 12, 2020.",
+                    "url": "https://support.apple.com/HT208050"
+                },
+                {
+                    "source_name": "DieNet Bash",
+                    "description": "die.net. (n.d.). bash(1) - Linux man page. Retrieved June 12, 2020.",
+                    "url": "https://linux.die.net/man/1/bash"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:34:55.625Z",
+            "name": "Unix Shell",
+            "description": "Adversaries may abuse Unix shell commands and scripts for execution. Unix shells are the primary command prompt on Linux, macOS, and ESXi systems, though many variations of the Unix shell exist (e.g. sh, ash, bash, zsh, etc.) depending on the specific OS or distribution.(Citation: DieNet Bash)(Citation: Apple ZShell) Unix shells can control every aspect of a system, with certain commands requiring elevated privileges.\n\nUnix shells also support scripts that enable sequential execution of commands as well as other typical programming operations such as conditionals and loops. Common uses of shell scripts include long or repetitive tasks, or the need to run the same set of commands on multiple systems.\n\nAdversaries may abuse Unix shells to execute various commands or payloads. Interactive shells may be accessed through command and control channels or during lateral movement such as with [Remote Services](https://attack.mitre.org/techniques/T0886). Adversaries may also leverage shell scripts to deliver and execute multiple commands on victims or as part of payloads used for persistence.\n\nWithin Industrial control system networks, workstations, control servers, hypervisors, networking devices, and embedded devices that run on linux platforms may allow for Unix command shell access or stripped-down shells to implement a subset of commands. Industrial automation equipment generally does not offer command shells as a native user interface.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-ics-attack",
+                    "phase_name": "execution"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

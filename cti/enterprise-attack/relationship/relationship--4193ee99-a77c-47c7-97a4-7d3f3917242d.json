@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6c8baf6f-4567-47af-9e5d-27fca7c3f11f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4193ee99-a77c-47c7-97a4-7d3f3917242d",
+            "created": "2026-04-19T16:46:52.187Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace 2025",
+                    "description": " Dominik Breitenbacher. (2025, March 18). Operation AkaiRy\u016b: MirrorFace invites Europe to Expo 2025 and revives ANEL backdoor. Retrieved May 22, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/operation-akairyu-mirrorface-invites-europe-expo-2025-revives-anel-backdoor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:26.930Z",
+            "description": "During [Operation AkaiRy\u016b](https://attack.mitre.org/campaigns/C0060), [MirrorFace](https://attack.mitre.org/groups/G1054) cleared Windows event logs post compromise.(Citation: ESET MirrorFace 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--8a7c55ea-f363-4a03-b4c5-fa3fdb132d8f",
+            "target_ref": "attack-pattern--75b9a4d2-d4e2-4ca1-9aab-1badd9e05fd0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

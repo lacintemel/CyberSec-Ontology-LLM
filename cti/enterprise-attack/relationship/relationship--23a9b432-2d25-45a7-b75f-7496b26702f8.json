@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0eb300ad-211e-4791-a115-84cbe10fffee",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--23a9b432-2d25-45a7-b75f-7496b26702f8",
+            "created": "2026-04-17T15:42:38.998Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.954Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) has collected stolen web cookies locally in the `%TEMP%` folder.(Citation: ESET MirrorFace DEC 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

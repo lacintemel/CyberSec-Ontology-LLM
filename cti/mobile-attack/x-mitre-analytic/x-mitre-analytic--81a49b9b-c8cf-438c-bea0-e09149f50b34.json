@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--87e14f3a-642c-41a2-91b5-e5123ca0f24b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--81a49b9b-c8cf-438c-bea0-e09149f50b34",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0645#AN1724",
+                    "external_id": "AN1724"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:52.102Z",
+            "name": "Analytic 1724",
+            "description": "For iOS, detect Lockscreen Bypass from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; Protected Configuration via Apple MDM [DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--6c62144a-cd5c-401c-ada9-58c4c74cd9d2",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthPolicyAllowList",
+                    "description": "MDM-managed authentication policy changes only. Any lock policy weakening outside MDM-authorized change is anomalous. Derive from MDM policy management logs."
+                },
+                {
+                    "field": "ElevationAllowList",
+                    "description": "Approved accessibility and Device Admin apps that may interact with lockscreen for legitimate purposes (enterprise kiosk). Derive from MDM catalog."
+                },
+                {
+                    "field": "LockBypassWindow",
+                    "description": "Default 10s between lock state and anomalous app activity. Lock-bypass is near-instantaneous."
+                }
+            ]
+        }
+    ]
+}

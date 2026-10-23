@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--b01f0ac6-d502-4690-92c4-9738f30bf90e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fda5d0ef-e6ee-4331-a201-5379a981259a",
+            "created": "2026-04-16T14:40:45.608Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "Zscaler BlindEagle DEC 2025",
+                    "description": "Pellegrino, G. (2025, December 16). BlindEagle Targets Colombian Government Agency with Caminho and DCRAT. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/blindeagle-targets-colombian-government-agency-caminho-and-dcrat"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.929Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used PowerShell in malware execution including as part of fileless attack chains to download additional payloads.(Citation: Kaspersky BlindEagle AUG 2024)(Citation: Zscaler BlindEagle DEC 2025)\n",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

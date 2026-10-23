@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f6cbdb1f-d072-43f4-a716-4a61381b31fb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8a19d65a-f438-4b12-8b8f-c696d7c44559",
+            "created": "2026-04-16T17:59:57.945Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler BlindEagle DEC 2025",
+                    "description": "Pellegrino, G. (2025, December 16). BlindEagle Targets Colombian Government Agency with Caminho and DCRAT. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/blindeagle-targets-colombian-government-agency-caminho-and-dcrat"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.114Z",
+            "description": "[Caminho](https://attack.mitre.org/software/S9016) can use code flattening for payload obfuscation.(Citation: Zscaler BlindEagle DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--97da6467-c9c5-4eb0-84d4-1234e937e534",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0d24cc75-5e21-41d3-b574-12a8c94ed264",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1df1d28c-9de3-4d1b-8c86-ac50175a1e69",
+            "created": "2026-10-01T19:30:16.745Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T19:30:16.745Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has corresponded and disseminated links to victims through social media.(Citation: Mandiant_UNC1549_Feb2024)          ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--f870408c-b1cd-49c7-a5c7-0ef0fc496cc6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

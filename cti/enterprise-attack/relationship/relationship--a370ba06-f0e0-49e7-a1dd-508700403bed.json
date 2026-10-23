@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--e04286b8-864f-4643-9f06-17faf445859f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a370ba06-f0e0-49e7-a1dd-508700403bed",
+            "created": "2026-09-23T17:07:20.061Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CarveyODonnellWelchHuntress_TheGentlemen_May2026",
+                    "description": "Carvey, H., O'Donnell-Welch, L. (2026, May 21). The Gentlemen (Ransomware) in Disguise: Defense Evasion and other TTPs. Retrieved September 18, 2026.",
+                    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+                },
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                },
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:20:17.185Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has copied malware executables, such as [PsExec](https://attack.mitre.org/software/S0029).exe, to the local `C:\\Temp` directory.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: CarveyODonnellWelchHuntress_TheGentlemen_May2026) [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) had also enabled a hidden SMB share pointed at the `C:\\Temp` folder to allow anonymous access.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026) [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has also consolidated data in `C:\\ProgramData\\data\\`.(Citation: TrendAI_TheGentlemen_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

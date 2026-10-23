@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--1c6d536b-1191-4811-aac1-58c7c96052b3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8f5e4bee-0677-41dd-89ad-8a467ae08eec",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0609#AN1661",
+                    "external_id": "AN1661"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:08.422Z",
+            "name": "Analytic 1661",
+            "description": "For Android, detect Match Legitimate Name or Location from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; File Creation via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: PackageInstaller.install() writes binary to device storage for impersonating app \u2014 install event is the enrollment of impersonating app]; File Metadata via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: app package_name distance <= $NameDistanceThreshold$ from $KnownAppCatalog$ entry]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: PackageInstaller.install() writes binary to device storage for impersonating app \u2014 install event is the enrollment of impersonating app"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: app package_name distance <= $NameDistanceThreshold$ from $KnownAppCatalog$ entry"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "NameDistanceThreshold",
+                    "description": "Default Levenshtein 2. Same as T1655 parent."
+                },
+                {
+                    "field": "KnownAppCatalog",
+                    "description": "MDM-approved catalog with cert fingerprints."
+                },
+                {
+                    "field": "IconHashThreshold",
+                    "description": "Default perceptual hash distance < 10."
+                },
+                {
+                    "field": "MDMApprovedCatalog",
+                    "description": "MDM-managed app list."
+                }
+            ]
+        }
+    ]
+}

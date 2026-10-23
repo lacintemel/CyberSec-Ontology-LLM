@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8d545e84-b6ed-44e6-bc52-629a05c458e3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--37b2e059-853e-423f-8504-a11b55f92160",
+            "created": "2026-09-26T03:57:34.150Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Claroty-IOCONTROL",
+                    "description": "Claroty Team82. (2024, December 10). Inside a New OT/IoT Cyberweapon: IOCONTROL. Retrieved September 2, 2026.",
+                    "url": "https://claroty.com/team82/research/inside-a-new-ot-iot-cyber-weapon-iocontrol"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:57:34.150Z",
+            "description": "IOCONTROL has conducted port scans on a network.(Citation: Claroty-IOCONTROL)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bcd0f2cd-0b21-4109-8310-8a90be320514",
+            "target_ref": "attack-pattern--5d24bb1d-4487-4923-ae3a-8e679092ac7a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--2f42a21b-4ac5-48ac-aa84-d8a985ce281d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3522ad60-960f-4b77-ba34-64b0d32995ab",
+            "created": "2026-09-25T20:32:41.531Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:32:41.531Z",
+            "description": "Harden applications that can host or launch VB/VBA/VBScript content and reduce exposed script-host execution paths where operationally feasible.  ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--49363b74-d506-4342-bd63-320586ebadb9",
+            "target_ref": "attack-pattern--d0225461-2610-469e-8c52-56ec12ac0c71",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

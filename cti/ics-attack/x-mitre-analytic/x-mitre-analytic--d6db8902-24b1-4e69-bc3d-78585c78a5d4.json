@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--0cef6d06-bd22-4537-9f34-e929a9c20285",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d6db8902-24b1-4e69-bc3d-78585c78a5d4",
+            "created": "2026-10-13T17:47:31.041Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0789#AN2264",
+                    "external_id": "AN2264"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:31.041Z",
+            "name": "Analytic 2264",
+            "description": "Real-time monitoring identifies Windows firewall changes blocking unsolicited Industrial Control System (ICS) reporting traffic while leaving polling/command traffic unaffected, resulting in Supervisory Control and Data Acquisition (SCADA) losing event-driven visibility while retaining polling capability. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--d2ff4b56-8351-4ed8-b0fb-d8605366005f",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Windows Filtering Platform / Firewall audit events (policy-dependent): firewall rule change blocking unsolicited Industrial Control Systems (ICS) reporting traffic while command/polling traffic continues"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExpectedReportingInterval",
+                    "description": "Device-specific configured interval for unsolicited reporting."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

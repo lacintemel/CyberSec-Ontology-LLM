@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--05a3832f-096e-4fa0-8e76-0eaeb8df21c4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--832681d0-1369-4915-a7b4-6627d7205a67",
+            "created": "2026-10-07T20:04:34.961Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0939",
+                    "external_id": "DET0939"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:04:34.961Z",
+            "name": "Detection of Anti-Automation Evasion",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--dde1f5e7-6aea-454c-9521-231257bb53c3"
+            ]
+        }
+    ]
+}

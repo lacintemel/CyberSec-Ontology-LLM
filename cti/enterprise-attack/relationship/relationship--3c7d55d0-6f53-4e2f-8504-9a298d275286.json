@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f29e230f-b76c-46c3-a669-145135a3c639",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3c7d55d0-6f53-4e2f-8504-9a298d275286",
+            "created": "2026-04-21T21:15:19.773Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.006Z",
+            "description": "[LP-Notes](https://attack.mitre.org/software/S9036) has decrypted strings with lengths ranging from 15 to 19 characters using the same decryption key for each string.(Citation: ESET_MuddyWater_Dec2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7fbf1f1e-cbd8-4060-8e3b-7ca0e56ce3fe",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

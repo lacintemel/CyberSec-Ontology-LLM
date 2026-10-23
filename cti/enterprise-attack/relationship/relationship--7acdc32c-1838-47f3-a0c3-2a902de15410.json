@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--389ab56b-b29a-448b-b784-ae5876052c99",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7acdc32c-1838-47f3-a0c3-2a902de15410",
+            "created": "2026-04-09T17:33:58.705Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:59.595Z",
+            "description": "[HTTPTroy](https://attack.mitre.org/software/S9007) has exfiltrated encrypted data over the C2 channel using the `up <FILENAME>` command.(Citation: Gen Digital Kimsuky HTTPTroy October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--52b52f72-88e6-4847-88d6-da3b9e4a4f71",
+            "target_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

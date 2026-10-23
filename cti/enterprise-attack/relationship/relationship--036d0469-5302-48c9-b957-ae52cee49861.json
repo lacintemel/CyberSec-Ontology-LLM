@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--014ad917-2761-41d9-be9e-d32b96530ef9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--036d0469-5302-48c9-b957-ae52cee49861",
+            "created": "2026-04-21T13:00:33.108Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Splunk LAMEHUG SEP 2025",
+                    "description": "Conteras, T., Splunk Research Team. (2025, September 25). From Prompt to Payload: LAMEHUG\u2019s LLM-Driven Cyber Intrusion. Retrieved April 21, 2026.",
+                    "url": "https://www.splunk.com/en_us/blog/security/lamehug-ai-driven-malware-llm-cyber-intrusion-analysis.html"
+                },
+                {
+                    "source_name": "Nov AI Threat Tracker",
+                    "description": "Google Threat Intelligence Group. (2025, November 5). GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools. Retrieved March 31, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:54.254Z",
+            "description": "[LAMEHUG](https://attack.mitre.org/software/S9035) can exfiltrate collected system information and documents to C2.(Citation: Splunk LAMEHUG SEP 2025)(Citation: Nov AI Threat Tracker)",
+            "relationship_type": "uses",
+            "source_ref": "malware--c55e0410-842d-4365-a2c8-26c0330f85b8",
+            "target_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

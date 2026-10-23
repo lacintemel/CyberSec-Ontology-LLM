@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--3efa295a-91e1-4e4b-ab59-795b81401309",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7e7151b1-8407-4cac-a843-f2605fb25377",
+            "created": "2026-04-15T18:33:23.759Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Black Hills Information Security TruffleHog January 2024",
+                    "description": "Chris Traynor. (2024, January 18). Rooting For Secrets with TruffleHog. Retrieved April 15, 2026.",
+                    "url": "https://www.blackhillsinfosec.com/rooting-for-secrets-with-trufflehog/"
+                },
+                {
+                    "source_name": "Netskope Shai-Hulud November 2025",
+                    "description": "Gianpietro Cutolo. (2025, November 26). Shai-Hulud 2.0: Aggressive, Automated, and Fast Spreading. Retrieved April 9, 2026.",
+                    "url": "https://www.netskope.com/blog/shai-hulud-2-0-aggressive-automated-one-of-fastest-spreading-npm-supply-chain-attacks-ever-observed"
+                },
+                {
+                    "source_name": "Github TruffleSecurity Trufflehog April 2025",
+                    "description": "Trufflesecurity. (2026, April 8). TruffleHog Enterprise. Retrieved April 15, 2026.",
+                    "url": "https://github.com/trufflesecurity/trufflehog"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.098Z",
+            "description": "[TruffleHog](https://attack.mitre.org/software/S9009) can obtain secrets from AWS Secrets and GCP Secret Manager.(Citation: Black Hills Information Security TruffleHog January 2024)(Citation: Github TruffleSecurity Trufflehog April 2025) [TruffleHog](https://attack.mitre.org/software/S9009) has also gathered passwords, secrets and API keys from source repositories, .env files, and git history.(Citation: Netskope Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "tool--76f8a686-3157-481f-9af6-e8558883a8d6",
+            "target_ref": "attack-pattern--cfb525cc-5494-401d-a82b-2539ca46a561",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

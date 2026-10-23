@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--8cad4235-d2c1-4fba-b222-ddf65851679c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4343ef82-8329-43e3-a6a2-116238fe2fcd",
+            "created": "2026-10-01T19:36:39.861Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERTPL_NGate_Nov2025",
+                    "description": "Ratajczak, K. (2025, November 3). Analysis of NGate malware campaign (NFC relay). Retrieved November 10, 2025.",
+                    "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+                },
+                {
+                    "source_name": "ESETStefanko_NGateVariant_Apr2026",
+                    "description": "Stefanko, L. (2026, April 21). New NGate variant hides in a trojanized NFC payment app. Retrieved May 6, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/new-ngate-variant-hides-in-a-trojanized-nfc-payment-app/"
+                },
+                {
+                    "source_name": "ESETStefankoOsmani_NGate_Aug2024",
+                    "description": "Stefanko, L., Osmani, J. (2024, August 22). NGate Android malware relays NFC traffic to steal cash. Retrieved November 10, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/ngate-android-malware-relays-nfc-traffic-to-steal-cash/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T19:40:28.531Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has been distributed via files[.]fm and through fake websites that mimic legitimate services, such as banking websites and Rio de Pr\u00eamios, a lottery website.(Citation: ESETStefankoOsmani_NGate_Aug2024)(Citation: CERTPL_NGate_Nov2025)(Citation: ESETStefanko_NGateVariant_Apr2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--53263a67-075e-48fa-974b-91c5b5445db7",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

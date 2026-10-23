@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--bc510b70-f324-4bd4-9c8f-9efbed481947",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0f356b7d-a206-4dfd-950f-41abbb85a59f",
+            "created": "2026-09-23T18:36:09.847Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T18:36:09.847Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has leveraged Base64-encoded PowerShell scripts.(Citation: TrendAI_TheGentlemen_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--d511a6f6-4a33-41d5-bc95-c343875d1377",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

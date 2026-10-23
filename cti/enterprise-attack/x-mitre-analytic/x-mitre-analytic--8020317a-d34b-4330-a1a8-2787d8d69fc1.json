@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--f4c0e45d-8413-4064-b286-711402cd6bf0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8020317a-d34b-4330-a1a8-2787d8d69fc1",
+            "created": "2026-09-22T00:23:37.701Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0925#AN2074",
+                    "external_id": "AN2074"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T00:29:54.806Z",
+            "name": "Analytic 2074",
+            "description": "An analyst observes a supported security artifact/task enter an autonomous defensive-analysis workflow, the analysis begin successfully, and the same workflow subsequently record an explicit failure, refusal, termination, or abnormal terminal state inconsistent with\u00a0$AuthorizedAnalysisStopConditions$.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "GuardrailTrace"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.FailureTrace"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.ModelInvocationInput"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "SupportedArtifactClasses",
+                    "description": "artifact/task classes expected to complete the analysis workflow; derive from product capabilities and clean executions"
+                },
+                {
+                    "field": "AuthorizedAnalysisStopConditions",
+                    "description": "known legitimate refusal/failure/cancellation states from product documentation and operational baseline"
+                },
+                {
+                    "field": "AnalysisCompletionWindow",
+                    "description": "normal completion duration by task/artifact type"
+                }
+            ]
+        }
+    ]
+}

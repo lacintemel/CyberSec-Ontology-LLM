@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7c3eac8d-bb3e-4a7e-806e-55327c8ad2f1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cf125e14-158c-4bd2-9d86-61f349704c99",
+            "created": "2026-09-26T04:58:28.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA-AA26-097A",
+                    "description": "Cybersecurity and Infrastructure Security Agency. (2026, July 22). Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure. Retrieved September 26, 2026.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T04:58:28.802Z",
+            "description": "During the [2026 Iranian Water Campaign](https://attack.mitre.org/campaigns/C0065), [CyberAv3ngers](https://attack.mitre.org/groups/G1027) were observed using secure shell ports TCP/22 and common industrial ports (TCP/44818, TCP&UDP/2222, TCP/102, and TCP/502). (Citation: CISA-AA26-097A)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--a07a367a-146c-45a8-a830-d3d337b9befa",
+            "target_ref": "attack-pattern--e6c31185-8040-4267-83d3-b217b8a92f07",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

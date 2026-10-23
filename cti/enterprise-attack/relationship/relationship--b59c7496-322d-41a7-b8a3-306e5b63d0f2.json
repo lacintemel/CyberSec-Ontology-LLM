@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--9c547713-ab91-40b3-b0be-094d07f296b4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b59c7496-322d-41a7-b8a3-306e5b63d0f2",
+            "created": "2026-10-01T21:24:20.864Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                },
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T21:24:20.864Z",
+            "description": "[LIGHTRAIL](https://attack.mitre.org/software/S9061) has been affiliated with the cyber espionage threat group [NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059).(Citation: Mandiant_UNC1549_Feb2024)(Citation: Mandiant_UNC1549TTPsTools_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "malware--0bbfc4cf-818d-4ef0-97e0-15b423c85b08",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

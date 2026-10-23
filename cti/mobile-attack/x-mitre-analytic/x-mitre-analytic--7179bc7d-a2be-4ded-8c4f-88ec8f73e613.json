@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--38bb00c8-0251-47dc-9f0e-d9d6c68c7b7b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7179bc7d-a2be-4ded-8c4f-88ec8f73e613",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0705#AN1826",
+                    "external_id": "AN1826"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:08.561Z",
+            "name": "Analytic 1826",
+            "description": "For iOS, detect Input Capture by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; Network Traffic Flow via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]; Permissions Request via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e2f72131-14d1-411f-8e8c-aa3453dd5456",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "KeyboardAllowList",
+                    "description": "IT-approved keyboard bundle IDs. Keep minimal."
+                },
+                {
+                    "field": "KeyboardVendorEndpoints",
+                    "description": "Known cloud sync endpoints for each approved keyboard vendor."
+                },
+                {
+                    "field": "KeystrokeFrequencyThreshold",
+                    "description": "Default 2 packets/sec \u2014 matches human average typing rate. Derive from keystroke baseline measurement."
+                },
+                {
+                    "field": "KeylogSessionThreshold",
+                    "description": "Default 300s sustained \u2014 confirms ongoing capture vs one-time sync."
+                }
+            ]
+        }
+    ]
+}

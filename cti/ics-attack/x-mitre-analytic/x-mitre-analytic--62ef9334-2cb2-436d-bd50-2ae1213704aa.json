@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--a033bfaf-5533-48ab-95a8-2027c6b752f3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--62ef9334-2cb2-436d-bd50-2ae1213704aa",
+            "created": "2026-10-13T17:44:48.471Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0765#AN2140",
+                    "external_id": "AN2140"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:48.471Z",
+            "name": "Analytic 2140",
+            "description": "Real-time monitoring identifies systemctl stop or kill commands targeting Industrial Control System (ICS) service processes on Linux assets, from a User Identifier (UID) that is not the ICS service owner or an authorized system administrator. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; systemctl/kill command targets a critical ICS service from a UID not in the authorized service-administration set"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedServiceAdmins",
+                    "description": "Accounts authorized to stop/start critical ICS services."
+                },
+                {
+                    "field": "BulkRestartTimeWindow",
+                    "description": "Time window within which multiple device restarts are considered a coordinated event."
+                },
+                {
+                    "field": "CriticalICSServiceList",
+                    "description": "List of Windows services whose stoppage constitutes a high-impact event."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue device restart commands."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--b3109c3e-d835-481e-8913-11dc8cfeb997",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c4d5acb4-61c8-4142-bf26-5865d235f02f",
+            "created": "2026-10-13T17:45:55.192Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0730#AN2189",
+                    "external_id": "AN2189"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:55.192Z",
+            "name": "Analytic 2189",
+            "description": "Real-time monitoring identifies a network infrastructure device exhibiting behavioral anomalies (unexpected listening ports, new routing entries) after a vendor firmware update or hardware replacement, where the device firmware hash does not match the authorized inventory. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "unexpected listening port or routing table change following firmware update event"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "VendorInstallManifest",
+                    "description": "Documented list of files/registry keys a legitimate vendor installer is expected to create."
+                },
+                {
+                    "field": "VendorInstallProfile",
+                    "description": "Documented expected process behavior for a legitimate vendor installer, established through lab testing."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

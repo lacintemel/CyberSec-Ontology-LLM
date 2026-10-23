@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8e7ae570-41d6-4916-803a-b2d678f4297e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--29d8bf9e-da2f-4a82-9cbb-765cade6a58a",
+            "created": "2026-04-17T12:12:38.111Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:08.382Z",
+            "description": "[MirrorFace](https://attack.mitre.org/groups/G1054) has placed specific content in phishing emails to target members of particular political parties.(Citation: ESET MirrorFace DEC 2022)\n",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--8cf6e33b-b6ef-4a1f-a77c-0ecdde93161f",
+            "target_ref": "attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

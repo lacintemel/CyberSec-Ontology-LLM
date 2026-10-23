@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fe36730a-1d09-4358-8e23-403debc82a4b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6eded7c7-8c55-4ced-83ad-f19f1b885af5",
+            "created": "2019-03-25T20:04:10.745Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Talos Olympic Destroyer 2018",
+                    "description": "Mercer, W. and Rascagneres, P. (2018, February 12). Olympic Destroyer Takes Aim At Winter Olympics. Retrieved March 14, 2019.",
+                    "url": "https://blog.talosintelligence.com/2018/02/olympic-destroyer.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.076Z",
+            "description": "[Olympic Destroyer](https://attack.mitre.org/software/S0365) will attempt to clear the System and Security event logs using <code>wevtutil</code>.(Citation: Talos Olympic Destroyer 2018)",
+            "relationship_type": "uses",
+            "source_ref": "malware--3249e92a-870b-426d-8790-ba311c1abfb4",
+            "target_ref": "attack-pattern--75b9a4d2-d4e2-4ca1-9aab-1badd9e05fd0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

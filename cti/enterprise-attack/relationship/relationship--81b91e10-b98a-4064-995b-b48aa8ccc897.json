@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--42e31dae-df45-48d4-946a-43b9e5e92bb8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--81b91e10-b98a-4064-995b-b48aa8ccc897",
+            "created": "2026-04-17T15:07:52.692Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky LODEINFO Part II OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part II. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-ii/107745/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.103Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) can capture system time to send to the C2.(Citation: Kaspersky LODEINFO Part II OCT 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--f3c544dc-673c-4ef3-accb-53229f1ae077",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

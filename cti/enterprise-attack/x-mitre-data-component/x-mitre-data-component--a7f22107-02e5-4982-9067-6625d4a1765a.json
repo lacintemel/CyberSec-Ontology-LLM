@@ -1,0 +1,886 @@
+{
+    "type": "bundle",
+    "id": "bundle--c70fd6f2-810d-456b-bd27-b7145c8a60bf",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+            "created": "2021-10-20T15:05:19.274Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0078",
+                    "external_id": "DC0078"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:50.375Z",
+            "name": "Network Traffic Flow",
+            "description": "Summarized network packet data that captures session-level details such as source/destination IPs, ports, protocol types, timestamps, and data volume, without storing full packet payloads. This is commonly used for traffic analysis, anomaly detection, and network performance monitoring.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "mobile-attack",
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "2.2",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Device-to-broker flow metadata"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "socket/connect"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "socket/connect syscalls"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "connect or sendto system call with burst pattern"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "ioctl: Changes to wireless network interfaces (up, down, reassociate)"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "CreateTrafficMirrorSession or ModifyTrafficMirrorTarget"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "egress > 90th percentile or frequent connection reuse"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "VPC/NSG flow logs for pod/instance egress to Internet or metadata"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "Outbound data flows"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "Unusual volume of inbound packets from single source across short time interval"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "Outbound flow logs to known mining pools"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "source instance sends large volume of traffic in short window"
+                },
+                {
+                    "name": "AWS:VPCFlowLogs",
+                    "channel": "Large outbound UDP traffic to multiple public reflector IPs"
+                },
+                {
+                    "name": "container:cni",
+                    "channel": "Outbound network traffic to mining proxies"
+                },
+                {
+                    "name": "containerd:runtime",
+                    "channel": "container-level outbound traffic events"
+                },
+                {
+                    "name": "dns:query",
+                    "channel": "Outbound resolution to hidden service domains (e.g., `.onion`)"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "CLI network calls"
+                },
+                {
+                    "name": "esxi:syslog",
+                    "channel": "esxcli network vswitch or DNS resolver configuration updates"
+                },
+                {
+                    "name": "esxi:syslog",
+                    "channel": "DNS resolution events leading to outbound traffic on unexpected ports"
+                },
+                {
+                    "name": "esxi:syslog",
+                    "channel": "/var/log/syslog.log"
+                },
+                {
+                    "name": "esxi:syslog",
+                    "channel": "Frequent DNS queries with high entropy names or NXDOMAIN results"
+                },
+                {
+                    "name": "esxi:syslog",
+                    "channel": "Frequent DNS resolution of same domain with rotating IPs"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "/var/log/vmkernel.log"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "HTTPS traffic to repository domains"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "None"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "egress log analysis"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "egress logs"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "network flows to external cloud services"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "port 22 access"
+                },
+                {
+                    "name": "esxi:vobd",
+                    "channel": "Network Events"
+                },
+                {
+                    "name": "esxi:vpxa",
+                    "channel": "connection attempts and data transmission logs"
+                },
+                {
+                    "name": "esxi:vpxd",
+                    "channel": "ESXi service connections on unexpected ports"
+                },
+                {
+                    "name": "esxi:vpxd",
+                    "channel": "TLS session established by ESXi service to unapproved endpoint"
+                },
+                {
+                    "name": "esxi:vpxd",
+                    "channel": "None"
+                },
+                {
+                    "name": "esxi:vpxd",
+                    "channel": "ESXi processes relaying traffic via SSH or unexpected ports"
+                },
+                {
+                    "name": "iptables:LOG",
+                    "channel": "TCP connections"
+                },
+                {
+                    "name": "iptables:LOG",
+                    "channel": "OUTBOUND"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "socket_events"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "Multiple IP addresses assigned to the same domain in rapid sequence"
+                },
+                {
+                    "name": "m365:defender",
+                    "channel": "NetworkConnection: high out:in ratio, periodic beacons, protocol mismatch"
+                },
+                {
+                    "name": "M365Defender:DeviceNetworkEvents",
+                    "channel": "NetworkConnection: bytes_sent >> bytes_received anomaly"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "socket_events"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "query: Historical list of associated SSIDs compared against baseline"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Suspicious outbound traffic from browser binary to non-standard domains"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "HTTPS POST to known webhook URLs"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "com.apple.network"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "outbound TCP/UDP traffic over unexpected port"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "tcp/udp"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Suspicious anomalies in transmitted data integrity during application network operations"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "HTTPS POST requests to pastebin.com or similar"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Firewall/PF anchor load or rule change events."
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "sudden burst in outgoing packets from same PID"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "forwarded encrypted traffic"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "ARP table updates inconsistent with expected gateway or DHCP lease assignments"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "networkd or com.apple.network"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "log stream 'eventMessage contains \"dns_request\"'"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Outbound UDP spikes to external reflector IPs"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "High entropy domain queries with multiple NXDOMAINs"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Rapid domain-to-IP resolution changes for same domain"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Firewall rule enable/disable or listen socket changes"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Outbound connections from IDE processes to marketplace/tunnel domains"
+                },
+                {
+                    "name": "NetFlow:Flow",
+                    "channel": "new outbound connections from exploited process tree"
+                },
+                {
+                    "name": "Network Traffic",
+                    "channel": "None"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "flow records"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "Config/ACL changes, line vty transport input changes, telnet/ssh/http(s) enable, image/feature module changes."
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "Config change: CLI/NETCONF/SNMP \u2013 'monitor session', 'mirror port'"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "Config/ACL/line vty changes, service enable (telnet/ssh/http(s)), module reloads"
+                },
+                {
+                    "name": "NetworkProxy:HTTPSFlow",
+                    "channel": "bytes_out in range $CredentialDumpMin$..$CredentialDumpMax$ to dest NOT IN $AppCDNList$ within $ExfilWindow$ of MDM jailbreak detection \u2014 credential dump size range (small but dense) to novel destination indicates Keychain exfiltration"
+                },
+                {
+                    "name": "NIDS:Flow",
+                    "channel": "session stats with bytes_out > bytes_in"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Internal connection logging"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "new connections from exploited lineage"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Outbound Connection"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Inbound on ports 5985/5986"
+                },
+                {
+                    "name": "NSM:firewall",
+                    "channel": "inbound connection to port 5900"
+                },
+                {
+                    "name": "NSM:Firewall",
+                    "channel": "Outbound connections to 139/445 to multiple destinations"
+                },
+                {
+                    "name": "NSM:Firewall",
+                    "channel": "pf firewall logs"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Source/destination/port/session metadata"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Client/broker flow metadata"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Client/broker connection metadata and periodicity"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Direct external DNS or HTTPS/TLS flow bypassing designated resolver/proxy"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "External DNS/HTTPS/TLS flow bypassing approved resolver/proxy"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Client-to-resolver or client-to-DoH endpoint flow"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Device-to-resolver/DoH destination flow"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Unexpected flows between segmented networks or prohibited ports"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time outbound connections to package registries or unknown hosts immediately after restore/build"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time egress to new registries/CDNs post-install/build"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time egress to non-approved registries after dependency install"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound connections to TCP 139,445 and HTTP/HTTPS to WebDAV endpoints from workstation subnets"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "large outbound data flows or long-duration connections"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "conn.log"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "connection metadata"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "LEASE_GRANTED"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "MAC not in allow-list acquiring IP (DHCP)"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "pf firewall logs"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Inter-segment traffic"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "None"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Long-lived or hijacked SSH sessions maintained with no active user activity"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Abnormal browser traffic volume or destination"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound requests to domains not previously resolved or associated with phishing campaigns"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound traffic to domains/IPs not previously resolved, occurring shortly after attachment download or link click"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "NetFlow/Zeek conn.log"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Flow records with entropy signatures resembling symmetric encryption"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "flow records"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Source/destination IP translation inconsistent with intended policy"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Sudden spike in incoming flows to web service ports from single/multiple IPs"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "port 5900 inbound"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "TCP port 5900 open"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "NetFlow/sFlow/PCAP"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound Network Flow"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Device-to-Device Deployment Flows"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound traffic from suspicious new processes post-attachment execution"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound traffic to mining pools or proxies"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Session records with TLS-like byte patterns"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Unexpected route changes or duplicate gateway advertisements"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Knock pattern: repeated REJ/S0 across \u2265MinSequenceLen ports from same src_ip then SF success."
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time egress to non-approved update hosts right after install/update"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "New outbound flows to non-approved vendor hosts post install"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "New/rare egress to non-approved update hosts after install"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "large outbound HTTPS uploads to repo domains"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "alert log"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound flow records"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "network_flow: bytes_out >> bytes_in, fixed packet sizes/intervals to non-approved CIDRs"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "session stats with bytes_out > bytes_in"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "High volumes of SYN/ACK packets with unacknowledged TCP handshakes"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "conn.log + ssl.log with Tor fingerprinting"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Relayed session pathing (multi-hop)"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound TCP SYN or UDP to multiple ports/hosts"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Gratuitous ARP replies with mismatched IP-MAC binding"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound UDP floods targeting common reflection services with spoofed IP headers"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Connection Tracking"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Flow Creation (NetFlow/sFlow)"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "conn.log, icmp.log"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Abnormal SMB authentication attempts correlated with poisoned LLMNR/NBT-NS sessions"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Gratuitous or duplicate DHCP OFFER packets from non-legitimate servers"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "uncommon ports"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "alternate ports"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "conn.log or flow data"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "High volume flows with incomplete TCP sessions or single-packet bursts"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Knock pattern: multiple REJ/S0 to distinct closed ports then successful connection to service_port"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time egress from host after new install to unknown update endpoints"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "First-time egress to unknown registries/mirrors immediately after install"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "New egress from app just installed to unknown update endpoints"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound connection to mining pool port (3333, 4444, 5555)"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound traffic to mining pool upon container launch"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Flow records with RSA key exchange on unexpected port"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Outbound connections from web server binaries (apache2, nginx, php-fpm) to unknown external IPs"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "sustained outbound HTTPS sessions with high data volume"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Connections from IDE hosts to marketplace/tunnel domains"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "large HTTPS outbound uploads"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "TCP port 22 traffic"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "Application-layer protocol traffic exhibiting beacon-like periodicity, anomalous session structure, or protocol misuse patterns"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "App-attributed traffic exhibits multi-destination fan-out, sustained session bridging, or SOCKS-like relay behavior inconsistent with normal client-only mobile communication"
+                },
+                {
+                    "name": "NSX:FlowLogs",
+                    "channel": "network_flow: bytes_out >> bytes_in to external"
+                },
+                {
+                    "name": "PF:Logs",
+                    "channel": "outbound flows with bytes_out >> bytes_in"
+                },
+                {
+                    "name": "PF:Logs",
+                    "channel": "high out:in ratio or fixed-size periodic flows"
+                },
+                {
+                    "name": "PF:Logs",
+                    "channel": "External traffic to remote access services"
+                },
+                {
+                    "name": "saas:api",
+                    "channel": "Webhook registrations or repeated POST activity"
+                },
+                {
+                    "name": "snmp:config",
+                    "channel": "Configuration change traps or policy enforcement failures"
+                },
+                {
+                    "name": "SNMP:DeviceLogs",
+                    "channel": "Unexpected NAT translation statistics or rule insertion events"
+                },
+                {
+                    "name": "TelecomLogs:MobilityEvents",
+                    "channel": "Unexpected location resolution events or abnormal subscriber tracking requests"
+                },
+                {
+                    "name": "TelecomLogs:MobilityEvents",
+                    "channel": "Unexpected subscriber tracking or abnormal mobility/location resolution activity"
+                },
+                {
+                    "name": "VPCFlowLogs:All",
+                    "channel": "High volume internal traffic with low entropy indicating looped or malicious DoS script"
+                },
+                {
+                    "name": "vpxd.log",
+                    "channel": "API communication"
+                },
+                {
+                    "name": "Windows Firewall Log",
+                    "channel": "SMB over high port"
+                },
+                {
+                    "name": "wineventlog:dhcp",
+                    "channel": "DHCP Lease Granted"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+                    "channel": "EventCode=2004, 2005, 2006"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "ARP cache modification attempts observed through event tracing or security baselines"
+                },
+                {
+                    "name": "WLANLogs:Association",
+                    "channel": "Multiple APs advertising the same SSID but with different BSSID/MAC or encryption type"
+                },
+                {
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                },
+                {
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): connection rate to device_ip exceeds Denial of Service (DoS) threshold per minute from single or distributed sources"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): flow volume to Industrial Control Systems (ICS) device subnet exceeds Denial of Service (DoS) flow threshold per minute"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): traffic from newly-authenticated device to Industrial Control System (ICS) application server within onboard window of association"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): source not in approved Supervisory Control and Data Acquisition (SCADA) servers generating high volume of short-duration flows to device subnet at regular intervals"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): Trivial File Transfer Protocol (TFTP) session to device Internet Protocol (IP) address from source not in engineering workstation list followed by device reboot syslog within firmware transfer window"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): egress flow on port 443/80/8080/53 from Industrial Control Systems (ICS) host in no-external-connectivity role list to destination not in approved vendor domains"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): source generates flows to every IP in device subnet in sequential order within discovery time window"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): Internet Control Message Protocol (ICMP) echo requests or Address Resolution Protocol (ARP) broadcasts to all Internet Protocol (IP) addresses in subnet sequentially from single source within discovery time window"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): inbound exploit-pattern traffic to Industrial Control Systems (ICS) Demilitarized Zone (DMZ) server followed by outbound connection from same Internet Protocol (IP) address to internal ICS network"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): connection from newly-observed device to Industrial Control Systems (ICS) application server within new device window of first network appearance"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): sustained high-byte-count flow from Industrial Control Systems (ICS) server Internet Protocol (IP) address to destination outside ICS zone following bulk read activity"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): host maintains simultaneous flows to device subnet and external destination with timing/byte-count correlation indicating relay"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): next-hop change for device subnet traffic or unexpected path through new gateway not in expected next-hop baseline"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): sequential connections from single source to multiple device Internet Protocol (IP) addresses resulting in large response payloads characteristic of directory listing"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): new device Media Access Control (MAC) address on Industrial Control Systems (ICS) network generating ICS master-pattern traffic such as polling multiple device Internet Protocol (IP) addresses on ICS protocol ports"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): firmware-mode activation protocol session from source not in engineering workstation list"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): connection from Virtual Private Network (VPN)-assigned Internet Protocol (IP) address into device subnet within remote access to Industrial Control Systems (ICS) window of the anomalous authentication"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): new east-west connection between Industrial Control Systems (ICS) hosts on remote service ports not in approved communication matrix"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): first-seen connection from a source to an Industrial Control System (ICS) device outside the documented approved communication matrix"
+                },
+                {
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): source generates short-lived flows to single dst across multiple Industrial Control Systems (ICS) protocol ports (502,102,44818,20000,4840) within port scan time window, source not in approved Supervisory Control and Data Acquisition (SCADA) servers"
+                },
+                {
+                    "name": "networkdevice:snmp",
+                    "channel": "Simple Network Management Protocol (SNMP) GET to system info OID from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                },
+                {
+                    "name": "networkdevice:snmp",
+                    "channel": "new Internet Group Management Protocol (IGMP) join or broadcast traffic spike on Industrial Control Systems (ICS) Virtual Local Area Network (VLAN) from source not in approved device inventory"
+                },
+                {
+                    "name": "networkdevice:snmp",
+                    "channel": "Internet Group Management Protocol (IGMP) membership report for Industrial Control Systems (ICS) multicast group from source not in approved device inventory"
+                },
+                {
+                    "name": "NSM:Content",
+                    "channel": "write function code targeting alarm config address range from source not in approved write sources within suppress grace period of the alarm status change"
+                },
+                {
+                    "name": "NSM:Content",
+                    "channel": "non-standard or malformed packet to device-specific diagnostic port immediately preceding a device-offline alarm"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "one Industrial Control System (ICS) traffic type (command or reporting) to/from device_ip ceases while other traffic types continue normally"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "reporting message for device_ip originates from src_mac not matching enrolled hardware address for that Internet Protocol (IP)"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "command-type traffic to device_ip absent while other traffic types (polling, reporting) to the same device continue normally"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "device_ip generates no outbound unsolicited traffic while responding normally to inbound polls"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "embedded device_ip initiates outbound connection on port 443/80/8080 to destination outside documented operational profile"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "inbound connection to field device Internet Protocol (IP) address from source outside RFC1918/organizational IP space on Industrial Control System (ICS) protocol port"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Connection/session metadata: embedded device opens HTTP/HTTPS/DNS session to destination outside approved ICS communication baseline"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "Connection/session metadata: management-port session to field device originates through external remote-access infrastructure rather than approved internal management path"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "field device Internet Protocol (IP) initiates connection to another field device IP, not in approved device-to-device communication matrix"
+                },
+                {
+                    "name": "NSM:Connections",
+                    "channel": "multiple device Internet Protocol (IP) addresses become unreachable simultaneously following network infrastructure config change event"
+                },
+                {
+                    "name": "NSM:Flow",
+                    "channel": "unsolicited response message source identity does not match the enrolled device for those data points"
+                },
+                {
+                    "name": "NSM:Content",
+                    "channel": "device_ip observed with src_mac differing from enrolled hardware address without corresponding topology change ticket"
+                },
+                {
+                    "name": "NSM:Content",
+                    "channel": "write function code to output register address range from source not in approved write sources"
+                },
+                {
+                    "name": "NSM:Content",
+                    "channel": "deauthentication flood targeting enrolled Industrial Control Systems (ICS) wireless device Media Access Control (MAC) addresses from source not in approved wireless infrastructure"
+                },
+                {
+                    "name": "perimeter:firewall",
+                    "channel": "inbound connection to Industrial Control Systems (ICS) device/server Internet Protocol (IP) address on ICS protocol port from source not in organizational IP space"
+                },
+                {
+                    "name": "wireless:spectrum",
+                    "channel": "Radio Frequency (RF) signal detected on Industrial Control Systems (ICS) wireless frequencies from Media Access Control (MAC) address not in approved wireless device inventory without completed association sequence"
+                },
+                {
+                    "name": "zeek:ssl",
+                    "channel": "Zeek ssl.log/TLS metadata: server_name (SNI), certificate chain/issuer/subject where available; compare with approved vendor domains/certificates"
+                }
+            ]
+        }
+    ]
+}

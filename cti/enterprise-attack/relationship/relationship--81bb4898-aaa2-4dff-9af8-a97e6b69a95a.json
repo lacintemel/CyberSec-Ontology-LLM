@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--05928c20-e51d-4218-a21b-591dc20d4bd7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--81bb4898-aaa2-4dff-9af8-a97e6b69a95a",
+            "created": "2019-06-25T12:31:57.676Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.103Z",
+            "description": "Ensure proper permissions are set for Registry hives to prevent users from modifying keys for system components that may lead to privilege escalation.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--a2c36a5d-4058-475e-8e77-fff75e50d3b9",
+            "target_ref": "attack-pattern--57340c81-c025-4189-8fa0-fc7ede51bae4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

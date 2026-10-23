@@ -1,0 +1,67 @@
+{
+    "type": "bundle",
+    "id": "bundle--d22a0e21-c2d3-43e1-bbe1-8bc193b1f633",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--ad07439d-e13e-438a-9f4b-330d61f2607b",
+            "created": "2026-10-13T17:44:08.147Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0722#AN2110",
+                    "external_id": "AN2110"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:08.147Z",
+            "name": "Analytic 2110",
+            "description": "Real-time monitoring identifies a process setting LD_PRELOAD before launching an Industrial Control System (ICS) service binary, or writing to /etc/ld.so.preload, where the injected library path is not part of the vendor's package manifest. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to /etc/ld.so.preload by User Identifier (UID) outside authorized admin list"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve with env containing LD_PRELOAD where exe matches Industrial Control Systems (ICS) service binary list and preload library not in vendor package manifest"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedICSVendorProcessList",
+                    "description": "Allowlist of processes permitted to install window/event hooks on ICS engineering and HMI hosts."
+                },
+                {
+                    "field": "ICSServiceBinaryList",
+                    "description": "List of binary paths for ICS gateway, OPC, and historian services on Linux assets that should never be launched with LD_PRELOAD set."
+                },
+                {
+                    "field": "VendorPackageManifest",
+                    "description": "Package manager manifest cross-reference confirming a shared library belongs to an installed, signed package."
+                },
+                {
+                    "field": "VendorSignedDLLHashBaseline",
+                    "description": "Cryptographic hash inventory of all vendor-signed ICS communication DLLs, refreshed on every legitimate vendor patch cycle."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

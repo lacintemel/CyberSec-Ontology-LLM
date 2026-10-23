@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--f1bac869-6f0f-4e6f-a6ef-0616395ea37f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1729fe56-66f8-4ac8-b579-f171c5a8d834",
+            "created": "2026-09-21T22:41:12.416Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-21T22:41:12.416Z",
+            "description": "Restrict AI agents to files, directories, repositories, and content stores required for their approved workflows. Limit write access separately from read access where possible to reduce the actions available following successful indirect prompt injection.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--987988f0-cf86-4680-a875-2f6456ab2448",
+            "target_ref": "attack-pattern--2e45d340-f00b-4bd6-b5c9-c2ef54b8894c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

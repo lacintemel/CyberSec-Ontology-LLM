@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9bcc4306-f9d1-43c8-80b1-a4c6c94573f0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8e9cacb4-f265-4a4e-9f80-853c7cfa791f",
+            "created": "2026-03-09T15:31:04.111Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_VajraSpy_Feb2024",
+                    "description": "Stefanko, L. (2024, February 1). VajraSpy: A Patchwork of espionage apps. Retrieved October 27, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/vajraspy-patchwork-espionage-apps/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:40:44.821Z",
+            "description": "[VajraSpy](https://attack.mitre.org/software/S9006) has searched for files with specific extensions, such as .txt, .jpg, .Om4a, .aac and .opus, before exfiltration.(Citation: ESET_VajraSpy_Feb2024)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "target_ref": "attack-pattern--cf28ca46-1fd3-46b4-b1f6-ec0b72361848",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--dd559b3f-e531-434f-a510-429fd868d0fa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--14f063a6-0819-4549-b9e0-44ee9e0f2fc8",
+            "created": "2026-09-22T22:22:05.892Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA_AA25-239ASaltTyphoon_Sept2025",
+                    "description": "CISA. (2025, September 3). Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System. Retrieved September 22, 2026.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T22:22:05.892Z",
+            "description": "[Salt Typhoon](https://attack.mitre.org/groups/G1045) has scanned open ports and services within the victim environment.(Citation: CISA_AA25-239ASaltTyphoon_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1c3dcf91-b859-4aae-a09c-ae26dc8b6390",
+            "target_ref": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

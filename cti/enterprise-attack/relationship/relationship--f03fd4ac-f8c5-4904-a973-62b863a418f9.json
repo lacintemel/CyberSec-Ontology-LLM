@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--0f697638-4232-41c2-947b-9881f7497840",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f03fd4ac-f8c5-4904-a973-62b863a418f9",
+            "created": "2026-04-17T20:14:44.063Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA SPAWNCHIMERA RESURGE February 2026",
+                    "description": "DHS/CISA. (2026, February 26). MAR-25993211-r1.v2 Ivanti Connect Secure (RESURGE): AR25-087A. Retrieved April 17, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-087a"
+                },
+                {
+                    "source_name": "Picus Security UNC5221 Ivanti May 2025",
+                    "description": "Sila Ozeren Hacioglu. (2025, May 5). UNC5221\u2019s Latest Exploit: Weaponizing CVE-2025-22457 in Ivanti Connect Secure. Retrieved April 13, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/unc5221-cve-2025-22457-ivanti-connect-secure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.252Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has modified the Ivanti Integrity Checker Tool to evade detection.(Citation: CISA SPAWNCHIMERA RESURGE February 2026)(Citation: Picus Security UNC5221 Ivanti May 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

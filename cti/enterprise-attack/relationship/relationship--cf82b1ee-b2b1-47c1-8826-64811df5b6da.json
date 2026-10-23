@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ca570a39-2fea-4cd9-bd28-7434711edc34",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cf82b1ee-b2b1-47c1-8826-64811df5b6da",
+            "created": "2026-09-23T22:27:32.921Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T22:27:32.921Z",
+            "description": "During the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary tasked Claude Code to identify system information using `hostname`.(Citation: AI-Mexico-Govt-Breach) \n \n\nDuring the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary tasked Claude Code with using [CrackMapExec](https://attack.mitre.org/software/S0488) to discover configuration information about the domain controllers.(Citation: AI-Mexico-Govt-Breach) ",
+            "relationship_type": "uses",
+            "source_ref": "campaign--199f5568-ca25-4892-b7a5-870503e4d0f4",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

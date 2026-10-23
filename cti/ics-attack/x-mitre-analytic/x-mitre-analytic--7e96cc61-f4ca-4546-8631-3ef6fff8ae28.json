@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--090430a1-909f-405b-8c0d-d6754996ee6e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7e96cc61-f4ca-4546-8631-3ef6fff8ae28",
+            "created": "2026-10-13T17:45:21.764Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0912#AN2166",
+                    "external_id": "AN2166"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:21.764Z",
+            "name": "Analytic 2166",
+            "description": "Real-time monitoring identifies hostapd or wireless controller configuration changes on Linux-based access points disabling the Industrial Control System (ICS) wireless Service Set Identifier (SSID), by a User Identifier (UID) not in the authorized wireless admin UIDs. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; hostapd/wireless-controller configuration command disables or alters an ICS wireless network outside the authorized wireless-administration baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessAdminList",
+                    "description": "Accounts/sources authorized to modify wireless infrastructure configuration."
+                },
+                {
+                    "field": "DeauthTimeWindow",
+                    "description": "Time window within which multiple deauthentication events are considered a coordinated mass event."
+                },
+                {
+                    "field": "MassDeauthThreshold",
+                    "description": "Number of simultaneously deauthenticated enrolled devices that constitutes a mass event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

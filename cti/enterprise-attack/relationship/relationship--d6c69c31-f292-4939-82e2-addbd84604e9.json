@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--5f68d3ce-9b90-4590-92de-e59516a704d8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d6c69c31-f292-4939-82e2-addbd84604e9",
+            "created": "2025-09-29T15:40:53.699Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Agenda Ransomware AUG 2022",
+                    "description": "Magdy, S. et al. (2022, August 25). New Golang Ransomware Agenda Customizes Attacks. Retrieved September 26, 2025.",
+                    "url": "https://www.trendmicro.com/en_us/research/22/h/new-golang-ransomware-agenda-customizes-attacks.html"
+                },
+                {
+                    "source_name": "BushidoToken Qilin RaaS JUN 2024",
+                    "description": "Thomas, W. (2024, June 12). Tracking Adversaries: The Qilin RaaS. Retrieved September 26, 2025.",
+                    "url": "https://blog.bushidotoken.net/2024/06/tracking-adversaries-qilin-raas.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.219Z",
+            "description": "[Qilin](https://attack.mitre.org/software/S1242) can reboot targeted systems in safe mode to avoid detection.(Citation: Trend Micro Agenda Ransomware AUG 2022)(Citation: BushidoToken Qilin RaaS JUN 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e23d2777-b85d-44fc-861e-9149d399fbb9",
+            "target_ref": "attack-pattern--c7660f19-f8c5-4ae3-a5e5-24381c270376",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

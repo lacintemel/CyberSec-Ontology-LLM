@@ -1,0 +1,75 @@
+{
+    "type": "bundle",
+    "id": "bundle--0f192e8e-bcdd-4906-8e63-52a552a329a7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--8cf6e33b-b6ef-4a1f-a77c-0ecdde93161f",
+            "created": "2026-04-17T12:01:07.688Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/groups/G1054",
+                    "external_id": "G1054"
+                },
+                {
+                    "source_name": "Earth Kasha",
+                    "description": "(Citation: Trend Micro Earth Kasha NOV 2024)(Citation: Trend Micro Earth Kasha Updates APR 2025)"
+                },
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha Updates APR 2025",
+                    "description": "Hiroaki, H. (2025, April 30). Earth Kasha Updates TTPs in Latest Campaign Targeting Taiwan and Japan. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/d/earth-kasha-updates-ttps.html"
+                },
+                {
+                    "source_name": "Kaspersky LODEINFO OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part I. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-i/107742/"
+                },
+                {
+                    "source_name": "Kaspersky LODEINFO Part II OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part II. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-ii/107745/"
+                },
+                {
+                    "source_name": "JPCERT MirrorFace JUL 2024",
+                    "description": "Tomonaga, S. (2024, July 16). MirrorFace Attack against Japanese Organisations. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:07.598Z",
+            "name": "MirrorFace",
+            "description": "[MirrorFace](https://attack.mitre.org/groups/G1054) is a People's Republic of China (PRC)-aligned cyberespionage actor believed to be a subgroup under the [menuPass](https://attack.mitre.org/groups/G0045) umbrella based on targeting, tools, and infrastructure overlaps. [MirrorFace](https://attack.mitre.org/groups/G1054) has been active since at least 2019, at first exclusively targeting Japanese organizations across the media, defense, diplomatic, financial, manufacturing, and academic sectors. Subsequent [MirrorFace](https://attack.mitre.org/groups/G1054) operations included targets in Central Europe and featured use of [LODEINFO](https://attack.mitre.org/software/S9020), [HiddenFace](https://attack.mitre.org/software/S9023), and [UPPERCUT](https://attack.mitre.org/software/S0275) malware.(Citation: Kaspersky LODEINFO OCT 2022)(Citation: Kaspersky LODEINFO Part II OCT 2022)(Citation: ESET MirrorFace DEC 2022)(Citation: JPCERT MirrorFace JUL 2024)(Citation: Trend Micro Earth Kasha NOV 2024)(Citation: Trend Micro Earth Kasha Updates APR 2025)",
+            "aliases": [
+                "MirrorFace",
+                "Earth Kasha"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Dominik Breitenbacher, ESET"
+            ]
+        }
+    ]
+}

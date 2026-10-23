@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a04d8913-b594-4fa5-b40b-2bcfd6b4748a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--378fcd18-9928-419c-b5c6-8fd1397bb425",
+            "created": "2026-04-22T22:02:11.205Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET DynoWiper Update JAN 2026",
+                    "description": "ESET. (2026, January 30). DynoWiper update: Technical analysis and attribution. Retrieved April 22, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/dynowiper-update-technical-analysis-attribution/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:19.563Z",
+            "description": "During the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063), the adversaries compromised infrastructure to use for C2.(Citation: ESET DynoWiper Update JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "attack-pattern--f9cc4d06-775f-4ee1-b401-4e2cc0da30ba",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

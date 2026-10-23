@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--f9e23617-c63e-4f29-905c-a0d72a0877cd",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--86989bf4-0dfc-459e-aa67-86c9c02fcdf9",
+            "created": "2026-10-13T17:44:40.273Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0743#AN2134",
+                    "external_id": "AN2134"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:40.273Z",
+            "name": "Analytic 2134",
+            "description": "Real-time monitoring identifies a process on an Industrial Control System (ICS) Linux asset setting a wireless interface to monitor mode via iwconfig or netlink calls, from a User Identifier (UID) not associated with documented wireless diagnostics. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve of wireless configuration utility setting monitor mode on Industrial Control Systems (ICS) Linux asset by User Identifier (UID) not in authorized wireless admin UIDs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessDeviceInventory",
+                    "description": "MAC/identity inventory of all devices authorized on the ICS wireless segment."
+                },
+                {
+                    "field": "DesignatedWirelessManagementStations",
+                    "description": "Hosts authorized to legitimately enable wireless capture for diagnostics."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

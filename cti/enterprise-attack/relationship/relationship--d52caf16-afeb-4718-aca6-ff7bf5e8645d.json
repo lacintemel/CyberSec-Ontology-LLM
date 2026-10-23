@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--53293f4a-7a3c-43c4-abcd-717fb1169a0b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d52caf16-afeb-4718-aca6-ff7bf5e8645d",
+            "created": "2026-04-20T18:04:19.148Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.217Z",
+            "description": "[MuddyViper](https://attack.mitre.org/software/S9032) has used PowerShell.exe to launch a reverse shell.(Citation: ESET_MuddyWater_Dec2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7b92e996-b535-4159-be16-3c3aee4edf54",
+            "target_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

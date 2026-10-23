@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--3d79fb6c-570e-4de3-8029-e629843b7927",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4cc1fe6e-b097-4e81-b0c3-aee729ec9600",
+            "created": "2020-02-21T20:32:21.106Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.030Z",
+            "description": "Ensure proper process and file permissions are in place to prevent adversaries from disabling or interfering with security services.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--987988f0-cf86-4680-a875-2f6456ab2448",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

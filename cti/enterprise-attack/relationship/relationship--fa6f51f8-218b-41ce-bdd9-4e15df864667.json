@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9ea2f6aa-da53-48d7-a235-5314513e97e4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fa6f51f8-218b-41ce-bdd9-4e15df864667",
+            "created": "2026-04-17T16:39:34.988Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky LODEINFO OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part I. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-i/107742/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.265Z",
+            "description": "[DOWNIISSA](https://attack.mitre.org/software/S9021) can use the `URLDownloadToFileA()` API to download from remote resources.(Citation: Kaspersky LODEINFO OCT 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eddb863e-fc77-41c1-86e9-5210d6d58b88",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

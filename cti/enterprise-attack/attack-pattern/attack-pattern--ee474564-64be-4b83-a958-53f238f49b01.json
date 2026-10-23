@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--e7eb1623-ad11-401c-ba22-91be68dbf998",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--ee474564-64be-4b83-a958-53f238f49b01",
+            "created": "2026-04-14T22:54:04.618Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1686/001",
+                    "external_id": "T1686.001"
+                },
+                {
+                    "source_name": "Expel AWS",
+                    "description": "Anthony Randazzo, Britton Manahan, Sam Lipton. (2020, April 28). Managed Detection & Response for AWS. Retrieved April 15, 2026.",
+                    "url": "https://expel.com/blog/finding-evil-in-aws/"
+                },
+                {
+                    "source_name": "Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022",
+                    "description": "Dror Alon. (2022, December 8). Compromised Cloud Compute Credentials: Case Studies From the Wild. Retrieved March 9, 2023.",
+                    "url": "https://unit42.paloaltonetworks.com/compromised-cloud-compute-credentials/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.723Z",
+            "name": "Cloud Firewall",
+            "description": "Adversaries may disable or modify a firewall within a cloud environment to bypass controls that limit access to cloud resources.\n\nCloud environments typically utilize restrictive security groups and firewall rules that only allow network activity from trusted IP addresses via expected ports and protocols. An adversary with appropriate permissions may introduce new firewall rules or policies to allow access into a victim cloud environment and/or move laterally from the cloud control plane to the data plane.\n\nFor example, an adversary may use a script or utility that creates new ingress rules in existing security groups (or creates new security groups entirely) to allow any TCP/IP connectivity to a cloud-hosted instance. They may also remove networking limitations to support traffic associated with malicious activity (such as cryptomining).(Citation: Palo Alto Unit 42 Compromised Cloud Compute Credentials 2022)(Citation: Expel AWS)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-impairment"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Arun Seelagan, CISA",
+                "Expel"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "IaaS"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

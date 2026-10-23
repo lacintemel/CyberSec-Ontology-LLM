@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--0609a5aa-9b09-40dc-ac4a-fa9fbf575f4a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4c10bd09-f51b-4190-811d-8ee3c6fb7696",
+            "created": "2026-10-07T17:52:00.452Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T17:52:00.452Z",
+            "description": "Use application control to restrict wscript.exe, cscript.exe, mshta.exe, Node.js, and other JavaScript runtimes to approved paths, parent processes, scripts, and users.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4fa717d9-cabe-47c8-8cdd-86e9e2e37f30",
+            "target_ref": "attack-pattern--09c897b1-2ce6-4187-8548-bda1cb18d5a2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

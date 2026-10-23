@@ -1,0 +1,44 @@
+{
+    "type": "bundle",
+    "id": "bundle--d99ab23f-f144-412e-be79-ee2d70a3f14b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--d85a6ee9-820c-4adf-8a64-2392ee70c83c",
+            "created": "2026-04-20T20:54:25.372Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T0843/002",
+                    "external_id": "T0843.002"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:59.738Z",
+            "name": "Online Edit",
+            "description": "Adversaries may execute an online edit of a PLC to update parts of an existing program. It does not require stopping the PLC which allows it to continue running during transfer and reconfiguration without interruption to process control. Adversaries may leverage this approach to minimize downtime and evade detection. \n\nThe ability to perform an online edit to the PLC typically relies on access to a workstation with the vendor-specific PLC programming software installed.\n",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-ics-attack",
+                    "phase_name": "lateral-movement"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

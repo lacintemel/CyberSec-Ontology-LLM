@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c3a91d51-44ac-4222-b185-604c432a736d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ddac1aee-5aca-4ccb-bba4-52a2b52e2abc",
+            "created": "2026-04-17T15:56:04.195Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ITOCHU LODEINFO JAN 2024",
+                    "description": "ITOCHU. (2024, January 24). The Endless Struggle Against APT10: Insights from LODEINFO v0.6.6 - v0.7.3 Analysis. Retrieved April 17, 2026.",
+                    "url": "https://blog-en.itochuci.co.jp/entry/2024/01/24/134100"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.228Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) has used control flow flattening to obfuscate code.(Citation: ITOCHU LODEINFO JAN 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

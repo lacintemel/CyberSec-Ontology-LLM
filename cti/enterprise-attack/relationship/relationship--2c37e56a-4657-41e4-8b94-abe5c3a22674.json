@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2331ecab-174a-44c1-b9e9-228895680fa2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2c37e56a-4657-41e4-8b94-abe5c3a22674",
+            "created": "2026-04-20T21:31:01.529Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.964Z",
+            "description": "[Fooder](https://attack.mitre.org/software/S9033)\u202fhas used the `DuplicateTokenEx` API to duplicate the token of a specified process, and `CreateProcessAsUserA` to execute its payload.(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f\u202f\u202f\u202f",
+            "relationship_type": "uses",
+            "source_ref": "malware--7c8865dc-1bf9-49ce-b5f2-f15abde0909a",
+            "target_ref": "attack-pattern--86850eff-2729-40c3-b85e-c4af26da4a2d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

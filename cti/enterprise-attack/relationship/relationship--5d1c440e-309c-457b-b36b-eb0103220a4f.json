@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8c4d3539-9bb3-4b8c-a4ad-75962be94bce",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5d1c440e-309c-457b-b36b-eb0103220a4f",
+            "created": "2026-04-20T20:16:10.636Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026",
+                    "description": "DomainTools Investigations. (2026, April 6). Handala: MOIS Linked Cyber Influence Ecosystem Threat Intelligence Assessment. Retrieved April 20, 2026.",
+                    "url": "https://dti.domaintools.com/research/handala-mois-linked-cyber-influence-ecosystem-threat-intelligence-assessment"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T17:55:53.159Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has developed or obtained trojanized applications used for persistent surveillance of targeted individuals.(Citation: Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--7807d3a4-a885-4639-a786-c1ed41484970",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

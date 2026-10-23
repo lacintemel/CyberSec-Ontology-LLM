@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--45532d8a-c280-496c-9046-579cfba8070d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4c4fe037-c9ae-4f38-b717-901d3ce09528",
+            "created": "2026-09-25T16:50:21.360Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-08T01:22:21.388Z",
+            "description": "Execution prevention may block malicious software from accessing protected resources through the command-line interface.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4fa717d9-cabe-47c8-8cdd-86e9e2e37f30",
+            "target_ref": "attack-pattern--abc2529d-70c0-4971-b25f-0dce8cffb427",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

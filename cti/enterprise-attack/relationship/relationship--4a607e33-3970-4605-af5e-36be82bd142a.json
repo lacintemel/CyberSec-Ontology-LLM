@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1b14110b-b60e-4487-9ce2-9e0062dc48e6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4a607e33-3970-4605-af5e-36be82bd142a",
+            "created": "2021-04-07T18:07:47.871Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Unit 42 Hildegard Malware",
+                    "description": "Chen, J. et al. (2021, February 3). Hildegard: New TeamTNT Cryptojacking Malware Targeting Kubernetes. Retrieved April 5, 2021.",
+                    "url": "https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.027Z",
+            "description": "[Hildegard](https://attack.mitre.org/software/S0601) has modified /etc/ld.so.preload to intercept shared library import functions.(Citation: Unit 42 Hildegard Malware)",
+            "relationship_type": "uses",
+            "source_ref": "malware--40a1b8ec-7295-416c-a6b1-68181d86f120",
+            "target_ref": "attack-pattern--633a100c-b2c9-41bf-9be5-905c1b16c825",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

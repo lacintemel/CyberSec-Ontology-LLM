@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--41297d2a-a88b-42ab-8df7-c0d88e3378d6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d3023733-5874-4746-a947-65925514e382",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0771#AN1903",
+                    "external_id": "AN1903"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:33.230Z",
+            "name": "Analytic 1903",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) protocol commands changing device-level credentials or access codes from a source not in the approved security administration list, where the device subsequently rejects connections from legitimate control system components. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "credential/access code change command from source not in approved security admin list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedCredentialAdmins",
+                    "description": "Accounts authorized to change credentials for ICS service and operator accounts."
+                },
+                {
+                    "field": "CredentialChangeImpactWindow",
+                    "description": "Time window after a credential change within which a service authentication failure is considered directly connected."
+                },
+                {
+                    "field": "CredentialRotationSchedule",
+                    "description": "Documented schedule for routine credential rotation."
+                }
+            ]
+        }
+    ]
+}

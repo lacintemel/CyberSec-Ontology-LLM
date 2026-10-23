@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c4e2a8be-7721-4db1-b62b-cab10bd52818",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e92e167d-d8b7-4429-bf60-d923f0a7f714",
+            "created": "2026-03-09T15:33:30.604Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "K7Dhanalakshmi_VajraSpy_April2022",
+                    "description": "Dhanalakshmi. (2022, April 19).  VajraSpy \u2013 An Android RAT. Retrieved November 5, 2025.",
+                    "url": "https://labs.k7computing.com/index.php/vajraspy-an-android-rat/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T22:19:52.639Z",
+            "description": "[VajraSpy](https://attack.mitre.org/software/S9006) has requested for `android.permission.CALL_PHONE`.(Citation: K7Dhanalakshmi_VajraSpy_April2022) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8205a875-3ed5-4be2-ab9b-14a7d29431d0",
+            "target_ref": "attack-pattern--351ddf79-2d3a-41b4-9bef-82ea5d3ccd69",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

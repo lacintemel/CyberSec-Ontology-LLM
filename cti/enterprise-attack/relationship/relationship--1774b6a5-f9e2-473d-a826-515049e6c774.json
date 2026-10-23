@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--940a836a-88ca-4308-89d0-e42ef7599dcb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1774b6a5-f9e2-473d-a826-515049e6c774",
+            "created": "2026-04-09T20:43:28.194Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.936Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has stopped `systemd-resolved` in order to manipulate DNS and firewalls.(Citation: Socket Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--dfefe2ed-4389-4318-8762-f0272b350a1b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

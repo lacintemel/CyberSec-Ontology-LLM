@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--8502a0cd-18a5-442b-aaaa-34eaf8a48e2f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--23ce0ac3-6afe-4647-be72-e1e9bcd1490e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0793#AN1925",
+                    "external_id": "AN1925"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:53.370Z",
+            "name": "Analytic 1925",
+            "description": "Real-time monitoring identifies a trusted, signed Windows system binary executing with command-line arguments inconsistent with its documented administrative purpose -- specifically arguments indicating payload decoding, remote content execution, or script invocation -- on an Industrial Control System (ICS) host. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 image matches certutil.exe/regsvr32.exe/mshta.exe/rundll32.exe and command line matches Living-off-the-Land Binary (LOLBin) abuse patterns on host in Industrial Control Systems (ICS) workstation inventory"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ICSWorkstationInventory",
+                    "description": "Inventory of ICS hosts warranting this elevated monitoring."
+                },
+                {
+                    "field": "LOLBinAbusePatterns",
+                    "description": "Documented command-line argument patterns for living-off-the-land binary abuse."
+                }
+            ]
+        }
+    ]
+}

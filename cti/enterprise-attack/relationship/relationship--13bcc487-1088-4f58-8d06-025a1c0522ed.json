@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8bb9a427-c6f7-45b1-b40a-2e6e4658d9b5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--13bcc487-1088-4f58-8d06-025a1c0522ed",
+            "created": "2026-10-01T18:36:34.756Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T18:36:34.756Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has utilized Native Windows API calls to execute on victim devices to include `GetModuleHandle`.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025)   ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

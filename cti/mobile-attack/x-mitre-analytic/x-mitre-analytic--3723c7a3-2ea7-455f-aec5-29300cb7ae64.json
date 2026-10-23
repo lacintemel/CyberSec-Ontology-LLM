@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--55b558c0-aea3-443b-82a2-f2c34f0744e5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--3723c7a3-2ea7-455f-aec5-29300cb7ae64",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0614#AN1669",
+                    "external_id": "AN1669"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:32.626Z",
+            "name": "Analytic 1669",
+            "description": "For Android, detect Drive-By Compromise by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate File Creation via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT for APK or binary file in /sdcard/ or /data/local/tmp/ by browser process within $DriveByWindow$ \u2014 payload drop confirms exploit code execution]; Network Traffic Content via Enterprise Secure Web Gateway / Proxy [DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed]; Process Creation via Application Vetting / Managed Device Telemetry [execve()]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT for APK or binary file in /sdcard/ or /data/local/tmp/ by browser process within $DriveByWindow$ \u2014 payload drop confirms exploit code execution"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "webproxy:applog",
+                    "channel": "DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "execve()"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "URLReputationThreshold",
+                    "description": "Default score 50/100. Derive from threat intel feed vendor scoring."
+                },
+                {
+                    "field": "DomainAgeDays",
+                    "description": "Default 30 days. Newly registered domain + browser exploit = high-confidence."
+                },
+                {
+                    "field": "KnownBrowserChildren",
+                    "description": "Renderer, GPU process, browser service workers. Derive from browser process baseline."
+                },
+                {
+                    "field": "DriveByWindow",
+                    "description": "Default 30s between URL navigation and process spawn."
+                }
+            ]
+        }
+    ]
+}

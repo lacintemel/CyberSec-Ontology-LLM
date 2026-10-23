@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--dd7ffa96-412c-447e-ba37-6284b65d03a1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--70857657-bd0b-4695-ad3e-b13f92cac1b4",
+            "created": "2020-06-16T17:23:06.508Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1578/003",
+                    "external_id": "T1578.003"
+                },
+                {
+                    "source_name": "Mandiant M-Trends 2020",
+                    "description": "Mandiant. (2020, February). M-Trends 2020. Retrieved November 17, 2024.",
+                    "url": "https://www.mandiant.com/sites/default/files/2021-09/mtrends-2020.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.641Z",
+            "name": "Delete Cloud Instance",
+            "description": "An adversary may delete a cloud instance after they have performed malicious activities in an attempt to evade detection and remove evidence of their presence.  Deleting an instance or virtual machine can remove valuable forensic artifacts and other evidence of suspicious behavior if the instance is not recoverable.\n\nAn adversary may also [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002) and later terminate the instance after achieving their objectives.(Citation: Mandiant M-Trends 2020)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-impairment"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Arun Seelagan, CISA"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "IaaS"
+            ],
+            "x_mitre_version": "2.0"
+        }
+    ]
+}

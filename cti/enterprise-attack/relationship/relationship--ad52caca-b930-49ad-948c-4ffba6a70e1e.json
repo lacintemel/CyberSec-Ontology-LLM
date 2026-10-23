@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--55a25335-4bea-47b0-8f1c-56f0b03223c9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ad52caca-b930-49ad-948c-4ffba6a70e1e",
+            "created": "2022-03-25T14:32:35.640Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Donut Github",
+                    "description": "TheWover. (2019, May 9). donut. Retrieved March 25, 2022.",
+                    "url": "https://github.com/TheWover/donut"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.161Z",
+            "description": "[Donut](https://attack.mitre.org/software/S0695) can patch Antimalware Scan Interface (AMSI), Windows Lockdown Policy (WLDP), as well as exit-related [Native API](https://attack.mitre.org/techniques/T1106) functions to avoid process termination.(Citation: Donut Github)\t",
+            "relationship_type": "uses",
+            "source_ref": "tool--a7b5df47-73bb-4d47-b701-869f185633a6",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

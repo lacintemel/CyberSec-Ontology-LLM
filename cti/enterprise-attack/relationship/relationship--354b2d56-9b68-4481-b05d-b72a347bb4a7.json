@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--93693127-395d-4474-a3e6-cd1c5beec137",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--354b2d56-9b68-4481-b05d-b72a347bb4a7",
+            "created": "2026-04-10T18:25:53.381Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Koi Glassworm New Tricks December 2025",
+                    "description": "Gal Hachamov. (2025, December 29). GlassWorm Goes Mac: Fresh Infrastructure, New Tricks. Retrieved April 10, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-goes-mac-fresh-infrastructure-new-tricks"
+                },
+                {
+                    "source_name": "Socket GlassWorm January 2026",
+                    "description": "Kirill Boychenko. (2026, January 31). GlassWorm Loader Hits Open VSX via Developer Account Compromise. Retrieved April 10, 2026.",
+                    "url": "https://socket.dev/blog/glassworm-loader-hits-open-vsx-via-suspected-developer-account-compromise"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.991Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has collected keys stored within `/Library/Keychains/login.keychain-db`.(Citation: Koi Glassworm New Tricks December 2025)(Citation: Socket GlassWorm January 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--1eaebf46-e361-4437-bc23-d5d65a3b92e3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4f5dc036-0ccc-447e-a0d3-fca1b8005421",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--85a03500-f954-487e-ba86-3ae696cb4736",
+            "created": "2026-04-17T00:08:41.901Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.108Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has created a new background session and has spawned a child process of a parent process when it determines it is not running in its intended state.(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--106c0cf6-bf73-4601-9aa8-0945c2715ec5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--3676bac4-a5ec-4f78-a10c-52480d772114",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--caa6869b-e752-4fb8-a228-09abaa2d321c",
+            "created": "2026-10-13T17:46:35.037Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0905#AN2219",
+                    "external_id": "AN2219"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:35.037Z",
+            "name": "Analytic 2219",
+            "description": "Real-time monitoring identifies successful authentication to an Industrial Control System (ICS) device or application using credentials that are either documented vendor defaults (T1694.001) or extracted from configuration files/firmware where stored in cleartext (T1694.002), from a source not in the approved access list. This technique-level analytic unifies both sub-techniques. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "authentication success using credential matching default vendor credential list or known hardcoded credential patterns from source not in engineering workstation list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DefaultVendorCredentialList",
+                    "description": "Documented default username/password combinations for all device models in the environment."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of legitimate authentication sources."
+                },
+                {
+                    "field": "KnownHardcodedCredentialPatterns",
+                    "description": "Documented hardcoded credential values for in-use ICS products."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

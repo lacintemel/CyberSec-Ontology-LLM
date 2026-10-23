@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--36058b55-9884-4e15-89f2-4cf6ccacd18b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9889694f-03c8-4e18-9e9b-9c96ced8eb9d",
+            "created": "2026-04-09T18:07:04.469Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cisco Talos Qilin Ransomware OCT 2025",
+                    "description": "Takeda, T. et al. (2025, October 26). Uncovering Qilin attack methods exposed through multiple cases. Retrieved March 26, 2026.",
+                    "url": "https://blog.talosintelligence.com/uncovering-qilin-attack-methods-exposed-through-multiple-cases/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.133Z",
+            "description": "The [Cobalt Strike](https://attack.mitre.org/software/S0154) loader can use the `MessageBoxA` API to prompt for user interaction as an anti-sandbox measure.(Citation: Cisco Talos Qilin Ransomware OCT 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--a7881f21-e978-4fe4-af56-92c9416a2616",
+            "target_ref": "attack-pattern--91541e7e-b969-40c6-bbd8-1b5352ec2938",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

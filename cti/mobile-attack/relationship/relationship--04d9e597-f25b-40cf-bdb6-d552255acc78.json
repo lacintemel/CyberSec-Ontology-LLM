@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--00d86e33-55b1-44e0-b1b7-1a03befb1730",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--04d9e597-f25b-40cf-bdb6-d552255acc78",
+            "created": "2026-02-06T21:24:18.589Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_June2025",
+                    "description": "ThreatFabric. (2025, June 3). Crocodilus Mobile Malware: Evolving Fast, Going Global. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/crocodilus-mobile-malware-evolving-fast-going-global"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:35:35.656Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has used XOR to encode its payload.(Citation: ThreatFabric_Crocodilus_June2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--d13fa042-8f26-44e1-a2a8-af0bf8e2ac9a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

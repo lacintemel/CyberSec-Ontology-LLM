@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--31b0f058-be74-4cb6-a9bb-8bcc745e55e6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--38848a62-c389-4344-8bed-094292cef803",
+            "created": "2026-04-20T18:10:49.899Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:07:46.478Z",
+            "description": "[MuddyViper](https://attack.mitre.org/software/S9032) has the ability to encrypt C2 communication using AES-CBC using the CNG API, the key `0608101047106453101617106423101013101012101083109710108585106969`, and the initialization vector `0`.(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f\u202f ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7b92e996-b535-4159-be16-3c3aee4edf54",
+            "target_ref": "attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

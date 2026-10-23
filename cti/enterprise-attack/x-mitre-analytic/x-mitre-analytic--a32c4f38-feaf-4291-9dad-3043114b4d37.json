@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--6a17bbf2-43dc-40fb-b551-7d23a74cc8bb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a32c4f38-feaf-4291-9dad-3043114b4d37",
+            "created": "2026-04-23T18:14:02.581Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0920#AN2064",
+                    "external_id": "AN2064"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-24T20:32:45.953Z",
+            "name": "Analytic 2064",
+            "description": "Detection identifies execution of scripts containing high concentrations of invisible Unicode characters followed by decoding or interpretation behaviors (e.g., base64 decode, eval) and subsequent process or network activity. Emphasis is placed on mismatch between file entropy/structure and execution output.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "auditd:SYSCALL",
+                    "channel": "stat and lstat syscall results on files, including inode and permission info"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "auditd:EXECVE",
+                    "channel": "execve of script/interpreter (bash, python, node) with suspicious encoded or non-printable content"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DecodeUtility",
+                    "description": "May include base64"
+                },
+                {
+                    "field": "EntropyThreshold",
+                    "description": "Useful for tuning sections containing high entropy indicative of Unicode sequences"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d6965f79-8336-4ea4-abdc-1b68e9307d7e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7641ab63-39e1-4cd2-8e9c-9bd1ce6da370",
+            "created": "2026-02-03T20:23:34.419Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Breakdev Evilginx 2.2 NOV 2018",
+                    "description": "Gretzky, K. (2018, November 22). Evilginx 2.2 - Jolly Winter Update. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-2-2-jolly-winter-update"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.087Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can inject custom POST arguments into requests to silently enable \"Remember Me\" options during authentication to stay logged in across browser sessions.(Citation: Breakdev Evilginx 2.2 NOV 2018)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--544b0346-29ad-41e1-a808-501bb4193f47",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

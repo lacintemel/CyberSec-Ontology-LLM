@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--39b1545c-c0fa-4b4c-9cf1-5d51e8a81068",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--194cb4dd-81ca-4e64-94e2-911fab1219f9",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0801",
+                    "external_id": "DET0801"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:20.456Z",
+            "name": "Detection of Device Restart/Shutdown",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--fcfe9c48-3a5a-49c8-96c3-be79414a8419",
+                "x-mitre-analytic--5db2235a-aa06-47b7-a89e-953a5afb6555",
+                "x-mitre-analytic--17713d7e-3d88-47b0-b5b0-fd60cd90bf86",
+                "x-mitre-analytic--b15aa5f3-acb3-4de6-831b-3f2a259baf63"
+            ]
+        }
+    ]
+}

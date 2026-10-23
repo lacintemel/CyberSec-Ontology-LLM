@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--a4af9cd3-037e-4e4f-87f6-e83ba47593b7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2b2871ae-e8e6-429e-b9e3-91852d1c5cb8",
+            "created": "2026-09-26T03:36:10.758Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:36:10.758Z",
+            "description": "Restrict MQTT, AMQP, DDS, and other publish/subscribe traffic to approved brokers, peers, ports, topics, namespaces, and security zones. Block unauthorized external broker access while preserving documented IIoT/OT messaging paths.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--11f242bc-3121-438c-84b2-5cbd46a4bb17",
+            "target_ref": "attack-pattern--4b5c5ba1-46a6-4e10-b99b-7e0892368c06",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

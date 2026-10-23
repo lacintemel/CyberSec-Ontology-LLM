@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c4d77683-a28a-4952-bcfe-2b0ca7866372",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4318c4fd-1522-403a-b21c-3834c7bd5cbe",
+            "created": "2026-04-19T00:30:24.334Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:24.737Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has leveraged dynamic API resolution using custom hashing techniques.(Citation: Gen Digital Kimsuky HTTPTroy October 2025) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--ea4c2f9c-9df1-477c-8c42-6da1118f2ac4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

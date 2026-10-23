@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--ab4b5bcd-ef1c-410b-89d5-3cd9e2a9500e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--4c12c1c8-bcef-4daf-8e5b-fca235f71d9e",
+            "created": "2022-05-11T16:22:58.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0109",
+                    "external_id": "DC0109"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:51.984Z",
+            "name": "Process/Event Alarm",
+            "description": "This includes a list of any process alarms or alerts produced to indicate unusual or concerning activity within the operational process (e.g., increased temperature/pressure)",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Databases",
+                    "channel": "None"
+                },
+                {
+                    "name": "Operational Databases",
+                    "channel": "None"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "communication-loss alarm for affected devices within comm block correlation window of the flagged configuration change"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "alarm status transitions to suppressed/shelved/disabled/acknowledged without matching operator_id entry within suppress grace period"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "process state change recorded without preceding operator_ack or scheduled switching order reference"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device_ip communication-loss alarm within serial block correlation window of a flagged serial gateway configuration change"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "expected communication absent for device_ip without corresponding device-generated alarm explaining the gap"
+                }
+            ]
+        }
+    ]
+}

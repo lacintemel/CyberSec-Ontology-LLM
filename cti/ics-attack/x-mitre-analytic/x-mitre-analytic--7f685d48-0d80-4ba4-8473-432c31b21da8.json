@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--6d9d6361-1933-4a38-a45b-e034cc47db01",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7f685d48-0d80-4ba4-8473-432c31b21da8",
+            "created": "2026-10-13T17:44:47.309Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0758#AN2139",
+                    "external_id": "AN2139"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:47.309Z",
+            "name": "Analytic 2139",
+            "description": "Real-time monitoring identifies rapid, bulk deletion of files across Industrial Control System (ICS) data directories on a Linux asset, by a User Identifier (UID) not associated with documented data retention management, correlated with worm-based propagation indicators consistent with documented Linux wiper malware (Awfulshred, SoloShred). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e905dad2-00d6-477c-97e8-800427abd0e8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: rm/shred/dd operations across multiple Industrial Control Systems (ICS) data directories exceeding bulk deletion threshold, by User Identifier (UID) not in authorized data management UIDs"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): Secure Shell (SSH)-based propagation pattern (connection to multiple hosts followed by file transfer and execution) within a short window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedDataManagementTools",
+                    "description": "Allowlist of backup/archival/retention management tools authorized to perform bulk file operations."
+                },
+                {
+                    "field": "BulkDeletionThreshold",
+                    "description": "File count threshold across monitored directories that distinguishes bulk destruction from routine cleanup."
+                },
+                {
+                    "field": "DataDestructionTimeWindow",
+                    "description": "Time window over which bulk deletion activity is measured."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue memory erase commands."
+                },
+                {
+                    "field": "WiperCrashWindow",
+                    "description": "Time window after bulk deletion within which a system crash is considered part of the same destructive event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "type": "bundle",
+    "id": "bundle--ff43e5b7-70e7-4f60-8c16-0de282586a18",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--c0a6e9ec-9ef1-46b6-8a71-cc73863e8985",
+            "created": "2026-09-22T01:25:32.738Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1700",
+                    "external_id": "T1700"
+                },
+                {
+                    "source_name": "Anthropic Report Sep 2026",
+                    "description": "Anthropic Threat Intelligence Team. (2026, September 10). Detecting and countering misuse of AI: September 2026. Retrieved September 21, 2026.",
+                    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+                },
+                {
+                    "source_name": "Google Cloud AI Risk Sep 2026",
+                    "description": "Google Cloud Security. (2026, September). AI risk and resilience | A Mandiant special report. Retrieved September 21, 2026.",
+                    "url": "https://cloud.google.com/security/resources/ai-risk-and-resilience-2026"
+                },
+                {
+                    "source_name": "Barracuda Prompt Injection Phishing Emails",
+                    "description": "Guruprasad Kenja. (2026, October 6). Threat Spotlight: Email attacks target both humans and AI in the same message. Retrieved October 8, 2026.",
+                    "url": "https://blog.barracuda.com/2026/10/07/email-attacks-target-both-humans-ai-assistants"
+                },
+                {
+                    "source_name": "Prompt-Injection Exfil",
+                    "description": "Md Habibur Rahman and Jaeho Kim. (2026, August 27). The Framing Gap: Indirect Prompt-Injection Exfiltration Defeats Surface-Level Defenses in Tool-Using Agents. Retrieved September 21, 2026.",
+                    "url": "https://arxiv.org/html/2608.27092"
+                },
+                {
+                    "source_name": "Google Security State of Prompt Injections",
+                    "description": "Thomas Brunner, Yu-Han Liu, and Moni Pande. (2026, April 23). AI threats in the wild: The current state of prompt injections on the web. Retrieved September 21, 2026.",
+                    "url": "https://blog.google/security/prompt-injections-web/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T16:32:40.851Z",
+            "name": "AI-Enabled Exfiltration",
+            "description": "Adversaries may utilize [Direct Prompt Injection](https://attack.mitre.org/techniques/T1699), [Indirect Prompt Injection](https://attack.mitre.org/techniques/T1698) or other methods to instruct enterprise AI agents to exfiltrate data.(Citation: Prompt-Injection Exfil)(Citation: Anthropic Report Sep 2026) When enterprise systems incorporate the use of AI assistants or other AI agents, adversaries may abuse these systems to weaponize sanctioned tools available to the agent.(Citation: Google Security State of Prompt Injections) \n\nAs an AI agent processes queries or ingests data, an injected prompt can cause the agent to use its tool connections in unauthorized or unintended ways. When AI agents are induced to exfiltrate data, other exfiltration techniques likely apply as well to transfer the information out of the network, such as [Exfiltration to Code Repository](https://attack.mitre.org/techniques/T1567/001) or [Exfiltration Over Web Service](https://attack.mitre.org/techniques/T1567).(Citation: Google Cloud AI Risk Sep 2026)(Citation: Barracuda Prompt Injection Phishing Emails)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "exfiltration"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Windows",
+                "SaaS"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

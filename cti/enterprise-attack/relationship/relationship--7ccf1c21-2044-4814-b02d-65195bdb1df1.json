@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--f0c93358-b3a4-487a-9528-3c30d842514a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7ccf1c21-2044-4814-b02d-65195bdb1df1",
+            "created": "2026-10-07T20:10:43.648Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:10:43.648Z",
+            "description": "Apply bot-management and application-layer filtering independently of whether a CAPTCHA challenge is triggered. Evaluate protected requests using behavioral, client/session, rate, reputation, token, and automation signals, and block or rate-limit activity that violates policy even when no CAPTCHA was presented.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--20f6a9df-37c4-4e20-9e47-025983b1b39d",
+            "target_ref": "attack-pattern--d52e7766-3e2e-4500-8730-0bd1bb8f7eaf",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

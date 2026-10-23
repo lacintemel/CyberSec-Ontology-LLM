@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--40d1199b-2282-4047-b9f4-6d13d831c510",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--22252671-e8e9-4853-8696-7a38ec7bad53",
+            "created": "2026-10-13T17:46:58.661Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0793#AN2242",
+                    "external_id": "AN2242"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:58.661Z",
+            "name": "Analytic 2242",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) protocol messages using embedded device built-in utilities or vendor-supplied diagnostic tools to execute payloads, from sources not in the approved engineering workstation list, containing payloads inconsistent with legitimate diagnostic use. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "vendor diagnostic function code with payload matching code execution pattern from source not in engineering workstation list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ICSWorkstationInventory",
+                    "description": "Inventory of ICS hosts warranting this elevated monitoring."
+                },
+                {
+                    "field": "LOLBinAbusePatterns",
+                    "description": "Documented command-line argument patterns for living-off-the-land binary abuse."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

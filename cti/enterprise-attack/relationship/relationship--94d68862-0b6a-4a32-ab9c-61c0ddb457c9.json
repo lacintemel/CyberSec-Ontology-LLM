@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--87afa329-1feb-40a2-8dc8-628c1388ee0a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--94d68862-0b6a-4a32-ab9c-61c0ddb457c9",
+            "created": "2026-04-20T21:38:59.698Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.128Z",
+            "description": "[Fooder](https://attack.mitre.org/software/S9033) has frequently masqueraded as the Snake game, using strings such as \u201cWelcome to snake Game\u201d and mutexes such as \u201cSNAKE_G.\u201d(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f",
+            "relationship_type": "uses",
+            "source_ref": "malware--7c8865dc-1bf9-49ce-b5f2-f15abde0909a",
+            "target_ref": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

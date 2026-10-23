@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--e492f20e-f549-4f0f-96d3-6cddf588a717",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f41d077c-c8f4-485b-b557-54231e82be7f",
+            "created": "2026-10-07T18:07:11.898Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T18:07:11.898Z",
+            "description": "Restrict file permissions to limit the exposure of sensitive data from AI agents. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--987988f0-cf86-4680-a875-2f6456ab2448",
+            "target_ref": "attack-pattern--c0a6e9ec-9ef1-46b6-8a71-cc73863e8985",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

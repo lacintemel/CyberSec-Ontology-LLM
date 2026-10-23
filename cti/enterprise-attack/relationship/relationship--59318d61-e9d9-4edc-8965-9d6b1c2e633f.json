@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7b4a8286-1b63-4b8d-b7c4-918285768449",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--59318d61-e9d9-4edc-8965-9d6b1c2e633f",
+            "created": "2026-04-17T00:04:58.320Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.047Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has the ability to check if it is running as an active child process through the detection of a specific environment variable.(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

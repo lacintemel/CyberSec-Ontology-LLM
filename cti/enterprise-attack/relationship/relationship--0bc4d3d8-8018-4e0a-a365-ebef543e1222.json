@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--28702637-dfbd-4601-be0e-4830710c0f00",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0bc4d3d8-8018-4e0a-a365-ebef543e1222",
+            "created": "2022-03-25T15:24:08.781Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Symantec Palmerworm Sep 2020",
+                    "description": "Threat Intelligence. (2020, September 29). Palmerworm: Espionage Gang Targets the Media, Finance, and Other Sectors. Retrieved March 25, 2022.",
+                    "url": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/palmerworm-blacktech-espionage-apt"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:01.552Z",
+            "description": "[BlackTech](https://attack.mitre.org/groups/G0098) has used the SNScan tool to find other potential targets on victim networks.(Citation: Symantec Palmerworm Sep 2020)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--6fe8a2a1-a1b0-4af8-953d-4babd329f8f8",
+            "target_ref": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

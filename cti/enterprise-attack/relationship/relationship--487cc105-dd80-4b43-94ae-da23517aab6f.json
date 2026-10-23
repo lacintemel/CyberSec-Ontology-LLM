@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a1b8650c-60cf-4f00-aaed-9e419f5e16b6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--487cc105-dd80-4b43-94ae-da23517aab6f",
+            "created": "2019-01-29T19:36:02.847Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET Carbon Mar 2017",
+                    "description": "ESET. (2017, March 30). Carbon Paper: Peering into Turla\u2019s second stage backdoor. Retrieved November 7, 2018.",
+                    "url": "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.024Z",
+            "description": "[Carbon](https://attack.mitre.org/software/S0335) creates a base directory that contains the files and folders that are collected.(Citation: ESET Carbon Mar 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--b7e9880a-7a7c-4162-bddb-e28e8ef2bf1f",
+            "target_ref": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

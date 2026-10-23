@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7160af69-154b-4926-9e68-c463159f5c81",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4d501413-0a23-4f44-97b8-38ddbc38c04a",
+            "created": "2026-09-25T20:34:17.393Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:34:17.394Z",
+            "description": "Disable Windows Script Host, Office macro capability, or other VB execution surfaces only on ICS assets where they are not required by validated vendor or engineering workflows. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--d0909119-2f71-4923-87db-b649881672d7",
+            "target_ref": "attack-pattern--d0225461-2610-469e-8c52-56ec12ac0c71",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

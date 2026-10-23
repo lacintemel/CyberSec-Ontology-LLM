@@ -1,0 +1,7 @@
+*.jar
+.*.ttl
+.git_submodule_init.done.log
+.lib.done.log
+.venv.done.log
+_*
+venv

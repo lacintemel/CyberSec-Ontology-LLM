@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--44ebbec9-4816-4e8a-b6d1-bfadfa1f1269",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7d81a83b-ae31-4ceb-b469-bb8a914a751c",
+            "created": "2026-10-13T17:45:58.659Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0756#AN2193",
+                    "external_id": "AN2193"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:58.659Z",
+            "name": "Analytic 2193",
+            "description": "Real-time monitoring identifies authentication attempts against Industrial Control System (ICS) network device management interfaces using well-known default vendor credentials from source Internet Protocol (IP) addresses not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet range. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "networkdevice:syslog",
+                    "channel": "Device authentication/audit log: successful authentication using a vendor-default or prohibited account from a non-approved management source"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DefaultVendorCredentialList",
+                    "description": "Documented default username/password combinations for all device models in the environment."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of legitimate authentication sources."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

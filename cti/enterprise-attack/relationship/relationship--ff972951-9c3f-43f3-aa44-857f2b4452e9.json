@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9df85041-d1e9-43df-9277-0d2b6b4a6fcc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ff972951-9c3f-43f3-aa44-857f2b4452e9",
+            "created": "2026-03-26T20:58:19.170Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Agenda Ransomware OCT 2025",
+                    "description": "Trend Micro. (2025, October 23). Agenda Ransomware Deploys Linux Variant on Windows Systems Through Remote Management Tools and BYOVD Techniques. Retrieved March 26, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/j/agenda-ransomware-deploys-linux-variant-on-windows-systems.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.272Z",
+            "description": "[Qilin](https://attack.mitre.org/software/S1242) can use the Splashtop remote management service (SRManager.exe) to execute the Linux ransomware binary directly on Windows systems.(Citation: Trend Micro Agenda Ransomware OCT 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e23d2777-b85d-44fc-861e-9149d399fbb9",
+            "target_ref": "attack-pattern--d4287702-e2f7-4946-bdfa-2c7f5aaa5032",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

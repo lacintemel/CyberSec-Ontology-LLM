@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--a1d2e7ff-d13b-4070-8e72-6f879d584ea9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--4a2e4d0b-dd28-4b0d-8b83-8c9e66826c62",
+            "created": "2026-09-25T19:05:32.433Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0930",
+                    "external_id": "DET0930"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T19:05:32.433Z",
+            "name": "Behavioral Detection of Windows Command Shell Execution in ICS",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--98e017f6-93cd-46d0-8923-13a7697965a7"
+            ]
+        }
+    ]
+}

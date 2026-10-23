@@ -1,0 +1,75 @@
+{
+    "type": "bundle",
+    "id": "bundle--227afbcc-118a-4112-b1c3-5be4b153afc9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--197be8a2-8569-4304-9fe8-b987c8ed79b1",
+            "created": "2026-10-13T17:45:30.374Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0723#AN2168",
+                    "external_id": "AN2168"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:30.374Z",
+            "name": "Analytic 2168",
+            "description": "Real-time monitoring of switch/router interface counters identifies a sudden spike in discarded or errored packets on an Industrial Control System (ICS)-facing interface combined with Central Processing Unit (CPU) utilization climbing above baseline, correlated with loss of reachability to downstream field devices on that segment within the same window. OT operational-fidelity gate: Alert only when a device-specific traffic/resource threshold is exceeded and the same window shows service degradation, failed polling, device alarm/restart, resource exhaustion, or malformed/out-of-spec protocol behavior. Suppress planned load tests, maintenance, network convergence/failover, and known equipment faults after operator confirmation.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): flow volume to Industrial Control Systems (ICS) device subnet exceeds Denial of Service (DoS) flow threshold per minute"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:snmp",
+                    "channel": "ifInErrors or ifOutDiscards rate exceeds baseline combined with cpu5min exceeding utilization threshold"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "CPUUtilizationThreshold",
+                    "description": "Network device CPU utilization percentage above which sustained load suggests packet-processing strain from flood traffic."
+                },
+                {
+                    "field": "DoSConnectionThreshold",
+                    "description": "Connections-per-minute threshold exceeding normal SCADA polling cadence, derived from the device's actual configured scan rate."
+                },
+                {
+                    "field": "DoSDetectionWindow",
+                    "description": "Time window over which flood rate and subsequent device silence are correlated, typically 1-5 minutes."
+                },
+                {
+                    "field": "ExpectedPollInterval",
+                    "description": "Device-specific supervisory poll interval used to determine what counts as a process historian gap."
+                },
+                {
+                    "field": "InterfaceErrorThreshold",
+                    "description": "Deviation from baseline interface error/discard rate, tuned against historical interface health data."
+                },
+                {
+                    "field": "MalformedPacketThreshold",
+                    "description": "Number of malformed/out-of-spec PDUs within the detection window constituting a flood, set above the device's documented error-tolerance baseline."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

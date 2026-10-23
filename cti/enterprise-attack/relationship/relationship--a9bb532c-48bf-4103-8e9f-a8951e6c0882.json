@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--6a86cc72-4466-439b-97be-91b0ef9ed524",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a9bb532c-48bf-4103-8e9f-a8951e6c0882",
+            "created": "2026-04-09T19:38:24.141Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aikido Shai-Hulud September 2025",
+                    "description": "Charlie Eriksen. (2025, September 16). S1ngularity/nx attackers strike again. Retrieved April 9, 2026.",
+                    "url": "https://www.aikido.dev/blog/s1ngularity-nx-attackers-strike-again"
+                },
+                {
+                    "source_name": "Palo Alto Unit 42 Shai-Hulud November 2025",
+                    "description": "Justin Moore. (2025, November 25). \"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 26). Retrieved April 9, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+                },
+                {
+                    "source_name": "Wiz Shai-Hulud September 2025",
+                    "description": "Merav Bar, Rami McCarthy, Barak Sharoni. (2025, September 16). Shai-Hulud: Ongoing Package Supply Chain Worm Delivering Data-Stealing Malware. Retrieved April 9, 2026.",
+                    "url": "https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:00.766Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has used POST to exfiltrate secrets from the victim environment to an attacker-controlled URL.(Citation: Aikido Shai-Hulud September 2025)(Citation: Palo Alto Unit 42 Shai-Hulud November 2025)(Citation: Wiz Shai-Hulud September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

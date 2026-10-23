@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--5d1774e2-8c1c-442d-9bcb-72d6aa83aa2f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6b9f014a-fd75-49df-9355-4224c71d6761",
+            "created": "2026-04-19T18:21:12.052Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.614Z",
+            "description": "During [Operation Digital Eye](https://attack.mitre.org/campaigns/C0061), threat actors used (LinkdById: S0225) to automate SQL injection.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--75ea699b-bff5-4541-b9b7-df4996c9db3c",
+            "target_ref": "tool--9a2640c2-9f43-46fe-b13f-bde881e55555",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

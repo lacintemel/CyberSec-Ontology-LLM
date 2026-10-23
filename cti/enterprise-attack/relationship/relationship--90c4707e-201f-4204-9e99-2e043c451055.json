@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a16b90cc-ed50-4afc-a693-673e9ad45c32",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--90c4707e-201f-4204-9e99-2e043c451055",
+            "created": "2026-09-22T18:55:43.360Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T18:55:43.360Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has relied on remote access tools, such as AnyDesk, as a means of maintaining access to victim environment.(Citation: TrendAI_TheGentlemen_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--d4287702-e2f7-4946-bdfa-2c7f5aaa5032",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

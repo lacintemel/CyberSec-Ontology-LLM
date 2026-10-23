@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fddb9b72-493e-487c-b101-88844621648c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b9de1f4c-1978-4efe-9bd0-f525b6acaeb1",
+            "created": "2021-04-13T13:27:27.007Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Conficker",
+                    "description": "Trend Micro. (2014, March 18). Conficker. Retrieved February 18, 2021.",
+                    "url": "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/conficker"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.178Z",
+            "description": "[Conficker](https://attack.mitre.org/software/S0608) has obfuscated its code to prevent its removal from host machines.(Citation: Trend Micro Conficker)",
+            "relationship_type": "uses",
+            "source_ref": "malware--58eddbaf-7416-419a-ad7b-e65b9d4c3b55",
+            "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

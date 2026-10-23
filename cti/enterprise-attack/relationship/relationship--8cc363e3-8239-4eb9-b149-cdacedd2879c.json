@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d4f3ec45-b112-4588-a9b2-e0f59ac84ab0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8cc363e3-8239-4eb9-b149-cdacedd2879c",
+            "created": "2026-10-01T18:23:25.136Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T18:23:25.136Z",
+            "description": "[DEEPROOT](https://attack.mitre.org/software/S9063) has gathered the victim hostname.(Citation: Mandiant_UNC1549_Nov2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--8460166d-ba74-405b-9944-c6f0365bc085",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

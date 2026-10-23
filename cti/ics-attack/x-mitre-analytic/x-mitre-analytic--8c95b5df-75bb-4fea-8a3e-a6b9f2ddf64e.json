@@ -1,0 +1,81 @@
+{
+    "type": "bundle",
+    "id": "bundle--abfbda77-905e-4c65-b309-be8addcd80a5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8c95b5df-75bb-4fea-8a3e-a6b9f2ddf64e",
+            "created": "2026-09-25T17:53:40.395Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0929#AN2086",
+                    "external_id": "AN2086"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T17:56:20.295Z",
+            "name": "Analytic 2086",
+            "description": "Real-time monitoring identifies direct PowerShell execution or indirect System.Management.Automation use with an unexpected parent, encoded/obfuscated arguments, unusual module loading, or execution followed by OT-relevant network/process activity. Alert only when the interpreter is not part of the asset's approved software/automation baseline or its execution context violates an approved signer/hash/path/parent/user rule, and require OT-relevant corroboration such as access to engineering files, ICS software/API use, communications with protected OT assets, configuration change, or another suspicious follow-on behavior. Suppress documented vendor software, engineering workflows, diagnostics, backup, patching, and approved maintenance. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1; powershell/pwsh or suspicious parent-child chain"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "WinEventLog:PowerShell",
+                    "channel": "EventCode=4103/4104/4105/4106; command/script-block content "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "WinEventLog:PowerShell",
+                    "channel": "EventCode=400/403; engine lifecycle/context"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--c0a4a086-cc20-4e1e-b7cb-29d99dfa3fb1",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=7; System.Management.Automation or unusual PowerShell-related modules"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedPowerShellUse",
+                    "description": "Approved scripts, modules, hosts, service accounts, and vendor workflows"
+                },
+                {
+                    "field": "ParentProcessName",
+                    "description": "Expected parents for engineering/administrative PowerShell"
+                },
+                {
+                    "field": "CommandLinePattern",
+                    "description": "Encoded, hidden, download, reflection, remoting, or ICS/API-related arguments"
+                },
+                {
+                    "field": "MaintenanceWindow",
+                    "description": "Approved change/diagnostic periods"
+                },
+                {
+                    "field": "ProtectedOTDestinations",
+                    "description": "Controllers, HMIs, historians, gateways, and engineering assets where follow-on activity raises fidelity"
+                }
+            ]
+        }
+    ]
+}

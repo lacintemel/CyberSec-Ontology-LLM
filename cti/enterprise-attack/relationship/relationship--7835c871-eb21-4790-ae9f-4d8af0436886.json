@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--8afc0bac-2342-4303-8211-6fcb4d49a6ca",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7835c871-eb21-4790-ae9f-4d8af0436886",
+            "created": "2026-04-20T18:17:31.400Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point VOID MANTICORE Handala Hack March 2026",
+                    "description": "Check Point Research. (2026, March 12). \u201cHandala Hack\u201d \u2013 Unveiling Group\u2019s Modus Operandi. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+                },
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026",
+                    "description": "DomainTools Investigations. (2026, April 6). Handala: MOIS Linked Cyber Influence Ecosystem Threat Intelligence Assessment. Retrieved April 20, 2026.",
+                    "url": "https://dti.domaintools.com/research/handala-mois-linked-cyber-influence-ecosystem-threat-intelligence-assessment"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.666Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has obtained access to commercial VPN services to launch malicious activity.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has also leveraged Starlink internet services.(Citation: Check Point VOID MANTICORE Handala Hack March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has used operator-controlled Telegram bots and channels as C2 infrastructure.(Citation: Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--88d31120-5bc7-4ce3-a9c0-7cf147be8e54",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

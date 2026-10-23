@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--416ebfb1-5e37-46c9-a41c-83c5019a4954",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0dc82354-8b3b-47f7-9bf3-31f9928ae395",
+            "created": "2026-10-07T18:12:14.300Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T18:12:14.300Z",
+            "description": "ASPs can be obtained through social engineering, which your technique explicitly includes. Train users not to generate or disclose ASPs in response to unsolicited instructions.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--2a4f6c11-a4a7-4cb9-b0ef-6ae1bb3a718a",
+            "target_ref": "attack-pattern--6c427a0d-e0df-41f8-b522-e59eaab44c47",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

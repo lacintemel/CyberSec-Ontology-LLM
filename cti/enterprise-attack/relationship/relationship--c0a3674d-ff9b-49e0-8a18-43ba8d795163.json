@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--2add24a7-729a-418d-a3da-4d586e91ac7f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c0a3674d-ff9b-49e0-8a18-43ba8d795163",
+            "created": "2026-04-17T21:13:09.362Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024",
+                    "description": "Matt Lin, Austin Larsen, John Wolfram, Ashley Pearson, Josh Murchie, Lukasz Lamparski, Joseph Pisano, Ryan Hall, Ron Craft, Shawn Crew, Billy Wong, Tyler McLellan. (2024, April 4). Cutting Edge, Part 4: Ivanti Connect Secure VPN Post-Exploitation Lateral Movement Case Studies. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-post-exploitation-lateral-movement"
+                },
+                {
+                    "source_name": "JPCERT SPAWNCHIMERA Ivanti February 2025",
+                    "description": "Yuma Masubuchi. (2025, February 20). SPAWNCHIMERA Malware: The Chimera Spawning from Ivanti Connect Secure Vulnerability. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2025/02/spawnchimera.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:57.966Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has the ability to bind on a localhost and listen on port 8300.(Citation: Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024)(Citation: JPCERT SPAWNCHIMERA Ivanti February 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--b18eae87-b469-4e14-b454-b171b416bc18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a96ed545-6fec-40f3-977e-bbc1456c27db",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--aa52ab24-5505-49c4-ac4f-924cdcb4d45e",
+            "created": "2026-04-20T13:22:11.065Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.157Z",
+            "description": "[SameCoin](https://attack.mitre.org/software/S9030) can use `libexampleone.so` to fill selected files with zeros and then deletes them from the file system.(Citation: Check Point Wirte NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--4e164a21-3fbe-4aaa-be69-2513fdba90f7",
+            "target_ref": "attack-pattern--9ef14445-6f35-4ed0-a042-5024f13a9242",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

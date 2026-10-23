@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--aad16bdc-9b73-4e5c-8299-f27a980c3ba0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5a7cc322-c3b7-48ee-9e5f-6a5f210692ea",
+            "created": "2026-09-23T21:53:22.031Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T21:53:22.031Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has used the following command to re-enable SMB1: `Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -NoRestart`.(Citation: CheckPointResearch_TheGentlemen_April2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--30904c16-39f9-41c6-b01a-500eb8878442",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

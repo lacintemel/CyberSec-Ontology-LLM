@@ -1,0 +1,81 @@
+{
+    "type": "bundle",
+    "id": "bundle--b1317a55-e67c-469d-807d-310ee246d29f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--edd8297d-ec63-4b54-8d28-106f228dd535",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0728#AN1861",
+                    "external_id": "AN1861"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:19.686Z",
+            "name": "Analytic 1861",
+            "description": "Real-time monitoring of the alarm and process historian layer identifies an alarm status transitioning to suppressed, shelved, disabled, or acknowledged without a corresponding operator action recorded within a grace period, correlated with Industrial Control System (ICS) protocol write traffic to alarm configuration or threshold registers arriving in the same window from a source not in the approved engineering list. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--4c12c1c8-bcef-4daf-8e5b-fca235f71d9e",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "alarm status transitions to suppressed/shelved/disabled/acknowledged without matching operator_id entry within suppress grace period"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--931b3fc6-ad68-42a8-9018-e98515eedc95",
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "process value crosses known alarm threshold but no corresponding alarm event recorded within expected latency window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "Generic Object Oriented Substation Event (GOOSE) dataset stNum value decreases (replay indicator) or test-mode bit asserted on protection relay without scheduled maintenance"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Content",
+                    "channel": "write function code targeting alarm config address range from source not in approved write sources within suppress grace period of the alarm status change"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmConfigAddressRange",
+                    "description": "Protocol register/address ranges corresponding to alarm threshold and configuration values per device type."
+                },
+                {
+                    "field": "AlarmConfigPaths",
+                    "description": "File system paths for alarm configuration files/databases on Windows alarm servers."
+                },
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to ICS devices, including alarm configuration."
+                },
+                {
+                    "field": "HMIAlarmParentAllowlist",
+                    "description": "Allowlist of recognized HMI/alarm management application processes authorized to modify alarm configuration."
+                },
+                {
+                    "field": "SuppressGracePeriod",
+                    "description": "Time window within which a legitimate operator acknowledgment is expected following an alarm status change, typically 10-30 seconds."
+                }
+            ]
+        }
+    ]
+}

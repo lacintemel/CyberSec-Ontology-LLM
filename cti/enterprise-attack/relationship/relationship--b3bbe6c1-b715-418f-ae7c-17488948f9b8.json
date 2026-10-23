@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ab9a8141-d6f1-4c81-ab3c-cf572924db5d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b3bbe6c1-b715-418f-ae7c-17488948f9b8",
+            "created": "2026-04-16T22:31:02.736Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FalconFeeds_Iran_Mar2026",
+                    "description": "FalconFeeds.io. (2026, March 5). The Digital Redoubt: Iran\u2019s National Information Network and the Asymmetry of Modern Cyber Conflict. Retrieved March 9, 2026.",
+                    "url": "https://falconfeeds.io/blogs/the-digital-redoubt-irans-national-information-network-cyber-conflict"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-08T20:28:08.766Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has used NordVPN to proxy phishing emails, making them appear to originate from France.(Citation: FalconFeeds_Iran_Mar2026)   ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--731f4f55-b6d0-41d1-a7a9-072a66389aea",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

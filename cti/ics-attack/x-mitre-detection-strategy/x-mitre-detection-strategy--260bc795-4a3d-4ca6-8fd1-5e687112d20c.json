@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--007d1d3a-e719-4b3a-b48e-0c73c9439774",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--260bc795-4a3d-4ca6-8fd1-5e687112d20c",
+            "created": "2026-09-25T16:53:28.157Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0928",
+                    "external_id": "DET0928"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T22:42:10.773Z",
+            "name": "Behavioral Detection of Command and Scripting Abuse in ICS",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--0d570cdf-f503-43b1-a3be-5ee485379576",
+                "x-mitre-analytic--3fef48cc-6e1f-4a2f-9a1e-a8a0e43c3c20",
+                "x-mitre-analytic--eb0833b1-5675-43df-84cb-3c185653326a",
+                "x-mitre-analytic--c7880711-79fa-4ea5-9c77-b7d59a9740be"
+            ]
+        }
+    ]
+}

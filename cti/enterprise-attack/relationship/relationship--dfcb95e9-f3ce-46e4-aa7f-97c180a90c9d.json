@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f6615c2b-4bd4-4fae-bc1c-55179fb5a64f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dfcb95e9-f3ce-46e4-aa7f-97c180a90c9d",
+            "created": "2026-09-25T16:12:17.836Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T17:44:40.053Z",
+            "description": "[BACKUPOSINT v9.0 APEX PREDATOR](https://attack.mitre.org/software/S9045) has leveraged OpenAI\u2019s GPT-4.1 API to analyze extracted data.(Citation: AI-Mexico-Govt-Breach) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--ab183324-4634-45bc-98af-9458bb94bcef",
+            "target_ref": "attack-pattern--55bb4471-ff1f-43b4-88c1-c9384ec47abf",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

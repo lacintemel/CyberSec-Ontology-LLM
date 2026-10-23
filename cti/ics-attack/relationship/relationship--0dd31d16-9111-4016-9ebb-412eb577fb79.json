@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--e8aecfab-fb72-4a3c-84f3-546f1475f5e3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0dd31d16-9111-4016-9ebb-412eb577fb79",
+            "created": "2026-09-25T20:34:46.230Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:34:46.230Z",
+            "description": "Use application control and macro/script restrictions to prevent unapproved VBS/VBA/VBScript execution, while explicitly allowlisting required vendor macros and engineering automation. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4fa717d9-cabe-47c8-8cdd-86e9e2e37f30",
+            "target_ref": "attack-pattern--d0225461-2610-469e-8c52-56ec12ac0c71",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

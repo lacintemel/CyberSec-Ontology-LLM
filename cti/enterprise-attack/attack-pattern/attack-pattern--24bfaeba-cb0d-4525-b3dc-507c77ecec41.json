@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--8789fb5a-3447-4114-b860-c0b1e6056f02",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+            "created": "2020-03-16T15:45:17.032Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1573/001",
+                    "external_id": "T1573.001"
+                },
+                {
+                    "source_name": "Destination Certification",
+                    "description": "John Berti. (2026, July 1). Symmetric Cryptography: A CISSP Exam Study Guide. Retrieved September 2, 2026.",
+                    "url": "https://destcert.com/resources/symmetric-cryptography/"
+                },
+                {
+                    "source_name": "Symmetric vs Asymmetric Cryptography",
+                    "description": "Keyfactor. (2026, July 22). Symmetric vs Asymmetric Cryptography: What\u2019s the Difference and When to Use Each. Retrieved September 2, 2026.",
+                    "url": "https://www.keyfactor.com/blog/symmetric-vs-asymmetric-cryptography-whats-the-difference-and-when-to-use-each/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:07:39.622Z",
+            "name": "Symmetric Cryptography",
+            "description": "Adversaries may employ a known symmetric encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol. Symmetric encryption algorithms use the same key for plaintext encryption and ciphertext decryption. Common symmetric encryption algorithms include AES, DES, 3DES, Blowfish, and RC4.(Citation: Destination Certification)(Citation: Symmetric vs Asymmetric Cryptography)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "ESXi",
+                "Linux",
+                "macOS",
+                "Network Devices",
+                "Windows"
+            ],
+            "x_mitre_version": "1.3"
+        }
+    ]
+}

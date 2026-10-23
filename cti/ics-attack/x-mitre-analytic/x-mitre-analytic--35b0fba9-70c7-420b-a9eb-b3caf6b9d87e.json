@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--a90fd4b4-ff17-4183-a42e-a64fa4f8173a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--35b0fba9-70c7-420b-a9eb-b3caf6b9d87e",
+            "created": "2026-10-13T17:44:58.977Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0787#AN2148",
+                    "external_id": "AN2148"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:58.977Z",
+            "name": "Analytic 2148",
+            "description": "Real-time monitoring identifies an account on an ICS Linux host invoking SSH, SNMP, or another remote-management utility with a non-local target to query remote system identity, hardware, operating-system, or inventory information outside the approved management baseline. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; SSH/SNMP/remote-management command includes a remote target host and queries system identity/inventory from an account outside the authorized management set"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate sources for device identification queries."
+                },
+                {
+                    "field": "ApprovedSystemAdmins",
+                    "description": "Accounts with documented system administration responsibilities."
+                },
+                {
+                    "field": "EnumerationTimeWindow",
+                    "description": "Time window within which multiple enumeration commands are considered a systematic reconnaissance sequence."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

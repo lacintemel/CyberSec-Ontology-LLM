@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--6844167c-5a81-4b90-b4f4-dd21c17490d1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--26e05910-d743-4959-a177-ff227fc48819",
+            "created": "2026-01-26T18:48:16.063Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft_diskpart_Feb2023",
+                    "description": "Microsoft. (2023, February 3). diskpart. Retrieved March 17, 2025.",
+                    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart"
+                },
+                {
+                    "source_name": "Trendmicro_RansomHub_Dec2024",
+                    "description": "Trend Research. (2024, December 20). RansomHub. Retrieved December 23, 2025.",
+                    "url": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-ransomhub"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.958Z",
+            "description": "[Diskpart](https://attack.mitre.org/software/S9002) can be used to delete a partition or a volume.(Citation: Microsoft_diskpart_Feb2023) [Diskpart](https://attack.mitre.org/software/S9002) can also be used to remove all partitions or volume formatting from the selected disk.(Citation: Trendmicro_RansomHub_Dec2024)   ",
+            "relationship_type": "uses",
+            "source_ref": "tool--080f872e-f1a3-4d42-bb00-9eb55949f6a9",
+            "target_ref": "attack-pattern--0af0ca99-357d-4ba1-805f-674fdfb7bef9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

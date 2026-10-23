@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--d63e1dbf-8f5d-472c-8618-ee65983da494",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--92483574-b54e-403d-a08b-f6e07a77f963",
+            "created": "2026-10-13T17:47:37.720Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0726#AN2269",
+                    "external_id": "AN2269"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:37.720Z",
+            "name": "Analytic 2269",
+            "description": "Real-time monitoring identifies a Windows process enabling promiscuous or monitor mode on a wireless adapter (netsh wlan, WinPcap/Npcap driver load, etc.) on an Industrial Control System (ICS) workstation that is not a designated wireless management station, indicating preparation for wireless interception consistent with this technique's reconnaissance phase. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3551476e-14f5-4e48-a518-e82135329e03",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=6 for wireless capture driver on host not in designated wireless management station list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessDeviceInventory",
+                    "description": "MAC/certificate inventory of devices authorized to associate with ICS wireless infrastructure."
+                },
+                {
+                    "field": "DesignatedWirelessManagementStations",
+                    "description": "Hosts authorized to legitimately enable wireless monitor mode for diagnostics."
+                },
+                {
+                    "field": "WirelessOnboardWindow",
+                    "description": "Time window after wireless association within which ICS-directed traffic is considered part of the same onboarding event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1f903af7-0775-4e06-b84e-685006bea67a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--59e256fe-638f-4b1f-81d0-3329b05a1443",
+            "created": "2026-04-16T18:38:08.770Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler BlindEagle DEC 2025",
+                    "description": "Pellegrino, G. (2025, December 16). BlindEagle Targets Colombian Government Agency with Caminho and DCRAT. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/blindeagle-targets-colombian-government-agency-caminho-and-dcrat"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:09:42.951Z",
+            "description": "[DCRAT](https://attack.mitre.org/software/S9017) can use certificate-based authentication for C2 servers.(Citation: Zscaler BlindEagle DEC 2025)\n",
+            "relationship_type": "uses",
+            "source_ref": "tool--2f481072-e9f8-4452-be00-d1d7e43c2edc",
+            "target_ref": "attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

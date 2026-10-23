@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--6c2f166a-7aee-47f5-bd8b-9285e71843e8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--02744e21-5d1c-4290-820f-d355fc044f50",
+            "created": "2026-09-25T20:00:54.346Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0931",
+                    "external_id": "DET0931"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:00:54.346Z",
+            "name": "Behavioral Detection of Unix Shell Execution in ICS",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--a5255607-9d66-473a-ac88-8b4d0f2527f3",
+                "x-mitre-analytic--a5361f96-a1da-426b-9211-33f29d7d217a",
+                "x-mitre-analytic--50e94b5a-3b2b-450d-a33c-c6b0d72f7b50"
+            ]
+        }
+    ]
+}

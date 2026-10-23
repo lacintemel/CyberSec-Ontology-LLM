@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--3ace0b85-a7db-41eb-a538-070c081532e0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c25ab527-d86f-4146-898c-03e9dc121321",
+            "created": "2026-09-30T19:10:33.150Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft Axios Compromise APR 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, April 1). Mitigating the Axios npm supply chain compromise. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/"
+                },
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T19:10:33.150Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has utilized malicious JavaScript payloads to compromise victims.(Citation: Microsoft Axios Compromise APR 2026)(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--0f4a0c76-ab2d-4cb0-85d3-3f0efb8cba0d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

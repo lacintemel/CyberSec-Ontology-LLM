@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--320bc5b8-1c29-4fda-824e-2d9bbe9fa402",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b27d69e9-d7e0-4d06-88e4-942b42987028",
+            "created": "2026-04-09T19:59:00.100Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aikido Shai-Hulud September 2025",
+                    "description": "Charlie Eriksen. (2025, September 16). S1ngularity/nx attackers strike again. Retrieved April 9, 2026.",
+                    "url": "https://www.aikido.dev/blog/s1ngularity-nx-attackers-strike-again"
+                },
+                {
+                    "source_name": "Netskope Shai-Hulud November 2025",
+                    "description": "Gianpietro Cutolo. (2025, November 26). Shai-Hulud 2.0: Aggressive, Automated, and Fast Spreading. Retrieved April 9, 2026.",
+                    "url": "https://www.netskope.com/blog/shai-hulud-2-0-aggressive-automated-one-of-fastest-spreading-npm-supply-chain-attacks-ever-observed"
+                },
+                {
+                    "source_name": "Wiz Shai-Hulud September 2025",
+                    "description": "Merav Bar, Rami McCarthy, Barak Sharoni. (2025, September 16). Shai-Hulud: Ongoing Package Supply Chain Worm Delivering Data-Stealing Malware. Retrieved April 9, 2026.",
+                    "url": "https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud Trufflehog September 2025",
+                    "description": "Socket Research Team. (2025, September 15). Popular Tinycolor npm Package Compromised in Supply Chain Attack Affecting 40+ Packages. Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/tinycolor-supply-chain-attack-affects-40-packages"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.169Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has published malicious gzip-compressed tarball (.tgz) following modification of packages within compromised accounts.(Citation: Aikido Shai-Hulud September 2025)(Citation: Socket Shai-Hulud Trufflehog September 2025) [Shai-Hulud](https://attack.mitre.org/software/S9008) has also modified packages within compromised accounts.(Citation: Netskope Shai-Hulud November 2025)(Citation: Wiz Shai-Hulud September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--3ee16395-03f0-4690-a32e-69ce9ada0f9e",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

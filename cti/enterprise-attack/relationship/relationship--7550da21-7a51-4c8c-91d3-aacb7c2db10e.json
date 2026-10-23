@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f0867c65-63a5-44d6-92c6-da9afa27db35",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7550da21-7a51-4c8c-91d3-aacb7c2db10e",
+            "created": "2026-04-20T21:34:04.523Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.086Z",
+            "description": "[Fooder](https://attack.mitre.org/software/S9033)\u202fhas reflectively loaded a payload into\u202fmemory.(Citation: ESET_MuddyWater_Dec2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7c8865dc-1bf9-49ce-b5f2-f15abde0909a",
+            "target_ref": "attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

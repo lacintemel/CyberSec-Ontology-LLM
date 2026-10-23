@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--965bff78-f2a6-4e4b-b546-8384b5b80470",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--bd5fd2c2-a9a3-401e-8723-92df94f9c482",
+            "created": "2021-10-11T17:54:11.520Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint Bandook Nov 2020",
+                    "description": "Check Point. (2020, November 26). Bandook: Signed & Delivered. Retrieved May 31, 2021.",
+                    "url": "https://research.checkpoint.com/2020/bandook-signed-delivered/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.184Z",
+            "description": "[Bandook](https://attack.mitre.org/software/S0234) has used the ShellExecuteW() function call.(Citation: CheckPoint Bandook Nov 2020) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--835a79f1-842d-472d-b8f4-d54b545c341b",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

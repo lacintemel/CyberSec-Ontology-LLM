@@ -1,0 +1,78 @@
+{
+    "type": "bundle",
+    "id": "bundle--849860cb-c554-43e6-96be-0fbe78bfbf8b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--cbdcf6f3-00c3-4c38-bc7c-ffb6806f0a25",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0626#AN1694",
+                    "external_id": "AN1694"
+                },
+                {
+                    "source_name": "SecureAuth_iOSOAuth_2025",
+                    "description": "SecureAuth. (2025). Build an iOS App Using OAuth 2.0 and PKCE. Retrieved March 2, 2026.",
+                    "url": "https://docs.secureauth.com/ciam/en/build-an-ios-app-using-oauth-2-0-and-pkce.html"
+                },
+                {
+                    "source_name": "IETF-OAuthNativeApps",
+                    "description": "W. Denniss and J. Bradley. (2017, October). IETF RFC 8252: OAuth 2.0 for Native Apps. Retrieved November 30, 2018.",
+                    "url": "https://tools.ietf.org/html/rfc8252"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:45.153Z",
+            "name": "Analytic 1694",
+            "description": "For iOS, detect URI Hijacking by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application Permission via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]; Network Connection Creation via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]; Network Traffic Content via Enterprise Secure Web Gateway / Proxy [DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "2.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "webproxy:applog",
+                    "channel": "DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedURIOwners",
+                    "description": "URI to authorized bundle mapping from enterprise OAuth registration."
+                },
+                {
+                    "field": "OAuthClientAllowList",
+                    "description": "Enterprise OAuth client_id to bundle mapping."
+                },
+                {
+                    "field": "OAuthFlowWindow",
+                    "description": "Default 30s."
+                }
+            ]
+        }
+    ]
+}

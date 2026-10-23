@@ -1,0 +1,77 @@
+{
+    "type": "bundle",
+    "id": "bundle--510ba18d-f213-4a17-ac4b-2c02be0446e7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8503331d-09f5-49d3-838c-f0d3b1d55e30",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0617#AN1675",
+                    "external_id": "AN1675"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:49.193Z",
+            "name": "Analytic 1675",
+            "description": "For Android, detect Dead Drop Resolver by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; Application State via Android Enterprise / EMM [Managed package inventory/status and package metadata]; Network Traffic Content via Enterprise Secure Web Gateway / Proxy [DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "webproxy:applog",
+                    "channel": "DNS/HTTP(S) inspection or proxy transaction metadata where enterprise decryption/inspection is deployed"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Background work scheduler or persistent service triggered the platform retrieval without user interaction"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AppDeclaredCDN",
+                    "description": "Per-app declared network destinations. Legitimate platform accesses (e.g., Slack app connecting to slack.com) should be in this list. Any platform access outside declared CDN is the dead-drop signal."
+                },
+                {
+                    "field": "ApprovedPlatformApps",
+                    "description": "Apps approved for each public platform: social media apps for their own platform, productivity apps for their cloud storage. Non-platform apps accessing these platforms in background are anomalous."
+                },
+                {
+                    "field": "AppBaselineDomains",
+                    "description": "30-day per-app network destination baseline."
+                },
+                {
+                    "field": "ResolverPivotWindow",
+                    "description": "Default 120s between dead-drop fetch and C2 pivot connection. Tightening: 30s \u2014 synchronous resolve-then-connect."
+                }
+            ]
+        }
+    ]
+}

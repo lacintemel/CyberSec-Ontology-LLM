@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b3e14c70-1a30-42c6-a7ce-1f7a3bd622e8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4a4a6166-57de-43c1-a0af-5416b561a9d8",
+            "created": "2026-02-16T15:51:23.958Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "EnkiWhiteHat_KimsukyDOCSWAP_Dec2025",
+                    "description": "EnkiWhiteHat. (2025, December 16). Kimsuky Distributing Malicious Mobile App via QR Code. Retrieved January 8, 2026.",
+                    "url": "https://www.enki.co.kr/en/media-center/blog/kimsuky-distributing-malicious-mobile-app-via-qr-code"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.027Z",
+            "description": "[DocSwap](https://attack.mitre.org/software/S9005) has checked for the `LOCAL_MAC_ADDRESS` and `READ_PRIVILEGED_PHONE_STATE` permissions.(Citation: EnkiWhiteHat_KimsukyDOCSWAP_Dec2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--3dbef387-12df-4547-9dd3-075c7ffec9e3",
+            "target_ref": "attack-pattern--d4536441-1bcc-49fa-80ae-a596ed3f7ffd",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

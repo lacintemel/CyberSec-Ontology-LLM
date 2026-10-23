@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--c115abc6-4877-45aa-b4e0-15b91e4613f8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--97914ffd-b189-415e-9309-e63e3be01b1e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0795",
+                    "external_id": "DET0795"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:54.905Z",
+            "name": "Detection of Exploitation for Evasion",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--fbd4686e-f637-459b-ad48-c6fd7840acfa",
+                "x-mitre-analytic--33c51048-bfa2-431a-a1d9-40fb60248de4",
+                "x-mitre-analytic--fe1b5de5-3919-480b-80b6-8914b6b1d098",
+                "x-mitre-analytic--c6a85d88-e62c-4bc2-8210-a8c94705d0f4"
+            ]
+        }
+    ]
+}

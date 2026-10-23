@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--96286142-cfc8-4d7c-b023-d57d908126e2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8895b1a0-d48f-4869-9f3a-19255c3bc490",
+            "created": "2026-09-24T18:49:46.008Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticore_May2026",
+                    "description": "Check Point. (2026, May 22). Fast and Furious \u2013 Nimbus Manticore Operations During the Iranian Conflict. Retrieved September 23, 2026.",
+                    "url": "https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T18:49:46.008Z",
+            "description": "[MiniFast](https://attack.mitre.org/software/S9052) has the ability to check running processes and has returned process names and their PIDs. [MiniFast](https://attack.mitre.org/software/S9052) has also checked its relative parent process.(Citation: CheckPoint_NimbusManticore_May2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--363bc9c0-6e9b-4815-a072-1a92d0ad7502",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

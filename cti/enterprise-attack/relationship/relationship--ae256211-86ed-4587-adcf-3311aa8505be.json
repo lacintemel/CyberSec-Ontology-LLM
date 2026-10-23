@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e9438b93-02ce-4b50-a9c0-7d004ed9f354",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ae256211-86ed-4587-adcf-3311aa8505be",
+            "created": "2026-04-10T19:30:54.327Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Socket GlassWorm January 2026",
+                    "description": "Kirill Boychenko. (2026, January 31). GlassWorm Loader Hits Open VSX via Developer Account Compromise. Retrieved April 10, 2026.",
+                    "url": "https://socket.dev/blog/glassworm-loader-hits-open-vsx-via-suspected-developer-account-compromise"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.162Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has searched browser data for cookies, history, login databases, and cryptocurrency wallets.(Citation: Socket GlassWorm January 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--5e4a2073-9643-44cb-a0b5-e7f4048446c7",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

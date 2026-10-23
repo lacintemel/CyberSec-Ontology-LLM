@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--1de7eb11-d923-4c2a-a32b-595bfcc4320e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c91514db-4e02-459e-9ff4-5092fdffb049",
+            "created": "2026-04-23T00:39:44.358Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.200Z",
+            "description": "Filter for protocols and payloads associated with program download activity to prevent unauthorized device configurations.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--11f242bc-3121-438c-84b2-5cbd46a4bb17",
+            "target_ref": "attack-pattern--d85a6ee9-820c-4adf-8a64-2392ee70c83c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

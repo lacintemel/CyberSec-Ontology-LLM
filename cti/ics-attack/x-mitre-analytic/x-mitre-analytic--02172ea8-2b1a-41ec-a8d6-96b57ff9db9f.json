@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--a49b60d8-bdd6-4eab-aec5-8a56bee5afd7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--02172ea8-2b1a-41ec-a8d6-96b57ff9db9f",
+            "created": "2026-09-26T02:39:43.087Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0934#AN2099",
+                    "external_id": "AN2099"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T02:41:25.738Z",
+            "name": "Analytic 2099",
+            "description": "Real-time monitoring identifies an ICS Windows asset bypassing designated DNS resolvers, generating tunneling-like DNS content, or establishing HTTPS/TLS sessions to unapproved DoH resolver/API infrastructure from a process not authorized for encrypted DNS. Require a resolver-policy or asset-role violation plus suspicious query/content/process/destination evidence; suppress approved browsers, security products, vendor cloud services, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=3; connection to DNS/DoH destination with process identity"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:DNS",
+                    "channel": "Native DNS query/response content: long/encoded labels, TXT use, unusual query structure"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "Direct external DNS or HTTPS/TLS flow bypassing designated resolver/proxy"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedResolvers",
+                    "description": "Site DNS resolvers and forwarding architecture"
+                },
+                {
+                    "field": "ApprovedDoHProviders",
+                    "description": "Explicitly permitted DoH/DoT endpoints, if any"
+                },
+                {
+                    "field": "AuthorizedDoHProcesses",
+                    "description": "Browsers/security/vendor software permitted to use encrypted DNS"
+                },
+                {
+                    "field": "QueryPattern",
+                    "description": "Length/entropy/type/frequency patterns used only as corroboration"
+                },
+                {
+                    "field": "NoExternalConnectivityRoleList",
+                    "description": "ICS assets that should not resolve/connect externally"
+                }
+            ]
+        }
+    ]
+}

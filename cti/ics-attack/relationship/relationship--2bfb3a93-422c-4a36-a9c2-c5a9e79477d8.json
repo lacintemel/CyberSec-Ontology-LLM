@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7904cbd4-31c3-4085-961b-3c83a587bdaa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2bfb3a93-422c-4a36-a9c2-c5a9e79477d8",
+            "created": "2026-09-26T03:00:05.537Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:00:05.537Z",
+            "description": "Require ICS assets to use approved DNS resolvers and restrict direct DNS, DoT, and DoH to unauthorized external resolvers or services. Apply allowlists for documented vendor/cloud dependencies and monitor exceptions rather than assuming all encrypted DNS is malicious.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--11f242bc-3121-438c-84b2-5cbd46a4bb17",
+            "target_ref": "attack-pattern--1aa2bf29-6015-4c8f-a15a-21ae0aff64de",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

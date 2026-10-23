@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--79a2477b-ff87-41b9-8ffd-a5244d853ad5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e4973ce8-5f52-45ac-844d-f73c97a0e040",
+            "created": "2026-02-16T15:57:38.727Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "EnkiWhiteHat_KimsukyDOCSWAP_Dec2025",
+                    "description": "EnkiWhiteHat. (2025, December 16). Kimsuky Distributing Malicious Mobile App via QR Code. Retrieved January 8, 2026.",
+                    "url": "https://www.enki.co.kr/en/media-center/blog/kimsuky-distributing-malicious-mobile-app-via-qr-code"
+                },
+                {
+                    "source_name": "S2W_DocSwap_Mar2025",
+                    "description": "Kim, H., S2W TALON. (2025, March 13). Detailed Analysis of DocSwap Malware Disguised as Security Document Viewer. Retrieved January 12, 2026.",
+                    "url": "https://medium.com/s2wblog/detailed-analysis-of-docswap-malware-disguised-as-security-document-viewer-218a728c36ff"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.236Z",
+            "description": "[DocSwap](https://attack.mitre.org/software/S9005) has checked for the `WRITE_EXTERNAL_STORAGE` permission.(Citation: EnkiWhiteHat_KimsukyDOCSWAP_Dec2025)(Citation: S2W_DocSwap_Mar2025)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--3dbef387-12df-4547-9dd3-075c7ffec9e3",
+            "target_ref": "attack-pattern--e1c912a9-e305-434b-9172-8a6ce3ec9c4a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

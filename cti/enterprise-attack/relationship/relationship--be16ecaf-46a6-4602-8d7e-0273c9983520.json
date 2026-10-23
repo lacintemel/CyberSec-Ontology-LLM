@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--88e9b85f-9192-4914-b102-1f921b8e892c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--be16ecaf-46a6-4602-8d7e-0273c9983520",
+            "created": "2026-09-11T19:22:47.182Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cyfirma_Vidar_June2024",
+                    "description": "CYFIRMA. (2024, June 3). Vidar Stealer: An In-depth Analysis of an Information-Stealing Malware. Retrieved August 13, 2026.",
+                    "url": "https://www.cyfirma.com/research/vidar-stealer-an-in-depth-analysis-of-an-information-stealing-malware/"
+                },
+                {
+                    "source_name": "Intrinsec_Vidar_April2026",
+                    "description": "Intrinsec. (2026, April). \"Chaos is a ladder\": Vidar's recent rise to the top. Retrieved April 27, 2026.",
+                    "url": "https://www.intrinsec.com/wp-content/uploads/2026/04/TLP_CLEAR-20260424-New_Vidar.pdf"
+                },
+                {
+                    "source_name": "LevelBlue_Vidar_May2026",
+                    "description": "Joshi, M. (2026, May 7). Unmasking a Multi-Stage Loader: AutoIt Abuse Leading to Vidar Stealer Command-and-Control Communication. Retrieved May 8, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/unmasking-a-multi-stage-loader-autoit-abuse-leading-to-vidar-stealer-command-and-control-communication"
+                },
+                {
+                    "source_name": "Unit42_Vidar_July2026",
+                    "description": "Nannaka, B., Chhaparwal, P. (2026, July 7). Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation. Retrieved July 8, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/"
+                },
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-11T19:22:47.182Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has gathered credentials and data, including history, credit cards and auto-filled information, from decrypted browser files from Chrome, Firefox, Edge, Opera, Vivaldi, Waterfox and Palemoon.(Citation: Intrinsec_Vidar_April2026)(Citation: LevelBlue_Vidar_May2026)(Citation: Unit42_Vidar_July2026)(Citation: Cyfirma_Vidar_June2024)(Citation: QuorumCyber_Vidar_March2023)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--58a3e6aa-4453-4cc8-a51f-4befe80b31a8",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

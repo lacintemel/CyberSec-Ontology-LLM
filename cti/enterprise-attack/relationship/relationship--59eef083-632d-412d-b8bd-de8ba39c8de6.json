@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--69c222b6-e54e-42d5-b126-a63dbb09b3ab",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--59eef083-632d-412d-b8bd-de8ba39c8de6",
+            "created": "2026-09-22T15:34:50.687Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sou\u010dekESET_Gentlemen_Jun2026",
+                    "description": "Sou\u010dek, J. (2026, June 18). Killing me gently: Inside Gentlemen\u2019s EDR killer framework. Retrieved September 18, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T22:38:39.505Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has named [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) payload files to resemble well-known software vendors to include security vendors. [The Gentlemen](https://attack.mitre.org/groups/G1058) has also utilized icons that match impersonated vendors.(Citation: Sou\u010dekESET_Gentlemen_Jun2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

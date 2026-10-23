@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9f2f43be-9da8-4e1b-9d46-2a871a62d951",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d2a00238-7cc5-435c-9278-3315ede691f6",
+            "created": "2026-04-09T19:24:47.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aikido Shai-Hulud September 2025",
+                    "description": "Charlie Eriksen. (2025, September 16). S1ngularity/nx attackers strike again. Retrieved April 9, 2026.",
+                    "url": "https://www.aikido.dev/blog/s1ngularity-nx-attackers-strike-again"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.213Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has queried the AWS and GCP metadata endpoints for instances and service credentials.(Citation: Aikido Shai-Hulud September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--19bf235b-8620-4997-b5b4-94e0659ed7c3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "type": "bundle",
+    "id": "bundle--275e9c2b-b539-42bf-b8f2-3f4302e13009",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d1985f23-da68-4b46-a5ab-9645ab91a25b",
+            "created": "2026-10-13T17:44:24.905Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0724#AN2122",
+                    "external_id": "AN2122"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:24.905Z",
+            "name": "Analytic 2122",
+            "description": "Real-time monitoring identifies Secure Shell (SSH) or local authentication by an Industrial Control System (ICS) service or operator account from a source Internet Protocol (IP) address outside the approved administrative Classless Inter-Domain Routing (CIDR) subnet, or a sudo/su escalation event by an ICS service account that does not normally require interactive privilege escalation, correlated with subsequent execution of ICS engineering tools. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): sudo/su success for Industrial Control Systems (ICS) service account UID without the expected automated invocation pattern"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "syslog:auth",
+                    "channel": "sshd Accepted publickey/password for Industrial Control Systems (ICS)-role account from source not in approved admin CIDR"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedAdminCIDR",
+                    "description": "IP ranges from which SSH administrative access to ICS Linux assets is authorized."
+                },
+                {
+                    "field": "ApprovedHostList",
+                    "description": "Inventory of workstations/jump hosts from which ICS-role accounts are authorized to authenticate."
+                },
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges from which network device administrative access is authorized."
+                },
+                {
+                    "field": "AuthToDeviceWindow",
+                    "description": "Time window after anomalous logon within which device-subnet connection is considered correlated, typically 5-15 minutes."
+                },
+                {
+                    "field": "ICSRoleAccountPatterns",
+                    "description": "Naming convention or group-membership pattern identifying accounts with engineering, operator, or ICS service roles."
+                },
+                {
+                    "field": "OfficeHoursWindow",
+                    "description": "Defined normal working hours for interactive ICS engineering activity, widened for 24/7 shift-based operations."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

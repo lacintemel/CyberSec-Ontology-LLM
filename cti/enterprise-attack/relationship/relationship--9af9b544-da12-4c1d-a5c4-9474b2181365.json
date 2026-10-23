@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a1423c91-9b8e-4ea3-8cb4-e60ee9d7217f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9af9b544-da12-4c1d-a5c4-9474b2181365",
+            "created": "2026-04-18T23:45:37.379Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aryaka Kimsuky July 2025",
+                    "description": "Varadharajan Krishnasamy, Aditya K Sood. (2025, July 29). From Reconnaissance  to Control: The Operational Blueprint of Kimsuky APT  for Cyber Espionage. Retrieved April 18, 2026.",
+                    "url": "https://www.aryaka.com/docs/reports/aryaka-kimsuky-apt-operational-blueprint.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:25.254Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has detected and killed virtual environments by using the PowerShell cmdlet `Get-CimInstance` that searches the classname of the computer system manufacturer through an if statement of `if($computerSystem.Manufacturer -match \"VMware\" -or $computerSystem.Manufacturer -match \"Microsoft\" -or $computerSystem.Manufacturer -match \"VirtualBox\")`.(Citation: Aryaka Kimsuky July 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--29be378d-262d-4e99-b00d-852d573628e6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--8ca384b5-fe95-4b17-8d89-cc218569fea4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c303e231-4201-4c17-a3fa-bcb0bbdad0d9",
+            "created": "2026-04-16T15:03:11.974Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "Recorded Future TAG-144 AUG 2025",
+                    "description": "Insikt Group. (2025, August 26). TAG-144\u2019s Persistent Grip on South American Organizations. Retrieved April 16, 2026.",
+                    "url": "https://assets.recordedfuture.com/insikt-report-pdfs/2025/cta-2025-0826.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.733Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used a customized version of [QuasarRAT](https://attack.mitre.org/software/S0262) known as BlotchyQuasar.(Citation: Recorded Future TAG-144 AUG 2025)(Citation: Kaspersky BlindEagle AUG 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "tool--da04ac30-27da-4959-a67d-450ce47d9470",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

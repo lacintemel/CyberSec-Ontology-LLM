@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--27fd021a-3545-4f25-86cd-f883e98209e5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4c141056-f1ee-46f9-9fdc-de576094ac65",
+            "created": "2026-09-30T16:24:53.227Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T16:24:53.227Z",
+            "description": "[LIGHTRAIL](https://attack.mitre.org/software/S9061) has leveraged Windows API calls to establish the WebSocket to include `WinHTTP`.(Citation: Mandiant_UNC1549TTPsTools_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--0bbfc4cf-818d-4ef0-97e0-15b423c85b08",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

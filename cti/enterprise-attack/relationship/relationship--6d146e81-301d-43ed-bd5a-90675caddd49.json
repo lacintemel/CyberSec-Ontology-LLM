@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b65d4b29-e563-42fe-9f6b-6cc2c4b9f192",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6d146e81-301d-43ed-bd5a-90675caddd49",
+            "created": "2026-04-16T20:03:29.650Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Fortinet Remcos Campaign NOV 2024",
+                    "description": "Zhang, X. (2024, November 8). New Campaign Uses Remcos RAT to Exploit Victims. Retrieved April 16, 2026.",
+                    "url": "https://www.fortinet.com/blog/threat-research/new-campaign-uses-remcos-rat-to-exploit-victims"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:09:43.019Z",
+            "description": "[Remcos](https://attack.mitre.org/software/S0332) can use TLS to encrypt C2 communication.(Citation: Fortinet Remcos Campaign NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "tool--7cd0bc75-055b-4098-a00e-83dc8beaff14",
+            "target_ref": "attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f45c3b00-88b3-44e6-a196-042a10f79bed",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a7c4675f-bc26-4dcf-977c-2966f195260f",
+            "created": "2026-04-20T13:16:42.367Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Wirte NOV 2024",
+                    "description": "Check Point. (2024, November 12). Hamas-affiliated Threat Actor WIRTE Continues its Middle East Operations and Moves to Disruptive Activity. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2024/hamas-affiliated-threat-actor-expands-to-disruptive-activity/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.154Z",
+            "description": "[SameCoin](https://attack.mitre.org/software/S9030) can list all system files and can avoid wiping specific directories such as Program Files, Windows, and Users.(Citation: Check Point Wirte NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--4e164a21-3fbe-4aaa-be69-2513fdba90f7",
+            "target_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

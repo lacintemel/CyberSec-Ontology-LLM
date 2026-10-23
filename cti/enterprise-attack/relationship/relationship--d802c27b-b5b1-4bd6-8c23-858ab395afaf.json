@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--89af1095-3381-49f1-9652-4cd2caccb10f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d802c27b-b5b1-4bd6-8c23-858ab395afaf",
+            "created": "2026-04-17T09:37:38.818Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler PureCrypter JUN 2022",
+                    "description": "Dumont, R. (2022, June 13). Technical Analysis of PureCrypter: A Fully-Functional Loader Distributing Remote Access Trojans and Information Stealers. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.220Z",
+            "description": "[PureCrypter](https://attack.mitre.org/software/S9019) can inject its final stage into another process on the targeted system.(Citation: Zscaler PureCrypter JUN 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--43e7dc91-05b2-474c-b9ac-2ed4fe101f4d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

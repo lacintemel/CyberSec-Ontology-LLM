@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--786b295b-9ae8-4a90-a1b1-fc55046de5f9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6f358cf3-7ed8-4bb0-8ff3-4f842a37e526",
+            "created": "2026-04-17T00:11:21.885Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.077Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has impaired command logging through the use of `dev/null` which prevents generating output from the command and does not wait for input.(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--b831f51c-d22f-4724-bbab-60d056bd1150",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

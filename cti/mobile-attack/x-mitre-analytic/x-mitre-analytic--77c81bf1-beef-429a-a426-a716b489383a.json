@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--691c6726-4217-497b-95bb-32d28c9579ab",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--77c81bf1-beef-429a-a426-a716b489383a",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0655#AN1742",
+                    "external_id": "AN1742"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:43.951Z",
+            "name": "Analytic 1742",
+            "description": "For iOS, detect Command and Scripting Interpreter from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Command Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: Shell process (sh, bash) or command-executing child process spawned under app context on supervised iOS device \u2014 any shell spawn on stock iOS indicates jailbreak or kernel exploit]; Process Creation via Application Vetting / Managed Device Telemetry [Managed iOS app invokes lower-level process-launch behavior or command-execution-equivalent activity outside sandbox-permitted APIs on supervised device]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Shell process (sh, bash) or command-executing child process spawned under app context on supervised iOS device \u2014 any shell spawn on stock iOS indicates jailbreak or kernel exploit"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Managed iOS app invokes lower-level process-launch behavior or command-execution-equivalent activity outside sandbox-permitted APIs on supervised device"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedShellApps",
+                    "description": "Terminal emulator apps (on non-production developer devices only), ADB-connected sessions. Production fleet: empty \u2014 no app should spawn shells. Derive from IT device classification."
+                },
+                {
+                    "field": "ShellActivityWindow",
+                    "description": "Default 30s between shell spawn and follow-on file/network activity. Shell execution and follow-on activity are near-synchronous."
+                }
+            ]
+        }
+    ]
+}

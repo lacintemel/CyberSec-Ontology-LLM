@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--cf94e980-979d-45b8-ade3-3f0d315641a5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--ee51b3ed-fb50-46dc-b21f-d28a98467941",
+            "created": "2026-10-13T17:45:57.072Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0738#AN2191",
+                    "external_id": "AN2191"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:57.072Z",
+            "name": "Analytic 2191",
+            "description": "Real-time monitoring identifies network device management commands succeeding from a source not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, following exploit-pattern traffic to the device's management interface, suggesting exploitation of a management-plane vulnerability to gain elevated access without valid credentials. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "management command succeeds from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, preceded by exploit-pattern traffic to management interface"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window within which a device/process crash and subsequent privileged action are considered correlated."
+                },
+                {
+                    "field": "KnownVulnerableDriverSignatures",
+                    "description": "Documented hash/name signatures of known vulnerable drivers exploitable for privilege escalation (BYOVD technique)."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--da4cfd96-1ad2-4e76-99e4-652af1826fee",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--526929a7-d746-477b-a34b-fe41e2e2e16a",
+            "created": "2026-04-17T16:41:43.622Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky LODEINFO OCT 2022",
+                    "description": "Ishimaru, S. (2022, October 31). APT10: Tracking down LODEINFO 2022, part I. Retrieved April 17, 2026.",
+                    "url": "https://securelist.com/apt10-tracking-down-lodeinfo-2022-part-i/107742/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:01.251Z",
+            "description": "[DOWNIISSA](https://attack.mitre.org/software/S9021) can download files to the compromised host.(Citation: Kaspersky LODEINFO OCT 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eddb863e-fc77-41c1-86e9-5210d6d58b88",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0a962ea6-2607-4e3c-94e7-6900419835f5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--172e0537-7a9c-4610-9b07-32a841f0bd8d",
+            "created": "2023-03-30T18:57:58.377Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Symantec W32.Duqu",
+                    "description": "Symantec Security Response. (2011, November). W32.Duqu: The precursor to the next Stuxnet. Retrieved September 17, 2015.",
+                    "url": "https://web.archive.org/web/20111213083345/https://www.symantec.com/content/en/us/enterprise/media/security_response/whitepapers/w32_duqu_the_precursor_to_the_next_stuxnet.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-06-12T16:00:28.144Z",
+            "description": "[Duqu](https://attack.mitre.org/software/S0038) downloads additional modules for the collection of data from local systems. The modules are named: infostealer 1, infostealer 2 and reconnaissance.(Citation: Symantec W32.Duqu)",
+            "relationship_type": "uses",
+            "source_ref": "malware--68dca94f-c11d-421e-9287-7c501108e18c",
+            "target_ref": "attack-pattern--fa3aa267-da22-4bdd-961f-03223322a8d5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

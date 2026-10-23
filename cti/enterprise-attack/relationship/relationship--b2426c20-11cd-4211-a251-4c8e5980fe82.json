@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--48076f08-5872-4a68-9daa-384d6ada6c97",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b2426c20-11cd-4211-a251-4c8e5980fe82",
+            "created": "2026-09-23T17:03:19.242Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BradyUnit42_TheGentlemen_July2026",
+                    "description": "Brady, M. (2026, July 10). No Manners Here: The Ruthless Rise of The Gentlemen Ransomware. Retrieved September 18, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"
+                },
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                },
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:24:27.300Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has deleted Volume Shadow Copies through the use of `vssadmin delete shadows /all /quiet` and `wmic shadowcopy delete`.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: TrendAI_TheGentlemen_Sept2025)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: BradyUnit42_TheGentlemen_July2026) [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has also inhibited system recovery by stopping backup services, disabling endpoint protection agents and remote access tools.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--f5d8eed6-48a9-4cdf-a3d7-d1ffa99c3d2a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

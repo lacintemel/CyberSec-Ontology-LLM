@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c1636f2c-de09-41dd-abd6-160fa065bd0c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--abcc0249-0226-440b-a32a-02512fd2db4f",
+            "created": "2026-09-22T14:46:41.808Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Intel471_TheGentlemen_Aug2026",
+                    "description": "Intel 471. (2026, August 11). Threat Hunting Case Study: The Gentlemen. Retrieved September 18, 2026.",
+                    "url": "https://www.intel471.com/blog/threat-hunting-case-study-the-gentlemen"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T14:46:41.808Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has utilized internal network scanning tools to enumerate additional hosts in the victim environment to include Advanced IP Scanner.(Citation: Intel471_TheGentlemen_Aug2026)   ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

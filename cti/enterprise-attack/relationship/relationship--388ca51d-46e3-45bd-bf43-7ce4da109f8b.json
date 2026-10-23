@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--bf3332c4-b49e-40cd-9f2a-f80c25381abb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--388ca51d-46e3-45bd-bf43-7ce4da109f8b",
+            "created": "2024-05-17T20:27:33.540Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Huntress NPPSPY 2022",
+                    "description": "Dray Agha. (2022, August 16). Cleartext Shenanigans: Gifting User Passwords to Adversaries With NPPSPY. Retrieved May 17, 2024.",
+                    "url": "https://www.huntress.com/blog/cleartext-shenanigans-gifting-user-passwords-to-adversaries-with-nppspy"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.997Z",
+            "description": "[NPPSPY](https://attack.mitre.org/software/S1131) creates a network listener using the misspelled label <code>logincontroll</code> recorded to the Registry key <code>HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\NetworkProvider\\\\Order</code>.(Citation: Huntress NPPSPY 2022)",
+            "relationship_type": "uses",
+            "source_ref": "tool--0630d1a7-54da-4a48-a6af-eb8a62b13c17",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

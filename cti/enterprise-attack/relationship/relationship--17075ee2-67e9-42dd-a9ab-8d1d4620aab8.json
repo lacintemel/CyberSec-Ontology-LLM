@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--38e4ad1b-e21d-41b5-840c-91f89e6a168e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--17075ee2-67e9-42dd-a9ab-8d1d4620aab8",
+            "created": "2026-04-19T18:22:22.198Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.417Z",
+            "description": "During [Operation Digital Eye](https://attack.mitre.org/campaigns/C0061), threat actors deployed a PHP-based webshell to maintain persistent access.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--75ea699b-bff5-4541-b9b7-df4996c9db3c",
+            "target_ref": "attack-pattern--5d0d3609-d06d-49e1-b9c9-b544e0c618cb",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

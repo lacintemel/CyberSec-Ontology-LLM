@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--b0f67d7a-8ec7-4aec-9d1c-1895e61f6112",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--96f5cb23-3dc4-4690-b745-914e85b0c95e",
+            "created": "2026-04-19T00:02:30.513Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                },
+                {
+                    "source_name": "Aryaka Kimsuky July 2025",
+                    "description": "Varadharajan Krishnasamy, Aditya K Sood. (2025, July 29). From Reconnaissance  to Control: The Operational Blueprint of Kimsuky APT  for Cyber Espionage. Retrieved April 18, 2026.",
+                    "url": "https://www.aryaka.com/docs/reports/aryaka-kimsuky-apt-operational-blueprint.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:25.213Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has utilized Native APIs to collect data from victim hosts and facilitate execution of malicious scripts.(Citation: Gen Digital Kimsuky HTTPTroy October 2025)(Citation: Aryaka Kimsuky July 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

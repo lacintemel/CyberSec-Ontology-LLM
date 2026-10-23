@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--e58a10e7-239a-4768-a0df-fd6ad9a3d660",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8fee4a4e-5467-4dd8-a55b-3a2764b34319",
+            "created": "2026-09-21T23:30:46.722Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-21T23:30:46.722Z",
+            "description": "Train users responsible for AI-enabled systems to recognize attempts to manipulate system instructions, role boundaries, or safety controls through user-provided prompts and to independently validate consequential AI-generated actions. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--2a4f6c11-a4a7-4cb9-b0ef-6ae1bb3a718a",
+            "target_ref": "attack-pattern--d7e9cba9-3b43-4208-8e90-fdb18bff4a6a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

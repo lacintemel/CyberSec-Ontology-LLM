@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6938c741-7b13-4b8c-941e-8f12a8aa7416",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fd3ff9c1-b745-44b1-8a28-3fb4a12134c7",
+            "created": "2026-04-21T13:43:17.680Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cato LAMEHUG JUL 2025",
+                    "description": "Simonovich, V. (2025, July 23). Cato CTRL\u2122 Threat Research: Analyzing LAMEHUG \u2013 First Known LLM-Powered Malware with Links to APT28 (Fancy Bear) . Retrieved April 21, 2026.",
+                    "url": "https://www.catonetworks.com/blog/cato-ctrl-threat-research-analyzing-lamehug/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:45.306Z",
+            "description": "[LAMEHUG](https://attack.mitre.org/software/S9035) has sent spearphishing emails impersonating Ukrainian government officials. (Citation: Cato LAMEHUG JUL 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--bef4c620-0787-42a8-a96d-b7eb6e85917c",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

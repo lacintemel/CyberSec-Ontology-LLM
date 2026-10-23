@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--746ba64d-2e8b-414b-8b17-cb9faf683270",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d567348d-6d6d-463b-acc3-f9d2640171ac",
+            "created": "2026-04-16T22:16:30.057Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FalconFeeds_Iran_Mar2026",
+                    "description": "FalconFeeds.io. (2026, March 5). The Digital Redoubt: Iran\u2019s National Information Network and the Asymmetry of Modern Cyber Conflict. Retrieved March 9, 2026.",
+                    "url": "https://falconfeeds.io/blogs/the-digital-redoubt-irans-national-information-network-cyber-conflict"
+                },
+                {
+                    "source_name": "FalconFeeds_MuddyWaterPSRust_Mar2026",
+                    "description": "FalconFeeds.io. (2026, March 6). MuddyWater in the Iran\u2013Israel Cyber War: From PowerShell Scripts to Rust Implants. Retrieved March 12, 2026.",
+                    "url": "https://falconfeeds.io/blogs/muddywater-in-the-iran-israel-cyber-war-from-powershell-scripts-to-rust-implants"
+                },
+                {
+                    "source_name": "Anomali Static Kitten February 2021",
+                    "description": "Mele, G. et al. (2021, February 10). Probable Iranian Cyber Actors, Static Kitten, Conducting Cyberespionage Campaign Targeting UAE and Kuwait Government Agencies. Retrieved March 17, 2021.",
+                    "url": "https://www.anomali.com/blog/probable-iranian-cyber-actors-static-kitten-conducting-cyberespionage-campaign-targeting-uae-and-kuwait-government-agencies"
+                },
+                {
+                    "source_name": "Proofpoint TA450 Phishing March 2024",
+                    "description": "Miller, J. et al. (2024, March 21). Security Brief: TA450 Uses Embedded Links in PDF Attachments in Latest Campaign. Retrieved March 27, 2024.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta450-uses-embedded-links-pdf-attachments-latest-campaign"
+                },
+                {
+                    "source_name": "NaumaanProofpoint_GlobalClickFix_April2025",
+                    "description": "Naumaan, S., et al. (2025, April 17). Around the World in 90 Days: State-Sponsored Actors Try ClickFix . Retrieved January 21, 2026.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix"
+                },
+                {
+                    "source_name": "Trend Micro Muddy Water March 2021",
+                    "description": "Peretz, A. and Theck, E. (2021, March 5). Earth Vetala \u2013 MuddyWater Continues to Target Organizations in the Middle East. Retrieved March 18, 2021.",
+                    "url": "https://www.trendmicro.com/en_us/research/21/c/earth-vetala---muddywater-continues-to-target-organizations-in-t.html"
+                },
+                {
+                    "source_name": "group-ib_muddywater_infra",
+                    "description": "Rostovcev, N. (2023, April 18). SimpleHarm: Tracking MuddyWater\u2019s infrastructure. Retrieved July 11, 2024.",
+                    "url": "https://www.group-ib.com/blog/muddywater-infrastructure/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:30.212Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has leveraged RMM solutions including ScreenConnect, AteraAgent, SimpleHelp, Action1, Level, and PDQ to facilitate follow-on actions within compromised hosts to include data exfiltration.(Citation: Trend Micro Muddy Water March 2021)(Citation: Anomali Static Kitten February 2021)(Citation: Proofpoint TA450 Phishing March 2024)(Citation: group-ib_muddywater_infra)(Citation: FalconFeeds_Iran_Mar2026)(Citation: NaumaanProofpoint_GlobalClickFix_April2025)(Citation: FalconFeeds_MuddyWaterPSRust_Mar2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--d4287702-e2f7-4946-bdfa-2c7f5aaa5032",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--fc542e63-4a8c-4253-86f5-7d0744ea18bc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8e232f50-a656-4b8e-8873-ec0530e1635d",
+            "created": "2026-09-18T19:26:34.656Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BradyUnit42_TheGentlemen_July2026",
+                    "description": "Brady, M. (2026, July 10). No Manners Here: The Ruthless Rise of The Gentlemen Ransomware. Retrieved September 18, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"
+                },
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T17:21:59.396Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has leveraged a branded graphic that is placed on the systems desktop wallpaper that symbolizes the association of malicious activity to the group.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: BradyUnit42_TheGentlemen_July2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--8f452cb4-cbf4-4522-8b11-448787be95c4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

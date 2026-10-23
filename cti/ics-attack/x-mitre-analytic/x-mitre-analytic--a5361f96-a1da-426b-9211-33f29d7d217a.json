@@ -1,0 +1,67 @@
+{
+    "type": "bundle",
+    "id": "bundle--51405e78-fa8d-4a11-9afc-56b62968c295",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a5361f96-a1da-426b-9211-33f29d7d217a",
+            "created": "2026-09-25T19:36:52.622Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0931#AN2089",
+                    "external_id": "AN2089"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:27:52.135Z",
+            "name": "Analytic 2089",
+            "description": "Real-time monitoring identifies network-device CLI or underlying Unix-like shell access from an unauthorized management source/account, followed by privileged or configuration commands outside an approved change window. Do not alert solely on CLI use. Require violation of the management matrix, command authorization, or change-control context. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "networkdevice:syslog",
+                    "channel": "CLI command audit / configuration command history"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "networkdevice:auth",
+                    "channel": "SSH/Telnet/console authentication and session creation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedManagementSources ",
+                    "description": "Jump hosts, management VLANs, and administrative CIDRs "
+                },
+                {
+                    "field": "AuthorizedAccounts ",
+                    "description": "Named/network-service administrative accounts "
+                },
+                {
+                    "field": "HighRiskCommands ",
+                    "description": "Enable/configure, ACL, route, NAT, firmware, file transfer, shell escape "
+                },
+                {
+                    "field": "ChangeWindow ",
+                    "description": "Approved network maintenance/change ticket window "
+                }
+            ]
+        }
+    ]
+}

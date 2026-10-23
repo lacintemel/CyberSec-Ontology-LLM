@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--177cc26c-8711-48be-ba7e-870226ee19a3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5b5635da-130a-4075-8936-23078f63d419",
+            "created": "2026-09-23T22:29:42.507Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                },
+                {
+                    "source_name": "AI-Mexico-Govt-Compromise",
+                    "description": "Jay Deen. (2026, May). AI-Assisted Compromise of Mexican Water Utility with OT Implications. Retrieved September 2, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/116-Whitepapers/dragos-2026-ai-mexico-water-attack-intel-brief.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:56:40.966Z",
+            "description": "During the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary used Claude Code to request [BACKUPOSINT v9.0 APEX PREDATOR](https://attack.mitre.org/software/S9045) to perform remote system discovery mapping harvested credentials to systems within the victim environment.(Citation: AI-Mexico-Govt-Breach) \n\nDuring the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary tasked Claude Code with enumerating additional lateral movement targets which included the discovery of a vNode industrial gateway and Supervisory Control and Data Acquisition (SCADA)/Industrial Internet of Things (IIoT) management platform.(Citation: AI-Mexico-Govt-Compromise)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--199f5568-ca25-4892-b7a5-870503e4d0f4",
+            "target_ref": "attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "type": "bundle",
+    "id": "bundle--a5278a2d-550d-449a-bca0-60ea5a97718d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-tactic",
+            "id": "x-mitre-tactic--43c49635-f2fa-44f2-92b9-0ee980bbf4ef",
+            "created": "2026-04-14T22:53:16.228Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/tactics/TA0112",
+                    "external_id": "TA0112"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.780Z",
+            "name": "Defense Impairment",
+            "description": "The adversary is trying to break security mechanisms, pipelines, and tooling so defenders can\u2019t see or trust what\u2019s happening.\n\nDefense Impairment consists of techniques that degrade, disable, or undermine the effectiveness and trustworthiness of security controls and monitoring mechanisms. These techniques are characterized by direct interference with defensive systems. The goal is to reduce defenders\u2019 ability to detect, interpret, or respond to adversary activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_shortname": "defense-impairment"
+        }
+    ]
+}

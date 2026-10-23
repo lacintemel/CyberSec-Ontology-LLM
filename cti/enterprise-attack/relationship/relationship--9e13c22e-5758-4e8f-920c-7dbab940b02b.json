@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6574519a-5bff-4a2a-b438-1446f8e6c0bc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9e13c22e-5758-4e8f-920c-7dbab940b02b",
+            "created": "2022-02-04T22:03:05.824Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BiZone Lizar May 2021",
+                    "description": "BI.ZONE Cyber Threats Research Team. (2021, May 13). From pentest to APT attack: cybercriminal group FIN7 disguises its malware as an ethical hacker\u2019s toolkit. Retrieved February 2, 2022.",
+                    "url": "https://bi-zone.medium.com/from-pentest-to-apt-attack-cybercriminal-group-fin7-disguises-its-malware-as-an-ethical-hackers-c23c9a75e319"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.141Z",
+            "description": "[Lizar](https://attack.mitre.org/software/S0681) can execute PE files in the address space of the specified process.(Citation: BiZone Lizar May 2021) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--f74a5069-015d-4404-83ad-5ca01056c0dc",
+            "target_ref": "attack-pattern--806a49c4-970d-43f9-9acc-ac0ee11e6662",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

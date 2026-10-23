@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--883f6800-a600-4ad0-8bf8-e67680f87723",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ae3003a7-3d6d-4dbc-8da9-65c947243cd5",
+            "created": "2026-04-16T18:05:57.379Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler BlindEagle DEC 2025",
+                    "description": "Pellegrino, G. (2025, December 16). BlindEagle Targets Colombian Government Agency with Caminho and DCRAT. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/blindeagle-targets-colombian-government-agency-caminho-and-dcrat"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:04.405Z",
+            "description": "[Caminho](https://attack.mitre.org/software/S9016) has the ability to download files onto compromised hosts.(Citation: Zscaler BlindEagle DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--97da6467-c9c5-4eb0-84d4-1234e937e534",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

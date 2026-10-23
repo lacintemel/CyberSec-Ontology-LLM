@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--0506bbc5-ae80-445b-99ca-7170546947b9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1a71edbf-2fee-41e7-ade1-74abf165e5e2",
+            "created": "2026-04-19T00:45:10.088Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "EnkiWhiteHat_KimsukyDOCSWAP_Dec2025",
+                    "description": "EnkiWhiteHat. (2025, December 16). Kimsuky Distributing Malicious Mobile App via QR Code. Retrieved January 8, 2026.",
+                    "url": "https://www.enki.co.kr/en/media-center/blog/kimsuky-distributing-malicious-mobile-app-via-qr-code"
+                },
+                {
+                    "source_name": "FBI_KimsukyQR_Jan2026",
+                    "description": "FBI. (2026, January 8). FBI Flash AC-000001-MW North Korean Kimsuky Actors Leverage Malicious QR  Codes in Spearphishing Campaigns Targeting U.S. Entities. Retrieved April 18, 2026.",
+                    "url": "https://www.ic3.gov/CSA/2026/260108.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:56:11.352Z",
+            "description": "[Kimsuky](https://attack.mitre.org/groups/G0094) has sent phishing emails that impersonate legitimate people to various targets containing malicious QR codes to harvest credentials and conduct other malicious activities.(Citation: FBI_KimsukyQR_Jan2026)  [Kimsuky](https://attack.mitre.org/groups/G0094) has also leveraged QR codes (also known as Quishing) to evade URL inspection and to direct victims from their corporate host devices to mobile devices.(Citation: EnkiWhiteHat_KimsukyDOCSWAP_Dec2025)(Citation: FBI_KimsukyQR_Jan2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--0ec2f388-bf0f-4b5c-97b1-fc736d26c25f",
+            "target_ref": "attack-pattern--defc1257-4db1-4fb3-8ef5-bb77f63146df",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

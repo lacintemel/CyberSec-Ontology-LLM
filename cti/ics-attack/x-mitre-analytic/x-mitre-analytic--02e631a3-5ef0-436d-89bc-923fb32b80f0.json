@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--117ebd3e-56cd-4759-9cb2-5d3845dacb37",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--02e631a3-5ef0-436d-89bc-923fb32b80f0",
+            "created": "2026-10-13T17:45:35.993Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0740#AN2173",
+                    "external_id": "AN2173"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:35.993Z",
+            "name": "Analytic 2173",
+            "description": "Real-time monitoring identifies exploit-pattern HTTP/HTTPS traffic targeting an ICS DMZ application from a source or request pattern outside the approved application baseline. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): inbound exploit-pattern traffic to Industrial Control Systems (ICS) Demilitarized Zone (DMZ) server followed by outbound connection from same Internet Protocol (IP) address to internal ICS network"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedClientCIDR",
+                    "description": "IP ranges from which legitimate access to the ICS web interface is expected."
+                },
+                {
+                    "field": "ExploitPatternSignatures",
+                    "description": "Regex/signature set for known exploit payload patterns and published CVE-specific payload signatures for in-use ICS web products."
+                },
+                {
+                    "field": "ExploitToShellWindow",
+                    "description": "Time window within which a child shell process spawned from the web server is considered connected to a preceding exploit-pattern request."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

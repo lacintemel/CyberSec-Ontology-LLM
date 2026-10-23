@@ -1,0 +1,98 @@
+{
+    "type": "bundle",
+    "id": "bundle--1a73a740-9138-4195-a2a5-63c7e436a06a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4476a312-d2c9-459e-96a3-53ac0b676c52",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0695#AN1808",
+                    "external_id": "AN1808"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.377Z",
+            "name": "Analytic 1808",
+            "description": "The defender correlates Android camera access by an app identity with app and device context showing that the capture is inconsistent with expected user-driven recording behavior. The strongest Android evidence is camera resource access followed by sustained capture duration, video or image artifact creation, buffer or cache growth, and optional outbound transfer, especially when the app is backgrounded, operating as a foreground service without visible user initiation, active while the device is locked, or capturing without recent user interaction. The detection is strengthened when the app is unmanaged, recently granted camera access, or not approved to record video.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--56c2b384-77f8-461f-a71a-76f7888ebfb6",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Camera sensor access began from app identity and remained active for sustained capture interval in app context not mapped to approved video recording workflow"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--56c2b384-77f8-461f-a71a-76f7888ebfb6",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Camera sensor access occurred while AppState=background, foreground service active without visible user action, or DeviceLockState=locked during capture interval"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before camera session start and no foreground transition occurred during sustained capture interval"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Burst write to media, cache, temp, export, or staging path occurred during or immediately after camera session from same app identity"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:MDMLog",
+                    "channel": "App identity performing camera session was unmanaged, recently granted camera permission, or not approved to use camera for video or interval image capture"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window linking camera access, lifecycle context, artifact creation, and optional network transfer."
+                },
+                {
+                    "field": "CaptureDurationThreshold",
+                    "description": "Minimum sustained camera session duration considered unusual for the app role."
+                },
+                {
+                    "field": "AllowedAppList",
+                    "description": "Approved camera-capable apps vary by organization, device group, and role."
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Some apps should only access the camera while visibly foregrounded."
+                },
+                {
+                    "field": "RecentUserInteractionWindow",
+                    "description": "Defines how close camera activation must be to user interaction to be considered expected."
+                },
+                {
+                    "field": "AllowedBackgroundCaptureApps",
+                    "description": "Specific enterprise or accessibility workflows may legitimately capture while not foregrounded."
+                },
+                {
+                    "field": "ArtifactWriteThreshold",
+                    "description": "Minimum media-buffer or file-write volume indicating probable video or burst-image capture."
+                },
+                {
+                    "field": "UplinkBytesThreshold",
+                    "description": "Threshold for suspicious outbound transfer after capture."
+                }
+            ]
+        }
+    ]
+}

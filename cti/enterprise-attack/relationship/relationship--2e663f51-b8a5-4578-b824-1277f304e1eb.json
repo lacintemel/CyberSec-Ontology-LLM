@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--40dc8037-9901-451b-8198-cc53c0e846ad",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2e663f51-b8a5-4578-b824-1277f304e1eb",
+            "created": "2026-09-22T00:17:29.415Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T00:17:29.415Z",
+            "description": "Limit AI-assisted analysis systems to the files and directories required for analysis and prevent artifacts under investigation from modifying agent configuration, instruction files, analysis state, or other trusted AI application resources. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--987988f0-cf86-4680-a875-2f6456ab2448",
+            "target_ref": "attack-pattern--6aa4bc38-0713-4d40-ad0b-949d912da852",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

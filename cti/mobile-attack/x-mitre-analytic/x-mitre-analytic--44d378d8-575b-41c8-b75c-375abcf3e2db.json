@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--7d608045-2006-4712-b74d-a0830a91fd97",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--44d378d8-575b-41c8-b75c-375abcf3e2db",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0671#AN1769",
+                    "external_id": "AN1769"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:14.178Z",
+            "name": "Analytic 1769",
+            "description": "For Android, detect Data Destruction from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Command Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: pm uninstall OR rm -f called by process NOT IN $MDMAgentPackageList$ for package_count > $BulkUninstallThreshold$ within $DestructionWindow$ \u2014 command-line destruction activity]; File Deletion via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: unlink() or rmdir() on path IN /data/data/ OR /data/user/ OR /sdcard/ by process NOT IN $MDMAgentPackageList$ at rate > $DeletionRateThreshold$ within $DestructionWindow$]; Process Creation via Application Vetting / Managed Device Telemetry [sh or cmd process spawned with arguments containing 'pm uninstall' or 'rm' by parent NOT IN $MDMAgentPackageList$ \u2014 shell invocation for destruction commands]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: pm uninstall OR rm -f called by process NOT IN $MDMAgentPackageList$ for package_count > $BulkUninstallThreshold$ within $DestructionWindow$ \u2014 command-line destruction activity"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e905dad2-00d6-477c-97e8-800427abd0e8",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: unlink() or rmdir() on path IN /data/data/ OR /data/user/ OR /sdcard/ by process NOT IN $MDMAgentPackageList$ at rate > $DeletionRateThreshold$ within $DestructionWindow$"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "sh or cmd process spawned with arguments containing 'pm uninstall' or 'rm' by parent NOT IN $MDMAgentPackageList$ \u2014 shell invocation for destruction commands"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "MDMAgentPackageList",
+                    "description": "MDM agent, OTA update service."
+                },
+                {
+                    "field": "DeletionRateThreshold",
+                    "description": "Default 100 file deletions within window. Derive from MDM-managed wipe baseline."
+                },
+                {
+                    "field": "BulkUninstallThreshold",
+                    "description": "Default 5 packages within window. MDM wipe uses different API."
+                },
+                {
+                    "field": "DestructionWindow",
+                    "description": "Default 300s."
+                }
+            ]
+        }
+    ]
+}

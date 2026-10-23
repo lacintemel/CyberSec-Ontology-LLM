@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--ba8df63d-6765-4d2b-a1c3-c9915c4b241c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--77a6a1b4-9217-48fe-b1dd-f1f6506dd910",
+            "created": "2026-04-17T17:38:43.932Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET HiddenFace 2024",
+                    "description": "Breitenbacher, D. (2024). Unmasking HiddenFace. Retrieved April 17, 2026.",
+                    "url": "https://jsac.jpcert.or.jp/archive/2024/pdf/JSAC2024_2_8_Breitenbacher_en.pdf"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.089Z",
+            "description": "[HiddenFace](https://attack.mitre.org/software/S9023) can identify processes identified with security applications and tooling.(Citation: ESET HiddenFace 2024)(Citation: Trend Micro Earth Kasha NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9edc41d1-a13d-4acf-b400-d47fb2f6809d",
+            "target_ref": "attack-pattern--cba37adb-d6fb-4610-b069-dd04c0643384",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

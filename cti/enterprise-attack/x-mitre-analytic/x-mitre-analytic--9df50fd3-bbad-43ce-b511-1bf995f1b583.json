@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--00ea76d4-d5b1-4cd9-87c5-d804e74fd0ab",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9df50fd3-bbad-43ce-b511-1bf995f1b583",
+            "created": "2026-04-16T17:03:37.991Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0900#AN2040",
+                    "external_id": "AN2040"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.381Z",
+            "name": "Analytic 2040",
+            "description": "Detects crafted activity resulting in crashes or impairment of endpoint security extensions, network filters, launch daemons, or telemetry agents. Correlates process activity, system extension state changes, and telemetry interruption.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "macOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "macos:unifiedlog",
+                    "channel": "Crash or abnormal termination of security agent or system extension host"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--f5a9a1dd-82f9-41a3-85b8-13e5b9cd6c79",
+                    "name": "macos:unifiedlog",
+                    "channel": "Extension disabled, unloaded, failed to start"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Flow",
+                    "channel": "Traffic spike preceding control crash"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExtensionList",
+                    "description": "Protected security system extensions"
+                },
+                {
+                    "field": "CrashBurstThreshold",
+                    "description": "Multiple failures in short interval"
+                }
+            ]
+        }
+    ]
+}

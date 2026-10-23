@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--98772b2e-be82-4368-a73d-577dad604a08",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a20f619e-7d6d-48c1-a492-151152470f18",
+            "created": "2026-04-20T17:57:42.063Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.145Z",
+            "description": "[MuddyViper](https://attack.mitre.org/software/S9032) has reflectively loaded the decrypted\u202fHackBrowserData\u202ftool in a new\u202fthread.(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f\u202f\u202f\u202f",
+            "relationship_type": "uses",
+            "source_ref": "malware--7b92e996-b535-4159-be16-3c3aee4edf54",
+            "target_ref": "attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fed34dfb-1a1d-4950-8f1e-340120959044",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0b566985-7ec1-43f0-b511-bad72e0cedb6",
+            "created": "2026-04-20T20:14:14.095Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026",
+                    "description": "DomainTools Investigations. (2026, April 6). Handala: MOIS Linked Cyber Influence Ecosystem Threat Intelligence Assessment. Retrieved April 20, 2026.",
+                    "url": "https://dti.domaintools.com/research/handala-mois-linked-cyber-influence-ecosystem-threat-intelligence-assessment"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.193Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) conducted large-scale data exfiltration in the Stryker operation, consistent with automated or scripted collection against enterprise systems.(Citation: Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--30208d3e-0d6b-43c8-883e-44462a514619",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--3ef40064-ab84-402f-9195-17739adadf68",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c5bd7cb8-0223-4cc6-a390-80178e24e48d",
+            "created": "2026-10-13T17:43:59.535Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0730#AN2109",
+                    "external_id": "AN2109"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:59.535Z",
+            "name": "Analytic 2109",
+            "description": "Periodic or event-triggered integrity verification identifies field devices with firmware or configuration that differs from the vendor-published authorized baseline, detected by comparing device firmware hashes against the authorized firmware inventory, appearing immediately after a vendor-supplied update or hardware replacement. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance. Monitoring reality: this is an integrity/posture analytic, not a universal streaming field-device event; collection cadence depends on the vendor integrity interface, asset-management system, or acquisition workflow.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b9d031bb-d150-4fc6-8025-688201bf3ffd",
+                    "name": "assetinventory:FirmwareHash",
+                    "channel": "post-update firmware hash does not match vendor-published checksum for the claimed version"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "VendorInstallManifest",
+                    "description": "Documented list of files/registry keys a legitimate vendor installer is expected to create."
+                },
+                {
+                    "field": "VendorInstallProfile",
+                    "description": "Documented expected process behavior for a legitimate vendor installer, established through lab testing."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

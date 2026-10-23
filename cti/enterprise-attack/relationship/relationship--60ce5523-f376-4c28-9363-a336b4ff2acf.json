@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--6052e9df-858c-4fd3-b117-bba6ac1dbeb3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--60ce5523-f376-4c28-9363-a336b4ff2acf",
+            "created": "2026-09-23T22:06:27.996Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Breach",
+                    "description": "Eyal Sela. (2026, April). The AI-Assisted Breach of Mexico's Government Infrastructure. Retrieved September 2, 2026.",
+                    "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+                },
+                {
+                    "source_name": "AI-Mexico-Govt-Compromise",
+                    "description": "Jay Deen. (2026, May). AI-Assisted Compromise of Mexican Water Utility with OT Implications. Retrieved September 2, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/116-Whitepapers/dragos-2026-ai-mexico-water-attack-intel-brief.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:56:40.966Z",
+            "description": "During the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary utilized Claude Code to maintain access to the victim\u2019s internal network through proxy tunnels.(Citation: AI-Mexico-Govt-Breach)(Citation: AI-Mexico-Govt-Compromise) \n \nDuring the [AI-Assisted Breach of Mexico's Government Infrastructure](https://attack.mitre.org/campaigns/C0064), the adversary tasked Claude Code to connect to the internal victim devices through SSH tunnels.(Citation: AI-Mexico-Govt-Breach) ",
+            "relationship_type": "uses",
+            "source_ref": "campaign--199f5568-ca25-4892-b7a5-870503e4d0f4",
+            "target_ref": "attack-pattern--f6dacc85-b37d-458e-b58d-74fc4bbf5755",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

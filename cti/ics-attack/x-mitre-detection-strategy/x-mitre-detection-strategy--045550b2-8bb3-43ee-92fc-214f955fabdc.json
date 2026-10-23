@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--e1774c8e-7959-467e-ae10-496906cec2f7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--045550b2-8bb3-43ee-92fc-214f955fabdc",
+            "created": "2026-09-26T01:47:44.862Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0933",
+                    "external_id": "DET0933"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T01:47:44.862Z",
+            "name": "Behavioral Detection of Python Execution in ICS",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--d9d759b9-6bd5-4c26-8872-cd0ccc173959",
+                "x-mitre-analytic--bffafc31-542c-45f0-9af1-73e2a789f782"
+            ]
+        }
+    ]
+}

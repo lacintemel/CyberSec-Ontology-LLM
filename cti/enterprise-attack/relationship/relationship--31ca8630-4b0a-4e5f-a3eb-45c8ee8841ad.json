@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--d66b08fa-e8f1-466f-b7da-fb5bcf0554fc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--31ca8630-4b0a-4e5f-a3eb-45c8ee8841ad",
+            "created": "2021-10-04T16:09:13.564Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.982Z",
+            "description": "Consider periodic review of <code>auditpol</code> settings for Administrator accounts and perform dynamic baselining on SIEM(s) to investigate potential malicious activity. Also ensure that the EventLog service and its threads are properly running.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--cc2399fd-3cd3-4319-8d0a-fbd6420cdaf8",
+            "target_ref": "attack-pattern--1411e6b8-80a6-4465-9909-54eaa9c67ce0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

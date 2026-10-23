@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--f6d4a154-78d0-469a-97db-7ed8e49714eb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4ba6ae62-55e8-4ea2-a58c-75f15620e031",
+            "created": "2026-04-16T15:44:16.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                },
+                {
+                    "source_name": "Recorded Future TAG-144 AUG 2025",
+                    "description": "Insikt Group. (2025, August 26). TAG-144\u2019s Persistent Grip on South American Organizations. Retrieved April 16, 2026.",
+                    "url": "https://assets.recordedfuture.com/insikt-report-pdfs/2025/cta-2025-0826.pdf"
+                },
+                {
+                    "source_name": "LevelBlue Blind Eagle Proton66 JUN 2025",
+                    "description": "Melnyk, S. (2025, June 27). Tracing Blind Eagle to Proton66. Retrieved April 16, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/tracing-blind-eagle-to-proton66/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T17:55:53.117Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has utilized well known malware including the Packer-as-a-Service HeartCrypt, PureCrypter, and open-source RATs such as [Remcos](https://attack.mitre.org/software/S0332).(Citation: Check Point Blind Eagle MAR 2025)(Citation: LevelBlue Blind Eagle Proton66 JUN 2025)(Citation: Recorded Future TAG-144 AUG 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--7807d3a4-a885-4639-a786-c1ed41484970",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

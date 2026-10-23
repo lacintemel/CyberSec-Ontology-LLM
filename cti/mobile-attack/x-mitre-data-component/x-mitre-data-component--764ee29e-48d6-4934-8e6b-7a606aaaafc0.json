@@ -1,0 +1,48 @@
+{
+    "type": "bundle",
+    "id": "bundle--ed78c062-43b0-4588-ad3b-755a452f1c84",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--764ee29e-48d6-4934-8e6b-7a606aaaafc0",
+            "created": "2023-03-13T19:59:42.141Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0113",
+                    "external_id": "DC0113"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:41.893Z",
+            "name": "Network Communication",
+            "description": "Network Communication captures outbound or inbound communication initiated by an application or mobile device, including the domains contacted, protocols used, and session metadata associated with the communication.\n\nMonitoring network communication enables defenders to identify command-and-control traffic, data exfiltration, or suspicious communication patterns originating from mobile applications.\n\nExamples\n\n- Connections to previously unseen domains\n- Repeated communication with suspicious infrastructure\n- Communication immediately following application installation\n\nCollection Methods\n\n- Mobile VPN telemetry\n- Secure web gateway logs\n- Network detection and response (NDR)\n- Mobile EDR network monitoring\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Application Vetting",
+                    "channel": "None"
+                },
+                {
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                },
+                {
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                }
+            ]
+        }
+    ]
+}

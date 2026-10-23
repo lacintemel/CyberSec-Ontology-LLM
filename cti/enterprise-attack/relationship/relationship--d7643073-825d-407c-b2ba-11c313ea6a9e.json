@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--392e7318-c8a4-485e-b1a8-fc9a9d61dff7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d7643073-825d-407c-b2ba-11c313ea6a9e",
+            "created": "2026-04-09T19:43:33.614Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aikido Shai-Hulud September 2025",
+                    "description": "Charlie Eriksen. (2025, September 16). S1ngularity/nx attackers strike again. Retrieved April 9, 2026.",
+                    "url": "https://www.aikido.dev/blog/s1ngularity-nx-attackers-strike-again"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.219Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has gathered victim system information.(Citation: Aikido Shai-Hulud September 2025)(Citation: Socket Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

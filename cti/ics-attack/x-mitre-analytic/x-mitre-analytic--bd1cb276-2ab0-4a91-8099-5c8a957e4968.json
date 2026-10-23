@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--aa1065a0-5f9b-4135-bd6e-50856423554e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--bd1cb276-2ab0-4a91-8099-5c8a957e4968",
+            "created": "2026-10-13T17:47:49.520Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0777#AN2276",
+                    "external_id": "AN2276"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:49.520Z",
+            "name": "Analytic 2276",
+            "description": "Real-time monitoring identifies a write to alarm threshold configuration on an Human-Machine Interface (HMI)/alarm server from a process other than the recognized alarm management application, without a corresponding operator session. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 to alarm threshold config path by image not in Human-Machine Interface (HMI) alarm parent allowlist"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmThresholdAddressRange",
+                    "description": "Register addresses specifically corresponding to alarm threshold/deadband configuration."
+                },
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to modify alarm configuration."
+                },
+                {
+                    "field": "SafeAlarmThresholdRange",
+                    "description": "Documented safe range for alarm thresholds per parameter."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

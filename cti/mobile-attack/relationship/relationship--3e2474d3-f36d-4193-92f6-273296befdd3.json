@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--734e24c4-3c41-47c2-8041-a8c41783d4f0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3e2474d3-f36d-4193-92f6-273296befdd3",
+            "created": "2022-04-05T19:38:18.760Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.010Z",
+            "description": "Users should protect their account credentials and enable multi-factor authentication options when available. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--653492e3-27be-4a0e-b08c-938dd2b7e0e1",
+            "target_ref": "attack-pattern--9ef05e3d-52db-4c12-be4f-519214bbe91f",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

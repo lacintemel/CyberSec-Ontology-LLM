@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--005299de-530b-4fc6-bb51-036d9fdf060b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--484023ea-6fea-4f91-b40d-c6d87188cbfe",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0788#AN1920",
+                    "external_id": "AN1920"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:17.221Z",
+            "name": "Analytic 1920",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol session that systematically enumerates a device's full tag/object namespace from a source not in the approved control server list, where the enumeration pattern covers the complete address/object space rather than the sparse, fixed tag set legitimate Supervisory Control and Data Acquisition (SCADA) polling queries. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "opc:applog",
+                    "channel": "client_id not in approved Open Platform Communications (OPC) clients traversing entire tag tree rather than known fixed subset"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "Open Platform Communications Unified Architecture (OPC UA) BrowseNamespace or Distributed Network Protocol 3 (DNP3) object 0 all-variation read or Common Industrial Protocol (CIP) Get_Attributes_All from source not in approved Supervisory Control and Data Acquisition (SCADA) servers, covering above namespace coverage threshold percent of device tag space"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedOPCClients",
+                    "description": "Allowlist of OPC client identities authorized for namespace browsing."
+                },
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate polling/browsing sources."
+                },
+                {
+                    "field": "NamespaceCoverageThreshold",
+                    "description": "Percentage of total device tag/object space accessed within a session constituting full enumeration."
+                }
+            ]
+        }
+    ]
+}

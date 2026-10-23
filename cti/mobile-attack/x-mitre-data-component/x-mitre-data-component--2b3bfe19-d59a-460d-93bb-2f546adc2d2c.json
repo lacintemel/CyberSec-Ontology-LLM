@@ -1,0 +1,682 @@
+{
+    "type": "bundle",
+    "id": "bundle--12c43ce0-7747-4da8-8a0e-46175fb2e9d8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+            "created": "2021-10-20T15:05:19.273Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0039",
+                    "external_id": "DC0039"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:40.408Z",
+            "name": "File Creation",
+            "description": "A new file is created on a system or network storage. This action often signifies an operation such as saving a document, writing data, or deploying a file. Logging these events helps identify legitimate or potentially malicious file creation activities. Examples include logging file creation events (e.g., Sysmon Event ID 11 or Linux auditd logs). ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "enterprise-attack",
+                "mobile-attack"
+            ],
+            "x_mitre_version": "3.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "IPA binary written with signing cert matching user-trusted certificate NOT IN $EnterpriseCertList$ within $ProfileInstallWindow$"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "App UID writes new file with suspicious extension/location (.tmp, .dat, .enc, /data/data/<pkg>/files/, /sdcard/Download/) and high estimated entropy"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "App UID writes edited media to container paths (e.g., /data/data/<pkg>/files/, .../cache/, /storage/emulated/0/Pictures/<pkg>/) with high delta in size vs. original and elevated estimated segment entropy  "
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "Create/write of high-entropy files in /data/data/<pkg>/(files|cache)/ or /storage/emulated/0/<...> with .dex/.so/.jar/.tmp/.bin"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "Create/write under /data/data/<pkg>/(files|cache)/ or /storage/emulated/0/ with extension .dex/.jar/.so/.zip/.tmp/.js and elevated entropy"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE of archive or container (.zip/.gz/.7z/.db copy) that aggregates files pulled from other-package paths"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE to app-writable DB/file path indicating clipboard dump (e.g., clipboard.db, clip_*.txt)"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE paths like /data/data/<pkg>/files/(keys|inputs)/.*\\\\.db|\\\\.txt|\\\\.log"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE to /data/data/<pkg>/(files|databases)/(keys|inputs|clipboard).*\\\\.(db|sqlite|txt|log)"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE to /data/data/<pkg>/(files|databases)/(creds|form|prompt).*\\\\.(db|sqlite|json|txt)"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE /data/data/<pkg>/(files|databases)/(app_inventory|pkg_list).*\\\\.(json|txt|db)"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "CREATE/WRITE /data/data/<pkg>/(files|databases)/(security_inventory|policy_audit).*\\\\.(json|txt|db|plist)"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "File creation with name starting with '.'"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "create: New file created in system binaries or temp directories"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "create: Creation of .zip, .gz, .bz2 files in /tmp, /var/tmp, or /home directories"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "create: Creation of archive files in /tmp, /var/tmp, or user home directories"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "create: Creation of files with anomalous headers and entropy levels in /tmp or user directories"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "Creation of hidden files (.*) in sensitive directories (/etc, /var, /usr/bin)"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "create: Creation of files ending in .tar, .gz, .bz2, .zip in /tmp or /var/tmp"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "Creation of files with extensions .sql, .csv, .sqlite, especially in user directories"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "New .py/.js/.sh files written to ~/.local/, ~/.cache/, or /tmp/ within 5 min of package install"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "mount target path within /proc/*"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "creation of .so files in non-standard directories (e.g., /tmp, /home/*)"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "WRITE: Drop of binaries/scripts in ~/.local, /tmp, or /opt tool dirs"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "creat"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open or creat syscalls targeting excluded paths"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "file creation/modification"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open,creat,rename: Writes in $HOME/Downloads, /tmp, ~/.cache with exe/script/archive/office extensions"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write/open, FIM audit"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open: Write to ~/.vscode-cli/code_tunnel.json"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, unlink, rename: File creation or deletion involving critical stored data"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "creat, open, write on /etc/systemd/system and /usr/lib/systemd/system"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write, open, or rename to /etc/systemd/system/*.service"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/create/rename: name in (/home/*/Downloads/*|/tmp/*|/run/user/*|/media/*) AND ext in SuspiciousExtensions"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "File creations of *.qcow2, *.vdi, *.vmdk outside standard VM directories"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open: File creation under /tmp, /var/tmp, ~/.cache with executable bit or shell shebang"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write, unlink"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "File creation events in /var/mail or /var/spool/mail exceeding baseline thresholds"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write or create file after .bash_history access"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "new file created in /var/www/html, /srv/http, or similar web root"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Access or modification to /lib/modules or creation of .ko files"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open,create"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open,creat,rename,write"
+                },
+                {
+                    "name": "AWS:CloudTrail",
+                    "channel": "PutObject"
+                },
+                {
+                    "name": "CloudTrail:PutObject",
+                    "channel": "PutObject"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "file write"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "VMFS file creation"
+                },
+                {
+                    "name": "File",
+                    "channel": "None"
+                },
+                {
+                    "name": "fs:fileevents",
+                    "channel": "creat"
+                },
+                {
+                    "name": "fs:fileevents",
+                    "channel": "create/write/rename in user-writable paths"
+                },
+                {
+                    "name": "fs:fsevents",
+                    "channel": "Create in /Users/*/Downloads or /private/var/folders/* with quarantine attribute"
+                },
+                {
+                    "name": "fs:fsevents",
+                    "channel": "Directory events (kFSEventStreamEventFlagItemCreated)"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "open/write/exec calls"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "disk activity on /Library/LaunchAgents or LaunchDaemons"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "File IO"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file activity"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file open/write"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "create: Attachment file creation in ~/Library/Mail directories"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "write or chmod to ~/Library/LaunchAgents/*.plist"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file write"
+                },
+                {
+                    "name": "fs:launchdaemons",
+                    "channel": "file_create"
+                },
+                {
+                    "name": "gcp:workspaceaudit",
+                    "channel": "drive.activity logs"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "NSFileHandle/NSFileManager writes creating high-entropy files within app container (/var/mobile/Containers/Data/Application/<GUID>/tmp|Library/Caches)"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "Create/write of high-entropy Mach-O/bundle or generic blob in /var/mobile/Containers/Data/Application/<GUID>/(tmp|Library/Caches)/"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "Create/write in /var/mobile/Containers/Data/Application/<GUID>/(tmp|Library/Caches)/ for .js/.bundle/.dylib/.zip with elevated entropy"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE of archive/container (.zip/.gz/.7z/.db export) aggregating recently read items"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE of clipboard dump artifacts in container (clipboard.db, clip_*.txt, caches)"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE clipboard/keylog artifacts (clipboard.db, keys_*.txt) in container"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE of keylog artifacts (keys_*.txt, inputs.db) within app/keyboard container"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE of form cache/credential-like artifacts (forms.db, creds.json) in container"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE container paths like /Library/Caches/app_inventory.*\\\\.(json|plist|db)"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "CREATE/WRITE of /Library/Caches/security_inventory.*\\\\.(json|plist|db)"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "linux:Sysmon",
+                    "channel": "New files in /tmp, /var/tmp, $HOME/.cache, executed within TimeWindow after browser HTTP fetch"
+                },
+                {
+                    "name": "macos:endpointsecurity",
+                    "channel": "ES_EVENT_TYPE_NOTIFY_CREATE: path under /Users/*/(Downloads|Desktop|Library/*/Containers|Library/Group Containers) AND extension in SuspiciousExtensions"
+                },
+                {
+                    "name": "macos:endpointsecurity",
+                    "channel": "es_event_open"
+                },
+                {
+                    "name": "macos:fsevents",
+                    "channel": "/Library/StartupItems/, ~/Library/LaunchAgents/"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "CREATE/MODIFY: Modification of app.asar inside .app bundle"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "CREATE/MODIFY: Creation of LaunchAgents/Daemons plists in user/system locations"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file write"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation or modification of browser extension .plist files"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file creation in AV exclusion directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file write/create"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of .plist under /Library/Managed Preferences/"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "creation of ~/.vscode-cli/code_tunnel.json"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "create/modify dylib files in monitored directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "New files written to /var/folders, /tmp, ~/Library/Caches, or ~/Downloads by browser context or its children"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File created in ~/Library/LaunchAgents or executable directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Process wrote large .mov/.mp4 in user temp/hidden dirs"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "logd:file write"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File creation"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Attachment files written to ~/Downloads or temporary folders"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Writes of .sql/.csv/.xlsx files to user documents/downloads"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of .zip, .gz, .dmg archives in /Users, /tmp, or application directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of .zip, .dmg, .tar.gz files in /Users, /tmp, or application directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File Events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation or modification of postinstall scripts within .pkg or .mpkg contents"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "create: New files in /tmp or ~/Library/Application Support/* with executable or script extensions"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File creation of unsigned binaries/scripts in user cache or download directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of files with anomalous headers and entropy values"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of LaunchAgents/LaunchDaemons in hidden or non-standard directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Creation of .zip or .dmg files in user-accessible or temporary directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file create or modify in /etc/emond.d/rules or /private/var/db/emondClients"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Writes under ~/Library/Application Support/Code*/extensions or JetBrains plugins"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "PackageInstaller.install() with signing_cert NOT IN $EnterpriseCertList$ within $PolicyViolationWindow$ of settings change"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Browser/WebView process creates downloaded payloads, temporary files, dropped archives, or unusual cached web artifacts shortly after visiting external content"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "File writes from removable-media or USB-associated paths into download, package staging, temp, or application-accessible storage shortly after USB connection"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "large file write originating from /mnt/usb or external mounted storage"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Recently installed or updated trusted app writes staging, cache, buffer, or export artifacts inconsistent with its approved function, especially when temporally adjacent to sensitive resource access or outbound transfer"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App stages, buffers, caches, or exports data locally immediately before communication with legitimate external web-service endpoints in a way inconsistent with normal sync or offline workflow"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Burst write to cache, buffer, temp, staging, or export path occurred between inbound retrieval and outbound write to same public web-service class"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Burst write to media, cache, temp, export, or staging path occurred during or immediately after camera session from same app identity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App writes encoded/encrypted blobs (high entropy data) to local storage or memory buffers prior to transmission"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App writes high-entropy encrypted blobs to local storage or memory buffers prior to transmission"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App writes asymmetric-encrypted blobs or encoded ciphertext to local buffers or files prior to transmission"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application reads multiple user-data files, media objects, message stores, or app-private records in burst sequence immediately before packaging or encryption activity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application writes archive-like container or high-entropy packaged blob to app storage, cache, temp path, or shared external path after burst collection activity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application writes new large container, temp package, or high-entropy blob after clustered local data access and before outbound communication"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application performs burst reads across local system paths, external storage, media directories, cache locations, or local database files within a short interval as the primary collection phase"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application writes newly retrieved binary, archive, script-like asset, overlay content, library, or opaque payload to app-private, cache, temp, or shared external path as the primary local effect of transfer"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Managed app writes newly retrieved container-local asset, dylib-like resource, archive, or opaque payload shortly after remote retrieval as the strongest local effect"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "APK, DEX, native library, or package-associated executable content is written, expanded, or swapped in app package paths, staging paths, or installer cache immediately before or during application replacement"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application modifies protected configuration, local control files, security settings, or tool-related data immediately before security service degradation or non-reporting state"
+                },
+                {
+                    "name": "snmp:syslog",
+                    "channel": "firmware write/log event"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-Shell-Core",
+                    "channel": "New startup folder shortcut or binary placed in Startup directory"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "File creation of suspicious scripts/binaries in temporary directories"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes asymmetric-encrypted blob or encoded ciphertext to local staging path before network transmission \u2014 encrypted staging artifact"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Local file write between inbound retrieval"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT on path LIKE '/data/data/%/files/%' for binary or dex content by app_package NOT IN $LegitDynamicLoaders$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT on binary-typed path in /data/data/<app>/ within $StegoExecWindow$ of media file download from same session"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT for file with audio MIME type (audio/mp4, audio/aac, audio/3gpp) in /data/data/<app>/files/ within $AudioCaptureWindow$ of recording API start"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT for APK or binary file in /sdcard/ or /data/local/tmp/ by browser process within $DriveByWindow$ \u2014 payload drop confirms exploit code execution"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: PackageInstaller.install() with installer_source NOT IN $ApprovedInstallSources$ within $PolicyViolationWindow$ of settings change"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: app binary written to device with signing certificate matching manually-trusted enterprise cert NOT IN $EnterpriseCertAllowList$ within $ProfileInstallWindow$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: PackageInstaller.install() with signing_cert NOT IN $EnterpriseCertList$ within $PolicyViolationWindow$ of settings change"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: IPA binary written with signing cert matching user-trusted certificate NOT IN $EnterpriseCertList$ within $ProfileInstallWindow$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: app binary written to device storage as part of install \u2014 confirms impersonating app is being persisted"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: PackageInstaller.install() writes binary to device storage for impersonating app \u2014 install event is the enrollment of impersonating app"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: open() with O_CREAT for APK file in /sdcard/ or /data/local/tmp/ within $PhishingWindow$ of navigation to flagged URL \u2014 APK drop confirms malware delivery phase"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: File with binary signature (.apk, .dex, .so, .sh) written to app storage or /data/local/tmp/ from USB-mounted path or external storage within $USBInstallWindow$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Compromised app writes staging, cache, or export artifacts inconsistent with its declared function within $PostInstallWindow$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App stages or caches content retrieved from web-service platform locally before initiating secondary network connection"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes high-entropy blob (Shannon entropy > $EntropyThreshold$) to local staging path immediately before outbound transmission \u2014 encrypted staging artifact confirms app-layer encryption occurred"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes newly retrieved binary, archive, native library (.so), DEX, or script to /data/data/<app>/files/, cache, or shared storage within $IngressWriteWindow$ of network retrieval from non-CDN source"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Managed app writes newly retrieved container-local file, dylib-like resource, or opaque payload after download from non-CDN source"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: APK, DEX, or native library written to app installation path outside MDM-authorized update mechanism \u2014 binary replacement is the persistence artifact"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App reads files across multiple directories or databases in background state (collection phase) then invokes archive or compression routines on collected content \u2014 read-then-archive sequence is the staging chain"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes archive-like container, high-entropy packaged blob, or .zip/.gz output to app-private or cache path after bulk data collection \u2014 archive artifact in private storage is the staging evidence"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes large container, temp package, or high-entropy blob to container-local storage after clustered data access \u2014 staged archive artifact"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes to or modifies protected configuration files or local control structures of deployed security tools"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 of alarm config paths by image not in Human-Machine Interface (HMI) alarm parent allowlist"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: file transfer (scp, sftp, rsync, etc.) placing executable on Industrial Control Systems (ICS) Linux asset, followed by execve of the transferred file within tool transfer window"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 with executable/script extension from remote-sourced write operation"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 from removable media path to Industrial Control Systems (ICS) engineering working directory"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 where an unrecognized process creates a staging/output file after bulk ICS data access activity"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 by same process within capture to file window of the Application Programming Interface (API) call"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 to alarm threshold config path by image not in Human-Machine Interface (HMI) alarm parent allowlist"
+                }
+            ]
+        }
+    ]
+}

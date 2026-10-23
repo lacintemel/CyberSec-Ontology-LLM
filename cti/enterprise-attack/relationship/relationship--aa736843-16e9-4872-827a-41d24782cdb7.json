@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--f19eee26-b8f0-431e-bfc0-92ef5abae327",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--aa736843-16e9-4872-827a-41d24782cdb7",
+            "created": "2026-04-17T09:34:57.392Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                },
+                {
+                    "source_name": "Zscaler PureCrypter JUN 2022",
+                    "description": "Dumont, R. (2022, June 13). Technical Analysis of PureCrypter: A Fully-Functional Loader Distributing Remote Access Trojans and Information Stealers. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:04.251Z",
+            "description": "[PureCrypter](https://attack.mitre.org/software/S9019) can download additional payloads for execution on the compromised host.(Citation: Zscaler PureCrypter JUN 2022)(Citation: Check Point Blind Eagle MAR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

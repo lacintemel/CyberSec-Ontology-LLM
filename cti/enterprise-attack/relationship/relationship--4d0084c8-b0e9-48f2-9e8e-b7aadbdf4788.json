@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fd621370-44a0-40da-b549-5d1cdd9263e1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4d0084c8-b0e9-48f2-9e8e-b7aadbdf4788",
+            "created": "2026-09-22T17:47:42.376Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BradyUnit42_TheGentlemen_July2026",
+                    "description": "Brady, M. (2026, July 10). No Manners Here: The Ruthless Rise of The Gentlemen Ransomware. Retrieved September 18, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T17:47:42.376Z",
+            "description": "(Citation: BradyUnit42_TheGentlemen_July2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "tool--f91162cc-1686-4ff8-8115-bf3f61a4cc7a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

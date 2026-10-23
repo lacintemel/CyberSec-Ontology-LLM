@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e20584a7-c9d3-4260-98f7-28237f8d2e12",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c8eec284-ab05-48a5-b79e-412db42f7123",
+            "created": "2017-05-31T21:33:27.042Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Group-IB Anunak",
+                    "description": "Group-IB and Fox-IT. (2014, December). Anunak: APT against financial institutions. Retrieved April 20, 2016.",
+                    "url": "http://www.group-ib.com/files/Anunak_APT_against_financial_institutions.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:56.659Z",
+            "description": "[Carbanak](https://attack.mitre.org/groups/G0008) may use [netsh](https://attack.mitre.org/software/S0108) to add local firewall rule exceptions.(Citation: Group-IB Anunak)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--55033a4d-3ffe-46b2-99b4-2c1541e9ce1c",
+            "target_ref": "attack-pattern--eec096b8-c207-43df-b6c1-11523861e452",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

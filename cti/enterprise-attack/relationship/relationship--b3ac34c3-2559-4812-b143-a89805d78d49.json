@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--eec2c756-2824-4157-b92c-93e056cab88b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b3ac34c3-2559-4812-b143-a89805d78d49",
+            "created": "2019-01-29T18:44:04.852Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Fortinet Agent Tesla June 2017",
+                    "description": "Zhang, X. (2017, June 28). In-Depth Analysis of A New Variant of .NET Malware AgentTesla. Retrieved November 5, 2018.",
+                    "url": "https://www.fortinet.com/blog/threat-research/in-depth-analysis-of-net-malware-javaupdtr.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.171Z",
+            "description": "[Agent Tesla](https://attack.mitre.org/software/S0331) has the capability to kill any running analysis processes and AV software.(Citation: Fortinet Agent Tesla June 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e7a5229f-05eb-440e-b982-9a6d2b2b87c8",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

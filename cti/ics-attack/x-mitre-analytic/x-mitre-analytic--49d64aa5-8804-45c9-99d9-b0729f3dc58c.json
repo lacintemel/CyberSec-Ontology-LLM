@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--19f29869-8ae7-428e-8079-31ceef59d657",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--49d64aa5-8804-45c9-99d9-b0729f3dc58c",
+            "created": "2026-10-13T17:46:13.532Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0737#AN2207",
+                    "external_id": "AN2207"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:13.532Z",
+            "name": "Analytic 2207",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) Windows application such as a Supervisory Control and Data Acquisition (SCADA) server or Distributed Control System (DCS) interface generating anomalously high-frequency write Application Programming Interface (API) calls to field devices, exceeding the configured scan rate baseline for that point. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "opc:applog",
+                    "channel": "Open Platform Communications Data Access (OPC DA) write queue depth or write throughput to a single point exceeds configured baseline by a significant margin"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "BruteForceDetectionWindow",
+                    "description": "Time window over which write rate is measured for threshold comparison."
+                },
+                {
+                    "field": "MaxNormalStateChangeRate",
+                    "description": "Maximum rate at which the physical process value is expected to legitimately change state."
+                },
+                {
+                    "field": "MaxWriteQueueDepth",
+                    "description": "Maximum legitimate write queue depth for SCADA/DCS write operations to a single point."
+                },
+                {
+                    "field": "MaxWriteRatePerPoint",
+                    "description": "Maximum legitimate write rate to a single I/O point, derived from the device's configured scan cycle and physical process response time."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

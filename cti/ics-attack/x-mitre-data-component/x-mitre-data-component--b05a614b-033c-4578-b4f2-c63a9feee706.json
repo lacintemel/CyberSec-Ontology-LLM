@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--19bff029-592f-4181-a5f2-8e7c85dae12c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--b05a614b-033c-4578-b4f2-c63a9feee706",
+            "created": "2022-09-23T16:34:00.912Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0110",
+                    "external_id": "DC0110"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:42.721Z",
+            "name": "Asset Inventory",
+            "description": "This includes sources of current and expected devices on the network, including the manufacturer, model, and necessary identifiers (e.g., IP and hardware addresses)",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_version": "2.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Asset",
+                    "channel": "None"
+                },
+                {
+                    "name": "assetinventory:MasterAddress",
+                    "channel": "command traffic uses master/station address not in registered master addresses"
+                },
+                {
+                    "name": "assetinventory:ProgramHash",
+                    "channel": "post-transfer program hash does not match last authorized program baseline"
+                },
+                {
+                    "name": "assetinventory:ProgramSize",
+                    "channel": "device program size/block count increases without corresponding change ticket reference"
+                }
+            ]
+        }
+    ]
+}

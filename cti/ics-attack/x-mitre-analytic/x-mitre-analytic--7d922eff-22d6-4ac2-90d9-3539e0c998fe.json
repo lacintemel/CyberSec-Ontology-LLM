@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--f4b2a349-b10b-4d31-9dd1-96da2d2651be",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7d922eff-22d6-4ac2-90d9-3539e0c998fe",
+            "created": "2026-10-13T17:47:39.319Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0734#AN2270",
+                    "external_id": "AN2270"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:39.319Z",
+            "name": "Analytic 2270",
+            "description": "Real-time monitoring identifies a host process making sequential Industrial Control System (ICS) protocol reads with output piped to a local staging file, from a process not associated with a recognized Human-Machine Interface (HMI) or historian tool. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 where an unrecognized process creates a staging/output file after bulk ICS data access activity"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedHistorianClients",
+                    "description": "Allowlist of applications/accounts authorized to perform bulk historian queries."
+                },
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate SCADA/historian servers."
+                },
+                {
+                    "field": "AutoCollectionTimeWindow",
+                    "description": "Time window within which sequential reads across multiple devices are considered part of a single automated collection event."
+                },
+                {
+                    "field": "BulkQueryThreshold",
+                    "description": "Record count threshold above which a historian query is considered a bulk export rather than a routine query."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

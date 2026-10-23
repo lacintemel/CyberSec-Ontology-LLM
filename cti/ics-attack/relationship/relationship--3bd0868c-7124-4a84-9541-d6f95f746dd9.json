@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ebcae069-a9f2-4cca-874c-170703e27d1c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3bd0868c-7124-4a84-9541-d6f95f746dd9",
+            "created": "2026-09-25T19:13:21.271Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anton Cherepanov, ESET June 2017",
+                    "description": "Anton Cherepanov, ESET 2017, June 12 Win32/Industroyer: A new threat for industrial control systems Retrieved. 2017/09/15 ",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2017/06/Win32_Industroyer.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T17:27:10.928Z",
+            "description": "The name of the [Industroyer](https://attack.mitre.org/software/S0604) payload DLL is supplied by the attackers via a command line parameter supplied in one of the main backdoors that executes shell commands. (Citation: Anton Cherepanov, ESET June 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e401d4fe-f0c9-44f0-98e6-f93487678808",
+            "target_ref": "attack-pattern--84acafb8-775e-4381-a156-876fd7ea129e",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

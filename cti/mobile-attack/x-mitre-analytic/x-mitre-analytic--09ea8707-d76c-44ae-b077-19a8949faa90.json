@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--a7ffb4f2-61cf-42ec-bef7-255447314202",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--09ea8707-d76c-44ae-b077-19a8949faa90",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0694#AN1807",
+                    "external_id": "AN1807"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:45.356Z",
+            "name": "Analytic 1807",
+            "description": "For Android, detect Hijack Execution Flow from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate File Access via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: App loads executable or library from writable external directory (/sdcard/, app cache, /data/local/tmp/) \u2014 writable-path library load is exploitable hijack vector]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App loads library or executes component]; Process Creation via Application Vetting / Managed Device Telemetry [App execution triggered with unexpected parent context or via indirect invocation (intent redirect, implicit intent resolution to unexpected handler) \u2014 indirect invocation path is the flow hijack confirmation]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App loads executable or library from writable external directory (/sdcard/, app cache, /data/local/tmp/) \u2014 writable-path library load is exploitable hijack vector"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App loads library or executes component"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "App execution triggered with unexpected parent context or via indirect invocation (intent redirect, implicit intent resolution to unexpected handler) \u2014 indirect invocation path is the flow hijack confirmation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AppInternalPaths",
+                    "description": "Expected library load paths per app: /data/app/<package>/lib/, /data/dalvik-cache/. Derive from app package manifest and baseline measurement. Any library loaded from outside these paths is anomalous."
+                },
+                {
+                    "field": "WritablePathList",
+                    "description": "/sdcard/, /data/local/tmp/, /data/data/<app>/files/ \u2014 directories writable without elevated privilege that are exploitable for library substitution."
+                }
+            ]
+        }
+    ]
+}

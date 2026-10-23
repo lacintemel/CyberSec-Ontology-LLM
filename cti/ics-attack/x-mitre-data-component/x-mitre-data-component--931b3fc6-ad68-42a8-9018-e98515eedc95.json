@@ -1,0 +1,80 @@
+{
+    "type": "bundle",
+    "id": "bundle--2e9c6e7b-ca1f-424c-88d6-2628b6e68bde",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--931b3fc6-ad68-42a8-9018-e98515eedc95",
+            "created": "2022-05-11T16:22:58.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0107",
+                    "external_id": "DC0107"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:50.698Z",
+            "name": "Process History/Live Data",
+            "description": "This includes any data stores that maintain historical or real-time events and telemetry recorded from various sensors or devices",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Databases",
+                    "channel": "None"
+                },
+                {
+                    "name": "Operational Databases",
+                    "channel": "None"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "no new process value recorded for device_ip within 1.5x expected poll interval immediately following a flood alert"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "process value crosses known alarm threshold but no corresponding alarm event recorded within expected latency window"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "multiple safety-critical outputs toggle within rapid toggle window, pattern consistent with scripted issuance"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "I/O point value oscillates or changes state at frequency exceeding max normal state change rate, inconsistent with physical process response time"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "reported values show statistically improbable stability during a period when physical process is known to be actively changing"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "tag value deviates from rolling baseline mean by more than parameter drift threshold percent within time window following a flagged write"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "process value expected to change following a command does not change within command confirmation window"
+                },
+                {
+                    "name": "operationaldb:ProcessHistory",
+                    "channel": "no unsolicited report received from device_ip within 1.5x expected reporting interval, while direct polling confirms device is reachable"
+                },
+                {
+                    "name": "processsensor:RedundantComparison",
+                    "channel": "Independent process measurement comparison: controller I/O image value diverges from independent sensor/measurement beyond configured integrity tolerance"
+                }
+            ]
+        }
+    ]
+}

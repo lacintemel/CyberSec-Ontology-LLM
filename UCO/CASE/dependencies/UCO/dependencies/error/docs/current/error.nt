@@ -1,0 +1,27 @@
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/2000/01/rdf-schema#comment> "It describes in some way, usually in natural language, which kind of error results from this resource."@en .
+<http://purl.org/spar/error> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/error> <http://purl.org/dc/elements/1.1/title> "The Error Ontology\nMaking contraints on ontology resources"@en .
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/error> <http://www.w3.org/2000/01/rdf-schema#label> "Error Ontology"@en .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nb50f882dfeea48d4a8cff9fb90540911 .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/error> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution Licence (http://creativecommons.org/licenses/by/3.0/)."@en .
+_:Nb50f882dfeea48d4a8cff9fb90540911 <http://www.w3.org/2002/07/owl#onProperty> <http://www.essepuntato.it/2009/10/error/hasError> .
+<http://purl.org/spar/error> <http://purl.org/dc/elements/1.1/description> "The Error Ontology is an unit test that allow to produce an inconsistent model if a particular (and incorrect) situation happens.\n\nIt works by means of a data property, \"hasError\" that denies its usage for ant resource. In fact, by defining its domain as \"all those resource that don't have any hasErrorDescription assertion\", a resource that asserts having an error makes the ontology inconsistent."@en .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/2000/01/rdf-schema#label> "has error"@en .
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/error> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/spar/error> <http://purl.org/dc/elements/1.1/date> "2010-11-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.essepuntato.it/2009/10/error/hasError> <http://purl.org/dc/elements/1.1/description> "A data property linking a resource that contains a logical error (which results in it belonging to the class owl:Nothing, therefore making the model inconsistent) to a textual description of that error."@en .
+_:Nb50f882dfeea48d4a8cff9fb90540911 <http://www.w3.org/2002/07/owl#cardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Nb50f882dfeea48d4a8cff9fb90540911 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+

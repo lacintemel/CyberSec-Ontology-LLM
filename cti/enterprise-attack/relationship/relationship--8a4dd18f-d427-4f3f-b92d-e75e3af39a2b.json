@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7ba8e484-42d2-4322-88e1-e6264ab0b209",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8a4dd18f-d427-4f3f-b92d-e75e3af39a2b",
+            "created": "2020-06-24T16:55:46.379Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Expel IO Evil in AWS",
+                    "description": "A. Randazzo, B. Manahan and S. Lipton. (2020, April 28). Finding Evil in AWS. Retrieved June 25, 2020.",
+                    "url": "https://expel.io/blog/finding-evil-in-aws/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.114Z",
+            "description": "Ensure least privilege principles are applied to Identity and Access Management (IAM) security policies.(Citation: Expel IO Evil in AWS)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--93e7968a-9074-4eac-8ae9-9f5200ec3317",
+            "target_ref": "attack-pattern--ee474564-64be-4b83-a958-53f238f49b01",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

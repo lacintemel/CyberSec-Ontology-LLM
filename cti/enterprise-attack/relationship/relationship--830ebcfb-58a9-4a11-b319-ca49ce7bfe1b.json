@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b639047c-e357-4c12-8d4e-f01c30fa6941",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--830ebcfb-58a9-4a11-b319-ca49ce7bfe1b",
+            "created": "2023-07-27T15:44:31.289Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sygnia Elephant Beetle Jan 2022",
+                    "description": "Sygnia Incident Response Team. (2022, January 5). TG2003: ELEPHANT BEETLE UNCOVERING AN ORGANIZED FINANCIAL-THEFT OPERATION. Retrieved February 9, 2023.",
+                    "url": "https://web.archive.org/web/20220105132433/https://f.hubspotusercontent30.net/hubfs/8776530/Sygnia-%20Elephant%20Beetle_Jan2022.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:31.206Z",
+            "description": "(Citation: Sygnia Elephant Beetle Jan 2022)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--fd66436e-4d33-450e-ac4c-f7810f1c85f4",
+            "target_ref": "tool--3433a9e8-1c47-4320-b9bf-ed449061d1c3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--d9ae384b-69ae-44d3-9029-91dabcf6a911",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6e046c4c-6c93-4fdf-a69e-5d81b52d1e9c",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0766#AN1898",
+                    "external_id": "AN1898"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:46.920Z",
+            "name": "Analytic 1898",
+            "description": "Configured Windows object-access monitoring identifies a write to an Industrial Control System (ICS) engineering project file by a process that is not the recognized vendor engineering software, or by the vendor engineering software immediately after loading a project file from an untrusted source. Documented mechanism in Havex (trojanized vendor software/installers distributed via compromised vendor websites). OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance. Collection requirement: use Windows Security Event ID 4663 with Object Access auditing and SACLs on approved project repositories; Sysmon FileCreate events can corroborate writes/overwrites but do not report generic file-open/read activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4663 (requires Object Access auditing/SACL): engineering process reads/opens project file from unapproved repository/removable-media/network-share path"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Microsoft-Windows-Sysmon/Operational Event ID 11 FileCreate/overwrite or Event ID 2 FileCreateTime, as applicable: Engineering tool process opens project file from path not in approved project repository (removable media, email attachment cache, untrusted network share)"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedProjectRepository",
+                    "description": "Documented, trusted source location(s) for project files."
+                },
+                {
+                    "field": "AuthorizedEngineeringTools",
+                    "description": "Allowlist of vendor engineering software processes authorized to modify project files."
+                },
+                {
+                    "field": "ProjectFileExtensions",
+                    "description": "File extensions used by ICS engineering project files for in-use vendor platforms."
+                }
+            ]
+        }
+    ]
+}

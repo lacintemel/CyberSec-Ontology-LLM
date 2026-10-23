@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--affcf5f2-a6a3-4924-b2f9-2f372263988e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--2862e391-b78a-400f-819e-d44e672e3d3a",
+            "created": "2026-10-13T17:46:01.858Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0771#AN2196",
+                    "external_id": "AN2196"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:01.858Z",
+            "name": "Analytic 2196",
+            "description": "Real-time monitoring identifies network device credential changes such as Authentication, Authorization, and Accounting (AAA) password modification or Simple Network Management Protocol (SNMP) community string modification from a source not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, corroborated by syslog showing authentication failures from legitimate NMS systems following the change. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "AAA/Simple Network Management Protocol (SNMP) credential change from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, followed by authentication failures from legitimate NMS systems"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedCredentialAdmins",
+                    "description": "Accounts authorized to change credentials for ICS service and operator accounts."
+                },
+                {
+                    "field": "CredentialChangeImpactWindow",
+                    "description": "Time window after a credential change within which a service authentication failure is considered directly connected."
+                },
+                {
+                    "field": "CredentialRotationSchedule",
+                    "description": "Documented schedule for routine credential rotation."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

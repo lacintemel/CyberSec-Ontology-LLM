@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--42cdd6d5-beb0-4786-b5f7-be274ce11d8c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4ea5942d-fa95-484d-9acb-fe205a3960a3",
+            "created": "2026-10-13T17:46:43.463Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0910#AN2227",
+                    "external_id": "AN2227"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:43.463Z",
+            "name": "Analytic 2227",
+            "description": "Real-time monitoring identifies multiple field devices becoming unreachable simultaneously following a network infrastructure configuration change event. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Connections",
+                    "channel": "multiple device Internet Protocol (IP) addresses become unreachable simultaneously following network infrastructure config change event"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges authorized for network infrastructure configuration changes."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which connectivity-affecting changes are authorized."
+                },
+                {
+                    "field": "CommBlockCorrelationWindow",
+                    "description": "Time window correlating a configuration change with subsequent communication loss."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

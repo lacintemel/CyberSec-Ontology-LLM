@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--89b78bb9-d074-48e5-978a-d4cec1707986",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--ff6456fc-576d-4da5-b561-b58f70961b15",
+            "created": "2026-04-22T16:29:50.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0905",
+                    "external_id": "DET0905"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:17.910Z",
+            "name": "Detection of Insecure Credentials",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--1017530e-423d-4857-80b6-99891bf82d28",
+                "x-mitre-analytic--b968d9b9-b7f6-423b-b490-6a43ed97389f",
+                "x-mitre-analytic--caa6869b-e752-4fb8-a228-09abaa2d321c",
+                "x-mitre-analytic--74e60460-7618-4a7c-b490-c1e164784564"
+            ]
+        }
+    ]
+}

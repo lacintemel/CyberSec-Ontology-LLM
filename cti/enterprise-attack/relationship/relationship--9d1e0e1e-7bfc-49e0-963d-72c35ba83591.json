@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--b6ecc62f-d34f-424f-8497-d52438d41038",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9d1e0e1e-7bfc-49e0-963d-72c35ba83591",
+            "created": "2026-09-21T23:29:54.742Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-21T23:29:54.742Z",
+            "description": "Restrict access to privileged AI capabilities and require explicit authorization or human approval for AI-generated actions involving administrative functions, sensitive resources, or privileged tools. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--9bb9e696-bff8-4ae1-9454-961fc7d91d5f",
+            "target_ref": "attack-pattern--d7e9cba9-3b43-4208-8e90-fdb18bff4a6a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

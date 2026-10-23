@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b1f18f92-b399-4950-b27c-1fd7dd4419ec",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--953d92ff-9f7a-4f50-bfe6-848ea4791dfc",
+            "created": "2026-10-01T13:51:18.386Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T13:51:18.386Z",
+            "description": "[MiniBrowse](https://attack.mitre.org/software/S9062) has gathered browser data to include Edge login data.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--8c8b765a-fba0-4551-ae83-b12e2a8b8937",
+            "target_ref": "attack-pattern--5e4a2073-9643-44cb-a0b5-e7f4048446c7",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

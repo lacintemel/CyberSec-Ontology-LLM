@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--66c9ccc1-725a-403c-97cf-5d397eed3465",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--80bf6361-8d29-4f25-8b76-64a3751686ed",
+            "created": "2026-04-22T22:24:16.790Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                },
+                {
+                    "source_name": "ESET DynoWiper Update JAN 2026",
+                    "description": "ESET. (2026, January 30). DynoWiper update: Technical analysis and attribution. Retrieved April 22, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/dynowiper-update-technical-analysis-attribution/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.101Z",
+            "description": "[DynoWiper](https://attack.mitre.org/software/S9038) has used multiple native Windows functions, such as `GetLogicalDrives` and `FindNextFile` for discovery and file deletion.(Citation: CERT Polska)(Citation: ESET DynoWiper Update JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--34057cb6-0a56-48a3-92e5-3af1357808da",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

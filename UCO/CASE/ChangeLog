@@ -1,0 +1,234 @@
+2026-07-23
+	* (217b29b) UCO Issue 666: Fix typo; add class-vs-instance clarifying remarks 
+
+2026-07-19
+	* (876173b) UCO Issue 670: Fix typo "withing"
+	* (876173b) UCO Issue 669: Fix typo "Implemetation"
+	* (876173b) UCO Issue 667: Fix typo "MessageTread"
+	* (876173b) UCO Issue 666: Add `core:UcoType` and `action:Technique`
+
+2025-05-29
+	* OCCASE-496: Release CASE 1.4.0, with release notes at https://caseontology.org/releases/1.4.0/
+
+2025-03-18
+	* (7ecdaf4) UCO Issue 629: Revise vocabulary pattern
+
+2025-02-13
+	* (256b474) UCO Issue 640: Add `core:informalType` and link as parent of type-describing properties
+
+2024-12-19
+	* (a0a62e9) Issue 167: Adjust top Makefile dependency ordering in submodule initialization
+
+2024-11-23
+	* (b5720af) UCO Issue 624: Add cpeid to DeviceFacet
+
+2024-11-08
+	* (96d45fb) UCO Issue 632: Prepare OperatingSystem to become a subclass of Software
+	* (f759e47) Pull Request 164: Update NIST licensing text 
+	* (2eb3991) UCO Pull Request 642: Update NIST licensing text 
+
+2024-11-07
+	* (820d63d) UCO Pull Request 639: Bump GitHub Action versions
+	* (cc5535e) UCO Pull Request 638: Refresh validation files to reflect validation tool template updates
+
+2024-10-18
+	* (557269c) UCO Issue 593: Remove owl:onDatatype from vocabulary definitions
+
+2024-10-16
+	* (8a353f8) UCO Issue 612: Warn if a `Disk` instance is not also a `StorageMedium`
+
+2024-09-11
+	* (8ba5929) UCO Issue 549: Add `core:objectStatus`
+
+2024-07-26
+	* (b93add7) UCO Issue 602: Warn about key-uniqueness enforcement to `types:Dictionary`
+
+2024-06-18
+	* (0d409cc) UCO Issue 609: Fix typo
+
+2024-06-10
+	* (5cf57b7) UCO Issues 586, 590: Warn of prior disjointedness declarations in `core:` and `types:`; warn if an `AlternateDataStream` instance is not also a `FileSystemObject`
+
+2024-05-01
+	* (50eb05b) UCO Issues 573, 584, 599: Warn if target or source on an `ObservableRelationship` are not `Observable`s; replace errant reference to non-existent concept `owl:Datatype`; remove 1-member minimum on `core:ContextualCompilation`
+
+2024-01-24
+	* OCCASE-495: Release CASE 1.3.0, with release notes at https://caseontology.org/releases/1.3.0/
+
+2024-01-24
+	* (79afa93) UCO Pull Request 579: Update change request template
+
+2024-01-22
+	* (caf5bd3) UCO Issue 571: Reduce UCO OWL RDF List review scope to OWL Sequences
+
+2023-12-05
+	* (279d2b7) UCO Issue 563: Designate action:Action and core:Event disjoint
+
+2023-11-16
+	* (24ea57f) UCO Issue 541: Add Event
+
+2023-10-20
+	* (8c8fa59) UCO Issue 536: Declare and warn of observable:File and :URL disjointedness
+
+2023-03-29
+	* ONT-494: Release CASE 1.2.0, with release notes at https://caseontology.org/releases/1.2.0/
+
+2023-03-28
+	* (0cb7b85) UCO Issue 449: Enable generating Protégé catalog files
+
+2022-11-22
+	* ONT-491: Release CASE 1.1.0, with release notes at https://caseontology.org/releases/1.1.0/
+
+2022-11-18
+	* (9922288) Issue 119: Test for concept-membership of used design vocabularies
+	* (137fff8) UCO Issue 491: Bump UCO to remove owl:ontologyIRI concept review
+	* (48e9d58) UCO Issue 493: Trigger CI on all branches starting with "develop" and "unstable"
+	* (ae27b42) UCO Issue 504: Test monolithic build with SHACL-SHACL
+
+2022-08-31
+	* ONT-295: Release CASE 1.0.0, with release notes at https://caseontology.org/releases/1.0.0/
+	* (761b058): Adopt UCO 1.0.0
+	* (40c4ba1): UCO Issue 430: Require non-blank nodes in graph data
+	* (33a0c3e): UCO Issue 437: Adopt priorVersion practice prepared for UCO 1.0.0
+	* ONT-410: Release CASE 0.7.1, with release notes at https://caseontology.org/releases/0.7.1/
+	* (5b8c03f): UCO Issue 437: Adopt UCO 0.9.1
+	* (e673017): UCO OC-217, CP-107: Revise ontology IRI to be slash-based and drop IRI base
+	* (0e7337e): UCO Issue 437: Adopt versionIRI practice prepared for UCO 0.9.1
+
+2022-08-30
+	* (d9db048): CASE Issue 106: Removed legacy requirements.txt
+
+2022-08-23
+	* (25bc31e): CASE Issue 98: Change minCount from 1 to 0 on multiple properties on Investigation object
+	* (8c4322c): ONT-467: Vocabulary datatypes are OWL-syntactically incomplete (Fix OWL syntax of CASE datatype)
+
+2022-08-22
+	* (52834ea): UCO Issue 406: UCO should perform OWL 2 DL review with SHACL-SPARQL
+	* (cd82078): UCO OC-217, CP-107: Revise ontology IRI to be slash-based and drop IRI base 
+	* (4f4731f): UCO Issue 387: Adapt for UCO files being under different directories
+	* (a495369): UCO CP-100: Apply semi-open vocabulary patterns
+	* (2a5af00): UCO Issue 424: Replace UCO glom_graph.py reference with rdfpipe
+
+2022-06-17
+	* ONT-476: Release CASE 0.7.0, with release notes at https://caseontology.org/releases/0.7.0/
+
+2022-06-16
+	* (3d13cc1): Adopt UCO 0.9.0
+
+2022-06-14
+	* (6ff8e99) UCO Issue 373: Upgraded Java to 11 and rdf-toolkit to post-1.10.0; delegated rdf-toolkit retrieval to UCO implementation
+
+2022-06-10
+	* (07810a2) ONT-465: Updated syntax surrounding ExaminerActionLifecycle
+
+2022-03-24
+	* ONT-463: Release CASE 0.6.0, with release notes at https://caseontology.org/releases/0.6.0/
+
+2022-03-23
+	* (a1b5d0b) ONT-471: Adopt UCO 0.8.0
+	* (8f7c87a) ONT-438, CP-36: Corrected rootExhibitNumber definition issues and aligned with exhibitNumber
+	* CP-36: https://drive.google.com/file/d/114XogkDDIqciWuJBJ3oRlMR5HoHCXwU7/view
+
+2022-03-08
+	* (cc19756) UCO OC-62, CP-89: Removed ActionReferencesFacet
+	* (bfc6d02) UCO OC-125, CP-56: Updated UCO ontology file paths
+	* (bc99cf7) UCO OC-217, CP-107: Revised ontology IRI structure as in CASE CP-34
+
+2022-02-14
+	* (ee4143d) ONT-468, CP-44: Made sh:targetClass shape application statements consistent between CASE and UCO
+	* CP-44: https://drive.google.com/file/d/1GN9lbqTpWLiU-TGPj53wYQzTQ9AvYb4l/view
+	
+2021-10-26
+	* ONT-437: Release CASE 0.5.0, with release notes at https://caseontology.org/releases/0.5.0/
+
+2021-09-17
+	* (21b3a1c) ONT-456, CP-41: Converted current property restrictions and domain assertions to SHACL class shapes
+	* CP-41: https://drive.google.com/file/d/1sKFTTiEe-LmQLEG1Bowf52QF1VPZDssL/view
+	* (1652d7c) ONT-455, CP-40: Adopted UCO 0.7.0 as a Git submodule
+	* CP-40: https://drive.google.com/file/d/1JqPx0ngdFKGxxOgGD1UgwuT9LgM4SKUV/view
+	* (b82a101) ONT-462, CP-42: Removed investigation-namespaced startTime and endTime properties from investigation-da.ttl
+	* CP-42: https://drive.google.com/file/d/1JDkSrI7bpVtr2aJ_8lLLa0BrLnBKpEOp/view
+
+2021-09-08
+	* (f79ac53) ONT-442, CP-37: Fixed broken link to website examples gallery in README
+	* CP-37: https://drive.google.com/file/d/16maCSg22Tfwro3OXajT6aYXfLhiihgL4/view
+
+2021-06-02
+	* ONT-400: Release CASE 0.4.0, with release notes at https://caseontology.org/releases/0.4.0/
+
+2021-06-01
+	* (b9f0f7b) ONT-435, CP-34: Revised CASE IRI structure to support granular resource service (applied for CASE 0.4.0)
+	* CP-34: https://drive.google.com/file/d/1J2UeRVeG_CCloTwo9Do628zvWcIpO5GR/view
+
+2021-05-24
+	* (d3531dd) ONT-403, CP-22: Added rootExhibitNumber property to ProvenanceRecord
+	* CP-22: https://drive.google.com/file/d/1_nWd8IV8pBgXBACE_kFQd-eg3jTH8-Qp/view
+
+2021-05-19
+	* (c1d5e2e) ONT-436, CP-35: Defined exhibitNumber in ProvenanceRecord
+	* CP-35: https://drive.google.com/file/d/1LbLZnDXZlq-8n92iz55n0fQD46c-pa4w/view
+
+2021-04-28
+	* (bf4c72b) ONT-390, CP-21: Add direct node-linking predicates for transitive provenance querying
+	* CP-21: https://drive.google.com/file/d/1EJnOYgJfDoDZteFsNxxCbxgQqiqVDL_L/view
+
+2021-04-22
+	* (ffcd5cb) ONT-418, CP-27: Revise merge review procedures and ChangeLog format to allow asynchronous change proposal posting
+	* CP-27: https://drive.google.com/file/d/17AUfa4EWe9-Tbv5wT46fM0q5LIWMzuYT/view
+
+2021-03-18
+	* ONT-362: Release CASE 0.3.0, with release notes at https://caseontology.org/releases/0.3.0/
+
+2021-03-18
+	* (22b313d) ONT-413, CP-25: Defined and used prefixes for imported concepts (new feature)
+	* CP-25: https://drive.google.com/file/d/1HUeY8AHxsnukP0sFOvsPQZRuyNbqcf6n/view
+
+2021-03-17
+	* (f754fd4) ONT-379, CP-18: Updated and improve Investigation namespace class definition comments for clarity and consistency (new feature)
+	* CP-18: https://drive.google.com/file/d/1AmVX6x2ZORr2-h2OIXug2PiptYaHcvuh/view
+
+2021-03-16
+	* (a8209d7) ONT-363, CP-15: Removed intermediate role classes (breaking change)
+	* CP-15: https://drive.google.com/file/d/1PLcPA3TSDqt7wX84SYlezC1thK_Sznrc/view
+	* (b515a81) ONT-251, CP-16: Established unit tests and Continuous Integration for ontology repository (new feature)
+	* CP-16: https://drive.google.com/file/d/1622v5k7fXo2fjDs_EzfhbTyvWIjDBZv-/view
+
+2020-08-19
+	* ONT-293: Release CASE 0.2.0, with release notes at https://caseontology.org/releases/0.2.0/
+
+2020-08-13
+	* (19b698a) ONT-314, CP-12: Removed documentation generated for CASE 0.1.0 (breaking change)
+	* CP-12: https://drive.google.com/file/d/1LE2P12w66TjIFVah567gyKbYWYkZziP5/view
+	* (1d9b468) ONT-140, CP-6: Linked Style Guidance as development practice (new feature)
+	* CP-6: https://drive.google.com/file/d/1jlCFCuL4BDojJOsIzR8asJjf-lAp8uLd/view
+	* (965f5e4) ONT-231, CP-10: Resolved naming inconsistency and associated equivalent class complexity (breaking change)
+	* CP-10: https://drive.google.com/file/d/1lut9Km0rYp2Iaftz7m0f4u50R4YD60F6/view
+
+2020-08-12
+	* (12a081a) ONT-318, CP-13: Updated ontology README to reflect website and Jira (bugfix)
+	* CP-13: https://drive.google.com/file/d/1fJoDjMjfbaXw0BWKKZ_9mK-gZzoJpgFS/view
+	* (cd8b27f) ONT-281, CP-9: Moved investigation.ttl and related vocabulary into CASE from UCO (new feature)
+	* CP-9: https://drive.google.com/file/d/1TNL7NtkSy4Veo1eObJGCmMGvmmxqeCJB/view
+	* (fe7f069) ONT-288, CP-11: ChangeLog format selected (new feature)
+	* CP-11: https://drive.google.com/file/d/1zWjQ_uhhVxEjkqS2mrcabT4tNh8s0JQx/view
+
+2020-07-29
+	* (07e6c12) ONT-144, CP-7: Moved examples directory to own repository, CASE-Examples (new feature, breaking change)
+	* CP-7: https://drive.google.com/file/d/1DiLxBTQYt0FQSdjn3mX6RabhqK9QbiDo/view
+
+2020-06-16
+	* (2fed9a5) ONT-5, CP-3: Established ontology normalization procedure (new feature)
+	* CP-3: https://caseontology.org/resources/references/CASE%20Change%20Proposal%203.zip
+
+2020-04-01
+	* (5c2a19b) ONT-201, CP-8: Renamed "propertyBundle" to "hasPropertyBundle", per CASE Style Guide
+	* CP-8: https://caseontology.org/resources/references/CASE%20Change%20Proposal%208.zip
+
+2019-08-06
+	* (ca5ca15) ONT-51, CP-4: Separated CASE ontology files by namespace (breaking change)
+
+2019-07-13
+	* (93b40ac) ONT-51, CP-4: Removed prototype contents of case.ttl file (breaking change)
+	* CP-4: https://drive.google.com/file/d/1CE9sfrc-czegRX15Q5xeqaffAfAH06ov/view
+	* (93b40ac) ONT-53, CP-2: Changed namespace to caseontology.org (new feature, breaking change)
+	* CP-2: https://drive.google.com/file/d/1_J3994JiPA5PMIHfno9x-NeXKaHFVCrJ/view

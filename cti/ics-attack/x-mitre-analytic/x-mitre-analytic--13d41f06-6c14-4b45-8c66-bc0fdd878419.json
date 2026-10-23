@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--253c886a-e664-4700-aa39-f62a00f23010",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--13d41f06-6c14-4b45-8c66-bc0fdd878419",
+            "created": "2026-10-13T17:47:36.018Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0910#AN2267",
+                    "external_id": "AN2267"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:36.018Z",
+            "name": "Analytic 2267",
+            "description": "Real-time monitoring identifies Windows firewall rule additions blocking Industrial Control System (ICS) protocol ports on ICS gateway or server hosts. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--746f095a-f84c-4ccc-90a5-c7caa5c100a2",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Windows Filtering Platform / Firewall audit events (policy-dependent): Windows Firewall rule added blocking Industrial Control Systems (ICS) protocol ports by account not in authorized firewall admins"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges authorized for network infrastructure configuration changes."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which connectivity-affecting changes are authorized."
+                },
+                {
+                    "field": "CommBlockCorrelationWindow",
+                    "description": "Time window correlating a configuration change with subsequent communication loss."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

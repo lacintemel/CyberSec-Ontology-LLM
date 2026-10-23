@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--35fe2b65-b1fe-4d3c-8277-1e413ce5b2b9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d16098fd-9b2d-479c-a25a-f970bce86f94",
+            "created": "2026-09-26T02:59:06.328Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Claroty-IOCONTROL",
+                    "description": "Claroty Team82. (2024, December 10). Inside a New OT/IoT Cyberweapon: IOCONTROL. Retrieved September 2, 2026.",
+                    "url": "https://claroty.com/team82/research/inside-a-new-ot-iot-cyber-weapon-iocontrol"
+                },
+                {
+                    "source_name": "Dragos 2025 Year in Review",
+                    "description": "Dragos. (2026, February). 9TH ANNUAL YEAR IN REVIEW | OT/ICS CYBERSECURITY REPORT . Retrieved April 26, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/312-Year-in-Review/2026/Dragos-2026-OT-Cybersecurity-Report-A-Year-in-Review.pdf?hsCtaAttrib=205683189348"
+                },
+                {
+                    "source_name": "Armis-IOCONTROL",
+                    "description": "Michael Freeman. (2024, December 16). IOControl Malware: What's New, What's Not?. Retrieved September 2, 2026.",
+                    "url": "https://www.armis.com/blog/iocontrol-malware-whats-new-whats-not/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-08T22:17:42.611Z",
+            "description": "IOCONTROL has used DNS over HTTPS (DoH) via CloudFlare\u2019s API to translate hostnames to IP addresses.(Citation: Claroty-IOCONTROL)(Citation: Dragos 2025 Year in Review)(Citation: Armis-IOCONTROL)\n\n\n",
+            "relationship_type": "uses",
+            "source_ref": "malware--bcd0f2cd-0b21-4109-8310-8a90be320514",
+            "target_ref": "attack-pattern--1aa2bf29-6015-4c8f-a15a-21ae0aff64de",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

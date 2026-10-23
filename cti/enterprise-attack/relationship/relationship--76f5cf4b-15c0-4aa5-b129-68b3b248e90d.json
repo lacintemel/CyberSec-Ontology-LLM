@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--13e8849c-c713-4f4b-aa11-171331f12370",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--76f5cf4b-15c0-4aa5-b129-68b3b248e90d",
+            "created": "2026-04-09T19:10:39.912Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cisco Talos Qilin Ransomware OCT 2025",
+                    "description": "Takeda, T. et al. (2025, October 26). Uncovering Qilin attack methods exposed through multiple cases. Retrieved March 26, 2026.",
+                    "url": "https://blog.talosintelligence.com/uncovering-qilin-attack-methods-exposed-through-multiple-cases/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.088Z",
+            "description": "[Qilin](https://attack.mitre.org/software/S1242) has run `cmd /C [PsExec] -accepteula \\\\IP Address -c -f -h -d -i\nC:\\Users\\xxx\\<encryptor_1>.exe --password [PASSWORD] --spread --spread-process` to execute its encryptor to target multiple network shares.(Citation: Cisco Talos Qilin Ransomware OCT 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e23d2777-b85d-44fc-861e-9149d399fbb9",
+            "target_ref": "attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

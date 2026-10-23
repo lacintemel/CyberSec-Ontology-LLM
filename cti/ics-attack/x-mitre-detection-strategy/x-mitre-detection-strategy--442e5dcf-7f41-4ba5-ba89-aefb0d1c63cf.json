@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--6a0a044b-d14d-4cd0-bd06-5f80a8244811",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--442e5dcf-7f41-4ba5-ba89-aefb0d1c63cf",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0776",
+                    "external_id": "DET0776"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:16.865Z",
+            "name": "Detection of Modify Parameter",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--48d2023b-469d-4f9f-a4e6-010be72436b9",
+                "x-mitre-analytic--13b48db7-e4d4-47a3-8bd1-60f9c2a039da",
+                "x-mitre-analytic--74cb9e26-6ec1-41e8-9da8-ed30504f9c39"
+            ]
+        }
+    ]
+}

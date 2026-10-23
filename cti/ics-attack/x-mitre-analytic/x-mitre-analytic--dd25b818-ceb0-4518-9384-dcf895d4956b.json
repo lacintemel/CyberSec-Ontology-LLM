@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--fcbb4fff-6710-4bf8-bcf6-a07731d57a9c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--dd25b818-ceb0-4518-9384-dcf895d4956b",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0740#AN1873",
+                    "external_id": "AN1873"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:21.575Z",
+            "name": "Analytic 1873",
+            "description": "Real-time monitoring identifies an internet-facing Industrial Control System (ICS) application server, web Human-Machine Interface (HMI), historian web interface, vendor remote access portal) process spawning an unexpected child process immediately following an inbound web request containing exploit-pattern content. Documented across multiple incidents involving internet-exposed ICS web interfaces. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance. Analyst implementation must limit predicates to fields actually retained by the web server/WAF (for example URI/path/query/header/status/source); request-body or payload signatures require WAF/DPI or request-body logging and must not be inferred from a basic access log.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "webserver:applog",
+                    "channel": "Web server/WAF access or request log: exploit-relevant URI/path/query/header/status pattern against ICS web interface from unapproved source; request-body claims require WAF/DPI logging"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 with parent matching web/application server process and image matching shell/script interpreter within exploit-to-shell window of anomalous request"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedClientCIDR",
+                    "description": "IP ranges from which legitimate access to the ICS web interface is expected."
+                },
+                {
+                    "field": "ExploitPatternSignatures",
+                    "description": "Regex/signature set for known exploit payload patterns and published CVE-specific payload signatures for in-use ICS web products."
+                },
+                {
+                    "field": "ExploitToShellWindow",
+                    "description": "Time window within which a child shell process spawned from the web server is considered connected to a preceding exploit-pattern request."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d7d4c416-821d-4da2-bb25-8b291105ca82",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e87efc12-0c0f-47d8-98e1-52b2d0508d3a",
+            "created": "2026-04-17T00:23:38.912Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024",
+                    "description": "Matt Lin, Austin Larsen, John Wolfram, Ashley Pearson, Josh Murchie, Lukasz Lamparski, Joseph Pisano, Ryan Hall, Ron Craft, Shawn Crew, Billy Wong, Tyler McLellan. (2024, April 4). Cutting Edge, Part 4: Ivanti Connect Secure VPN Post-Exploitation Lateral Movement Case Studies. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-post-exploitation-lateral-movement"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.241Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has executed shell commands using `/bin/sh`.(Citation: Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

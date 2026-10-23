@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9c41be6b-9413-4c3a-b749-439a71497a7b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b270a54c-2a59-46a1-a0b1-4e626bba0b25",
+            "created": "2026-10-07T17:40:08.702Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Tom Fakterman August 2019",
+                    "description": "Tom Fakterman 2019, August 05 Sodinokibi: The Crown Prince of Ransomware Retrieved. 2021/04/12 ",
+                    "url": "https://www.cybereason.com/blog/the-sodinokibi-ransomware-attack"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T17:44:24.901Z",
+            "description": "[REvil](https://attack.mitre.org/software/S0496) utilizes JavaScript, WScript, and PowerShell scripts to execute. The malicious JavaScript attachment has an obfuscated PowerShell script that executes the malware. (Citation: Tom Fakterman August 2019)",
+            "relationship_type": "uses",
+            "source_ref": "malware--ac61f1f9-7bb1-465e-9b8a-c2ce8e88baf5",
+            "target_ref": "attack-pattern--09c897b1-2ce6-4187-8548-bda1cb18d5a2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

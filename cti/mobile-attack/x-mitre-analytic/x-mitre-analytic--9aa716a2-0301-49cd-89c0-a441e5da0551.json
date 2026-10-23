@@ -1,0 +1,73 @@
+{
+    "type": "bundle",
+    "id": "bundle--d0348ca3-6a16-4700-b2bf-b687c8c1ab55",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9aa716a2-0301-49cd-89c0-a441e5da0551",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0628#AN1698",
+                    "external_id": "AN1698"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:23.637Z",
+            "name": "Analytic 1698",
+            "description": "For iOS, detect Supply Chain Compromise from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]; Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: Known app begins first-seen use of protected framework categories (location, microphone, contacts) or background task patterns post-update]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Known app begins first-seen use of protected framework categories (location, microphone, contacts) or background task patterns post-update"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--6c62144a-cd5c-401c-ada9-58c4c74cd9d2",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AppNetworkBaseline",
+                    "description": "30-day per-app network destination baseline anchored to prior version. Updated on each planned release. Derive by measurement. Tightening: strict domain allowlist per version."
+                },
+                {
+                    "field": "AppBehaviorBaseline",
+                    "description": "Per-app permission and API call baseline from prior version. Derive from MDM telemetry on known-good version. Any new API category post-update is anomalous."
+                },
+                {
+                    "field": "PostInstallWindow",
+                    "description": "Default 86400s (24hr) behavioral observation window post-install/update. Tightening: 3600s \u2014 catches immediate post-install C2."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--d9733cf5-a365-435a-9859-33a43f764d13",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--47df93f9-b33f-4333-95b6-b3cca9418a4d",
+            "created": "2026-04-16T17:08:44.505Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0900#AN2041",
+                    "external_id": "AN2041"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.377Z",
+            "name": "Analytic 2041",
+            "description": "Detects exploitation of cloud-native security boundaries or management components followed by disabled logging, detached agents, changed security groups, policy bypass, or telemetry suppression. Correlates suspicious API activity with reduced control coverage.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "IaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ec0612c5-2644-4c50-bcac-82586974fedd",
+                    "name": "AWS:CloudTrail",
+                    "channel": "StopLogging, DeleteTrail, or DisableSecurityService"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--45d0ff14-b9c4-41f5-8603-156657c20b75",
+                    "name": "AWS:CloudTrail",
+                    "channel": "ModifyInstanceAttribute"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--d2ff4b56-8351-4ed8-b0fb-d8605366005f",
+                    "name": "AWS:CloudTrail",
+                    "channel": "AuthorizeSecurityGroupIngress"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "CriticalTrailList",
+                    "description": "Audit trails that must remain enabled"
+                },
+                {
+                    "field": "ControlChangeWindow",
+                    "description": "Time after suspicious API sequence to inspect coverage loss"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--cdddb2c6-7b4b-4c82-961c-e738fa2d5037",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--552ee76d-d812-49be-81b0-bf106dcda7b8",
+            "created": "2026-09-24T18:38:25.096Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticore_May2026",
+                    "description": "Check Point. (2026, May 22). Fast and Furious \u2013 Nimbus Manticore Operations During the Iranian Conflict. Retrieved September 23, 2026.",
+                    "url": "https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T18:38:25.096Z",
+            "description": "[MiniFast](https://attack.mitre.org/software/S9052) has blended into network traffic by mimicking a Chrome browser using the following User-Agent string: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36`.(Citation: CheckPoint_NimbusManticore_May2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--363bc9c0-6e9b-4815-a072-1a92d0ad7502",
+            "target_ref": "attack-pattern--afac5dbc-4383-4fb6-9ba6-45b25d49e530",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "type": "bundle",
+    "id": "bundle--ca51c3f2-f6d8-4e42-9202-f760dd64ec57",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--4484fb29-439d-4396-bbc3-4a7976710c1c",
+            "created": "2026-09-21T19:03:17.110Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1608/007",
+                    "external_id": "T1608.007"
+                },
+                {
+                    "source_name": "darkreading geo poisoning",
+                    "description": "Alexander Culafi. (2025, December 10). ClickFix Style Attack Uses Grok, ChatGPT for Malware Delivery. Retrieved September 18, 2026.",
+                    "url": "https://www.darkreading.com/vulnerabilities-threats/clickfix-style-attack-grok-chatgpt-malware"
+                },
+                {
+                    "source_name": "darkreading ai result poisoning",
+                    "description": "Alexander Culafi. (2025, December 10). ClickFix Style Attack Uses Grok, ChatGPT for Malware Delivery. Retrieved September 18, 2026.",
+                    "url": "https://www.darkreading.com/vulnerabilities-threats/clickfix-style-attack-grok-chatgpt-malware"
+                },
+                {
+                    "source_name": "dev.to Abusing AI Chatbot Recommendations",
+                    "description": "Dennis Kim. (2026, May 27). Cryptojacking Abusing AI Chatbot Recommendations \u2014 A New Delivery Vector Beyond Search Poisoning. Retrieved September 18, 2026.",
+                    "url": "https://dev.to/denniskim/cryptojacking-abusing-ai-chatbot-recommendations-a-new-delivery-vector-beyond-search-poisoning-1cmb"
+                },
+                {
+                    "source_name": "Lasso Security AI Engine Poisoning",
+                    "description": "Eliya Saban. (2026, June 24). Exploiting GEO to Push Harmful Claims into AI-Generated Answers. Retrieved September 18, 2026.",
+                    "url": "https://www.lasso.security/blog/exploiting-geo-to-push-harmful-claims-into-ai-generated-answers"
+                },
+                {
+                    "source_name": "Netcraft AI Summaries",
+                    "description": "Ginny Spicer. (2026, August 3). Threat Actors are Finding Their Way into Your AI Summaries. Retrieved September 18, 2026.",
+                    "url": "https://www.netcraft.com/blog/threat-actors-are-finding-their-way-into-your-ai-summaries"
+                },
+                {
+                    "source_name": "Digiday AI Result Poisoning",
+                    "description": "Sam Bradley. (2026, July 6). WTF is AI poisoning?. Retrieved September 18, 2026.",
+                    "url": "https://digiday.com/marketing/wtf-is-ai-poisoning/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T17:44:55.706Z",
+            "name": "AI Result Poisoning",
+            "description": "Adversaries may manipulate publicly accessible web content to influence generative AI systems or AI-powered search engines into retrieving, citing, or recommending attacker-controlled information.(Citation: Digiday AI Result Poisoning)(Citation: Netcraft AI Summaries)\n\nUnlike traditional [SEO Poisoning](https://attack.mitre.org/techniques/T1608/006), which primarily attempts to influence the ordering of conventional search results, AI Result Poisoning targets systems that synthesize information from multiple sources and provide a direct answer to the user. Adversaries may create malicious or misleading websites, publish fabricated claims, generate supporting articles, or establish multiple apparently independent sources that reinforce the same information. These sources may then be retrieved by AI systems using web search or retrieval-augmented generation and incorporated into generated responses. \n\nAdversaries may use this technique to recommend or link to phishing sites, fraudulent online stores, malicious downloads, impersonation pages, or other attacker-controlled infrastructure.(Citation: dev.to Abusing AI Chatbot Recommendations)(Citation: darkreading geo poisoning)(Citation: darkreading ai result poisoning) It can also be used to promote misinformation or fabricated claims without requiring access to the underlying AI model, system prompt, or application infrastructure.(Citation: Lasso Security AI Engine Poisoning) Because the malicious content can resemble ordinary marketing, editorial, or informational material, traditional prompt injection and malware-focused detections may not identify the activity. ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "resource-development"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Bridger Hackworth (NR Labs)",
+                "Menachem Goldstein"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "PRE"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

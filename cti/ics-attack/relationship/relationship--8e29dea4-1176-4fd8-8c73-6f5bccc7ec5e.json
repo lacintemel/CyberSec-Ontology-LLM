@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--de3ad4b2-0980-451b-ac7b-8082a1f2759e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8e29dea4-1176-4fd8-8c73-6f5bccc7ec5e",
+            "created": "2026-09-25T18:41:44.451Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T18:41:44.451Z",
+            "description": "Where PowerShell is not required for the documented function of an ICS asset, disable or remove access to it. Do not apply this control to systems where vendor support, engineering workflows, backup, patching, or approved automation depend on PowerShell. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--d0909119-2f71-4923-87db-b649881672d7",
+            "target_ref": "attack-pattern--e3496d05-0826-4187-a993-80f29aa5a40a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

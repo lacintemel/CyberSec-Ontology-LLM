@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7a4966d1-e2d1-4468-af33-4b038f5af554",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--20b43c4b-c97d-4f5f-a004-07f38a9851e1",
+            "created": "2026-10-01T13:47:57.348Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T13:47:57.348Z",
+            "description": "[MiniBrowse](https://attack.mitre.org/software/S9062) has the ability to gather the username associated with the victim host.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--8c8b765a-fba0-4551-ae83-b12e2a8b8937",
+            "target_ref": "attack-pattern--03d7999c-1f4c-42cc-8373-e7690d318104",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

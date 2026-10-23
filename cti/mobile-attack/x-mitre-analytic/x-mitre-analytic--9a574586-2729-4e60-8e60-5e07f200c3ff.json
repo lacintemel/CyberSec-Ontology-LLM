@@ -1,0 +1,80 @@
+{
+    "type": "bundle",
+    "id": "bundle--5db75559-990f-4860-bcac-7236f522d457",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9a574586-2729-4e60-8e60-5e07f200c3ff",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0629#AN1699",
+                    "external_id": "AN1699"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:09.755Z",
+            "name": "Analytic 1699",
+            "description": "For Android, detect Exploitation for Client Execution by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Host Status via Android Enterprise DPC [DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported]; Network Connection Creation via Android Enterprise Network Logging / Enterprise VPN [DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata]; Process Creation via Application Vetting / Managed Device Telemetry [execve()]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--85a533a4-5fa4-4dba-b45d-f0717bedd6e6",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "execve()"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "MediaProcessList",
+                    "description": "mediaserver, chromium, com.android.browser, com.android.mms, com.android.messaging. Expand per installed browser."
+                },
+                {
+                    "field": "KnownMediaChildren",
+                    "description": "Renderer, GPU process, sandboxed service workers. Derive from media process baseline."
+                },
+                {
+                    "field": "ExploitWindow",
+                    "description": "Default 10s between media process activity and child spawn."
+                },
+                {
+                    "field": "AppBaselineDomains",
+                    "description": "Per-app CDN baseline."
+                },
+                {
+                    "field": "PostExploitWindow",
+                    "description": "Default 30s between child spawn and C2 connection."
+                },
+                {
+                    "field": "PatchLagThreshold",
+                    "description": "Default 30 days. Context only \u2014 not primary signal."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9b7c7c19-9cb0-4e18-a7b5-8b984daae1fa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dc813360-db9a-4de2-883c-a9e0b5e959fa",
+            "created": "2026-09-11T19:38:57.466Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cyfirma_Vidar_June2024",
+                    "description": "CYFIRMA. (2024, June 3). Vidar Stealer: An In-depth Analysis of an Information-Stealing Malware. Retrieved August 13, 2026.",
+                    "url": "https://www.cyfirma.com/research/vidar-stealer-an-in-depth-analysis-of-an-information-stealing-malware/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-11T19:38:57.466Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has used native Windows functions, such as `LoadLibraryExW`, for discovery and execution.(Citation: Cyfirma_Vidar_June2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

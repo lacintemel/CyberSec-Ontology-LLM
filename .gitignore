@@ -1,0 +1,20 @@
+# Local Python environments and caches
+.venv/
+**/.venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+**/.pytest_cache/
+
+# Preserved metadata from repositories nested in this thesis workspace
+**/.git.nested-backup/
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+

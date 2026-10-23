@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--9919f21a-e3e9-47a6-9fb5-df9d67f90d4e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--13b48db7-e4d4-47a3-8bd1-60f9c2a039da",
+            "created": "2026-10-13T17:44:54.658Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0776#AN2145",
+                    "external_id": "AN2145"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:54.658Z",
+            "name": "Analytic 2145",
+            "description": "Real-time monitoring identifies a Linux process invoking Industrial Control System (ICS) vendor write Application Programming Interfaces (APIs) or Open Platform Communications (OPC) Unified Architecture (UA) write calls to setpoint tags on field devices, from a User Identifier (UID) not associated with the authorized control application, with values exceeding the safe operating range. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "decoded ICS protocol write/setpoint operation to a control/output address from a client identity or source not in the approved control-application baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to parameter/setpoint registers."
+                },
+                {
+                    "field": "BaselineValueRange",
+                    "description": "Documented safe operating range for each monitored parameter."
+                },
+                {
+                    "field": "ParameterDriftThreshold",
+                    "description": "Percentage deviation from rolling baseline considered significant drift."
+                },
+                {
+                    "field": "SetpointAddressRange",
+                    "description": "Register/address ranges corresponding to parameter and setpoint values for the device type."
+                },
+                {
+                    "field": "TimeWindow",
+                    "description": "Time window over which post-write drift is measured."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

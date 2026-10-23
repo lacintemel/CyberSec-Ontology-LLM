@@ -1,0 +1,44 @@
+{
+    "type": "bundle",
+    "id": "bundle--edf87dd4-8332-421b-b0f7-d754200f6f54",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--613788f2-ad72-43f5-b5f7-a93e2adc70fa",
+            "created": "2024-03-29T14:59:30.164Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0119",
+                    "external_id": "DC0119"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.773Z",
+            "name": "Application Assets",
+            "description": "Application Assets represent static or packaged resources bundled with an application that may contain executable logic, configuration data, or hidden payloads.\n\nThese assets may include embedded binaries, scripts, configuration files, libraries, or other resources stored within the application package. Adversaries may hide malicious components within application assets to evade detection during installation or initial inspection.\n\nExamples\n\nAndroid:\n\n- Embedded .dex files loaded dynamically\n- Hidden native libraries in APK assets\n- Dropped payloads stored within the app sandbox\n\niOS:\n\n- Embedded frameworks\n- Configuration files within the application bundle\n- Hidden scripts or secondary binaries packaged with the app\n\nCollection Methods\n- Mobile EDR application inspection\n- Static application analysis\n- Application package scanning during install or sideload events\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Application Vetting",
+                    "channel": "None"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "Application gaining or using unexpected background execution entitlements or modes"
+                }
+            ]
+        }
+    ]
+}

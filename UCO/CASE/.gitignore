@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+
+# Unit testing files
+.*.done.log
+.*.ttl
+venv
+
+# Pycharm files
+.idea
+
+# Protege files
+.project

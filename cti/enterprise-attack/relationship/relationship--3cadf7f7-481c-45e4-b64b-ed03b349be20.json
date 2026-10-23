@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ae3e479f-2e79-40fa-892c-ff2975b4a3c7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3cadf7f7-481c-45e4-b64b-ed03b349be20",
+            "created": "2026-04-13T16:28:46.634Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti April 2025",
+                    "description": "John Wolfram, Michael Edie, Jacob Thompson, Matt Lin, Josh Murchie. (2025, April 3). Suspected China-Nexus Threat Actor Actively Exploiting Critical Ivanti Connect Secure Vulnerability (CVE-2025-22457). Retrieved April 13, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-exploiting-critical-ivanti-vulnerability"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.007Z",
+            "description": "[BRUSHFIRE](https://attack.mitre.org/software/S9011) has decrypted XOR strings prior to execution.(Citation: Google UNC5221 Ivanti April 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e110c9c6-7691-4bcb-874d-3d83a63c06c2",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

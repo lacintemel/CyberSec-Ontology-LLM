@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--960a1566-3cb8-44d0-9da8-ba5eb3a93216",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--73773bb8-c63b-4d48-9b48-33440f12a514",
+            "created": "2026-04-22T15:56:01.514Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0904",
+                    "external_id": "DET0904"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:55.817Z",
+            "name": "Detection of Firmware Modification",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--fc6641ac-5748-4498-89e9-d4ada2b6f88a"
+            ]
+        }
+    ]
+}

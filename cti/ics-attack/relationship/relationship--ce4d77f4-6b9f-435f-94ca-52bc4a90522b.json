@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--22d4706d-d891-4bab-9279-65e4cead0e78",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ce4d77f4-6b9f-435f-94ca-52bc4a90522b",
+            "created": "2026-10-08T21:51:52.950Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FBI Water and Wastewater",
+                    "description": "FBI Press Office. (2026, July 30). Malicious Cyber Actors Targeting Water and Wastewater Sector Internet- Facing Programmable Logic Controllers, Causing Operational Disruptions. Retrieved October 8, 2026.",
+                    "url": "https://www.fbi.gov/investigate/cyber/alerts/2026/malicious-cyber-actors-targeting-water-and-wastewater-sector-internet--facing-programmable-logic-controllers-causing-operational-disruptions"
+                },
+                {
+                    "source_name": "Dragos Water Under Attack",
+                    "description": "Michael Rothschild. (2026, August 13). Water Under Attack: A Decade of Warnings, and the Same Gaps Still Open. Retrieved October 8, 2026.",
+                    "url": "https://www.dragos.com/blog/water-utility-attacks-decade-of-gaps"
+                },
+                {
+                    "source_name": "Tenable Minnesota Water Utilities",
+                    "description": "Research Special Operations. (2026, July 28). Coordinated \"cyberattack\" on U.S. water utilities: What you need to know. Retrieved September 26, 2026.",
+                    "url": "https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"
+                },
+                {
+                    "source_name": "Forescout Water Systems Attack",
+                    "description": "Sai Molige. (2026, August 5). OT Security Analysis: Exposed Devices Attacked in US Water Systems. Retrieved October 8, 2026.",
+                    "url": "https://www.forescout.com/blog/ot-security-analysis-exposed-devices-attacked-in-us-water-systems/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:06:24.650Z",
+            "description": "During the [2026 U.S. Water Utilities Attacks](https://attack.mitre.org/campaigns/C0066), the adversary changed the IP addresses of internet-facing MicroLogix controllers, altering their network configuration settings outside normal operations.(Citation: Tenable Minnesota Water Utilities)(Citation: Forescout Water Systems Attack)(Citation: Dragos Water Under Attack)(Citation: FBI Water and Wastewater)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5cae2d7e-ce03-4a20-b7a7-32e846d26121",
+            "target_ref": "attack-pattern--097924ce-a9a9-4039-8591-e0deedfb8722",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

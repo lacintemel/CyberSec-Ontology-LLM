@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--40be4822-76d5-40f9-8d10-0d65383661ff",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--277e7284-90af-45b4-89f7-2eb0a559822b",
+            "created": "2026-09-22T00:17:12.128Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T00:17:12.128Z",
+            "description": "Prevent content contained within an artifact under analysis from directly controlling the analysis workflow, terminating analysis, altering required analysis stages, or initiating unrelated tools and actions. Enforce workflow transitions independently of instructions generated from artifact content. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--47e0e9fe-96ce-4f65-8bb1-8be1feacb5db",
+            "target_ref": "attack-pattern--6aa4bc38-0713-4d40-ad0b-949d912da852",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

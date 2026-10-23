@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--63818e1c-6e2b-4791-adbe-554def4a0e76",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a58e681b-7b34-426b-ba4f-2983c9de6316",
+            "created": "2026-04-15T13:23:00.304Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.150Z",
+            "description": "Ensure proper Registry permissions are in place to prevent adversaries from disabling or modifying firewall settings.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--a2c36a5d-4058-475e-8e77-fff75e50d3b9",
+            "target_ref": "attack-pattern--291ede6c-1473-454c-b614-5ac5ea63c987",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

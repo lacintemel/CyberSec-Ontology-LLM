@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--79887bc3-9c7d-4255-ba9e-2fb31fa5c6a7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a94e85d8-62a1-43a2-8443-245bf61ec115",
+            "created": "2023-10-05T11:45:54.847Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sygnia Elephant Beetle Jan 2022",
+                    "description": "Sygnia Incident Response Team. (2022, January 5). TG2003: ELEPHANT BEETLE UNCOVERING AN ORGANIZED FINANCIAL-THEFT OPERATION. Retrieved February 9, 2023.",
+                    "url": "https://web.archive.org/web/20220105132433/https://f.hubspotusercontent30.net/hubfs/8776530/Sygnia-%20Elephant%20Beetle_Jan2022.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:31.412Z",
+            "description": "[FIN13](https://attack.mitre.org/groups/G1016) has assigned newly created accounts the sysadmin role to maintain persistence.(Citation: Sygnia Elephant Beetle Jan 2022)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--fd66436e-4d33-450e-ac4c-f7810f1c85f4",
+            "target_ref": "attack-pattern--3e6831b2-bf4c-4ae6-b328-2e7c6633b291",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

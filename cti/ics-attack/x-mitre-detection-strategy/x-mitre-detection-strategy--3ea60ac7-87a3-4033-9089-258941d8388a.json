@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--5a5690e2-ca00-4ae3-bded-5fcee54009d2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--3ea60ac7-87a3-4033-9089-258941d8388a",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0737",
+                    "external_id": "DET0737"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:13.703Z",
+            "name": "Detection of Brute Force I/O",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--77857bc3-6a38-4826-8109-30facf6c23ec",
+                "x-mitre-analytic--4be2c353-ef8d-4bb4-b973-4cae602f627f",
+                "x-mitre-analytic--49d64aa5-8804-45c9-99d9-b0729f3dc58c"
+            ]
+        }
+    ]
+}

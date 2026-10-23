@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--575d898f-920f-4167-9799-c4cc4776f069",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--58edd7e0-7b54-4ac5-8e84-81e2dfb03a71",
+            "created": "2026-04-22T22:21:11.962Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "LockerGoga Revisited",
+                    "description": "Joe Slowik. (2020, March 17). Spyware Stealer Locker Wiper: LockerGoga Revisited. Retrieved April 22, 2026.",
+                    "url": "https://www.dragos.com/blog/industry-news/spyware-stealer-locker-wiper-lockergoga-revisited/"
+                },
+                {
+                    "source_name": "Kevin Beaumont",
+                    "description": "Kevin Beaumont   How Lockergoga took down Hydro  ransomware used in targeted attacks aimed at big business Retrieved. 2019/10/16 ",
+                    "url": "https://doublepulsar.com/how-lockergoga-took-down-hydro-ransomware-used-in-targeted-attacks-aimed-at-big-business-c666551f5880"
+                },
+                {
+                    "source_name": "Detecting LockerGoga",
+                    "description": "Oleg Kolesnikov and Harshvardhan Parashar. (2019, April 30). Detecting LockerGoga Targeted IT/OT Cyber Sabotage/Ransomware Attacks. Retrieved April 22, 2026.",
+                    "url": "https://www.securonix.com/wp-content/uploads/2021/07/Securonix-Threat-Research-Report-Detecting-LockerGoga.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.046Z",
+            "description": "[LockerGoga](https://attack.mitre.org/software/S0372) had blocked network communications by disabling all the network interfaces on the system via netsh.exe.(Citation: LockerGoga Revisited)(Citation: Kevin Beaumont)(Citation: Detecting LockerGoga)",
+            "relationship_type": "uses",
+            "source_ref": "malware--5af7a825-2d9f-400d-931a-e00eb9e27f48",
+            "target_ref": "attack-pattern--6008c1f0-1b68-4614-8f5b-a547436b8855",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

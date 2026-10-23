@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--279d8d39-f9d6-47bc-adff-c4a119d02a47",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c951fc97-7f01-43a5-99d7-e95e56c1f4dc",
+            "created": "2026-09-30T20:31:16.080Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:31:16.080Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has used Finder, a macOS native app with FDA permissions, to rename the folder `com.apple.TCC`, then used another process to move the `TCC.db` file to a new location, where SQLite3 was used to edit `TCC.db`. The edited `TCC.db` file allowed code signing authorization, permission access, etc. without requiring a user prompt.(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--e8a0a025-3601-4755-abfb-8d08283329fb",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

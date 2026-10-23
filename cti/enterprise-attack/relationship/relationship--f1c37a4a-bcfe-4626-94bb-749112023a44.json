@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c64fb781-f809-4438-ac05-6478d07bcc30",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f1c37a4a-bcfe-4626-94bb-749112023a44",
+            "created": "2026-09-11T19:58:20.403Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-11T19:58:20.403Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has loaded and executed common Windows DLLs during execution.(Citation: QuorumCyber_Vidar_March2023)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--0a5231ec-41af-4a35-83d0-6bdf11f28c65",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--25fbfbda-4d08-4b2e-a143-7260718f0961",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--635477d8-e634-4f6b-acdf-2cccb27061fa",
+            "created": "2026-10-07T18:07:35.768Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T18:07:35.768Z",
+            "description": "Employ user training to include the implications of AI agent use within corporate environments ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--2a4f6c11-a4a7-4cb9-b0ef-6ae1bb3a718a",
+            "target_ref": "attack-pattern--c0a6e9ec-9ef1-46b6-8a71-cc73863e8985",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

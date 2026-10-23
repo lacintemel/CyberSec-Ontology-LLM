@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--e0374802-8a4e-4d5d-b557-40bfeca28334",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--a3e1e6c5-9c74-4fc0-a16c-a9d228c17829",
+            "created": "2020-03-11T13:50:11.467Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1052/001",
+                    "external_id": "T1052.001"
+                },
+                {
+                    "source_name": "A USB data exfiltration case study",
+                    "description": "Mu-Huan (Miles) Chunga, Yuhong (Alisha) Yangb, Lu Wanga, Greg Centob, Khilan Jerathb, Parwinder Taankb, Abhay Ramanb, Jonathan H. Chanc, Mark H. Chignella. (n.d.). Enhancing cybersecurity situation awareness through visualization: A USB data exfiltration case study. Retrieved September 2, 2026.",
+                    "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)00232-3"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T18:41:21.426Z",
+            "name": "Exfiltration over USB",
+            "description": "Adversaries may attempt to exfiltrate data over a USB connected physical device. In certain circumstances, such as an air-gapped network compromise, exfiltration could occur via a USB device introduced by a user. The USB device could be used as the final exfiltration point or to hop between otherwise disconnected systems.(Citation: A USB data exfiltration case study)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "exfiltration"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "William Cain"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Linux",
+                "Windows",
+                "macOS"
+            ],
+            "x_mitre_version": "1.3"
+        }
+    ]
+}

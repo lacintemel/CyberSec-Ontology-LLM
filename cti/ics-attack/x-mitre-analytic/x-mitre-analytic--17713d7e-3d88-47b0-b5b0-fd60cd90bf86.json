@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--8c7173cb-76cd-4bcd-9e10-15b580885bed",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--17713d7e-3d88-47b0-b5b0-fd60cd90bf86",
+            "created": "2026-10-13T17:45:51.944Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0801#AN2187",
+                    "external_id": "AN2187"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:51.944Z",
+            "name": "Analytic 2187",
+            "description": "Real-time monitoring identifies Simple Network Management Protocol (SNMP) SET commands to power Management Information Base (MIB) restart Object Identifiers (OIDs) or Command Line Interface (CLI) reload commands from a source not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:snmp",
+                    "channel": "Simple Network Management Protocol (SNMP) SET to power Management Information Base (MIB) restart Object Identifier (OID) or Command Line Interface (CLI) reload command from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "BulkRestartTimeWindow",
+                    "description": "Time window within which multiple device restarts are considered a coordinated event."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which restarts are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue device restart commands."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

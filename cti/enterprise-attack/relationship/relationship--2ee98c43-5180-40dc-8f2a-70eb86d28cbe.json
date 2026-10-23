@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--642b262e-9444-4b4c-9ed4-690767505982",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2ee98c43-5180-40dc-8f2a-70eb86d28cbe",
+            "created": "2026-09-28T18:46:21.395Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T18:46:21.395Z",
+            "description": "[MiniBike](https://attack.mitre.org/software/S9059) has the ability to download files from the C2.(Citation: Mandiant_UNC1549_Feb2024) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--1cf09c8f-32e1-404c-bb1e-4ac9ee7c5191",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

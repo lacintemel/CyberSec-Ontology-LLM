@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f45a1a87-cb0c-4da6-86ff-7e1265291ec1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5d5bda78-ea1a-4e73-b663-6105b77728bb",
+            "created": "2023-07-27T20:34:55.483Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sygnia Elephant Beetle Jan 2022",
+                    "description": "Sygnia Incident Response Team. (2022, January 5). TG2003: ELEPHANT BEETLE UNCOVERING AN ORGANIZED FINANCIAL-THEFT OPERATION. Retrieved February 9, 2023.",
+                    "url": "https://web.archive.org/web/20220105132433/https://f.hubspotusercontent30.net/hubfs/8776530/Sygnia-%20Elephant%20Beetle_Jan2022.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:30.954Z",
+            "description": "[FIN13](https://attack.mitre.org/groups/G1016) has leveraged SMB to move laterally within a compromised network via application servers and SQL servers.(Citation: Sygnia Elephant Beetle Jan 2022)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--fd66436e-4d33-450e-ac4c-f7810f1c85f4",
+            "target_ref": "attack-pattern--4f9ca633-15c5-463c-9724-bdcd54fde541",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

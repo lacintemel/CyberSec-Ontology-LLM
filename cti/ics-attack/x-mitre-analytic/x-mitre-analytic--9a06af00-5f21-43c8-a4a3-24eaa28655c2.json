@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--0bbc781a-c2e3-41e6-a2df-b69e320aff9c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9a06af00-5f21-43c8-a4a3-24eaa28655c2",
+            "created": "2026-10-13T17:45:56.223Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0733#AN2190",
+                    "external_id": "AN2190"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:56.223Z",
+            "name": "Analytic 2190",
+            "description": "Real-time monitoring identifies a new device connecting to an Industrial Control System (ICS) network switch port that was previously unused or previously assigned to a different device Media Access Control (MAC) address immediately following physical access to the environment, with subsequent Industrial Control System (ICS) protocol traffic to field devices. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "new Media Access Control (MAC) address learned on a switch port previously unused or assigned to a different device, followed by Industrial Control Systems (ICS) protocol traffic to field devices"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedUSBAllowlist",
+                    "description": "Hardware ID inventory of USB storage devices authorized for use on ICS engineering and HMI workstations."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform file transfers to field devices."
+                },
+                {
+                    "field": "USBExecutionWindow",
+                    "description": "Time window after device insertion/mount within which process execution is considered directly connected to the insertion event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "type": "bundle",
+    "id": "bundle--1c6143e2-7ef4-41f8-8c88-7507d7795cb8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c8eb9196-3134-4954-9331-838556db9aa1",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0721#AN1854",
+                    "external_id": "AN1854"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:26.332Z",
+            "name": "Analytic 1854",
+            "description": "For iOS, detect Compromise Software Supply Chain from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]; Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: Launch services, extension-handling, or framework subsystem anomalies occur near install or first launch of recently updated trusted app on supervised device]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Launch services, extension-handling, or framework subsystem anomalies occur near install or first launch of recently updated trusted app on supervised device"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window between app install/update and subsequent lifecycle or network anomalies."
+                },
+                {
+                    "field": "SupervisedRequired",
+                    "description": "Strongest app inventory and managed state analytics depend on supervised iOS devices."
+                },
+                {
+                    "field": "AllowedManagedApps",
+                    "description": "Approved managed app set varies by organization, business unit, and device profile."
+                },
+                {
+                    "field": "ExpectedVersionTransitionPolicy",
+                    "description": "Allowed upgrade paths, release rings, and phased rollout patterns vary by environment."
+                },
+                {
+                    "field": "AllowedDestinations",
+                    "description": "Expected app destinations, enterprise backends, Apple services, and CDNs differ by app."
+                },
+                {
+                    "field": "BackgroundRefreshBaseline",
+                    "description": "Legitimate background activity differs by app category and policy."
+                },
+                {
+                    "field": "RecentUserInteractionWindow",
+                    "description": "Defines how close runtime/network activity must be to user action to be considered expected."
+                },
+                {
+                    "field": "UplinkBytesThreshold",
+                    "description": "Threshold for suspicious post-update outbound transfer volume."
+                }
+            ]
+        }
+    ]
+}

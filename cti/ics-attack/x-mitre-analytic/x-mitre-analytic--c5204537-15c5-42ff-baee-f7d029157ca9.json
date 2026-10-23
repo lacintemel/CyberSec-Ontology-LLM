@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--ac459bc2-751f-42ea-80c3-230123d9e1b1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c5204537-15c5-42ff-baee-f7d029157ca9",
+            "created": "2026-10-13T17:44:22.547Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0906#AN2120",
+                    "external_id": "AN2120"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:22.547Z",
+            "name": "Analytic 2120",
+            "description": "Real-time monitoring identifies a write to a Siemens project file path on a Linux engineering workstation from a User Identifier (UID) not associated with the Siemens engineering tool runtime. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to Siemens project file path by User Identifier (UID) not in authorized Siemens engineering UIDs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedProjectRepository",
+                    "description": "Documented, trusted source location(s) for Siemens project files."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

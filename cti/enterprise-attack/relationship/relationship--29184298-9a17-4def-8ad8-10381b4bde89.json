@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--372d1709-bf6f-4671-b9ca-99067ff9385c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--29184298-9a17-4def-8ad8-10381b4bde89",
+            "created": "2026-04-10T19:26:44.559Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Koi Glassworm InvisibleCode October 2025",
+                    "description": "Idan Dardikman. (2025, October 18). GlassWorm: First Self-Propagating Worm Using Invisible Code Hits OpenVSX Marketplace. Retrieved April 10, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-first-self-propagating-worm-using-invisible-code-hits-openvsx-marketplace"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-08T20:28:42.262Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has leveraged peer-to-peer software to facilitate communications within the victim network to include the software WebRTC.(Citation: Koi Glassworm InvisibleCode October 2025)  [GlassWorm](https://attack.mitre.org/software/S9010) has also established a SOCKS proxy to interact with victim devices that also acted as a proxy node for follow-on behaviors.(Citation: Koi Glassworm InvisibleCode October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--f6dacc85-b37d-458e-b58d-74fc4bbf5755",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

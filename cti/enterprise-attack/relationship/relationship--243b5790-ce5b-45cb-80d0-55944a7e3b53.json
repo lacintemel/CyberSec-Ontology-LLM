@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c59b26b2-94f0-47a9-b87c-37dd48f7b995",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--243b5790-ce5b-45cb-80d0-55944a7e3b53",
+            "created": "2026-04-16T16:50:31.258Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.955Z",
+            "description": "[PHASEJAM](https://attack.mitre.org/software/S9014) has the ability to decode Base64 commands and data.(Citation: Google UNC5221 Ivanti January 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--ca3f5123-b853-45ef-83cb-1d1bca22e03f",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

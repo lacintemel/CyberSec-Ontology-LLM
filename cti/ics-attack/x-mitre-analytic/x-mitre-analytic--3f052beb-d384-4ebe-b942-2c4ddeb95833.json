@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--21fc3d82-cec9-4abd-8a29-9bde525d8935",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--3f052beb-d384-4ebe-b942-2c4ddeb95833",
+            "created": "2026-04-22T21:47:06.445Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0910#AN2053",
+                    "external_id": "AN2053"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:09.218Z",
+            "name": "Analytic 2053",
+            "description": "Real-time monitoring identifies a network infrastructure configuration change that results in a communication gap between previously-connected Industrial Control System (ICS) zones, from a source not in the approved network administration list. This technique-level analytic synthesizes Serial COM (T1695.001), Ethernet (T1695.002), and Wi-Fi (T1695.003). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "Access Control List (ACL)/firewall/routing configuration change from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet outside change control window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--4c12c1c8-bcef-4daf-8e5b-fca235f71d9e",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "communication-loss alarm for affected devices within comm block correlation window of the flagged configuration change"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges authorized for network infrastructure configuration changes."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which connectivity-affecting changes are authorized."
+                },
+                {
+                    "field": "CommBlockCorrelationWindow",
+                    "description": "Time window correlating a configuration change with subsequent communication loss."
+                }
+            ]
+        }
+    ]
+}

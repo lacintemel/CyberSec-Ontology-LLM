@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--e3981471-4d62-408d-a9e5-1c9ed6e2abde",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--2b726f82-bb4f-4889-b6a0-4587f438cd83",
+            "created": "2026-10-13T17:45:19.389Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0910#AN2164",
+                    "external_id": "AN2164"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:19.389Z",
+            "name": "Analytic 2164",
+            "description": "Real-time monitoring identifies iptables/nftables rule additions blocking Industrial Control System (ICS) protocol ports on Linux ICS gateways. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; iptables/nftables command adds a rule that blocks ICS protocol traffic outside the authorized network-administration baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges authorized for network infrastructure configuration changes."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which connectivity-affecting changes are authorized."
+                },
+                {
+                    "field": "CommBlockCorrelationWindow",
+                    "description": "Time window correlating a configuration change with subsequent communication loss."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

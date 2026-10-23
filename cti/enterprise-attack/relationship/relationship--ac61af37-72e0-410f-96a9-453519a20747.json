@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--10e97fc2-3bd3-4857-bee6-57ba568ae9c4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ac61af37-72e0-410f-96a9-453519a20747",
+            "created": "2021-06-24T11:57:32.001Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BleepingComputer REvil 2021",
+                    "description": "Abrams, L. (2021, March 19). REvil ransomware has a new \u2018Windows Safe Mode\u2019 encryption mode. Retrieved June 23, 2021.",
+                    "url": "https://www.bleepingcomputer.com/news/security/revil-ransomware-has-a-new-windows-safe-mode-encryption-mode/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.160Z",
+            "description": "[REvil](https://attack.mitre.org/software/S0496) can force a reboot in safe mode with networking.(Citation: BleepingComputer REvil 2021)",
+            "relationship_type": "uses",
+            "source_ref": "malware--ac61f1f9-7bb1-465e-9b8a-c2ce8e88baf5",
+            "target_ref": "attack-pattern--c7660f19-f8c5-4ae3-a5e5-24381c270376",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

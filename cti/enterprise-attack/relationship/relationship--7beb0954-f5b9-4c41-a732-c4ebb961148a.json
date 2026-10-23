@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ec82f54e-d0b6-4d62-bba8-46cbdb8128c6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7beb0954-f5b9-4c41-a732-c4ebb961148a",
+            "created": "2026-04-17T21:16:22.766Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024",
+                    "description": "Matt Lin, Austin Larsen, John Wolfram, Ashley Pearson, Josh Murchie, Lukasz Lamparski, Joseph Pisano, Ryan Hall, Ron Craft, Shawn Crew, Billy Wong, Tyler McLellan. (2024, April 4). Cutting Edge, Part 4: Ivanti Connect Secure VPN Post-Exploitation Lateral Movement Case Studies. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-post-exploitation-lateral-movement"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.095Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has been compiled as a Position Independent Executable (PIE) to use a third-party library for injection.(Citation: Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--633a100c-b2c9-41bf-9be5-905c1b16c825",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

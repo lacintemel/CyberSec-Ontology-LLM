@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--add7dc13-2221-40fe-b57a-4faebf383fe9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2d17672c-ceaf-4fbb-8f3e-a00996b240c8",
+            "created": "2026-04-22T20:26:56.868Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                },
+                {
+                    "source_name": "Dragos ELECTRUM JAN 2026",
+                    "description": "https://5943619.hs-sites.com/hubfs/Reports/dragos-2025-poland-attack-report.pdf. (2026, January). ELECTRUM: CYBER ATTACK ON POLAND\u2019S ELECTRIC SYSTEM 2025. Retrieved April 22, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/Reports/dragos-2025-poland-attack-report.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:19.533Z",
+            "description": "During the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063), the adversaries wiped devices and also damaged Mikronika RTUs, Hitachi Relion Protection and Control Relays (IEDs), and HMI workstations resulting in a loss of communications and view between the facility and the distribution system operators (DSO).(Citation: CERT Polska)(Citation: Dragos ELECTRUM JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "attack-pattern--138979ba-0430-4de6-a128-2fc0b056ba36",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

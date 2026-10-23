@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--808db6d3-b225-4225-aa27-842ec77af962",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--500aec57-cf41-4572-bdae-f08e185ebeec",
+            "created": "2026-10-13T17:46:51.696Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0746#AN2236",
+                    "external_id": "AN2236"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:51.696Z",
+            "name": "Analytic 2236",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) unsolicited response messages such as Distributed Network Protocol 3 (DNP3) unsolicited or Generic Object Oriented Substation Event (GOOSE) frames arriving from Internet Protocol (IP) or Media Access Control (MAC) addresses that do not match the enrolled device for those data points. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "unsolicited response message source identity does not match the enrolled device for those data points"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "SensorToleranceThreshold",
+                    "description": "Acceptable divergence between primary and independent secondary measurement of the same physical quantity."
+                },
+                {
+                    "field": "ZeroVarianceWindow",
+                    "description": "Time window over which reported values are checked for implausible stability."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

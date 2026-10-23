@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--eb206626-a450-4a9b-8597-bd186724f59f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--95ebe979-ec88-489d-ba9d-b4ac2f1f22db",
+            "created": "2026-04-17T16:58:55.128Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.129Z",
+            "description": "[MirrorStealer](https://attack.mitre.org/software/S9022) has stored stolen credentials on the local machine in `%TEMP%\\31558.txt`.(Citation: ESET MirrorFace DEC 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--2f851d4a-18cc-4d7f-9408-b10ef02ee936",
+            "target_ref": "attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

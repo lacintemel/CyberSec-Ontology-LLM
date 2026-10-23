@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b26152f5-93be-4428-80f5-328531f954b5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--eb93689a-f815-4d93-ba6d-6104a60d9a9e",
+            "created": "2026-04-17T18:24:02.743Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "JPCERT MirrorFace JUL 2024",
+                    "description": "Tomonaga, S. (2024, July 16). MirrorFace Attack against Japanese Organisations. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.246Z",
+            "description": "[HiddenFace](https://attack.mitre.org/software/S9023) can store its configuration file in the Registry.(Citation: JPCERT MirrorFace JUL 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9edc41d1-a13d-4acf-b400-d47fb2f6809d",
+            "target_ref": "attack-pattern--57340c81-c025-4189-8fa0-fc7ede51bae4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

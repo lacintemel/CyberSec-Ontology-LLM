@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--39f66e10-b2f4-452a-a85f-9eeb2a319c69",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--711d0a57-1e3f-4598-80a4-952b6ad9ada4",
+            "created": "2026-02-06T21:27:07.464Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_March2025",
+                    "description": "ThreatFabric. (2025, March 28). Exposing Crocodilus: New Device Takeover Malware Targeting Android Devices. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/exposing-crocodilus-new-device-takeover-malware-targeting-android-devices"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.080Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has displayed a black screen overlay and has muted the sound of the device to conceal all malicious actions.(Citation: ThreatFabric_Crocodilus_March2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--24a77e53-0751-46fc-b207-99378fb35c08",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

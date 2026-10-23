@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8ca0081e-46de-45c4-a87d-c066bac08eb0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--31e2a6f9-065f-44ca-82eb-5cf12f6fd07a",
+            "created": "2026-04-16T22:33:22.161Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FalconFeeds_MuddyWaterPSRust_Mar2026",
+                    "description": "FalconFeeds.io. (2026, March 6). MuddyWater in the Iran\u2013Israel Cyber War: From PowerShell Scripts to Rust Implants. Retrieved March 12, 2026.",
+                    "url": "https://falconfeeds.io/blogs/muddywater-in-the-iran-israel-cyber-war-from-powershell-scripts-to-rust-implants"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:55.266Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has used ports 8043 and 8848 for botnet C2 communication.(Citation: FalconFeeds_MuddyWaterPSRust_Mar2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--b18eae87-b469-4e14-b454-b171b416bc18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--af156df8-1d0c-44a1-abb0-708aec529fc6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--bed265af-6f51-42c1-b4d2-691535a32d67",
+            "created": "2026-10-13T17:46:42.631Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0907#AN2226",
+                    "external_id": "AN2226"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:42.631Z",
+            "name": "Analytic 2226",
+            "description": "Real-time monitoring identifies rapid sequential Industrial Control System (ICS) protocol connection attempts to the same field device Internet Protocol (IP) address across different protocol ports from a single source not in the approved control server list. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "NSM:Connections",
+                    "channel": "rapid sequential connection attempts to same device Internet Protocol (IP) address across multiple Industrial Control System (ICS) protocol ports from source not in approved Supervisory Control and Data Acquisition (SCADA) servers"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate sources."
+                },
+                {
+                    "field": "PortScanTimeWindow",
+                    "description": "Time window within which connections across multiple ports are considered a single scan event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

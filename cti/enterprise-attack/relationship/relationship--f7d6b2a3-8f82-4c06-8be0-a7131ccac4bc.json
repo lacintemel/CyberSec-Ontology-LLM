@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a141d01c-dd80-4bf2-84c9-97dd22a344aa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f7d6b2a3-8f82-4c06-8be0-a7131ccac4bc",
+            "created": "2026-09-11T19:58:00.442Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-11T19:58:00.442Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has obfuscated stack strings within executable files.(Citation: QuorumCyber_Vidar_March2023)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--b0533c6e-8fea-4788-874f-b799cacc4b92",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--36f9f260-c65e-4ad5-a821-33d8c1852e8d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5619736a-4081-4fc3-93b7-cf70d01cd094",
+            "created": "2026-01-26T18:48:54.269Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft_diskpart_Feb2023",
+                    "description": "Microsoft. (2023, February 3). diskpart. Retrieved March 17, 2025.",
+                    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.043Z",
+            "description": "[Diskpart](https://attack.mitre.org/software/S9002) can show information about the selected disk, partition, volume, or virtual hard disk (VHD).(Citation: Microsoft_diskpart_Feb2023) ",
+            "relationship_type": "uses",
+            "source_ref": "tool--080f872e-f1a3-4d42-bb00-9eb55949f6a9",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

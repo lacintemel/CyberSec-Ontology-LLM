@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--ed7e791f-4dd7-41a0-a750-2da6cf2e35b7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b127de87-5a4a-4af9-8743-cc4765e20fab",
+            "created": "2026-09-30T20:40:50.154Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:40:50.154Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has gathered data and credentials stored in Shell History.(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--8187bd2a-866f-4457-9009-86b0ddedffa3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

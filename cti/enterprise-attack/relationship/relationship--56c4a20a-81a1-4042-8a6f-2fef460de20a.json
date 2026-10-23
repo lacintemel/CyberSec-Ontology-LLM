@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f98e8982-6ec5-4dd5-9ca1-94a2f421fc10",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--56c4a20a-81a1-4042-8a6f-2fef460de20a",
+            "created": "2026-09-22T18:32:31.164Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant APT42-charms",
+                    "description": "Mandiant. (n.d.). APT42: Crooked Charms, Cons and Compromises. Retrieved October 9, 2024.",
+                    "url": "https://services.google.com/fh/files/misc/apt42-crooked-charms-cons-and-compromises.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T18:33:06.818Z",
+            "description": "[APT42](https://attack.mitre.org/groups/G1044) has stolen application specific passwords in order to bypass MFA requirements to include victim environments who leverage the Microsoft App Password feature. (Citation: Mandiant APT42-charms) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c0291346-defe-48d7-9542-9e074ba1bdfb",
+            "target_ref": "attack-pattern--6c427a0d-e0df-41f8-b522-e59eaab44c47",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

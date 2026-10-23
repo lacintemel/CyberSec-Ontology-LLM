@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--0e34b38f-ecb4-4fbd-b265-170c4484462c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--51a094bf-b7eb-452a-9b7a-ffac16fce1ac",
+            "created": "2026-04-22T18:49:31.209Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0907#AN2050",
+                    "external_id": "AN2050"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:00.318Z",
+            "name": "Analytic 2050",
+            "description": "Real-time monitoring identifies execution of port scanning utilities (nmap, masscan) with arguments targeting Industrial Control System (ICS) protocol port ranges on an ICS Windows host. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 of port scanning utility with arguments targeting Industrial Control Systems (ICS) protocol port ranges"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate sources."
+                },
+                {
+                    "field": "PortScanTimeWindow",
+                    "description": "Time window within which connections across multiple ports are considered a single scan event."
+                }
+            ]
+        }
+    ]
+}

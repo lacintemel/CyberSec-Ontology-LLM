@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--5429d37c-5078-4860-88ab-da5ff05708f3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--ec4eaf43-4490-4833-a18a-e475ab244970",
+            "created": "2026-10-13T17:47:16.942Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0803#AN2257",
+                    "external_id": "AN2257"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:16.942Z",
+            "name": "Analytic 2257",
+            "description": "Real-time monitoring identifies an SSH authentication/session to an ICS Linux asset from a VPN-assigned or remote-access source outside the approved remote-administration baseline. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--39b9db72-8b48-4595-a18d-db5bbba3091b",
+                    "name": "syslog:auth",
+                    "channel": "Secure Shell (SSH) session from Virtual Private Network (VPN)-assigned Internet Protocol (IP) address correlated with remote access authentication anomaly"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedRemoteAccessOrigins",
+                    "description": "Documented geographic regions/ASNs from which legitimate ICS-role remote access is expected."
+                },
+                {
+                    "field": "ExpectedSessionPattern",
+                    "description": "Baseline of normal session timing/duration for each ICS-role account's remote access usage."
+                },
+                {
+                    "field": "RemoteAccessToICSWindow",
+                    "description": "Time window correlating VPN authentication with subsequent ICS-zone network access."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

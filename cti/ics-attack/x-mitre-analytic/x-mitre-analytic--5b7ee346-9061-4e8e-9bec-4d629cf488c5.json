@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--d9a50051-6273-4764-9d75-6a4204847853",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--5b7ee346-9061-4e8e-9bec-4d629cf488c5",
+            "created": "2026-10-13T17:48:05.156Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0722#AN2286",
+                    "external_id": "AN2286"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:05.156Z",
+            "name": "Analytic 2286",
+            "description": "Real-time monitoring identifies ICS protocol responses whose timing or payload structure deviates from the established device-specific per-function baseline in a pattern consistent with an intercepting relay or hook. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "otids:ProtocolDecoder",
+                    "channel": "Protocol decoder/IDS transaction: traffic on an ICS service port fails expected protocol parsing/conformance or decodes as a different application protocol"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedICSVendorProcessList",
+                    "description": "Allowlist of processes permitted to install window/event hooks on ICS engineering and HMI hosts."
+                },
+                {
+                    "field": "ICSServiceBinaryList",
+                    "description": "List of binary paths for ICS gateway, OPC, and historian services on Linux assets that should never be launched with LD_PRELOAD set."
+                },
+                {
+                    "field": "VendorPackageManifest",
+                    "description": "Package manager manifest cross-reference confirming a shared library belongs to an installed, signed package."
+                },
+                {
+                    "field": "VendorSignedDLLHashBaseline",
+                    "description": "Cryptographic hash inventory of all vendor-signed ICS communication DLLs, refreshed on every legitimate vendor patch cycle."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

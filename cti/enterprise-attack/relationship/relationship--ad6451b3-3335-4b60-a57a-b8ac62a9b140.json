@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--27c934d8-16f9-4279-9456-0018a0dcd0d8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ad6451b3-3335-4b60-a57a-b8ac62a9b140",
+            "created": "2026-04-22T21:04:38.231Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                },
+                {
+                    "source_name": "ESET DynoWiper Update JAN 2026",
+                    "description": "ESET. (2026, January 30). DynoWiper update: Technical analysis and attribution. Retrieved April 22, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/dynowiper-update-technical-analysis-attribution/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:19.913Z",
+            "description": "During the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063), the adversaries attempted to dump credentials utilizing LSASS.(Citation: CERT Polska)(Citation: ESET DynoWiper Update JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

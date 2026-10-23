@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--241ad945-3c69-4a12-ac38-e9d505159b73",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--f487a605-0acb-4b12-b157-33b75ebd9a40",
+            "created": "2026-04-22T14:32:49.664Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0902",
+                    "external_id": "DET0902"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:59.186Z",
+            "name": "Detection of Unauthorized Message",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--613b28ef-88dd-4008-8d7e-206ce55a7cde",
+                "x-mitre-analytic--18bf81d6-981c-49a2-9259-a08e1f1337b8",
+                "x-mitre-analytic--89b7a519-ee8c-4aac-a9ef-f82d32116d30"
+            ]
+        }
+    ]
+}

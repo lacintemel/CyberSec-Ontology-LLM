@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--ee28c7dc-1411-4826-aa9a-1e09843b398e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4c637450-dd7b-4f6a-b59d-628d8258e0cd",
+            "created": "2026-04-17T19:11:43.191Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA SPAWNCHIMERA RESURGE February 2026",
+                    "description": "DHS/CISA. (2026, February 26). MAR-25993211-r1.v2 Ivanti Connect Secure (RESURGE): AR25-087A. Retrieved April 17, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-087a"
+                },
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                },
+                {
+                    "source_name": "Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024",
+                    "description": "Matt Lin, Austin Larsen, John Wolfram, Ashley Pearson, Josh Murchie, Lukasz Lamparski, Joseph Pisano, Ryan Hall, Ron Craft, Shawn Crew, Billy Wong, Tyler McLellan. (2024, April 4). Cutting Edge, Part 4: Ivanti Connect Secure VPN Post-Exploitation Lateral Movement Case Studies. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-post-exploitation-lateral-movement"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:53.749Z",
+            "description": "[SPAWNCHIMERA](https://attack.mitre.org/software/S9024) has created SSH tunnels to facilitate C2 communications.(Citation: CISA SPAWNCHIMERA RESURGE February 2026)(Citation: Google UNC5221 Ivanti January 2025)(Citation: Google UNC5221 BRICKSTORM SPAWNCHIMERA April 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--d1974f35-0e06-478e-bc74-7530545d814b",
+            "target_ref": "attack-pattern--4fe28b27-b13c-453e-a386-c2ef362a573b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

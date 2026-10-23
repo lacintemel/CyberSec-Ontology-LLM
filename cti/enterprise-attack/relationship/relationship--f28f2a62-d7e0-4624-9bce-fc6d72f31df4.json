@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--57cccaa9-829f-4568-986b-1aeb09c8e770",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f28f2a62-d7e0-4624-9bce-fc6d72f31df4",
+            "created": "2026-04-16T21:41:16.612Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.908Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used [HeartCrypt](https://attack.mitre.org/software/S9018) in [Remcos](https://attack.mitre.org/software/S0332) infection chains.(Citation: Check Point Blind Eagle MAR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "malware--148f947c-aabd-4ba8-b6a3-22b296855119",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

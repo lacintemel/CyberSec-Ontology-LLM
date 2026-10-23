@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e21a8ada-32ad-4a88-9b7e-98569ac770ed",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--061d7039-8463-46bc-9f33-ac8153c5cf22",
+            "created": "2026-09-23T16:45:56.299Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T16:45:56.299Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has deleted PowerShell command history for all users by targeting the command history file located in `C:/Users/*/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadline/ConsoleHost_History.txt`.(Citation: MSTI_GentelmenRansomware_May2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--3aef9463-9a7a-43ba-8957-a867e07c1e6a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

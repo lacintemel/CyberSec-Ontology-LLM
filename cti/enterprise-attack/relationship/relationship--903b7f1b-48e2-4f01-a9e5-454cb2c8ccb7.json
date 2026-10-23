@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--1c128d12-3612-4273-8764-5600e9434a26",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--903b7f1b-48e2-4f01-a9e5-454cb2c8ccb7",
+            "created": "2026-04-21T13:15:30.795Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Nov AI Threat Tracker",
+                    "description": "Google Threat Intelligence Group. (2025, November 5). GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools. Retrieved March 31, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+                },
+                {
+                    "source_name": "Cato LAMEHUG JUL 2025",
+                    "description": "Simonovich, V. (2025, July 23). Cato CTRL\u2122 Threat Research: Analyzing LAMEHUG \u2013 First Known LLM-Powered Malware with Links to APT28 (Fancy Bear) . Retrieved April 21, 2026.",
+                    "url": "https://www.catonetworks.com/blog/cato-ctrl-threat-research-analyzing-lamehug/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.122Z",
+            "description": "[LAMEHUG](https://attack.mitre.org/software/S9035) can gather process information on targeted systems.(Citation: Nov AI Threat Tracker)(Citation: Cato LAMEHUG JUL 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--c55e0410-842d-4365-a2c8-26c0330f85b8",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

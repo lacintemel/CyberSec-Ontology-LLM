@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--a3f8b577-4c43-4177-b194-0ed3900896c0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d4922804-7216-4e83-b0c0-6e61b09d5fc0",
+            "created": "2020-05-07T22:32:37.695Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "LevelBlue Blind Eagle Proton66 JUN 2025",
+                    "description": "Melnyk, S. (2025, June 27). Tracing Blind Eagle to Proton66. Retrieved April 16, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/tracing-blind-eagle-to-proton66/"
+                },
+                {
+                    "source_name": "QiAnXin APT-C-36 Feb2019",
+                    "description": "QiAnXin Threat Intelligence Center. (2019, February 18). APT-C-36: Continuous Attacks Targeting Colombian Government Institutions and Corporations. Retrieved May 5, 2020.",
+                    "url": "https://web.archive.org/web/20190625182633if_/https://ti.360.net/blog/articles/apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corporations-en/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.811Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used VBScript for initial malware deployment including within a malicious Word document which is executed upon the document opening.(Citation: QiAnXin APT-C-36 Feb2019)(Citation: Kaspersky BlindEagle AUG 2024)(Citation: LevelBlue Blind Eagle Proton66 JUN 2025)\n",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

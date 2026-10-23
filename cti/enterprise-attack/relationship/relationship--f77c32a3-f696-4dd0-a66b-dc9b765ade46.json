@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--bea44d33-9ff2-4686-943c-8a9e2cb2cd14",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f77c32a3-f696-4dd0-a66b-dc9b765ade46",
+            "created": "2026-09-25T15:52:30.196Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Compromise",
+                    "description": "Jay Deen. (2026, May). AI-Assisted Compromise of Mexican Water Utility with OT Implications. Retrieved September 2, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/116-Whitepapers/dragos-2026-ai-mexico-water-attack-intel-brief.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:56:40.966Z",
+            "description": "[BACKUPOSINT v9.0 APEX PREDATOR](https://attack.mitre.org/software/S9045) can interact with and execute Docker and Kerberos commands.(Citation: AI-Mexico-Govt-Compromise) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--ab183324-4634-45bc-98af-9458bb94bcef",
+            "target_ref": "attack-pattern--7b50a1d3-4ca7-45d1-989d-a6503f04bfe1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

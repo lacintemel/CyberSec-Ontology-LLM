@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--7e5e0af0-4c85-4862-b4c1-a0fdc87b77ca",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d2a6ecfe-089b-47cc-8f10-260ad2de9c2e",
+            "created": "2026-10-13T17:46:03.526Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0789#AN2198",
+                    "external_id": "AN2198"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:03.526Z",
+            "name": "Analytic 2198",
+            "description": "Real-time monitoring identifies ACL modifications on Industrial Control System (ICS) network devices specifically blocking ICS reporting message ports while allowing command ports to remain open. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "Access Control List (ACL) modification blocking Industrial Control Systems (ICS) reporting message ports while command ports remain open"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExpectedReportingInterval",
+                    "description": "Device-specific configured interval for unsolicited reporting."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

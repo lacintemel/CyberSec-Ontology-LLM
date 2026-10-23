@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0a94a40d-865c-41b2-b88e-8e50cafdc60a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--94a02780-a86d-45f0-a1c4-2b7864879dcf",
+            "created": "2026-04-08T17:43:01.411Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:02.231Z",
+            "description": "[HTTPTroy](https://attack.mitre.org/software/S9007) has used HTTP POST requests to communicate with C2.(Citation: Gen Digital Kimsuky HTTPTroy October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--52b52f72-88e6-4847-88d6-da3b9e4a4f71",
+            "target_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

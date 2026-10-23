@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3bf8cbd7-bf5c-4730-91a4-f838c4337c84",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cf5cb40e-9857-438c-8e57-26088a87e879",
+            "created": "2026-02-04T20:41:15.080Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sophos Evilginx MAR 2025",
+                    "description": "Everts, M. (2025, March 28). Stealing user credentials with evilginx. Retrieved January 27, 2026.",
+                    "url": "https://www.sophos.com/en-us/blog/stealing-user-credentials-with-evilginx"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.209Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can capture information from each session with a victim including the public IP used to access the server and the user agent.(Citation: Sophos Evilginx MAR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

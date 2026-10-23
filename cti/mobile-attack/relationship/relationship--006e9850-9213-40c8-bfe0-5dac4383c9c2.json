@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6508674b-b6d5-4d41-9a3e-9afdbaa78bcb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--006e9850-9213-40c8-bfe0-5dac4383c9c2",
+            "created": "2026-02-06T21:34:47.955Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_March2025",
+                    "description": "ThreatFabric. (2025, March 28). Exposing Crocodilus: New Device Takeover Malware Targeting Android Devices. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/exposing-crocodilus-new-device-takeover-malware-targeting-android-devices"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.903Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has received instructions and applications through communications with C2 while running.(Citation: ThreatFabric_Crocodilus_March2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--6c49d50f-494d-4150-b774-a655022d20a6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

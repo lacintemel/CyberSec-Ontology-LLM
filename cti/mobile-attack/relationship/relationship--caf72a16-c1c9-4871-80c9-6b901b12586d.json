@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8a9f5602-86d1-4e59-a6e1-03b1fdf538b7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--caf72a16-c1c9-4871-80c9-6b901b12586d",
+            "created": "2026-05-13T20:28:19.347Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERTPL_NGate_Nov2025",
+                    "description": "Ratajczak, K. (2025, November 3). Analysis of NGate malware campaign (NFC relay). Retrieved November 10, 2025.",
+                    "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-13T20:28:19.347Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has used Java to execute a variety of actions, such as loading and verifying runtime configuration and disabling the launcher if decryption or parsing failed.(Citation: CERTPL_NGate_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--29f1f56c-7b7a-4c14-9e39-59577ea2743c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

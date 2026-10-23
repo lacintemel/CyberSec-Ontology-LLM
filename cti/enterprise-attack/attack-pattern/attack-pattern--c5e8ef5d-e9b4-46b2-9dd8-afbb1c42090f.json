@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--3a1fc506-8b12-4133-9ea8-b431368e5ee8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--c5e8ef5d-e9b4-46b2-9dd8-afbb1c42090f",
+            "created": "2026-09-16T18:21:04.016Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1696",
+                    "external_id": "T1696"
+                },
+                {
+                    "source_name": "CAPTCHAS Cloudflare",
+                    "description": "Cloudflare. (n.d.). How CAPTCHAs work | What does CAPTCHA mean?. Retrieved September 16, 2026.",
+                    "url": "https://www.cloudflare.com/learning/bots/how-captchas-work/"
+                },
+                {
+                    "source_name": "Capsolver",
+                    "description": "Ethan Collins. (2026, May 21). How Agentic Browsers Solve CAPTCHAs: AI CAPTCHA Solving Infrastructure. Retrieved September 16, 2026.",
+                    "url": "https://www.capsolver.com/blog/ai/agentic-browser-capsolver"
+                },
+                {
+                    "source_name": "CAPTCHA Bypass",
+                    "description": "Suchintan Singh. (2025, September 8). Best Way to Bypass CAPTCHA for AI Browser Automation (August 2026). Retrieved September 16, 2026.",
+                    "url": "https://www.skyvern.com/blog/best-way-to-bypass-captcha-for-ai-browser-automation-september-2025/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-06T16:11:07.686Z",
+            "name": "Anti-Automation Evasion",
+            "description": "Adversaries may employ various means to evade or complete automation checks. Automation checks distinguish human users from bot traffic and prevent bots from reaching the web pages protected by automation checks. For example, a user may be required to solve a CAPTCHA challenge before accessing a form or login page. Traditional CAPTCHAs ask the user to decipher a string of characters, type the characters into a box, and submit the form. reCAPTCHA asks the user to identify images, click a checkbox, or evaluate the user\u2019s behavior from mouse movement and device cookies.(Citation: CAPTCHAS Cloudflare) \n\nAdversaries may pay for a service that forwards the CAPTCHA challenge to a remote human worker. The human service then solves the CAPTCHA on behalf of the bot.(Citation: CAPTCHA Bypass) AI tools, such as CapSolver, can also be used to automatically solve CAPTCHA challenges.(Citation: Capsolver) ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

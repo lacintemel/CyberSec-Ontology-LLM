@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--7c9d1ab6-c218-4dae-8029-587fd95356ca",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--441ded70-7e25-47f1-b55c-0fafb7d4f44c",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0770",
+                    "external_id": "DET0770"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:48.197Z",
+            "name": "Detection of Network Connection Enumeration",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--7aa60595-5a1c-4de2-be60-cc1f9fea2313",
+                "x-mitre-analytic--35c7f7bd-a79b-4125-ba0c-2bbf281ebf51",
+                "x-mitre-analytic--8d30e2a3-b7a5-403b-ad5f-243f37f44fa4",
+                "x-mitre-analytic--4effd386-490e-435b-9375-f53a3b44f0d0"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--2c3d16c1-78e5-45e1-9fee-6a8643e7f8a6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--1017530e-423d-4857-80b6-99891bf82d28",
+            "created": "2026-04-22T16:28:31.400Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0905#AN2048",
+                    "external_id": "AN2048"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:34.740Z",
+            "name": "Analytic 2048",
+            "description": "Real-time monitoring identifies successful authentication to Windows-hosted Industrial Control System (ICS) applications using credentials matching known default or hardcoded vendor passwords. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 for account matching default or hardcoded credential patterns from source not in approved host list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DefaultVendorCredentialList",
+                    "description": "Documented default username/password combinations for all device models in the environment."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of legitimate authentication sources."
+                },
+                {
+                    "field": "KnownHardcodedCredentialPatterns",
+                    "description": "Documented hardcoded credential values for in-use ICS products."
+                }
+            ]
+        }
+    ]
+}

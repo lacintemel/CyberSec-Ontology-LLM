@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--38a65ba0-88c1-4d0e-b91b-8a38a4dfcd87",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b0c5bff6-44da-421f-adf4-d9b3c8746693",
+            "created": "2026-04-20T17:58:07.296Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point VOID MANTICORE Handala Hack March 2026",
+                    "description": "Check Point Research. (2026, March 12). \u201cHandala Hack\u201d \u2013 Unveiling Group\u2019s Modus Operandi. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.842Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has leveraged public facing VPN infrastructure to gain initial access to victim environments.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--10d51417-ee35-4589-b1ff-b6df1c334e8d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

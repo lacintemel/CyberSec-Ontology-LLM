@@ -1,0 +1,73 @@
+{
+    "type": "bundle",
+    "id": "bundle--00b75e34-7a4b-408b-b927-a3a8eb79f537",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--7ec436a3-dd31-4d23-a51b-0e03d3c474bd",
+            "created": "2026-04-16T16:54:55.315Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0900#AN2038",
+                    "external_id": "AN2038"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.379Z",
+            "name": "Analytic 2038",
+            "description": "Detects suspicious interactions with security products followed by service crashes, unexpected restarts, driver unloads, telemetry gaps, or tamper-state changes. Correlates exploit precursor behavior with immediate degradation of defensive services and follow-on process execution.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--74fa567d-bc90-425c-8a41-3c703abb221c",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=7035"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3551476e-14f5-4e48-a518-e82135329e03",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=6"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4688"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "CrashCorrelationWindow",
+                    "description": "Time between suspicious interaction and security service failure"
+                },
+                {
+                    "field": "ProtectedServiceList",
+                    "description": "Security agents/services expected to remain stable"
+                },
+                {
+                    "field": "TelemetryGapThreshold",
+                    "description": "Acceptable heartbeat silence duration"
+                }
+            ]
+        }
+    ]
+}

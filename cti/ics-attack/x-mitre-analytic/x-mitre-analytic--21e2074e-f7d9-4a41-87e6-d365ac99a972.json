@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--c589fbba-f8af-4b4d-90c5-04d2c9de488f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--21e2074e-f7d9-4a41-87e6-d365ac99a972",
+            "created": "2026-10-13T17:47:11.077Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0772#AN2251",
+                    "external_id": "AN2251"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:11.077Z",
+            "name": "Analytic 2251",
+            "description": "Real-time monitoring identifies Virtual Network Computing (VNC) or proprietary remote console sessions to embedded Human-Machine Interface (HMI) panels or operator terminals from IP addresses outside the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, where the sessions access Industrial Control System (ICS) control interfaces with physical-plant impact. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "Virtual Network Computing (VNC) or remote console session to embedded Human-Machine Interface (HMI) panel from source not in approved management Classless Inter-Domain Routing (CIDR) subnet"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedManagementCIDR",
+                    "description": "IP ranges authorized for remote desktop/console access to ICS hosts."
+                },
+                {
+                    "field": "ApprovedOperatorList",
+                    "description": "Accounts with documented operator/engineer roles."
+                },
+                {
+                    "field": "ApprovedOperatorWorkstations",
+                    "description": "Inventory of workstations from which operator/engineer interactive sessions are expected to originate."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

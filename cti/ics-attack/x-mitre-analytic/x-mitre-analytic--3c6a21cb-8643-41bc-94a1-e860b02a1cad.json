@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--36f02824-7aee-4eb5-8274-f7038d607572",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--3c6a21cb-8643-41bc-94a1-e860b02a1cad",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0761#AN1893",
+                    "external_id": "AN1893"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:05.430Z",
+            "name": "Analytic 1893",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol session reading back the user program from a field device to a source not in the approved engineering workstation list, where the session byte count is consistent with a substantial portion of the device's program memory. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "S7comm Upload Block / Common Industrial Protocol (CIP) Read Program session from source not in engineering workstation list with bytes_recv exceeding program upload size threshold"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "engineeringworkstation:ApplicationLog",
+                    "channel": "Engineering application audit/session log: controller program upload initiated outside approved backup/change window and without documented backup purpose"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "BackupWindowSchedule",
+                    "description": "Scheduled periods during which routine backup uploads are expected."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform program uploads from field devices."
+                },
+                {
+                    "field": "ProgramUploadSizeThreshold",
+                    "description": "Minimum byte count for a session to be considered a substantial program readback."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--8f6bbe0b-158d-4ad9-9cff-db0ac4eef079",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--736619f9-f636-4308-843b-83d38813982b",
+            "created": "2026-10-13T17:45:50.847Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0787#AN2186",
+                    "external_id": "AN2186"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:50.847Z",
+            "name": "Analytic 2186",
+            "description": "Real-time monitoring identifies Simple Network Management Protocol (SNMP) GET requests targeting system information Object Identifiers (OIDs) from a source not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, directed at Industrial Control System (ICS) server or device IPs. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "networkdevice:snmp",
+                    "channel": "Simple Network Management Protocol (SNMP) GET to system info OID from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate sources for device identification queries."
+                },
+                {
+                    "field": "ApprovedSystemAdmins",
+                    "description": "Accounts with documented system administration responsibilities."
+                },
+                {
+                    "field": "EnumerationTimeWindow",
+                    "description": "Time window within which multiple enumeration commands are considered a systematic reconnaissance sequence."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

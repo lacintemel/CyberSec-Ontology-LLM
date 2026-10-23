@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--29301ae7-435a-4c28-8005-b43e5b6a3dfa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--fc19b602-2811-418f-aa98-1b49f1355743",
+            "created": "2026-04-16T16:38:58.641Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0899#AN2036",
+                    "external_id": "AN2036"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.384Z",
+            "name": "Analytic 2036",
+            "description": "Detects user-authorized execution of downloaded content or scripts after communication prompts, including browser downloads followed by osascript, shell, or installer execution and subsequent network activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "macOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "macos:unifiedlog",
+                    "channel": "Execution of osascript, sh, bash, zsh, installer, open"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "NSM:Connections",
+                    "channel": "Outbound connection after script or installer launch"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "macos:unifiedlog",
+                    "channel": "Recent download opened or executed"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DownloadToExecutionWindow",
+                    "description": "Time between download and launch"
+                },
+                {
+                    "field": "InstallerParentAllowlist",
+                    "description": "Legitimate software deployment parents"
+                }
+            ]
+        }
+    ]
+}

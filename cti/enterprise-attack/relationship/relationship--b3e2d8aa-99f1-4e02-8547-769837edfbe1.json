@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--86b7aa9d-b31e-4667-ba46-e936fa95c690",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b3e2d8aa-99f1-4e02-8547-769837edfbe1",
+            "created": "2026-09-11T19:59:22.314Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-11T19:59:22.314Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has attempted to collect browser information.(Citation: QuorumCyber_Vidar_March2023)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--3c4a2599-71ee-4405-ba1e-0e28414b4bc5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

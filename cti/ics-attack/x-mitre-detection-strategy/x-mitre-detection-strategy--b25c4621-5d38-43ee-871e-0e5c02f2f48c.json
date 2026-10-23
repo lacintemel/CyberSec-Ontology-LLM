@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--50e814f2-85f7-4c3b-86a0-73605238a1e7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--b25c4621-5d38-43ee-871e-0e5c02f2f48c",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0765",
+                    "external_id": "DET0765"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:46.543Z",
+            "name": "Detection of Service Stop",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--6b3b3e92-bef7-4977-9895-29036bab29f1",
+                "x-mitre-analytic--62ef9334-2cb2-436d-bd50-2ae1213704aa",
+                "x-mitre-analytic--5346fb44-b04e-4820-8b14-eb62ee3a2ca8",
+                "x-mitre-analytic--27e8a172-0682-4d23-a7c2-e2eac526ea9c"
+            ]
+        }
+    ]
+}

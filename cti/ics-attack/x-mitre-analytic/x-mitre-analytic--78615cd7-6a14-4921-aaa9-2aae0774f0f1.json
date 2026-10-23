@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--483ee02a-cc4c-45dc-adcf-7d204fb6ee05",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--78615cd7-6a14-4921-aaa9-2aae0774f0f1",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0755#AN1887",
+                    "external_id": "AN1887"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:20.438Z",
+            "name": "Analytic 1887",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol mode-change command targeting a field device from a source not in the approved engineering workstation list, where the transition is not immediately followed by a corresponding operator acknowledgment. Documented in Triton (the Tricon controller had to be placed in PROGRAM mode before the attack could inject its payload). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device mode-change alarm generated without corresponding operator_id entry within mode change ack window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "mode-change service from source not in engineering workstation list outside change control window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "engineeringworkstation:ApplicationLog",
+                    "channel": "mode-change session logged without corresponding change ticket reference"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which mode changes are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue mode-change commands."
+                },
+                {
+                    "field": "ModeChangeAckWindow",
+                    "description": "Time window within which a legitimate operator acknowledgment is expected following a mode-change event."
+                }
+            ]
+        }
+    ]
+}

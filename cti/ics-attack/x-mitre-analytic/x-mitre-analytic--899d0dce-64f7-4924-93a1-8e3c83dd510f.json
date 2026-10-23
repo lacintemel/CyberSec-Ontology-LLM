@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--21009d67-a9a8-4e12-aafb-79735af2207b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--899d0dce-64f7-4924-93a1-8e3c83dd510f",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0730#AN1863",
+                    "external_id": "AN1863"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:26.988Z",
+            "name": "Analytic 1863",
+            "description": "Real-time monitoring identifies a vendor-distributed software update package that, upon execution, exhibits behavior inconsistent with the vendor's documented installation profile: spawning unexpected child processes, writing files outside the vendor's standard manifest, or loading unsigned Dynamic Link Libraries (DLLs). OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "fim:hashcompare",
+                    "channel": "installed binary hash does not match vendor-published checksum for claimed version"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Microsoft-Windows-Sysmon/Operational Event ID 11 FileCreate/overwrite or Event ID 2 FileCreateTime, as applicable: Process creation and file creation correlation: vendor installer creates files outside vendor install manifest or spawns undocumented child process"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "VendorInstallManifest",
+                    "description": "Documented list of files/registry keys a legitimate vendor installer is expected to create."
+                },
+                {
+                    "field": "VendorInstallProfile",
+                    "description": "Documented expected process behavior for a legitimate vendor installer, established through lab testing."
+                }
+            ]
+        }
+    ]
+}

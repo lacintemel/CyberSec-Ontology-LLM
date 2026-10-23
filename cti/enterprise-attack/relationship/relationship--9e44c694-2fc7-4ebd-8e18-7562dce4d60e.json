@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d77b27f0-3165-4c76-ab29-abc2133f59f6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9e44c694-2fc7-4ebd-8e18-7562dce4d60e",
+            "created": "2026-04-21T17:46:55.816Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CloudSEK_RustyWater_Jan2026",
+                    "description": "Awasthi, P. (2026, January 8). Reborn in Rust: Muddy Water Evolves Tooling with RustyWater Implant. Retrieved March 19, 2026.",
+                    "url": "https://www.cloudsek.com/blog/reborn-in-rust-muddywater-evolves-tooling-with-rustywater-implant"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.141Z",
+            "description": "[RustyWater](https://attack.mitre.org/software/S9037) has an obfuscated function (i.e. love_me__()) that dynamically reconstructs the string WScript.Shell using hard-coded ASCII values and the Chr() function.(Citation: CloudSEK_RustyWater_Jan2026)\u202f\u202f\u202f  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--50be4e81-db74-41a2-a9aa-423314082bea",
+            "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--e03601b2-f94e-45b3-ae6d-dace6c71b470",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4b2e7e2d-e1be-4829-9011-53eb5eca3dc6",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0643#AN1719",
+                    "external_id": "AN1719"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:06.660Z",
+            "name": "Analytic 1719",
+            "description": "For Android, detect Clipboard Data by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate API Calls via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: ClipboardManager.addOnPrimaryClipChangedListener()]; Application State via Android Enterprise / EMM [Managed package inventory/status and package metadata]; Network Connection Creation via Android Enterprise Network Logging / Enterprise VPN [DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--5ae32c6a-2d12-4b8f-81ca-f862f2be0962",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ClipboardManager.addOnPrimaryClipChangedListener()"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ClipboardAllowList",
+                    "description": "Approved IME apps, approved password managers. Derive from MDM catalog."
+                },
+                {
+                    "field": "SensitiveClipPattern",
+                    "description": "Bitcoin/Ethereum wallet regex, IBAN format, password-manager copy markers. Tunable to org-specific patterns."
+                },
+                {
+                    "field": "ClipExfilWindow",
+                    "description": "Default 10s \u2014 clipboard replacement is synchronous."
+                },
+                {
+                    "field": "AppCDNList",
+                    "description": "Per-app CDN. Derive by measurement."
+                }
+            ]
+        }
+    ]
+}

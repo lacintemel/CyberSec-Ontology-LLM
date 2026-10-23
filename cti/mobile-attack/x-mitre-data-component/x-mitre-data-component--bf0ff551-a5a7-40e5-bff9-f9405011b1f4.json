@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--7516a23e-92cb-466a-b37a-ee0ae2a035c9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--bf0ff551-a5a7-40e5-bff9-f9405011b1f4",
+            "created": "2023-03-13T20:47:52.557Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0117",
+                    "external_id": "DC0117"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:39.059Z",
+            "name": "System Notifications",
+            "description": "System Notifications represent operating system alerts, warnings, or status messages generated in response to application actions, system state changes, or security events. These notifications may indicate potentially malicious activity or abnormal application behavior.\n\nExamples\n\n- Application requesting sensitive permissions\n- USB device connected notifications\n- Security warnings triggered by device configuration changes\n\nCollection Methods\n\n- Mobile OS notification monitoring\n- Mobile EDR sensors\n- Device management telemetry\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "User Interface",
+                    "channel": "None"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "\\\"has pasted from\\\" cross-app paste notification text containing source app name"
+                },
+                {
+                    "name": "iOS:ManagedAppLog",
+                    "channel": "ManagedApplicationFeedback or application-generated telemetry"
+                },
+                {
+                    "name": "android:ManagedAppLog",
+                    "channel": "Documented DPC/admin callbacks or managed-app generated event telemetry"
+                }
+            ]
+        }
+    ]
+}

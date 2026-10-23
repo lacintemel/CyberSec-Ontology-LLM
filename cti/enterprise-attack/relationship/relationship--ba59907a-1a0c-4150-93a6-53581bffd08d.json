@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0164963b-bf80-4354-872f-7c5e8a9f9284",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ba59907a-1a0c-4150-93a6-53581bffd08d",
+            "created": "2026-03-30T19:25:36.628Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Agenda Ransomware OCT 2025",
+                    "description": "Trend Micro. (2025, October 23). Agenda Ransomware Deploys Linux Variant on Windows Systems Through Remote Management Tools and BYOVD Techniques. Retrieved March 26, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/j/agenda-ransomware-deploys-linux-variant-on-windows-systems.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.179Z",
+            "description": "[Qilin](https://attack.mitre.org/software/S1242) has the ability to delay execution.(Citation: Trend Micro Agenda Ransomware OCT 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e23d2777-b85d-44fc-861e-9149d399fbb9",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

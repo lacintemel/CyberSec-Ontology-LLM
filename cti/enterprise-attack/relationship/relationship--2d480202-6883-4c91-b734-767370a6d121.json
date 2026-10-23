@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--126e3b91-72f8-4dd7-b077-5e51ca634df8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2d480202-6883-4c91-b734-767370a6d121",
+            "created": "2026-04-22T22:37:26.632Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.966Z",
+            "description": "[LazyWiper](https://attack.mitre.org/software/S9039) can disable Microsoft Windows Defender Real-Time Monitoring with the `Set-MpPreference` cmdlet.(Citation: CERT Polska)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--e4160979-b9bc-4f58-acbe-1d921ebbc122",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

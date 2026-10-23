@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e09ef438-807f-4a98-b0c7-80171a28b49f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8a961514-3372-4c3e-b7ee-e3d053c3d5f3",
+            "created": "2020-09-11T14:54:16.615Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Lookout Desert Scorpion",
+                    "description": "A. Blaich, M. Flossman. (2018, April 16). Lookout finds new surveillanceware in Google Play with ties to known threat actor targeting the Middle East. Retrieved September 11, 2020.",
+                    "url": "https://blog.lookout.com/desert-scorpion-google-play"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:48:05.070Z",
+            "description": "[Desert Scorpion](https://attack.mitre.org/software/S0505) can record videos.(Citation: Lookout Desert Scorpion)",
+            "relationship_type": "uses",
+            "source_ref": "malware--3271c107-92c4-442e-9506-e76d62230ee8",
+            "target_ref": "attack-pattern--d8940e76-f9c1-4912-bea6-e21c251370b6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

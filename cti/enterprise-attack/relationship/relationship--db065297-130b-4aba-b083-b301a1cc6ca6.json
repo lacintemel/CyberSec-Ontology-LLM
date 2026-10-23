@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--aa6e4f77-0e14-40cc-8c67-0eb525f99aff",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--db065297-130b-4aba-b083-b301a1cc6ca6",
+            "created": "2026-04-17T10:41:35.560Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.224Z",
+            "description": " [PureCrypter](https://attack.mitre.org/software/S9019) can set `ProcessWindowStyle.Hidden` to hide windows on victim machines.(Citation: Check Point Blind Eagle MAR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--cbb66055-0325-4111-aca0-40547b6ad5b0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

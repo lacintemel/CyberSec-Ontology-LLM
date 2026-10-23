@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--8c7ef050-5dae-4822-9560-069c3ae1932e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f10a7842-ddb2-488b-93ac-e53fa6476614",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0707#AN1830",
+                    "external_id": "AN1830"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:37.873Z",
+            "name": "Analytic 1830",
+            "description": "For iOS, detect Scheduled Task/Job primarily during application vetting or controlled analysis rather than assuming a live device SOC feed. Correlate OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: Managed app creates NSBackgroundActivityScheduler activity or registers BGTask with repeating=true or deferred interval outside $ApprovedSchedulerApps$ function]; Scheduled Job Creation via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: Scheduled task execution produces network, local-write, or sensor artifact while app_state=background or device_locked=true without user trigger]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: Managed app creates NSBackgroundActivityScheduler activity or registers BGTask with repeating=true or deferred interval outside $ApprovedSchedulerApps$ function"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--f42df6f0-6395-4f0c-9376-525a031f00c3",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: Scheduled task execution produces network, local-write, or sensor artifact while app_state=background or device_locked=true without user trigger"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSchedulerApps",
+                    "description": "Apps with legitimate scheduled background work: MDM agent (policy sync), email clients (push sync), approved enterprise apps. Derive from MDM catalog. Any unapproved app using repeating scheduled tasks is anomalous."
+                },
+                {
+                    "field": "ScheduledIntervalThreshold",
+                    "description": "Default 900s (15 min) minimum suspicious repeat interval. Shorter intervals indicate high-frequency C2 check-in pattern. Derive from legitimate app scheduler baseline."
+                }
+            ]
+        }
+    ]
+}

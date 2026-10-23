@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--d6768a31-1b21-4287-bcf9-597a431181a2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d6d7deaf-8ed1-437b-87ab-c2270015c96d",
+            "created": "2026-10-01T19:24:05.619Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                },
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T21:13:32.762Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has utilized Azure C2 subdomains that resemble `*[.]*[.]cloudapp[.]azure[.]com`.(Citation: Mandiant_UNC1549_Feb2024)(Citation: Mandiant_UNC1549TTPsTools_Nov2025)    \n\n[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) also utilized services that would reflect the geolocation of their targeted victims.(Citation: Mandiant_UNC1549_Feb2024)         ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--79da0971-3147-4af6-a4f5-e8cd447cd795",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "type": "bundle",
+    "id": "bundle--a3a5f393-6a08-4e1f-8c42-b199464aad71",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b06e4fe7-c1de-407b-82cb-c3b1ecef3b8b",
+            "created": "2026-09-22T01:43:38.369Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0926#AN2077",
+                    "external_id": "AN2077"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T22:13:18.971Z",
+            "name": "Analytic 2077",
+            "description": "Detect successful SaaS authentication through an application-specific or legacy credential mechanism from a source/client not previously associated with that account, correlated with new session establishment or subsequent access inconsistent with ApprovedASPUsage. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "saas:audit ",
+                    "channel": "Successful application-specific/legacy credential authentication where exposed "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--d27b0089-2c39-4b6c-84ff-303e48657e77",
+                    "name": "saas:audit",
+                    "channel": "ASP creation/modification event where supported "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "saas:session ",
+                    "channel": "New authenticated session associated with changed source/client context "
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedASPUsage",
+                    "description": "Approved user/application/use-case relationships for ASP authentication\u2014for example, which user or service is expected to use an ASP with which application. Derive from documented integration workflows and service ownership. Broadening permitted relationships reduces FP but increases FN for abused legitimate credentials; narrowing them increases detection sensitivity and FP."
+                }
+            ]
+        }
+    ]
+}

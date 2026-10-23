@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--752fc602-acbb-40a6-9083-0d6169c4ec85",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--37d989e6-14cd-49a4-adec-3d8b72c8dc22",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0792#AN1924",
+                    "external_id": "AN1924"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:04.143Z",
+            "name": "Analytic 1924",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) master-role command traffic originating from a source not in the approved control server inventory, directed at multiple field devices in a pattern consistent with control-server behavior. Documented in Maroochy Water Services (falsified PDS/station addresses to impersonate the master) and the 2017 Dallas Siren incident (rogue radio transmitter to 156 sirens). OT operational-fidelity gate: Alert only when the master/station identity or source is not authorized for the target device and command function, or when a normally authorized master violates its configured role/sequence and produces a corroborating device/process-state change. Suppress legitimate redundancy/failover, hot-standby promotion, commissioning, and approved engineering master activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b05a614b-033c-4578-b4f2-c63a9feee706",
+                    "name": "assetinventory:MasterAddress",
+                    "channel": "command traffic uses master/station address not in registered master addresses"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device receives commands from two distinct master identities within a short window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "write/control command traffic from source not in approved Supervisory Control and Data Acquisition (SCADA) servers directed at multiple distinct device IPs within rogue master time window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP/identity allowlist of legitimate master/control server systems."
+                },
+                {
+                    "field": "RegisteredMasterAddresses",
+                    "description": "Inventory of authorized station/master addresses for protocols using logical addressing distinct from IP."
+                },
+                {
+                    "field": "RogueMasterTimeWindow",
+                    "description": "Time window within which command traffic to multiple devices from a single unrecognized source is considered a coordinated rogue master event."
+                }
+            ]
+        }
+    ]
+}

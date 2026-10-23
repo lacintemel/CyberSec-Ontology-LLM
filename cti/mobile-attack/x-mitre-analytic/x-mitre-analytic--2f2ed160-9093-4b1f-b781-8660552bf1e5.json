@@ -1,0 +1,79 @@
+{
+    "type": "bundle",
+    "id": "bundle--ceb5f594-9733-4e42-ad4f-711fd547f676",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--2f2ed160-9093-4b1f-b781-8660552bf1e5",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0648#AN1729",
+                    "external_id": "AN1729"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.376Z",
+            "name": "Analytic 1729",
+            "description": "Correlates (1) application possession and use of location authorization sufficient for ongoing geographic evaluation, (2) repeated location or region-monitoring behavior with limited visible feature activation outside target area, and (3) abrupt onset of network communication, background execution, or feature activation only after a qualifying location context is reached. Because direct visibility into every geofence callback is often weaker on iOS, the defender relies more heavily on the combination of location authorization state, repeated location access, app state transition, and downstream behavior that begins after region alignment.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "iOS:MDMLog",
+                    "channel": "application authorized for when-in-use or always location access and, where relevant, background execution capability sufficient for continued geographic evaluation before later guarded behavior"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application exhibits repeated location-context evaluation followed by delayed privileged framework use or feature activation only after target region match"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window between location access, region qualification, and guarded activity"
+                },
+                {
+                    "field": "AuthorizationMode",
+                    "description": "Expected risk weighting for when-in-use versus always authorization and whether background behavior occurs under that mode"
+                },
+                {
+                    "field": "RegionMatchThreshold",
+                    "description": "Defines geospatial or dwell-time threshold used to infer region-based activation"
+                },
+                {
+                    "field": "DormancyThreshold",
+                    "description": "Duration of inactivity or suppressed behavior before location-qualified activation"
+                },
+                {
+                    "field": "ExpectedBackgroundModes",
+                    "description": "Baseline of apps legitimately using location-driven background execution or region monitoring"
+                },
+                {
+                    "field": "AllowedDestinationList",
+                    "description": "Expected destinations for apps whose network activity legitimately depends on user location"
+                },
+                {
+                    "field": "UserInteractionThreshold",
+                    "description": "Acceptable recency of user interaction before post-location activation is considered suspicious"
+                }
+            ]
+        }
+    ]
+}

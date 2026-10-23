@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d3842159-d602-404b-9d40-e1c3ca7b7ed3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--62890054-ce8d-479e-8331-eab58bed6ede",
+            "created": "2026-04-17T00:04:17.675Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA BRICKSTORM UNC5221 AR25-338A February 2026",
+                    "description": "DHS/CISA. (2026, February 11). AR25-338A: BRICKSTORM Backdoor. Retrieved April 16, 2026.",
+                    "url": "https://www.cisa.gov/news-events/analysis-reports/ar25-338a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.059Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has utilized XOR cipher encryption to hide key strings within their code, to include IPv4 addresses of public DNS-over-HTTPS (DOH) servers.(Citation: CISA BRICKSTORM UNC5221 AR25-338A February 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

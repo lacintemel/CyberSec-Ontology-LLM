@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--f712fed3-686f-4b89-9089-7f5f90a6422e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--eb204b76-676b-48c2-a6e4-d773eef16bdc",
+            "created": "2026-04-09T20:21:14.168Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Aikido Shai-Hulud September 2025",
+                    "description": "Charlie Eriksen. (2025, September 16). S1ngularity/nx attackers strike again. Retrieved April 9, 2026.",
+                    "url": "https://www.aikido.dev/blog/s1ngularity-nx-attackers-strike-again"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud Trufflehog September 2025",
+                    "description": "Socket Research Team. (2025, September 15). Popular Tinycolor npm Package Compromised in Supply Chain Attack Affecting 40+ Packages. Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/tinycolor-supply-chain-attack-affects-40-packages"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.245Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has leveraged captured valid NPM tokens to enumerate and update packages on compromised accounts.(Citation: Aikido Shai-Hulud September 2025)(Citation: Socket Shai-Hulud November 2025)(Citation: Socket Shai-Hulud Trufflehog September 2025) [Shai-Hulud](https://attack.mitre.org/software/S9008) has also utilized stolen GitHub access tokens to access compromised accounts.(Citation: Socket Shai-Hulud November 2025)(Citation: Socket Shai-Hulud Trufflehog September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--f005e783-57d4-4837-88ad-dbe7faee1c51",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

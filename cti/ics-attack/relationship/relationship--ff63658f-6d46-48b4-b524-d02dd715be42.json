@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fd0b48b9-9034-496e-b730-5c14455a1dd7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ff63658f-6d46-48b4-b524-d02dd715be42",
+            "created": "2026-09-26T04:58:54.550Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA-AA26-097A",
+                    "description": "Cybersecurity and Infrastructure Security Agency. (2026, July 22). Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure. Retrieved September 26, 2026.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T04:58:54.550Z",
+            "description": "During the [2026 Iranian Water Campaign](https://attack.mitre.org/campaigns/C0065), one victim reported actors leveraged Dropbear Secure Shell (SSH) software to enable remote access over port 22.(Citation: CISA-AA26-097A)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--a07a367a-146c-45a8-a830-d3d337b9befa",
+            "target_ref": "attack-pattern--e1f9cdd2-9511-4fca-90d7-f3e92cfdd0bf",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

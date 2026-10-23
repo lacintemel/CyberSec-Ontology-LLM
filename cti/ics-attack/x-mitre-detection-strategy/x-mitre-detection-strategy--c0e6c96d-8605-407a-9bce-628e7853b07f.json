@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--df22167e-6d37-4887-b0f4-bfb8afab0008",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--c0e6c96d-8605-407a-9bce-628e7853b07f",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0746",
+                    "external_id": "DET0746"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:51.861Z",
+            "name": "Detection of Spoof Reporting Message",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--32bfb2ab-2ad1-4c00-8428-96bc626c34f3",
+                "x-mitre-analytic--6e73b9c1-482d-44c7-b25b-e9b99764e987",
+                "x-mitre-analytic--dc472b4e-7b39-4bbb-810e-acbf9998a767",
+                "x-mitre-analytic--500aec57-cf41-4572-bdae-f08e185ebeec"
+            ]
+        }
+    ]
+}

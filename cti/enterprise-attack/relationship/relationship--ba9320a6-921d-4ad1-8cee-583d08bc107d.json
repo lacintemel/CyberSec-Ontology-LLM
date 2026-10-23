@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--4d2701f6-a21b-482d-8aed-5e8a374c32fc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ba9320a6-921d-4ad1-8cee-583d08bc107d",
+            "created": "2026-02-06T21:36:20.709Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_June2025",
+                    "description": "ThreatFabric. (2025, June 3). Crocodilus Mobile Malware: Evolving Fast, Going Global. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/crocodilus-mobile-malware-evolving-fast-going-global"
+                },
+                {
+                    "source_name": "ThreatFabric_Crocodilus_March2025",
+                    "description": "ThreatFabric. (2025, March 28). Exposing Crocodilus: New Device Takeover Malware Targeting Android Devices. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/exposing-crocodilus-new-device-takeover-malware-targeting-android-devices"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.179Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has stolen cryptocurrency wallet details from victim devices.(Citation: ThreatFabric_Crocodilus_March2025)(Citation: ThreatFabric_Crocodilus_June2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--851e071f-208d-4c79-adc6-5974c85c78f3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

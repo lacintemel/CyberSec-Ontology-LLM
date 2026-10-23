@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--22518a7a-e40a-4222-8e75-9b45a3c95db1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--631156f6-a414-4856-81b0-e4bd727e77ba",
+            "created": "2026-04-19T19:09:50.318Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:01.985Z",
+            "description": "[PHPsert](https://attack.mitre.org/software/S9028) has the ability to retrieve remote payloads.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9491a623-5861-4d0a-9958-8c05d0d17442",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

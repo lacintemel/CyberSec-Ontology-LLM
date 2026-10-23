@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--985556f0-bed0-462d-aecc-d4e25532ca51",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--04f6d882-3964-4d57-bc83-714b7cb4264d",
+            "created": "2026-10-07T20:09:00.282Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:09:00.282Z",
+            "description": "Use web application firewalls, bot-management controls, and application-layer traffic filtering to restrict automated access to protected resources. Apply filtering using request characteristics, client/session reputation, behavioral signals, rate limits, and validated client or bot identity. Block, rate-limit, or challenge traffic that violates established access policies.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--20f6a9df-37c4-4e20-9e47-025983b1b39d",
+            "target_ref": "attack-pattern--c5e8ef5d-e9b4-46b2-9dd8-afbb1c42090f",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

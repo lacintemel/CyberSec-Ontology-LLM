@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--6e31af81-1378-4f80-bc42-7e97642e1fda",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d462143c-69d1-44c9-b657-b64deb12eab8",
+            "created": "2026-04-22T16:05:26.631Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.216Z",
+            "description": "The encryption of firmware should be considered to prevent adversaries from identifying possible vulnerabilities within the firmware.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--9f99fcfd-772e-4e63-9d39-e45612e546dc",
+            "target_ref": "attack-pattern--7b4c0e19-a9b0-4a74-a196-b38c07b79f20",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

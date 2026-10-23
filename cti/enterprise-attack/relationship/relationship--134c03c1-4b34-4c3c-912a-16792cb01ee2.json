@@ -1,0 +1,31 @@
+{
+    "type": "bundle",
+    "id": "bundle--b16dab1a-3d20-42e0-837c-ab6264f243f6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--134c03c1-4b34-4c3c-912a-16792cb01ee2",
+            "created": "2026-09-23T21:30:49.189Z",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T21:30:49.189Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has leveraged `crontab` to launch the ransomware after a 60-second delay upon reboot using `echo '@reboot sleep 60 && /bin/.vmware-authd <original_argv>' | crontab - 2>/dev/null`.(Citation: CheckPointResearch_TheGentlemen_April2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--2acf44aa-542f-4366-b4eb-55ef5747759c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

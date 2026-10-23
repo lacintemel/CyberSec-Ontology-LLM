@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--39b227e8-f8ac-4542-9dca-0d8951a10b5c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cbb83538-3a5b-4dcc-a2df-b960dde3d36e",
+            "created": "2026-04-20T21:39:31.974Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.204Z",
+            "description": "[Fooder](https://attack.mitre.org/software/S9033) has used a custom delay function\u202f(`delayExecution(integer)`)\u202fand Sleep API calls\u202f(`Sleep(integer)`)\u202fto slow code\u202fexecution.(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7c8865dc-1bf9-49ce-b5f2-f15abde0909a",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

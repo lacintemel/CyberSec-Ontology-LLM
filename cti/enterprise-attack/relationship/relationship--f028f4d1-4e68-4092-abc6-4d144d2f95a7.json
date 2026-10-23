@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7a90b641-9b78-4ca0-8e14-31f95a30679d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f028f4d1-4e68-4092-abc6-4d144d2f95a7",
+            "created": "2026-04-21T12:54:36.445Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Splunk LAMEHUG SEP 2025",
+                    "description": "Conteras, T., Splunk Research Team. (2025, September 25). From Prompt to Payload: LAMEHUG\u2019s LLM-Driven Cyber Intrusion. Retrieved April 21, 2026.",
+                    "url": "https://www.splunk.com/en_us/blog/security/lamehug-ai-driven-malware-llm-cyber-intrusion-analysis.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.252Z",
+            "description": "[LAMEHUG](https://attack.mitre.org/software/S9035) can xcopy for file collection on targeted systems.(Citation: Splunk LAMEHUG SEP 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--c55e0410-842d-4365-a2c8-26c0330f85b8",
+            "target_ref": "attack-pattern--00f90846-cbd1-4fc5-9233-df5c2bf2a662",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

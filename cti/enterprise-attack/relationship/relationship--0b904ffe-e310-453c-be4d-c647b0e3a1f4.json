@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--503be7e8-4009-4a4f-af22-7b062c00f456",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0b904ffe-e310-453c-be4d-c647b0e3a1f4",
+            "created": "2026-04-20T18:49:57.751Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "DOJ FBI Handala Hack March 2026",
+                    "description": "DOJ/FBI. (2026, March 19). Case 1:26-mj-00683-CDA: Affidavit in Support of Seizure Warrant: In the Matter of the Seizure of Domain Names Justicehomeland[.]org; karmabelow80[.]org; handala-hack[.]to; and handala-redwatned[.]to. Retrieved April 20, 2026.",
+                    "url": "https://www.justice.gov/opa/media/1431956/dl?inline"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.216Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has utilized a disk wiping utility to facilitate destructive actions on victim servers.(Citation: DOJ FBI Handala Hack March 2026) [VOID MANTICORE](https://attack.mitre.org/groups/G1055) has also utilized legitimate remote disk wiping commands.(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--fb640c43-aa6b-431e-a961-a279010424ac",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

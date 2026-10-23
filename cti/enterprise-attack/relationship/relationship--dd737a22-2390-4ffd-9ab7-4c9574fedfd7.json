@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--a497817a-4344-41c1-8379-7d4078fcd18e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dd737a22-2390-4ffd-9ab7-4c9574fedfd7",
+            "created": "2026-04-22T22:22:52.447Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                },
+                {
+                    "source_name": "ESET DynoWiper Update JAN 2026",
+                    "description": "ESET. (2026, January 30). DynoWiper update: Technical analysis and attribution. Retrieved April 22, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/dynowiper-update-technical-analysis-attribution/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.227Z",
+            "description": "[DynoWiper](https://attack.mitre.org/software/S9038) has utilized a five-second delay using `Sleep(5000)` between two of the three phases of the attack that involves file overwriting, file deletion, and system reboot.(Citation: CERT Polska)(Citation: ESET DynoWiper Update JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--34057cb6-0a56-48a3-92e5-3af1357808da",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

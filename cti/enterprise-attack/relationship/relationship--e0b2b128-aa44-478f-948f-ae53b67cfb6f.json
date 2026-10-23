@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--57d380ad-ef73-482c-897a-b7df7d89d011",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e0b2b128-aa44-478f-948f-ae53b67cfb6f",
+            "created": "2020-10-15T16:47:27.531Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.231Z",
+            "description": "Make sure that the <code>HISTCONTROL</code> environment variable is set to \u201cignoredups\u201d instead of \u201cignoreboth\u201d or \u201cignorespace\u201d.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--2f316f6c-ae42-44fe-adf8-150989e0f6d3",
+            "target_ref": "attack-pattern--b831f51c-d22f-4724-bbab-60d056bd1150",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "type": "bundle",
+    "id": "bundle--2abbf615-8342-40f9-bde3-a478f79b0ded",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--32db74f9-d46d-4728-891a-113a8b8e2b07",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0782#AN1914",
+                    "external_id": "AN1914"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:20.792Z",
+            "name": "Analytic 1914",
+            "description": "Real-time monitoring identifies a browser process on an Industrial Control System (ICS) workstation spawning an unexpected child process immediately following navigation to an external website, particularly a vendor support or software-download site. Documented Havex precedent: adversaries compromised legitimate ICS vendor websites to serve trojanized software downloads. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "webproxy:applog",
+                    "channel": "file download from domain not matching verified vendor Transport Layer Security (TLS) certificate/domain history, immediately preceding the anomalous process spawn"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 where a browser process spawns cmd.exe, powershell.exe, wscript.exe, or another executable outside the approved browser-child baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ICSWorkstationInventory",
+                    "description": "Inventory of ICS engineering/operator workstations from which routine vendor software downloads occur."
+                }
+            ]
+        }
+    ]
+}

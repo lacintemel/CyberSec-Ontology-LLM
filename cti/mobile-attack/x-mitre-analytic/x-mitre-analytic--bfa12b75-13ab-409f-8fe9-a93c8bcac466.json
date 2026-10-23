@@ -1,0 +1,98 @@
+{
+    "type": "bundle",
+    "id": "bundle--76229192-e623-459c-8874-92cf06593fa5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--bfa12b75-13ab-409f-8fe9-a93c8bcac466",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0670#AN1767",
+                    "external_id": "AN1767"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:41.644Z",
+            "name": "Analytic 1767",
+            "description": "For Android, detect Archive Collected Data from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; File Creation via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: App reads files across multiple directories or databases in background state (collection phase) then invokes archive or compression routines on collected content \u2014 read-then-archive sequence is the staging chain]; File Creation via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes archive-like container, high-entropy packaged blob, or .zip/.gz output to app-private or cache path after bulk data collection \u2014 archive artifact in private storage is the staging evidence]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App reads files across multiple directories or databases in background state (collection phase) then invokes archive or compression routines on collected content \u2014 read-then-archive sequence is the staging chain"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App writes archive-like container, high-entropy packaged blob, or .zip/.gz output to app-private or cache path after bulk data collection \u2014 archive artifact in private storage is the staging evidence"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App invokes ZIP, GZIP, or bulk-buffer packaging routines (ZipOutputStream, DeflaterOutputStream, similar) on previously accessed local data in background state"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App applies encryption to newly created archive or staged data blob before network transmission \u2014 encrypt-after-archive confirms adversary-controlled packing for exfil"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window between data access, package creation, encryption, and optional network upload"
+                },
+                {
+                    "field": "AllowedAppList",
+                    "description": "Apps legitimately expected to package local data such as backup, cloud sync, file manager, or media editing apps"
+                },
+                {
+                    "field": "AllowedPathList",
+                    "description": "Expected storage paths for legitimate archives, exports, or caches"
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Whether packaging/export behavior should occur only during active user-driven workflows"
+                },
+                {
+                    "field": "BurstReadThreshold",
+                    "description": "Number of files or records read in a short interval before archive creation"
+                },
+                {
+                    "field": "ArchiveSizeThreshold",
+                    "description": "Minimum output size for suspicious packaged blob or archive"
+                },
+                {
+                    "field": "EntropyThreshold",
+                    "description": "Threshold for identifying encrypted or heavily compressed output"
+                },
+                {
+                    "field": "UplinkBytesThreshold",
+                    "description": "Minimum upload size consistent with recent archive creation"
+                }
+            ]
+        }
+    ]
+}

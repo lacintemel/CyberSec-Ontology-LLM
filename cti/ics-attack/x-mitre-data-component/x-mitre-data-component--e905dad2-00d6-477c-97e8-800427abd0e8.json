@@ -1,0 +1,170 @@
+{
+    "type": "bundle",
+    "id": "bundle--d64c7984-6606-40cd-9098-3d77f43c150f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--e905dad2-00d6-477c-97e8-800427abd0e8",
+            "created": "2021-10-20T15:05:19.273Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0040",
+                    "external_id": "DC0040"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:44.580Z",
+            "name": "File Deletion",
+            "description": "Refers to events where files are removed from a system or storage device. These events can indicate legitimate housekeeping activities or malicious actions such as attackers attempting to cover their tracks. Monitoring file deletions helps organizations identify unauthorized or suspicious activities.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "enterprise-attack",
+                "mobile-attack"
+            ],
+            "x_mitre_version": "3.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "File",
+                    "channel": "None"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "unlink/unlinkat on service binaries or data targets"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "file deletion"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "esxi:shell",
+                    "channel": "shell history"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=23"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "PATH"
+                },
+                {
+                    "name": "esxi:shell",
+                    "channel": "/var/log/shell.log"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "delete action"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "unlink, unlinkat, openat, write"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "exec rm -rf|dd if=/dev|srm|file unlink"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "unlink, unlinkat, rmdir"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "unlink, rename, open"
+                },
+                {
+                    "name": "linux:Sysmon",
+                    "channel": "EventCode=23"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "unlink, fs_delete"
+                },
+                {
+                    "name": "docker:daemon",
+                    "channel": "container file operations"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "rm, clearlogs, logrotate"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "Datastore file operations"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "CREATE, DELETE, WRITE: Stored data manipulation attempts by unauthorized processes"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "unlink/unlinkat"
+                },
+                {
+                    "name": "WinEventLog:Microsoft-Windows-Backup",
+                    "channel": "Windows Backup Catalog deletion or catalog corruption"
+                },
+                {
+                    "name": "auditd:CONFIG_CHANGE",
+                    "channel": "/etc/fstab, /etc/systemd/*"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application deletes, alters, renames, relocates, or suppresses local artifacts relevant to detection, including files, hidden media, compromise markers, or app-local evidence, before later continued execution or transfer"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application deletes package files, cleanup artifacts, or app-local state immediately before disappearance from installed inventory or runtime"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application deletes, truncates, or removes user, operational, or evidence-bearing files after prior access or staging and before later continued execution or communication"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App deletes, truncates, or removes files that were recently written by the same app (collected data, staged exfil artifacts, operation logs) within $PostExfilCleanupWindow$ of network upload event \u2014 post-exfil cleanup chain"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App deletes package files or local state immediately before package inventory disappearance \u2014 pre-removal evidence cleanup"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: unlink() or rmdir() on path IN /data/data/ OR /data/user/ OR /sdcard/ by process NOT IN $MDMAgentPackageList$ at rate > $DeletionRateThreshold$ within $DestructionWindow$"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: truncate/shred/rm on Industrial Control Systems (ICS) application log files or auth.log by User Identifier (UID) not in authorized log admin UIDs"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: rm/shred/dd operations across multiple Industrial Control Systems (ICS) data directories exceeding bulk deletion threshold, by User Identifier (UID) not in authorized data management UIDs"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=23 across multiple Industrial Control Systems (ICS) data directories exceeding bulk deletion threshold within data destruction time window, by process not in authorized data management tools"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=23 or wevtutil/Clear-EventLog invocation deleting Industrial Control Systems (ICS) vendor application log file by process not in authorized log management tools"
+                },
+                {
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=104 outside scheduled log rotation window"
+                }
+            ]
+        }
+    ]
+}

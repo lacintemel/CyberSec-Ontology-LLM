@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--869a1286-ac3c-401d-8be9-713494c7153b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c97ef137-79d7-4e87-ba15-f719724eb15b",
+            "created": "2026-04-21T14:40:08.072Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SecureListUbiedo_Tsundere_Nov2025",
+                    "description": "Ubiedo, L. (2025, November 20). Blockchain and Node.js abused by Tsundere: an emerging botnet. Retrieved April 6, 2026.",
+                    "url": "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.201Z",
+            "description": "[Tsundere Botnet](https://attack.mitre.org/software/S9034) has collected the machine\u2019s MAC address, total memory, GPU information and other system information.(Citation: SecureListUbiedo_Tsundere_Nov2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--18f5f8c6-bba5-4aba-93e7-3539fe565883",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

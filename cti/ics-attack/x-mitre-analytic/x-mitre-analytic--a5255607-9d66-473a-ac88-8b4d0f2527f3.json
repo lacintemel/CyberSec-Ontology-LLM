@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--1b27aab7-2987-47ac-a31d-560e55f836e9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a5255607-9d66-473a-ac88-8b4d0f2527f3",
+            "created": "2026-09-25T19:29:31.248Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0931#AN2088",
+                    "external_id": "AN2088"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:26:54.586Z",
+            "name": "Analytic 2088",
+            "description": "Real-time monitoring identifies sh/bash/ash/zsh/BusyBox execution from an unexpected parent, unauthorized account, remote session, or non-approved script path, particularly when followed by OT-relevant network discovery, persistence, file modification, or communications. Alert only when the interpreter/shell is not expected for the asset role or user/service context, or when its parent, path, arguments, remote-session source, or follow-on behavior violates the approved OT baseline. Suppress approved engineering scripts, vendor support, diagnostics, backup, patching, and maintenance windows. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve for shell/interpreter and child commands "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "linux:syslog",
+                    "channel": "auth.log/secure.log; SSH or console session context "
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ShellExecutable",
+                    "description": "Approved shell paths and BusyBox use"
+                },
+                {
+                    "field": "ParentProcess",
+                    "description": "Expected service/vendor parents"
+                },
+                {
+                    "field": "UserContext",
+                    "description": "Authorized users and service accounts"
+                },
+                {
+                    "field": "RemoteSource",
+                    "description": "Approved jump hosts and management subnets "
+                },
+                {
+                    "field": "CommandLinePattern",
+                    "description": "High-risk shell commands and ICS-relevant follow-on activity "
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--e1d59954-a3aa-4cbe-a9d0-3dc9178f3712",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a0774b4b-493d-4025-bf19-b94280371478",
+            "created": "2026-10-13T17:45:32.099Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0727#AN2169",
+                    "external_id": "AN2169"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:32.099Z",
+            "name": "Analytic 2169",
+            "description": "Real-time monitoring identifies NetFlow showing a host generating an anomalously high volume of short-duration flows to multiple field device IPs at regular intervals, from a source not in the approved Supervisory Control and Data Acquisition (SCADA) server list. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): source not in approved Supervisory Control and Data Acquisition (SCADA) servers generating high volume of short-duration flows to device subnet at regular intervals"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedOPCClients",
+                    "description": "Allowlist of OPC client application identities authorized to connect."
+                },
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate SCADA/HMI/historian servers authorized to poll field devices."
+                },
+                {
+                    "field": "BaselinePollRate",
+                    "description": "Measured normal polling frequency per device, derived from actual baseline traffic capture."
+                },
+                {
+                    "field": "KnownTagAddressRanges",
+                    "description": "Documented register/tag address ranges that legitimate SCADA polling actually queries."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

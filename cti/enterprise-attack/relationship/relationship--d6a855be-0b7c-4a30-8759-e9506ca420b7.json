@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--74971bcf-2a98-431a-87e4-fff87913e570",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d6a855be-0b7c-4a30-8759-e9506ca420b7",
+            "created": "2026-04-17T18:57:45.410Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "JPCERT MirrorFace JUL 2024",
+                    "description": "Tomonaga, S. (2024, July 16). MirrorFace Attack against Japanese Organisations. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.219Z",
+            "description": "[NOOPLDR](https://attack.mitre.org/software/S9025) can hide services used to aid execution.(Citation: JPCERT MirrorFace JUL 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--66637cd6-ae68-4bcd-af82-32f70a854175",
+            "target_ref": "attack-pattern--22905430-4901-4c2a-84f6-98243cb173f8",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

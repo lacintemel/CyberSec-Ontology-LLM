@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--e4f04a47-89b4-4f7a-89f1-5b035a106bcc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--6aa4bc38-0713-4d40-ad0b-949d912da852",
+            "created": "2026-09-22T00:10:37.783Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1685/007",
+                    "external_id": "T1685.007"
+                },
+                {
+                    "source_name": "Shai-Hulud May 2026",
+                    "description": "Moshe Siman Tov Bustan. (2026, May 12). Shai-Hulud Goes Open Source: Malware Creators Leak Their Own Code to GitHub. Retrieved September 21, 2026.",
+                    "url": "https://www.ox.security/blog/shai-hulud-open-source-malware-github/"
+                },
+                {
+                    "source_name": "MacOS.Gaslight Prompt Injection",
+                    "description": "Phil Stokes. (2026, June 23). macOS.Gaslight | Rust Backdoor Turns Prompt Injection on the Analyst, Not the Sandbox. Retrieved September 21, 2026.",
+                    "url": "https://www.sentinelone.com/labs/macos-gaslight-rust-backdoor-turns-prompt-injection-on-the-analyst-not-the-sandbox/"
+                },
+                {
+                    "source_name": "Gaslight AI triage prompt injection",
+                    "description": "Rogue Security Research. (2026, June 29). Gaslight's prompt injection against malware analysis. Retrieved September 21, 2026.",
+                    "url": "https://www.rogue.security/blog/gaslight-malware-ai-triage-prompt-injection"
+                },
+                {
+                    "source_name": "Prompt Injection LLM-Powered SOC Assistants",
+                    "description": "Tayyeb Nadeem Somro, Bilal Arshad, Dr. Ammara Gul. (2026, June 26). LLM-Powered SOC Assistants: Prompt Injection Risks in Threat Triage. Retrieved September 21, 2026.",
+                    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7179658"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T03:30:57.025Z",
+            "name": "Impair Autonomous Defenses",
+            "description": "Adversaries may use methods like [Indirect Prompt Injection](https://attack.mitre.org/techniques/T1698) to disrupt, disable, or otherwise impair autonomous defensive capabilities such as LLM-assisted processing of malware, artifacts, or activity.(Citation: Prompt Injection LLM-Powered SOC Assistants) This behavior may cause a system to ignore data, fail to alert on malicious activity, abort analysis, or to be disabled completely. \n\nAdversaries may include content in malware implants that mimic an LLM prompt scaffold that contains fake system messages in order to convince the LLM that it has encountered an error.(Citation: MacOS.Gaslight Prompt Injection)(Citation: Gaslight AI triage prompt injection) Depending on the type of error, the LLM may abort analysis, truncate, or refuse to continue. Adversaries may also embed prompts in malware intended to stop agents or systems from analyzing the malware.(Citation: Shai-Hulud May 2026) ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-impairment"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Vijay Lalwani"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Windows",
+                "SaaS"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

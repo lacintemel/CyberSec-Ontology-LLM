@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--a639a3dd-05d9-4369-ae44-0df84bf74d0a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--e2c3189b-34cf-4160-bc9f-2dcf4df451c6",
+            "created": "2026-04-23T14:59:37.388Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0919",
+                    "external_id": "DET0919"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:39.378Z",
+            "name": "Detection of Query Public AI Services",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--255379f1-e115-4f3c-835a-23c8d279847e"
+            ]
+        }
+    ]
+}

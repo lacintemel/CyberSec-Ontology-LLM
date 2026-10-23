@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b4474ccf-609e-4c48-be76-401e9dcb597c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--81cf1179-d422-44fd-9d3d-fadcc8ed2329",
+            "created": "2026-04-20T18:36:56.372Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Check Point VOID MANTICORE Handala Hack March 2026",
+                    "description": "Check Point Research. (2026, March 12). \u201cHandala Hack\u201d \u2013 Unveiling Group\u2019s Modus Operandi. Retrieved April 20, 2026.",
+                    "url": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.697Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) had exported credentials from registry hives to include those stored in HKLM.(Citation: Check Point VOID MANTICORE Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--341e222a-a6e3-4f6f-b69c-831d792b1580",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

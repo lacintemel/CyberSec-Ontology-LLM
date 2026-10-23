@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--c32e8510-ac85-470f-9318-3d28073a825f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f45c158a-7086-4172-9fe4-1684e0ca34ee",
+            "created": "2026-10-13T17:45:50.059Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0780#AN2185",
+                    "external_id": "AN2185"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:50.059Z",
+            "name": "Analytic 2185",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) network device telemetry gaps -- Simple Network Management Protocol (SNMP) polling returning inconsistent results, syslog sequence gaps -- suggesting kernel-level manipulation of device-reported state. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:snmp",
+                    "channel": "Simple Network Management Protocol (SNMP) polling inconsistency or syslog sequence gap suggesting telemetry manipulation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "FirmwareIntegrityScanSchedule",
+                    "description": "Frequency of out-of-band firmware integrity verification."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

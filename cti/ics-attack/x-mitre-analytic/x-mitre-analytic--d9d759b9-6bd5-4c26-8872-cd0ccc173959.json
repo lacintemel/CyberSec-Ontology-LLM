@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--606503a1-1826-475d-a599-0e6f4b8b082a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d9d759b9-6bd5-4c26-8872-cd0ccc173959",
+            "created": "2026-09-25T21:34:56.341Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0933#AN2094",
+                    "external_id": "AN2094"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T01:47:44.692Z",
+            "name": "Analytic 2094",
+            "description": "Real-time monitoring identifies python.exe/py.exe or packaged Python runtimes launched from unexpected parents or locations, by unauthorized identities, or followed by communications to protected OT assets, system modification, or child interpreters. Alert only when the interpreter is not part of the asset's approved software/automation baseline or its execution context violates an approved signer/hash/path/parent/user rule, and require OT-relevant corroboration such as access to engineering files, ICS software/API use, communications with protected OT assets, configuration change, or another suspicious follow-on behavior. Suppress documented vendor software, engineering workflows, diagnostics, backup, patching, and approved maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1; Python interpreter/script execution and lineage"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=3; Python-originated connection to OT or external destination"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedPythonInstallations",
+                    "description": "Approved interpreter paths/hashes and embedded vendor runtimes"
+                },
+                {
+                    "field": "ScriptPath",
+                    "description": "Approved automation repositories versus temp/user-writable paths"
+                },
+                {
+                    "field": "ParentProcess",
+                    "description": "Expected vendor/engineering parents"
+                },
+                {
+                    "field": "UserContext",
+                    "description": "Authorized automation/service accounts"
+                },
+                {
+                    "field": "ApprovedDestinations",
+                    "description": "OT and external destinations Python may legitimately access"
+                }
+            ]
+        }
+    ]
+}

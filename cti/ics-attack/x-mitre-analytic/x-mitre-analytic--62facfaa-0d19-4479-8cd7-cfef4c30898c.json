@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--85aab802-cdda-44e8-bf34-8486544fdd29",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--62facfaa-0d19-4479-8cd7-cfef4c30898c",
+            "created": "2026-10-13T17:45:08.047Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0799#AN2155",
+                    "external_id": "AN2155"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:08.047Z",
+            "name": "Analytic 2155",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) Linux service processes initiating outbound application-layer protocol connections to ports/destinations outside the approved communication matrix. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): connect syscall from an ICS service/application process to a destination outside the approved network or vendor-service baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedVendorDomains",
+                    "description": "Allowlist of legitimate vendor/business domains for application-layer protocol traffic."
+                },
+                {
+                    "field": "NoExternalConnectivityRoleList",
+                    "description": "Inventory of ICS hosts whose role does not require external application-layer connectivity."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

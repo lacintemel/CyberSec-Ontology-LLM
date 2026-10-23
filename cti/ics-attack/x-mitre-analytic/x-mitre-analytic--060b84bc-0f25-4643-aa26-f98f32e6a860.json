@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--5cd25c5f-cd51-4508-9ec3-ead0edabdb11",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--060b84bc-0f25-4643-aa26-f98f32e6a860",
+            "created": "2026-10-13T17:45:12.847Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0804#AN2159",
+                    "external_id": "AN2159"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:12.847Z",
+            "name": "Analytic 2159",
+            "description": "Real-time monitoring identifies SSH lateral movement between Industrial Control System (ICS) Linux hosts not in the documented communication matrix, with subsequent ICS tool execution or privilege escalation. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): Industrial Control Systems (ICS) tool execution following Secure Shell (SSH) lateral movement session"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "syslog:auth",
+                    "channel": "Secure Shell (SSH) session between Industrial Control Systems (ICS) hosts not in approved lateral movement pairs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedCommunicationMatrix",
+                    "description": "Comprehensive matrix of expected inter-host communication on remote service ports."
+                },
+                {
+                    "field": "ApprovedLateralMovementPairs",
+                    "description": "Documented, approved host-to-host remote access pairs within the ICS network."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

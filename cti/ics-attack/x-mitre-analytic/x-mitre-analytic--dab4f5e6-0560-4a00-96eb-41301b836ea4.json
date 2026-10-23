@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--92d4ab80-eee8-47db-920b-8257ac1f9426",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--dab4f5e6-0560-4a00-96eb-41301b836ea4",
+            "created": "2026-09-26T03:21:18.721Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0935#AN2102",
+                    "external_id": "AN2102"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T13:21:11.422Z",
+            "name": "Analytic 2102",
+            "description": "Real-time monitoring identifies MQTT/AMQP/DDS sessions crossing an unexpected zone boundary, connecting an ICS client to an unapproved broker/service, or using client/topic/message behavior inconsistent with the documented pub/sub architecture. Require topology/identity/topic/destination violation; periodicity alone is not sufficient.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "Protocol identification; MQTT CONNECT/SUBSCRIBE/PUBLISH, AMQP/DDS metadata where parsable"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "Source/destination/port/session metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "NetworkDevice:Syslog",
+                    "channel": "Permitted/denied connection creation where network devices record it"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedBrokers",
+                    "description": "Broker IP/FQDN/service inventory"
+                },
+                {
+                    "field": "ApprovedClientIDs",
+                    "description": "Expected MQTT/AMQP client identities where observable"
+                },
+                {
+                    "field": "ApprovedTopics",
+                    "description": "Expected publish/subscribe topic namespaces"
+                },
+                {
+                    "field": "ApprovedCommunicationMatrix",
+                    "description": "Allowed zone/client/broker relationships"
+                },
+                {
+                    "field": "TLSProfile",
+                    "description": "Expected encrypted/unencrypted protocol use and certificate identities"
+                }
+            ]
+        }
+    ]
+}

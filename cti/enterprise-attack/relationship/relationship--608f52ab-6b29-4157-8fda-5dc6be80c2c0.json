@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--33061def-926e-4945-bec5-86e2d50c140a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--608f52ab-6b29-4157-8fda-5dc6be80c2c0",
+            "created": "2026-04-20T18:09:10.220Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:00.098Z",
+            "description": "[MuddyViper](https://attack.mitre.org/software/S9032) has used HTTP GET requests over port 443 and with the WINHTTP_FLAG_SECURE set to SSL/TLS via the WinHTTP API.(Citation: ESET_MuddyWater_Dec2025)\u202f\u202f\u202f\u202f ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7b92e996-b535-4159-be16-3c3aee4edf54",
+            "target_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--dcf7bdf0-dc5b-4826-8442-2353f1c41875",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--98d7d238-3473-4e3c-adc0-3c8d33341466",
+            "created": "2026-04-23T00:26:22.850Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.134Z",
+            "description": "ll field controllers should restrict the download of programs, including online edits and program appends, to only certain users (e.g., engineers, field technician), preferably through implementing a role-based access mechanism.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--e0d38502-decb-481d-ad8b-b8f0a0c330bd",
+            "target_ref": "attack-pattern--574d5bfb-9a7a-4b28-ab5c-743ac704c135",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

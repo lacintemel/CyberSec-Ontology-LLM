@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--24d23201-a390-4f74-8a37-b8a40337b622",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--881abd90-78d3-4f25-ab87-e7e8b031c98d",
+            "created": "2026-09-25T18:35:12.134Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Dragos",
+                    "description": "Dragos   Allanite Retrieved. 2019/10/27 ",
+                    "url": "https://dragos.com/resource/allanite/"
+                },
+                {
+                    "source_name": "Symantec March 2019",
+                    "description": "Symantec 2019, March 27 Elfin: Relentless Espionage Group Targets Multiple Organizations in Saudi Arabia and U.S. Retrieved. 2019/12/02 ",
+                    "url": "https://www.symantec.com/blogs/threat-intelligence/elfin-apt33-espionage"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T18:35:12.134Z",
+            "description": "[APT33](https://attack.mitre.org/groups/G0064) utilized PowerShell scripts to establish command and control and install files for execution. (Citation: Symantec March 2019) (Citation: Dragos)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--fbd29c89-18ba-4c2d-b792-51c0adee049f",
+            "target_ref": "attack-pattern--e3496d05-0826-4187-a993-80f29aa5a40a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

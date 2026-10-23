@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6d1390ec-4f04-49d1-9f48-14849b1cbcd1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--59685dcb-3076-4171-b43f-0ddca6555dc0",
+            "created": "2026-04-23T14:30:09.007Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Wylie-22",
+                    "description": "Jimmy Wylie. (2022, August). Analyzing PIPEDREAM: Challenges in Testing an ICS Attack Toolkit. Defcon 30.",
+                    "url": "https://media.defcon.org/DEF%20CON%2030/DEF%20CON%2030%20presentations/Jimmy%20Wylie%20-%20Analyzing%20PIPEDREAM%20Challenges%20in%20testing%20an%20ICS%20attack%20toolkit.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.047Z",
+            "description": "[INCONTROLLER](https://attack.mitre.org/software/S1045) can modified program logic on Omron PLCs using either the program download or backup transfer functions available through the HTTP server.(Citation: Wylie-22) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--d3aa1058-b1b3-4c29-a3ba-9a9b90ccd93b",
+            "target_ref": "attack-pattern--77015a55-eef8-4f71-a071-b152f82ec1ef",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

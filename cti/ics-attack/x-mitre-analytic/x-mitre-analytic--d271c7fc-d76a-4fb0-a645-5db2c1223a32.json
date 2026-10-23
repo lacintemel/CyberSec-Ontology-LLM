@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--5115f385-b647-4e2c-a974-27abe36b5187",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d271c7fc-d76a-4fb0-a645-5db2c1223a32",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0799#AN1931",
+                    "external_id": "AN1931"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:22.783Z",
+            "name": "Analytic 1931",
+            "description": "Real-time monitoring identifies Domain Name System (DNS) queries from Industrial Control System (ICS) host Internet Protocol (IP) addresses to external resolvers for domains not associated with any approved ICS vendor, particularly domains exhibiting Domain Generation Algorithm (DGA)-like patterns. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "dns:querylog",
+                    "channel": "Domain Name System (DNS) query from Industrial Control Systems (ICS) host to domain not in approved vendor domains, particularly domains exhibiting Domain Generation Algorithm (DGA)-like patterns"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedVendorDomains",
+                    "description": "Allowlist of legitimate vendor/business domains for application-layer protocol traffic."
+                },
+                {
+                    "field": "NoExternalConnectivityRoleList",
+                    "description": "Inventory of ICS hosts whose role does not require external application-layer connectivity."
+                }
+            ]
+        }
+    ]
+}

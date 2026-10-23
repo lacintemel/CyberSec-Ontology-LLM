@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--8b8e4551-cb3e-441d-8f97-746018da6c66",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--216bc52c-8353-4943-8a05-631abd091fe5",
+            "created": "2026-09-22T15:07:01.066Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                },
+                {
+                    "source_name": "Sophos_TheGentlemen_Sept2026",
+                    "description": "Sophos Counter Threat Unit Research Team. (2026, September 1). Ungentlemanly behavior: Insights into a ransomware operation. Retrieved September 18, 2026.",
+                    "url": "https://www.sophos.com/en-gb/blog/ungentlemanly-behavior-insights-into-a-ransomware-operation"
+                },
+                {
+                    "source_name": "Sou\u010dekESET_Gentlemen_Jun2026",
+                    "description": "Sou\u010dek, J. (2026, June 18). Killing me gently: Inside Gentlemen\u2019s EDR killer framework. Retrieved September 18, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T18:54:00.526Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has maintained a TOR Data Leak Site (DLS) to post stolen victim data.(Citation: Sophos_TheGentlemen_Sept2026)(Citation: Sou\u010dekESET_Gentlemen_Jun2026)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: TrendAI_TheGentlemen_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--40f5caa0-4cb7-4117-89fc-d421bb493df3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

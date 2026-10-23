@@ -1,0 +1,67 @@
+{
+    "type": "bundle",
+    "id": "bundle--d65aa341-3761-480b-8b65-fa2a6eb70f26",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6b3b3e92-bef7-4977-9895-29036bab29f1",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0765#AN1897",
+                    "external_id": "AN1897"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:46.090Z",
+            "name": "Analytic 1897",
+            "description": "Real-time monitoring identifies a service control command targeting a critical Industrial Control System (ICS) services such as Open Platform Communications (OPC) server, historian, Supervisory Control and Data Acquisition (SCADA) polling from an account not in the authorized service administration role, without a preceding change-control ticket, immediately followed by the service transitioning to Stopped state. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 sc.exe/net.exe invocation targeting a critical ICS service from an account outside the authorized service-administration set"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--74fa567d-bc90-425c-8a41-3c703abb221c",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=7036 critical Industrial Control Systems (ICS) service transitions to Stopped without preceding change ticket reference"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedServiceAdmins",
+                    "description": "Accounts authorized to stop/start critical ICS services."
+                },
+                {
+                    "field": "BulkRestartTimeWindow",
+                    "description": "Time window within which multiple device restarts are considered a coordinated event."
+                },
+                {
+                    "field": "CriticalICSServiceList",
+                    "description": "List of Windows services whose stoppage constitutes a high-impact event."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue device restart commands."
+                }
+            ]
+        }
+    ]
+}

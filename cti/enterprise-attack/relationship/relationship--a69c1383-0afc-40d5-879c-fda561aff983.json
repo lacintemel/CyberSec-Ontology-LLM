@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--f219a86b-c9d5-476b-b8ee-c70edad206b0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a69c1383-0afc-40d5-879c-fda561aff983",
+            "created": "2020-03-29T20:35:36.808Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.152Z",
+            "description": "Proactively reset accounts that are known to be part of breached credentials either immediately, or after detecting bruteforce attempts.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--93e7968a-9074-4eac-8ae9-9f5200ec3317",
+            "target_ref": "attack-pattern--b2d03cea-aec1-45ca-9744-9ee583c1e1cc",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

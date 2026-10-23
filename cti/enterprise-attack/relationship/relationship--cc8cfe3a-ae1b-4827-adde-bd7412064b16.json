@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e6b35d90-782e-4ed4-a306-f89649300d2f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cc8cfe3a-ae1b-4827-adde-bd7412064b16",
+            "created": "2024-09-16T08:57:23.230Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google Cloud APT41 2024",
+                    "description": "Mike Stokkel et al. (2024, July 18). APT41 Has Arisen From the DUST. Retrieved September 16, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/apt41-arisen-from-dust"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.205Z",
+            "description": "[DUSTTRAP](https://attack.mitre.org/software/S1159) can delete infected system log information.(Citation: Google Cloud APT41 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--33139388-de0c-49ff-862a-041c315b142d",
+            "target_ref": "attack-pattern--75b9a4d2-d4e2-4ca1-9aab-1badd9e05fd0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

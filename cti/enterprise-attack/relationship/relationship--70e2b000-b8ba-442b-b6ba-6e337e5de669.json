@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--11426733-71d4-40b7-b8c3-8e239559238e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--70e2b000-b8ba-442b-b6ba-6e337e5de669",
+            "created": "2026-09-26T03:57:01.658Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Claroty-IOCONTROL",
+                    "description": "Claroty Team82. (2024, December 10). Inside a New OT/IoT Cyberweapon: IOCONTROL. Retrieved September 2, 2026.",
+                    "url": "https://claroty.com/team82/research/inside-a-new-ot-iot-cyber-weapon-iocontrol"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:57:01.658Z",
+            "description": "IOCONTROL has removed malware persistence from a system upon command. (Citation: Claroty-IOCONTROL)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bcd0f2cd-0b21-4109-8310-8a90be320514",
+            "target_ref": "attack-pattern--d2c4e5ea-dbdf-4113-805a-b1e2a337fb33",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

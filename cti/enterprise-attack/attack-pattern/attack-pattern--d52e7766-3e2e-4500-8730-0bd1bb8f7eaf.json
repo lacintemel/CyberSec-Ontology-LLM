@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--e8fa20db-d3d5-4142-afa9-08e8505e7ecd",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--d52e7766-3e2e-4500-8730-0bd1bb8f7eaf",
+            "created": "2026-09-21T19:15:18.350Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1696/002",
+                    "external_id": "T1696.002"
+                },
+                {
+                    "source_name": "Sentinel CAPTCHA Bypass",
+                    "description": "Alex Delamotte & Jim Walter. (2025, April 9). AkiraBot | AI-Powered Bot Bypasses CAPTCHAs, Spams Websites At Scale. Retrieved October 6, 2026.",
+                    "url": "https://www.sentinelone.com/labs/akirabot-ai-powered-bot-bypasses-captchas-spams-websites-at-scale/"
+                },
+                {
+                    "source_name": "CAPTCHA Bypass Olostep",
+                    "description": "Arslan. (2026, March 20). How to Bypass CAPTCHA Without Breaking Your Scraper. Retrieved October 6, 2026.",
+                    "url": "https://www.olostep.com/blog/how-to-bypass-captcha"
+                },
+                {
+                    "source_name": "CAPTCHAS Cloudflare",
+                    "description": "Cloudflare. (n.d.). How CAPTCHAs work | What does CAPTCHA mean?. Retrieved September 16, 2026.",
+                    "url": "https://www.cloudflare.com/learning/bots/how-captchas-work/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-12T19:59:30.798Z",
+            "name": "Avoid CAPTCHA",
+            "description": "Adversaries may avoid CAPTCHA challenges by mimicking human behavior. Automation tests, such as CAPTCHA, are typically used by defenders to detect and prevent bot and spam traffic from accessing protected webpages. CAPTCHAs are often placed before login screens or form fields. Traditional CAPTCHAs ask the user to decipher a string of characters, type the characters into a box, and submit the form. reCAPTCHA asks the user to identify images, click a checkbox, or evaluate the user\u2019s behavior from mouse movement and device cookies.(Citation: CAPTCHAS Cloudflare) \n\nAdversaries may attempt to avoid CAPTCHA challenges by constructing a bot that mimics human behavior through browser automation. The automated browser may mimic a human by [Masquerading](https://attack.mitre.org/techniques/T1036) a [Browser Fingerprint](https://attack.mitre.org/techniques/T1036/012) and through attributes such as session history, IP reputation, and the use of browser APIs.(Citation: CAPTCHA Bypass Olostep) For example, adversaries may use Selenium browsers to simulate a human user. In the Selenium browsers, JavaScript is injected into the website\u2019s Document Object Model (DOM). The injected script may modify browser attributes such as Audio Context and Voice engines, graphic rendering, installed fonts, and browser navigator objects.(Citation: Sentinel CAPTCHA Bypass)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": true,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

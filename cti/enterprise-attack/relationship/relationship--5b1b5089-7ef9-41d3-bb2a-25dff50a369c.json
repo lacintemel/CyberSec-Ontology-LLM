@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--33cfb5db-f4f4-4559-a89d-bf4a2b1c2c6c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5b1b5089-7ef9-41d3-bb2a-25dff50a369c",
+            "created": "2026-09-11T19:42:09.772Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cyfirma_Vidar_June2024",
+                    "description": "CYFIRMA. (2024, June 3). Vidar Stealer: An In-depth Analysis of an Information-Stealing Malware. Retrieved August 13, 2026.",
+                    "url": "https://www.cyfirma.com/research/vidar-stealer-an-in-depth-analysis-of-an-information-stealing-malware/"
+                },
+                {
+                    "source_name": "Intrinsec_Vidar_April2026",
+                    "description": "Intrinsec. (2026, April). \"Chaos is a ladder\": Vidar's recent rise to the top. Retrieved April 27, 2026.",
+                    "url": "https://www.intrinsec.com/wp-content/uploads/2026/04/TLP_CLEAR-20260424-New_Vidar.pdf"
+                },
+                {
+                    "source_name": "Unit42_Vidar_July2026",
+                    "description": "Nannaka, B., Chhaparwal, P. (2026, July 7). Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation. Retrieved July 8, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/"
+                },
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T17:02:19.186Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has obfuscated and/or AES-encrypted its core code to avoid debugger and/or analysis tools.(Citation: Cyfirma_Vidar_June2024)(Citation: QuorumCyber_Vidar_March2023)\n\n[Vidar](https://attack.mitre.org/software/S9050) has used XOR to obfuscate the DLL name and the function name with key 0x05 to evade static string scanning.(Citation: Unit42_Vidar_July2026)(Citation: QuorumCyber_Vidar_March2023) \n\n[Vidar](https://attack.mitre.org/software/S9050) has Base64-encoded information relating to cryptocurrency wallet extensions.(Citation: Intrinsec_Vidar_April2026) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

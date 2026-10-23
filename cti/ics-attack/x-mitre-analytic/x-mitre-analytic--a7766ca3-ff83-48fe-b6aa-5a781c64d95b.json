@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--224fc3ab-dc55-4885-8e8a-480902044784",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a7766ca3-ff83-48fe-b6aa-5a781c64d95b",
+            "created": "2026-10-13T17:43:57.611Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0728#AN2107",
+                    "external_id": "AN2107"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:57.611Z",
+            "name": "Analytic 2107",
+            "description": "Real-time monitoring identifies a write to alarm configuration files on a Linux-based Supervisory Control and Data Acquisition (SCADA)/alarm server by a User Identifier (UID) that is not the alarm management service, or the alarm management service process receiving Application Programming Interface (API) calls that suppress alarm classes without a corresponding operator session. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "alarmserver:ApplicationLog",
+                    "channel": "alarm suppression Application Programming Interface (API) call logged without operator session identifier (ID)"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to Industrial Control Systems (ICS) alarm configuration file by User Identifier (UID) not in authorized alarm admin UIDs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmConfigAddressRange",
+                    "description": "Protocol register/address ranges corresponding to alarm threshold and configuration values per device type."
+                },
+                {
+                    "field": "AlarmConfigPaths",
+                    "description": "File system paths for alarm configuration files/databases on Windows alarm servers."
+                },
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to ICS devices, including alarm configuration."
+                },
+                {
+                    "field": "HMIAlarmParentAllowlist",
+                    "description": "Allowlist of recognized HMI/alarm management application processes authorized to modify alarm configuration."
+                },
+                {
+                    "field": "SuppressGracePeriod",
+                    "description": "Time window within which a legitimate operator acknowledgment is expected following an alarm status change, typically 10-30 seconds."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--8781cc9e-7b66-4f83-90d5-82370e815cdb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--633c4102-be49-42dd-bf73-2f79c8f0eaf5",
+            "created": "2026-04-10T19:25:15.322Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Koi Glassworm InvisibleCode October 2025",
+                    "description": "Idan Dardikman. (2025, October 18). GlassWorm: First Self-Propagating Worm Using Invisible Code Hits OpenVSX Marketplace. Retrieved April 10, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-first-self-propagating-worm-using-invisible-code-hits-openvsx-marketplace"
+                },
+                {
+                    "source_name": "Aikido GlassWorm October 2025",
+                    "description": "Ilyas Makari. (2025, October 31). The Return of the Invisible Threat: Hidden PUA Unicode Hits GitHub repositorties. Retrieved April 10, 2026.",
+                    "url": "https://www.aikido.dev/blog/the-return-of-the-invisible-threat-hidden-pua-unicode-hits-github-repositorties"
+                },
+                {
+                    "source_name": "Socket GlassWorm January 2026",
+                    "description": "Kirill Boychenko. (2026, January 31). GlassWorm Loader Hits Open VSX via Developer Account Compromise. Retrieved April 10, 2026.",
+                    "url": "https://socket.dev/blog/glassworm-loader-hits-open-vsx-via-suspected-developer-account-compromise"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.060Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has spread through Visual Studio extensions.(Citation: Koi Glassworm InvisibleCode October 2025)(Citation: Aikido GlassWorm October 2025)(Citation: Socket GlassWorm January 2026)  [GlassWorm](https://attack.mitre.org/software/S9010) has also spread through JavaScript projects hosted on Github.(Citation: Aikido GlassWorm October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--191cc6af-1bb2-4344-ab5f-28e496638720",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

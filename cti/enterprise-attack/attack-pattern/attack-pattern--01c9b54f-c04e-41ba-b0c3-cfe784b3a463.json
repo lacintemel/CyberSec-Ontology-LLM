@@ -1,0 +1,53 @@
+{
+    "type": "bundle",
+    "id": "bundle--dfb87068-c636-40f6-b4da-5fc8e8115f2a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--01c9b54f-c04e-41ba-b0c3-cfe784b3a463",
+            "created": "2026-04-14T22:53:27.621Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1687",
+                    "external_id": "T1687"
+                },
+                {
+                    "source_name": "Salesforce zero-day in facebook phishing attack",
+                    "description": "Bill Toulas. (2023, August 2). Hackers exploited Salesforce zero-day in Facebook phishing attack. Retrieved September 18, 2023.",
+                    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploited-salesforce-zero-day-in-facebook-phishing-attack/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T15:12:00.619Z",
+            "name": "Exploitation for Defense Impairment",
+            "description": "Adversaries may exploit vulnerabilities in security software, infrastructure, or defensive components to degrade, disable, or otherwise continue to impair their ability to prevent, detect, or respond to malicious activity. \n \nAdversaries may exploit a system or application vulnerability to directly interfere with defensive mechanisms. Exploitation occurs when an adversary takes advantage of a programming error in software, services, or the operating system to execute adversary-controlled code, often with the goal of weakening or disabling protections. \n\nVulnerabilities may exist in security tools such as antivirus, endpoint detection and response (EDR), firewalls, or other monitoring solutions. Adversaries may use prior reconnaissance or perform discovery activities (e.g., [Software Discovery](https://attack.mitre.org/techniques/T1518)) to identify defensive tools present in an environment and target them for exploitation. \n\nSuccessful exploitation may allow adversaries to terminate security processes, disable protections, bypass enforcement mechanisms, or reduce the effectiveness of defensive controls. In some cases, vulnerabilities in cloud-based or SaaS infrastructure may also be leveraged to bypass built-in security boundaries or disrupt visibility and enforcement across environments.(Citation: Salesforce zero-day in facebook phishing attack)",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-impairment"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "IaaS",
+                "Linux",
+                "macOS",
+                "SaaS",
+                "Windows"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

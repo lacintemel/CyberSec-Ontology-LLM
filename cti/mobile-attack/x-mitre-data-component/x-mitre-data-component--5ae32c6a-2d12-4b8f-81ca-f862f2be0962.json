@@ -1,0 +1,232 @@
+{
+    "type": "bundle",
+    "id": "bundle--c7f1c705-fbf9-4534-a47d-14301a984e5c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--5ae32c6a-2d12-4b8f-81ca-f862f2be0962",
+            "created": "2023-03-13T19:59:14.491Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0112",
+                    "external_id": "DC0112"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:33.749Z",
+            "name": "API Calls",
+            "description": "API calls utilized by an application that could indicate malicious activity",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Application Vetting",
+                    "channel": "None"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "Repeated sandbox or policy violations by a single process or app bundle (for example, deny rules) followed by successful access to resources or APIs that normally require higher privileges"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "mmap with PROT_EXEC and PROT_WRITE by sandboxed app"
+                },
+                {
+                    "name": "android:logcat",
+                    "channel": "SELinux AVC related to execute_no_trans/execmem after decode/unpack activity by the same app UID"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: APK or IPA contains SystemProperties.get() calls, Runtime.exec getprop invocations, or code patterns checking for emulator artifacts (ro.product.model=sdk, IMEI=000000, screen size, sensor absence) \u2014 static detection of environment-check co"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: IPA contains UIDevice.currentDevice.model checks for Simulator strings, CMMotionManager.isDeviceMotionAvailable comparisons, or other Simulator-detection patterns \u2014 static detection of iOS environment-check code"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ClipboardManager.addOnPrimaryClipChangedListener()"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UIPasteboard.general.string property accessed by app"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED received by listener_app NOT IN $AccessibilityAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED received by listener NOT IN $AccessibilityAllowList$ at rate > $KeystrokeEventThreshold$ per minute with source_apps spanning > $AppMonitorCountThreshold$ distinct apps"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: PackageManager.getInstalledPackages() or getInstalledApplications() called by app NOT IN $AppEnumAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UIApplication.canOpenURL() called > $URLProbeThreshold$ times with schemes NOT declared in app's LSApplicationQueriesSchemes within $ProbeWindow$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: PackageManager.getPackageInfo() called for package names IN $SecurityToolPackageList$ by app NOT IN $AppEnumAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UIApplication.canOpenURL() called with schemes IN $MDMToolSchemeList$ by app NOT IN $AppEnumAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: WifiInfo.getBSSID()"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: NetworkInterface.getNetworkInterfaces()"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ConnectivityManager.getActiveNetworkInfo() or InetAddress.isReachable() called by app NOT IN $ConnectivityAllowList$ at app launch or on schedule without user action"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: NWPathMonitor.start() or SCNetworkReachabilityGetFlags() called by app NOT IN $ConnectivityAllowList$ at launch or on background schedule"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: WifiManager.getScanResults()"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: CNCopyCurrentNetworkInfo() or NEHotspotHelper.register() called by app NOT IN $WiFiAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: android.os.Build field reads > $SysInfoFieldThreshold$ distinct fields within $SysInfoWindow$ by app NOT IN $SysInfoAllowList$ at launch or in background"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UIDevice.current.model"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: AudioRecord.startRecording() or MediaRecorder.start() called by app NOT IN $AudioAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: LocationManager.requestLocationUpdates() called with minTime < $LocationUpdateFreqThreshold$ by app NOT IN $LocationAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: FirebaseMessaging.getToken() called for project_id NOT IN $FCMAllowList$ \u2014 rogue FCM project registration is the adversary enabling C2 over Google infrastructure"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UNUserNotificationCenter or legacy UIApplication.registerForRemoteNotifications with Apple Team ID NOT IN $APNSAllowList$ \u2014 rogue APNS sender registration"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: AccessibilityService receiving events from dc(source_app) > $AccessibilityTargetThreshold$ distinct apps INCLUDING apps IN $TargetAppList$ \u2014 broad monitoring across apps distinguishes malware from single-purpose assistive tech"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: getNetworkInterfaces() OR NetworkInterface.getHardwareAddress() called within $ProcReadWindow$ of /proc reads by same app \u2014 network MAC OUI check completes hardware fingerprint"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: UIDevice.currentDevice.model"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: PackageManager.queryIntentActivities() returns handler_count > 1 for custom URI scheme"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: PackageManager reports two or more apps with identical URI scheme intent-filter"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query() to sensitive provider URI (contacts, calendar, call_log, sms) with query_count > $ContentQueryThreshold$ by app NOT IN $ApprovedDataApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: CNContactStore.enumerateContacts or EKEventStore.fetchEvents or CLLocationManager.startUpdatingLocation called with broad scope by app NOT IN $ApprovedDataApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query(CalendarContract) with query_count > $CalendarQueryThreshold$ by app NOT IN $ApprovedCalendarApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: EKEventStore.fetchEvents() or enumerateEvents() with date_range > $CalendarDateRangeThreshold$ days by app NOT IN $ApprovedCalendarApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query(CallLog.Calls) with query_count > $CallLogQueryThreshold$ by app NOT IN $ApprovedDialerApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query(ContactsContract) with projection=all_fields"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: CNContactStore.enumerateContacts with CNContactFetchRequest.keysToFetch containing all contact keys by app NOT IN $ApprovedContactsApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query(Telephony.Sms) including both inbox"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: AccountManager.getAccounts() OR getAccountsByType() called > $AccountEnumThreshold$ times within $AccountEnumWindow$ by app NOT IN $ApprovedAuthenticatorApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: SecItemCopyMatching() called with kSecMatchLimitAll"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: InetAddress.getByName() or DnsResolver called > $DGACandidateThreshold$ times with algorithmically-distinct hostnames in $DGAWindow$ \u2014 rapid programmatic resolution attempts"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: DevicePolicyManager.resetPassword() or lockNow() or wipeData() called by caller NOT IN $MDMAgentPackageList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.update() called by writer_app NOT IN $LegitimateIPCPartners$ for target_app's content provider URI"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ClipboardManager.addOnPrimaryClipChangedListener() registered"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: DevicePolicyManager.lockNow() or resetPassword() called by caller NOT IN $MDMAgentPackageList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: SmsManager.sendTextMessage() called by app NOT IN $ApprovedMessagingApps$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: NotificationListenerService.onNotificationPosted() receiving notifications from source_app IN $HighValueNotifApps$ by listener NOT IN $NotificationAllowList$"
+                },
+                {
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: camera activated within app IN $MessagingAppList$ \u2014 QR scan requires camera access; activation in messaging app context is the trigger signal"
+                }
+            ]
+        }
+    ]
+}

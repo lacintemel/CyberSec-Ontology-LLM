@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--662b687a-9adb-41a1-bcab-a28a4a52a11a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--20649e4e-a7b3-4252-8515-f21f262b059b",
+            "created": "2026-10-07T20:30:05.354Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anthropic AI Orchestrated Campaign NOV 2025",
+                    "description": "Anthropic. (2025, November). Disrupting the first reported AI-orchestrated cyber espionage campaign. Retrieved April 20, 2026.",
+                    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T20:30:05.354Z",
+            "description": "During the [Anthropic AI-orchestrated Campaign](https://attack.mitre.org/campaigns/C0062), the adversary entered a prompt that claimed the user was an employee of a cybersecurity firm and that Claude was being used for defensive cybersecurity testing to authorize restricted operations.(Citation: Anthropic AI Orchestrated Campaign NOV 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--590cd5b0-2421-4158-84a2-db13b5db02a3",
+            "target_ref": "attack-pattern--d7e9cba9-3b43-4208-8e90-fdb18bff4a6a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

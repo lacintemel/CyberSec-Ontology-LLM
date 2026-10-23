@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3e15ba9d-6baf-4bae-8ffe-b2d227ae471c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1efd302f-e162-4f68-a942-f5d14b642a78",
+            "created": "2026-04-17T21:17:07.021Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Anel NOV 2024",
+                    "description": "Hiroaki, H. (2024, November 26). Guess Who\u2019s Back - The Return of ANEL in the Recent Earth Kasha Spear-phishing Campaign in 2024. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/return-of-anel-in-the-recent-earth-kasha-spearphishing-campaign.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.947Z",
+            "description": "[ROAMINGHOUSE](https://attack.mitre.org/software/S9026) has been loaded as a Word Template file when victims opened a decoy document placed in `%APPDATA%\\Microsoft\\Templates` alongside a [ROAMINGHOUSE](https://attack.mitre.org/software/S9026) macro.(Citation: Trend Micro Earth Kasha Anel NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--251f1715-fc97-4487-b939-5c8823ef7a39",
+            "target_ref": "attack-pattern--79a47ad0-fc3b-4821-9f01-a026b1ddba21",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

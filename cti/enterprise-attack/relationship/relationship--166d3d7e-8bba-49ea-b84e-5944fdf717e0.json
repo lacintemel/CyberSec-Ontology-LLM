@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--cd03d9e9-421e-4187-b158-bccd25a160f6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--166d3d7e-8bba-49ea-b84e-5944fdf717e0",
+            "created": "2026-09-24T22:24:58.061Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T22:24:58.061Z",
+            "description": "[MiniJunk](https://attack.mitre.org/software/S9053) has utilized Windows API calls to make HTTPs requests to C2.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7eaf437c-cde7-475b-87dd-d8573ca5406b",
+            "target_ref": "attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

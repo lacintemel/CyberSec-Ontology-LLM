@@ -1,0 +1,92 @@
+{
+    "type": "bundle",
+    "id": "bundle--5b351261-245d-4200-86ff-934236b49ae7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--34dd92d1-edc3-42db-9507-760d82c42a5f",
+            "created": "2026-09-22T01:37:14.668Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0926#AN2075",
+                    "external_id": "AN2075"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T21:06:04.295Z",
+            "name": "Analytic 2075",
+            "description": "Detect creation of an application-specific password for a user account, correlated within ASPActivityWindow with authentication from a source, device, client, or location outside the account's established baseline, or followed by authentication using a legacy/non-MFA authentication path inconsistent with ApprovedASPUsage. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Identity Provider"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--d27b0089-2c39-4b6c-84ff-303e48657e77",
+                    "name": "idp:audit",
+                    "channel": "Application-specific password created/added for account "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "idp:authentication ",
+                    "channel": "Successful authentication associated with legacy/application-specific credential flow "
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "idp:session ",
+                    "channel": "New session established from source/device inconsistent with account baseline "
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ASPActivityWindow",
+                    "description": "Time window used to correlate application-specific password creation, modification, retrieval, or use with subsequent authentication activity. Derive from the normal delay between ASP administration and legitimate first use. Increasing the window captures delayed malicious use but increases FP from unrelated account activity; decreasing it reduces FP but may miss delayed adversary use (FN)."
+                },
+                {
+                    "field": "ApprovedASPUsers",
+                    "description": "Users or roles authorized to create, manage, or use application-specific passwords. Derive from IAM policy, role assignments, and approved exception records. Broadening the list reduces FP but increases FN from compromised authorized accounts; narrowing it increases FP for legitimate ASP users but reduces FN."
+                },
+                {
+                    "field": "ApprovedASPApplications",
+                    "description": "Applications, services, or integrations approved to authenticate using application-specific passwords. Derive from application inventory and IAM/integration configuration. Broadening the set reduces FP but may conceal unauthorized application use (FN); narrowing it increases FP when legitimate applications are omitted."
+                },
+                {
+                    "field": "ApprovedASPUsage",
+                    "description": "Approved user/application/use-case relationships for ASP authentication\u2014for example, which user or service is expected to use an ASP with which application. Derive from documented integration workflows and service ownership. Broadening permitted relationships reduces FP but increases FN for abused legitimate credentials; narrowing them increases detection sensitivity and FP."
+                },
+                {
+                    "field": "KnownDevices",
+                    "description": "Devices or managed endpoints from which ASP-related account activity or authentication is expected. Derive from device inventory, endpoint management, and historical successful authentication. Broadening known-device criteria reduces FP but can suppress compromised devices; narrowing increases FP from new/rebuilt legitimate devices."
+                },
+                {
+                    "field": "KnownLocations",
+                    "description": "Expected geographic, network, tenant, or organizational locations for the associated identity/application activity. Derive from historical authentication telemetry and organizational network architecture. Broadening accepted locations reduces travel/remote-work FP but increases FN; narrowing increases sensitivity but also FP."
+                },
+                {
+                    "field": "ExpectedAuthMethods",
+                    "description": "Authentication methods normally associated with the account/application workflow. Derive from identity-provider policy and historical authentication telemetry. Broadening expected methods reduces FP but can hide fallback or weaker authentication abuse; narrowing increases FP when legitimate authentication methods change."
+                },
+                {
+                    "field": "ApprovedLegacyClients",
+                    "description": "Legacy clients explicitly permitted to authenticate using ASP-compatible mechanisms. Derive from application inventory and documented compatibility exceptions. Adding clients reduces FP but increases the opportunity for malicious use to blend with approved legacy authentication; removing clients increases FP until legitimate dependencies are remediated."
+                },
+                {
+                    "field": "KnownSourceRanges",
+                    "description": "Network ranges from which approved ASP-backed applications or services normally authenticate. Derive from service/network architecture and historical authentication sources. Broadening ranges reduces FP but increases FN for adversary activity originating within accepted infrastructure; narrowing improves discrimination but increases FP from legitimate infrastructure changes."
+                }
+            ]
+        }
+    ]
+}

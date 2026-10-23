@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2d14bd84-0a51-4a1b-a341-19b7d0027ed2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4802a823-0a51-47c2-aabe-369a2430ba95",
+            "created": "2025-12-17T18:47:47.009Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Lumen_SystemBC_Sept2025",
+                    "description": "Black Lotus Labs . (2025, September 18). SystemBC: Bringing the noise. Retrieved December 15, 2025.",
+                    "url": "https://blog.lumen.com/systembc-bringing-the-noise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:53.243Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has encoded with XOR and encrypted with RC4 its beacon.(Citation: Lumen_SystemBC_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--ad255bfe-a9e6-4b52-a258-8d3462abe842",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

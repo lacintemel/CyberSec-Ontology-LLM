@@ -1,0 +1,40 @@
+{
+    "type": "bundle",
+    "id": "bundle--c5368b01-e903-4518-b8b8-396e38fe8a9f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--48923678-0fb6-4d14-986b-2f6adeb8c421",
+            "created": "2026-04-16T16:45:43.694Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0899",
+                    "external_id": "DET0899"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:33.947Z",
+            "name": "Detect Social Engineering",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--54bb8256-cbe8-4088-9cff-b03711bd7841",
+                "x-mitre-analytic--983e1849-6af7-491e-9605-46b9bf54bbd1",
+                "x-mitre-analytic--e817eb45-0830-476d-9fd7-8e8acb14af8a",
+                "x-mitre-analytic--f238e0f3-7354-4304-9101-69cefd8446fc",
+                "x-mitre-analytic--fc19b602-2811-418f-aa98-1b49f1355743"
+            ]
+        }
+    ]
+}

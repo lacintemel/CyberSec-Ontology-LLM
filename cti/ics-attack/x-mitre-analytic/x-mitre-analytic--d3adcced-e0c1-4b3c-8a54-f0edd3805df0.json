@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--a8defe77-79bb-4484-b33d-6550c9776059",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d3adcced-e0c1-4b3c-8a54-f0edd3805df0",
+            "created": "2026-10-13T17:45:54.329Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0728#AN2188",
+                    "external_id": "AN2188"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:54.329Z",
+            "name": "Analytic 2188",
+            "description": "Real-time monitoring identifies a network-device ACL, filter, or rate-limit policy change that suppresses or blocks ICS alarm-notification traffic outside the approved network-change baseline. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "Access Control List (ACL)/policy change affecting alarm notification traffic ports without corresponding change ticket"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmConfigAddressRange",
+                    "description": "Protocol register/address ranges corresponding to alarm threshold and configuration values per device type."
+                },
+                {
+                    "field": "AlarmConfigPaths",
+                    "description": "File system paths for alarm configuration files/databases on Windows alarm servers."
+                },
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to ICS devices, including alarm configuration."
+                },
+                {
+                    "field": "HMIAlarmParentAllowlist",
+                    "description": "Allowlist of recognized HMI/alarm management application processes authorized to modify alarm configuration."
+                },
+                {
+                    "field": "SuppressGracePeriod",
+                    "description": "Time window within which a legitimate operator acknowledgment is expected following an alarm status change, typically 10-30 seconds."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

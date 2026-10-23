@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--621b65c6-d7f7-44c8-9e0b-932f8ed76244",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--568bd76b-1cf0-4f60-be6f-79c7e90d80a4",
+            "created": "2026-09-24T22:26:46.713Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T22:26:46.713Z",
+            "description": "[MiniJunk](https://attack.mitre.org/software/S9053) has encoded network data by converting strings into bytes, then reversing the bytes and the entire strings. [MiniJunk](https://attack.mitre.org/software/S9053) has also encrypted strings to obfuscate code.(Citation: CheckPoint_NimbusManticoreEurope_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--7eaf437c-cde7-475b-87dd-d8573ca5406b",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

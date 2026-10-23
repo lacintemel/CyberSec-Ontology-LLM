@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9af09ba1-492d-4f8c-ba38-d462cd5a109b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3baa4f86-8ad4-4778-9327-1c23cebdfdca",
+            "created": "2026-09-22T21:21:07.640Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA_AA25-239ASaltTyphoon_Sept2025",
+                    "description": "CISA. (2025, September 3). Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System. Retrieved September 22, 2026.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T17:43:02.056Z",
+            "description": "[Salt Typhoon](https://attack.mitre.org/groups/G1045) has obfuscated target pathways with double encoding to bypass security solutions.(Citation: CISA_AA25-239ASaltTyphoon_Sept2025)     ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1c3dcf91-b859-4aae-a09c-ae26dc8b6390",
+            "target_ref": "attack-pattern--d511a6f6-4a33-41d5-bc95-c343875d1377",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

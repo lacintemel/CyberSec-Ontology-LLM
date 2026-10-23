@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--3cf627c1-3f9f-483b-b646-57e446f01392",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e767c178-e4b2-490a-b544-bb1b2d6c7de4",
+            "created": "2020-09-21T17:59:24.739Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.240Z",
+            "description": "Application isolation will limit the other processes and system features an exploited target can access. Examples of built in features are software restriction policies, AppLocker for Windows, and SELinux or AppArmor for Linux.\n",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--059ba11e-e3dc-49aa-84ca-88197f40d4ea",
+            "target_ref": "attack-pattern--32632a95-6856-47b9-9ab7-fea5cd7dce00",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

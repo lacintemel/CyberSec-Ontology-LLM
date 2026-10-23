@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--717a235c-3ffb-4f9a-9e9a-dc38d4b774c6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--24ccb55f-1e6a-48be-a222-aa0faf1272c3",
+            "created": "2026-04-09T20:33:38.625Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Unit 42 Shai-Hulud November 2025",
+                    "description": "Justin Moore. (2025, November 25). \"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 26). Retrieved April 9, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.955Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has delayed execution of its larger payloads by forking itself into background process.(Citation: Palo Alto Unit 42 Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

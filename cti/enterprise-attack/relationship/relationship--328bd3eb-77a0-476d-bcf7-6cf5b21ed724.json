@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3b04f62b-0dd1-4b33-a695-d3e9641e8792",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--328bd3eb-77a0-476d-bcf7-6cf5b21ed724",
+            "created": "2026-04-20T18:55:41.425Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "DOJ FBI Handala Hack March 2026",
+                    "description": "DOJ/FBI. (2026, March 19). Case 1:26-mj-00683-CDA: Affidavit in Support of Seizure Warrant: In the Matter of the Seizure of Domain Names Justicehomeland[.]org; karmabelow80[.]org; handala-hack[.]to; and handala-redwatned[.]to. Retrieved April 20, 2026.",
+                    "url": "https://www.justice.gov/opa/media/1431956/dl?inline"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-09T18:44:33.675Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has gathered victim email-content from victim servers.(Citation: DOJ FBI Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--b4694861-542c-48ea-9eb1-10d356e7140a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

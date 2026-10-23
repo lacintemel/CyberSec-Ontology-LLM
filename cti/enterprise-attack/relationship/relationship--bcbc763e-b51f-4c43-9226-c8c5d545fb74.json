@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--51359443-8c5d-42d1-b174-7bf221abcf6f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--bcbc763e-b51f-4c43-9226-c8c5d545fb74",
+            "created": "2026-04-20T18:47:17.682Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SPECOPS Outpost24 Handala Hack Stryker March 2026",
+                    "description": "David Ketler. (2026, March 30). Stryker Cyber-Attack: What we Know so Far About the Remote Wipe Attack. Retrieved April 20, 2026.",
+                    "url": "https://specopssoft.com/blog/stryker-cyber-attack-what-we-know-remote-wipe/"
+                },
+                {
+                    "source_name": "DOJ FBI Handala Hack March 2026",
+                    "description": "DOJ/FBI. (2026, March 19). Case 1:26-mj-00683-CDA: Affidavit in Support of Seizure Warrant: In the Matter of the Seizure of Domain Names Justicehomeland[.]org; karmabelow80[.]org; handala-hack[.]to; and handala-redwatned[.]to. Retrieved April 20, 2026.",
+                    "url": "https://www.justice.gov/opa/media/1431956/dl?inline"
+                },
+                {
+                    "source_name": "FBI IC3 Flash VOID MANTICORE Handala Hack March 2026",
+                    "description": "FBI. (2026, March 20). FBI Flash: FLASH-20260320-001:Government of Iran Cyber Actors Deploy Telegram C2 to  Push Malware to Identified Targets. Retrieved April 20, 2026.",
+                    "url": "https://www.ic3.gov/CSA/2026/260320.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.929Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has collected cached data and files from within the victim environment.(Citation: SPECOPS Outpost24 Handala Hack Stryker March 2026)(Citation: DOJ FBI Handala Hack March 2026)(Citation: FBI IC3 Flash VOID MANTICORE Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--3c4a2599-71ee-4405-ba1e-0e28414b4bc5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

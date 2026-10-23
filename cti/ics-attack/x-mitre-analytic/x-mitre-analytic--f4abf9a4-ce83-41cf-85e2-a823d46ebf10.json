@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--d6205cbd-cb34-4556-a499-56ebcb373d23",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f4abf9a4-ce83-41cf-85e2-a823d46ebf10",
+            "created": "2026-10-13T17:48:07.198Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0767#AN2288",
+                    "external_id": "AN2288"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:07.198Z",
+            "name": "Analytic 2288",
+            "description": "Real-time monitoring identifies exploit-pattern ICS/network traffic, including malformed packets, out-of-spec function codes, or overflow-sized payloads, targeting ICS servers or field devices from unexpected sources. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "zeek:conn",
+                    "channel": "exploit-pattern traffic to Industrial Control Systems (ICS) server/device Internet Protocol (IP) from unexpected source, followed by behavioral anomaly within a short window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedClientCIDR",
+                    "description": "IP ranges from which legitimate connections to network-facing ICS services are expected."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

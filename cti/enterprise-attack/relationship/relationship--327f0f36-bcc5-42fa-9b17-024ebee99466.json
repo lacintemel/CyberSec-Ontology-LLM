@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3fa40511-0a1d-4c02-b3d8-ebbad3de71ae",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--327f0f36-bcc5-42fa-9b17-024ebee99466",
+            "created": "2026-04-09T16:36:36.633Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Gen Digital Kimsuky HTTPTroy October 2025",
+                    "description": "Alexndru-Cristian Bardas. (2025, October 30). DPRK\u2019s Playbook: Kimsuky\u2019s HttpTroy and Lazarus\u2019s New BLINDINGCAN Variant. Retrieved April 8, 2026.",
+                    "url": "https://www.gendigital.com/blog/insights/research/dprk-kimsuky-lazarus-analysis"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:07:46.373Z",
+            "description": "[HTTPTroy](https://attack.mitre.org/software/S9007) has obfuscated request communications utilizing XOR encryption.(Citation: Gen Digital Kimsuky HTTPTroy October 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--52b52f72-88e6-4847-88d6-da3b9e4a4f71",
+            "target_ref": "attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

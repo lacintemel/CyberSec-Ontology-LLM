@@ -1,0 +1,56 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:file-1ef24857-e713-40ec-b325-b2561a4fcb3a",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:RasterPicture"
+            ],
+            "uco-core:description": "Screenshot of webpage",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-0e21a61a-3a68-490c-9e93-d456c227d14b",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "screenshot-1.png",
+                    "uco-observable:sizeInBytes": 1234567
+                },
+                {
+                    "@id": "kb:raster-picture-facet-166f8489-cff6-4405-b977-be46dc4a1a88",
+                    "@type": "uco-observable:RasterPictureFacet",
+                    "uco-observable:pictureHeight": 1024,
+                    "uco-observable:pictureWidth": 768
+                }
+            ]
+        },
+        {
+            "@id": "kb:investigative-action-45a85ed1-acd5-45be-aa78-891170bbd9b6",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-action:result": [
+                {
+                    "@id": "kb:file-1ef24857-e713-40ec-b325-b2561a4fcb3a"
+                },
+                {
+                    "@id": "kb:provenance-record-9e807c8c-ad7e-41aa-bd60-1dc98cae25c7"
+                }
+            ],
+            "uco-core:name": "Submit reference graphic"
+        },
+        {
+            "@id": "kb:provenance-record-9e807c8c-ad7e-41aa-bd60-1dc98cae25c7",
+            "@type": "case-investigation:ProvenanceRecord",
+            "case-investigation:exhibitNumber": "1",
+            "case-investigation:rootExhibitNumber": "1",
+            "uco-core:object": {
+                "@id": "kb:file-1ef24857-e713-40ec-b325-b2561a4fcb3a"
+            }
+        }
+    ]
+}

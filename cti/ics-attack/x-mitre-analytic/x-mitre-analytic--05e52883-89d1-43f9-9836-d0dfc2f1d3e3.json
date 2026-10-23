@@ -1,0 +1,67 @@
+{
+    "type": "bundle",
+    "id": "bundle--cd706d83-eb7e-42ef-a6de-414c696dae21",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--05e52883-89d1-43f9-9836-d0dfc2f1d3e3",
+            "created": "2026-10-13T17:47:00.577Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0722#AN2243",
+                    "external_id": "AN2243"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:00.577Z",
+            "name": "Analytic 2243",
+            "description": "Detect embedded hooking by correlating an independently acquired firmware/module integrity measurement that differs from the approved vendor/baseline image with protocol-response behavior that also departs from the device's known deterministic behavior. A protocol-response anomaly by itself does not prove a hook because firmware versions, device state, communications faults, and vendor-specific behavior can produce response differences. Treat network anomalies as corroboration and require independent integrity evidence or vendor/device attestation before escalating the condition as firmware-level hooking. Monitoring mode: periodic or event-triggered integrity verification plus near-real-time protocol monitoring where a capable OT protocol decoder is deployed.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "deterministic function code response content diverges from the device's established per-function response baseline without a corresponding firmware update event"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b9d031bb-d150-4fc6-8025-688201bf3ffd",
+                    "name": "assetinventory:FirmwareHash",
+                    "channel": "independently acquired firmware/module hash or vendor integrity measurement differs from approved baseline; protocol-response anomalies are corroboration only"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedICSVendorProcessList",
+                    "description": "Allowlist of processes permitted to install window/event hooks on ICS engineering and HMI hosts."
+                },
+                {
+                    "field": "ICSServiceBinaryList",
+                    "description": "List of binary paths for ICS gateway, OPC, and historian services on Linux assets that should never be launched with LD_PRELOAD set."
+                },
+                {
+                    "field": "VendorPackageManifest",
+                    "description": "Package manager manifest cross-reference confirming a shared library belongs to an installed, signed package."
+                },
+                {
+                    "field": "VendorSignedDLLHashBaseline",
+                    "description": "Cryptographic hash inventory of all vendor-signed ICS communication DLLs, refreshed on every legitimate vendor patch cycle."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

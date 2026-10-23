@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--96e2c010-ad88-44f6-bcd7-ad05e5371f53",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--88dc7850-3f62-4822-90c0-3a1ed06cc044",
+            "created": "2026-10-13T17:46:35.838Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0791#AN2220",
+                    "external_id": "AN2220"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:35.838Z",
+            "name": "Analytic 2220",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) embedded device executing a sequence of operations inconsistent with its programmed logic, correlating temporally with an operator interaction on an engineering terminal connected to the device. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "otndr:BehaviorAlert",
+                    "channel": "device Input/Output (I/O) state change inconsistent with programmed logic correlating temporally with operator terminal interaction"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDestinations",
+                    "description": "Allowlist of network destinations consistent with legitimate document/link content."
+                },
+                {
+                    "field": "ExpectedDocumentViewerChildren",
+                    "description": "Documented normal child processes for legitimate document viewers/handlers."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--68741a09-5db5-4366-b736-c9826c35cebf",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6e3a93db-d2a6-43b7-9aa6-4dcf972f5e53",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0702#AN1821",
+                    "external_id": "AN1821"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:27.495Z",
+            "name": "Analytic 1821",
+            "description": "For iOS, detect Remote Device Management Services by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; Cloud Service Enumeration via Application Vetting / Cloud Service Audit [Instrumented app API trace and corresponding cloud-service audit/API telemetry]; User Account Authentication via Application Vetting / Identity Provider Telemetry [App authentication flow instrumentation or IdP sign-in/audit events]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--8c826308-2760-492f-9e36-4f0f7e23bcac",
+                    "name": "cloud:AuditLog",
+                    "channel": "Instrumented app API trace and corresponding cloud-service audit/API telemetry"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "idp:AuditLog",
+                    "channel": "App authentication flow instrumentation or IdP sign-in/audit events"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "FindMyQueryThreshold",
+                    "description": "Default 5 queries per session \u2014 legitimate users check location once; adversary polls repeatedly."
+                },
+                {
+                    "field": "LocationQueryWindow",
+                    "description": "Default 300s."
+                },
+                {
+                    "field": "UserKnownDevices",
+                    "description": "User's registered device IPs and user agents from enterprise IdP device registry."
+                }
+            ]
+        }
+    ]
+}

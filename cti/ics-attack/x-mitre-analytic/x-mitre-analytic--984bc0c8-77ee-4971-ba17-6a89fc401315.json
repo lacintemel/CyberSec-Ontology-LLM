@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--39ae3b04-f2b0-4663-952a-f0302d98e7ba",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--984bc0c8-77ee-4971-ba17-6a89fc401315",
+            "created": "2026-10-13T17:46:21.543Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0777#AN2211",
+                    "external_id": "AN2211"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:21.543Z",
+            "name": "Analytic 2211",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol write specifically targeting alarm threshold/deadband configuration registers from a source not in the approved engineering list, where the new value widens the alarm deadband or shifts the trip point beyond the safe operating envelope, without operator acknowledgment. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "alarm threshold configuration changed without operator_ack or change ticket reference"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "write to alarm threshold address range from source not in approved write sources with new value outside safe alarm threshold range"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmThresholdAddressRange",
+                    "description": "Register addresses specifically corresponding to alarm threshold/deadband configuration."
+                },
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to modify alarm configuration."
+                },
+                {
+                    "field": "SafeAlarmThresholdRange",
+                    "description": "Documented safe range for alarm thresholds per parameter."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--388ab2b8-687f-4f22-9034-206ea2b320fe",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--39d06f63-a10e-4882-91f0-7f96a6ad74e8",
+            "created": "2026-04-17T17:04:34.890Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.999Z",
+            "description": "[MirrorStealer](https://attack.mitre.org/software/S9022) can target Group Policy Preferences for credentials.(Citation: Trend Micro Earth Kasha NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--2f851d4a-18cc-4d7f-9408-b10ef02ee936",
+            "target_ref": "attack-pattern--8d7bd4f5-3a89-4453-9c82-2c8894d5655e",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

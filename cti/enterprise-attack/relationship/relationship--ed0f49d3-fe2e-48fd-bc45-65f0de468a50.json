@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--073d0ea4-6c3b-4362-ad27-fd8d1c415551",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ed0f49d3-fe2e-48fd-bc45-65f0de468a50",
+            "created": "2026-04-14T14:47:50.020Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.248Z",
+            "description": "[DRYHOOK](https://attack.mitre.org/software/S9013) has terminated all instances of the `cgi-server` process before activating the modified DSAuth.pm file.(Citation: Google UNC5221 Ivanti January 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e9c72c02-b55a-4852-b2eb-c7031d215414",
+            "target_ref": "attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

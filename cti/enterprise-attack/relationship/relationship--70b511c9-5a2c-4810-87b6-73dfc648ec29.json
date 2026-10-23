@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--c9037272-78e2-4a3b-a2de-c5a65b0f961b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--70b511c9-5a2c-4810-87b6-73dfc648ec29",
+            "created": "2020-06-23T19:03:15.337Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.079Z",
+            "description": "Anti-virus can be used to automatically quarantine suspicious files. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--a6a47a06-08fc-4ec4-bdc3-20373375ebb9",
+            "target_ref": "attack-pattern--cc3502b5-30cc-4473-ad48-42d51a6ef6d1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--6a7d204e-0c72-486d-9f9d-e79173e94cb2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--94ff7939-a6fb-483d-bee2-a242a43e32f6",
+            "created": "2026-04-17T13:46:22.903Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Updates APR 2025",
+                    "description": "Hiroaki, H. (2025, April 30). Earth Kasha Updates TTPs in Latest Campaign Targeting Taiwan and Japan. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/d/earth-kasha-updates-ttps.html"
+                },
+                {
+                    "source_name": "JPCERT MirrorFace JUL 2024",
+                    "description": "Tomonaga, S. (2024, July 16). MirrorFace Attack against Japanese Organisations. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+                },
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:08.838Z",
+            "description": "[MirrorFace](https://attack.mitre.org/groups/G1054) has used `cmd.exe` for malware execution, file discovery, and manual file manipulation.(Citation: Trend Micro Earth Kasha NOV 2024)(Citation: Trend Micro Earth Kasha Updates APR 2025)(Citation: JPCERT MirrorFace JUL 2024)(Citation: JPCERT MirrorFace JUL 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--8cf6e33b-b6ef-4a1f-a77c-0ecdde93161f",
+            "target_ref": "attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

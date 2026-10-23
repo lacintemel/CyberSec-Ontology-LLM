@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e6195f55-ce6d-4b5c-b826-e8ae56ebf481",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0ef43f4a-6781-4e70-a09c-368283ab411c",
+            "created": "2026-04-17T16:55:59.842Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:08.204Z",
+            "description": "[MirrorFace](https://attack.mitre.org/groups/G1054) has used [MirrorStealer](https://attack.mitre.org/software/S9022) to harvest credentials.(Citation: ESET MirrorFace DEC 2022)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--8cf6e33b-b6ef-4a1f-a77c-0ecdde93161f",
+            "target_ref": "malware--2f851d4a-18cc-4d7f-9408-b10ef02ee936",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

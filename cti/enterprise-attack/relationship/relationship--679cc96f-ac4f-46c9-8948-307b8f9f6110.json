@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d09a64ce-4d42-40e1-b268-e2c56684d9f4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--679cc96f-ac4f-46c9-8948-307b8f9f6110",
+            "created": "2026-04-20T14:42:41.116Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Ashen Lepus DEC 2025",
+                    "description": "Unit 42. (2025, December 11). Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.066Z",
+            "description": "The [AshTag](https://attack.mitre.org/software/S9031) AshenOrchestrator component payload as been Base64 encoded and embedded with HTML content from the C2 server.(Citation: Palo Alto Ashen Lepus DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bb6f2a5c-dbc9-45b0-bd3f-a0b7849959c2",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

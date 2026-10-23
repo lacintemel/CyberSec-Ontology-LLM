@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--ce70bdd9-d0ab-45e1-a4bc-240ddc2eb44e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--87f5d864-d79b-474a-a3b4-43673dcb9f90",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0796#AN1928",
+                    "external_id": "AN1928"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:31.506Z",
+            "name": "Analytic 1928",
+            "description": "Real-time monitoring identifies inbound connections to Industrial Control System (ICS) Windows application servers from internet-routed Internet Protocol (IP) addresses. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--39b9db72-8b48-4595-a18d-db5bbba3091b",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: inbound authentication attempt or successful session from internet-sourced Internet Protocol (IP) address to Industrial Control Systems (ICS) application port"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "OrganizationalIPSpace",
+                    "description": "Documented internal/organizational IP address ranges."
+                }
+            ]
+        }
+    ]
+}

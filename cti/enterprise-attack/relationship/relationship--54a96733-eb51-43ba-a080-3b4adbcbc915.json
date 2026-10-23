@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6c06fac1-e804-4cee-8531-72ebc062c433",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--54a96733-eb51-43ba-a080-3b4adbcbc915",
+            "created": "2026-04-21T14:37:47.674Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SecureListUbiedo_Tsundere_Nov2025",
+                    "description": "Ubiedo, L. (2025, November 20). Blockchain and Node.js abused by Tsundere: an emerging botnet. Retrieved April 6, 2026.",
+                    "url": "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:47:01.339Z",
+            "description": "[Tsundere Botnet](https://attack.mitre.org/software/S9034)\u2019s loader component has downloaded the zip file node-v18.17.0-win-x64.zip from the official Node.js website, as well as pm2, a Node.js process management tool.(Citation: SecureListUbiedo_Tsundere_Nov2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--18f5f8c6-bba5-4aba-93e7-3539fe565883",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

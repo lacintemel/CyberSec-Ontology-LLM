@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--aa429127-7adb-40dd-879c-e7c34a95a856",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--09266cb7-26b3-4959-bcff-a91e309b5588",
+            "created": "2018-01-16T16:13:52.465Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ClearSky OilRig Jan 2017",
+                    "description": "ClearSky Cybersecurity. (2017, January 5). Iranian Threat Agent OilRig Delivers Digitally Signed Malware, Impersonates University of Oxford. Retrieved May 3, 2017.",
+                    "url": "http://www.clearskysec.com/oilrig/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.916Z",
+            "description": "[Helminth](https://attack.mitre.org/software/S0170) has used a scheduled task for persistence.(Citation: ClearSky OilRig Jan 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eff1a885-6f90-42a1-901f-eef6e7a1905e",
+            "target_ref": "attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fa385a02-b022-4b5b-8180-88cfa628c893",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--82a8a34c-a439-463a-822b-9305e30b0b32",
+            "created": "2026-04-20T19:18:52.374Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anthropic AI Orchestrated Campaign NOV 2025",
+                    "description": "Anthropic. (2025, November). Disrupting the first reported AI-orchestrated cyber espionage campaign. Retrieved April 20, 2026.",
+                    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.411Z",
+            "description": "During the [Anthropic AI-orchestrated Campaign](https://attack.mitre.org/campaigns/C0062), the adversary used Claude Code to research exploitation techniques for an identified SSRF vulnerability, to generate a tailored custom attack payload, and to develop a full exploit chain prior to deployment.(Citation: Anthropic AI Orchestrated Campaign NOV 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--590cd5b0-2421-4158-84a2-db13b5db02a3",
+            "target_ref": "attack-pattern--bbc3cba7-84ae-410d-b18b-16750731dfa2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

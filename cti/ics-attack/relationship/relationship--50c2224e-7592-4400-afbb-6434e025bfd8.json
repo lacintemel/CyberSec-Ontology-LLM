@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--bba02277-cb08-472a-9809-d641dff938bb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--50c2224e-7592-4400-afbb-6434e025bfd8",
+            "created": "2022-09-29T14:28:08.703Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.036Z",
+            "description": "Ensure embedded controls and network devices are protected through access management, as these devices often have unknown hardcoded accounts which could be used to gain unauthorized access.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--3992ce42-43e9-4bea-b8db-a102ec3ec1e3",
+            "target_ref": "attack-pattern--6b335943-c3af-430e-a135-ab09623bdc20",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

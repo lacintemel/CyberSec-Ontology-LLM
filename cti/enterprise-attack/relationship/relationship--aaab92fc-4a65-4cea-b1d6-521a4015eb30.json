@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--881314a9-cc8b-4c07-934f-80ee92fcab14",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--aaab92fc-4a65-4cea-b1d6-521a4015eb30",
+            "created": "2020-07-27T15:21:26.243Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Talos Promethium June 2020",
+                    "description": "Mercer, W. et al. (2020, June 29). PROMETHIUM extends global reach with StrongPity3 APT. Retrieved July 20, 2020.",
+                    "url": "https://blog.talosintelligence.com/2020/06/promethium-extends-with-strongpity3.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T14:50:24.061Z",
+            "description": "[StrongPity](https://attack.mitre.org/software/S0491) can add directories used by the malware to the Windows Defender exclusions list to prevent detection.(Citation: Talos Promethium June 2020)",
+            "relationship_type": "uses",
+            "source_ref": "malware--20945359-3b39-4542-85ef-08ecb4e1c174",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

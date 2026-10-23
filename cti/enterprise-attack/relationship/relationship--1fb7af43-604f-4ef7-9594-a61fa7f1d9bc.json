@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d1c0c3cb-b04f-4dd1-8e08-aba8d2d634b4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1fb7af43-604f-4ef7-9594-a61fa7f1d9bc",
+            "created": "2026-04-20T14:19:02.685Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Ashen Lepus DEC 2025",
+                    "description": "Unit 42. (2025, December 11). Hamas-Affiliated Ashen Lepus Targets Middle Eastern Diplomatic Entities With New AshTag Malware Suite. Retrieved April 20, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/hamas-affiliate-ashen-lepus-uses-new-malware-suite-ashtag/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.948Z",
+            "description": "[AshTag](https://attack.mitre.org/software/S9031) has been executed through victims downloading and opening malicious RAR archive files.(Citation: Palo Alto Ashen Lepus DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bb6f2a5c-dbc9-45b0-bd3f-a0b7849959c2",
+            "target_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

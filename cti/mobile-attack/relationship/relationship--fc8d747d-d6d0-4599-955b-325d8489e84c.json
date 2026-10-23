@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--5d93d685-7242-46f6-ae44-0b78053ce45e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fc8d747d-d6d0-4599-955b-325d8489e84c",
+            "created": "2026-02-06T21:25:25.950Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_June2025",
+                    "description": "ThreatFabric. (2025, June 3). Crocodilus Mobile Malware: Evolving Fast, Going Global. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/crocodilus-mobile-malware-evolving-fast-going-global"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T22:13:13.092Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has used its AccessibilityLogging feature to collect user data, such as private keys of specific cryptocurrency wallets.(Citation: ThreatFabric_Crocodilus_June2025)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--4c58b7c6-a839-4789-bda9-9de33e4d4512",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

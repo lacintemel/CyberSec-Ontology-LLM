@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--58fd9848-d040-46ad-8246-1ff09c653ba0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--866a9b33-9fd4-4f1a-a44e-dd919f31efc1",
+            "created": "2026-10-13T17:47:41.828Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0743#AN2272",
+                    "external_id": "AN2272"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:41.828Z",
+            "name": "Analytic 2272",
+            "description": "Real-time monitoring identifies a Windows process enabling promiscuous or monitor mode on a wireless adapter on an Industrial Control System (ICS) workstation that is not a designated wireless management station, indicating preparation for wireless interception. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3551476e-14f5-4e48-a518-e82135329e03",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=6 for wireless capture driver on host not in designated wireless management station list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessDeviceInventory",
+                    "description": "MAC/identity inventory of all devices authorized on the ICS wireless segment."
+                },
+                {
+                    "field": "DesignatedWirelessManagementStations",
+                    "description": "Hosts authorized to legitimately enable wireless capture for diagnostics."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

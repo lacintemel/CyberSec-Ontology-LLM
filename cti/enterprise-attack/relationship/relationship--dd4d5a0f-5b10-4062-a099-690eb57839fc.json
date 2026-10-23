@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--862404ba-6c4e-4b0b-b8da-21388d0b42e3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dd4d5a0f-5b10-4062-a099-690eb57839fc",
+            "created": "2026-04-15T19:06:38.549Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Github TruffleSecurity Trufflehog April 2025",
+                    "description": "Trufflesecurity. (2026, April 8). TruffleHog Enterprise. Retrieved April 15, 2026.",
+                    "url": "https://github.com/trufflesecurity/trufflehog"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.227Z",
+            "description": "[TruffleHog](https://attack.mitre.org/software/S9009) has used stolen credentials to log into cloud services to access cloud hosted repositories and other cloud storage solutions to discover sensitive data to include API Keys, tokens and credentials.(Citation: Github TruffleSecurity Trufflehog April 2025)",
+            "relationship_type": "uses",
+            "source_ref": "tool--76f8a686-3157-481f-9af6-e8558883a8d6",
+            "target_ref": "attack-pattern--f232fa7a-025c-4d43-abc7-318e81a73d65",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

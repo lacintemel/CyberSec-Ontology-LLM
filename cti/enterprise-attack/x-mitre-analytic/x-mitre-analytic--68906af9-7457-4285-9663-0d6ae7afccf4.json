@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--e30728ee-5053-4acf-afbd-60b5d8ee219e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--68906af9-7457-4285-9663-0d6ae7afccf4",
+            "created": "2026-09-24T00:07:36.446Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0927#AN2078",
+                    "external_id": "AN2078"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T00:16:13.844Z",
+            "name": "Analytic 2078",
+            "description": "An analyst observes an AI agent access\u00a0$ProtectedDataScope$, invoke a tool/API using that information or a derived payload, and the destination service record a successful transfer to a recipient, repository, tenant, domain, or service outside\u00a0$AuthorizedAIDataFlows$.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "SaaS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "saas:audit",
+                    "channel": "Actual send/share/upload/write operation"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.actionGroupInvocationInput"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "AWS:bedrock",
+                    "channel": "AgentTrace.knowledgeBaseLookupInput"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ProtectedDataScope",
+                    "description": "protected information"
+                },
+                {
+                    "field": "AuthorizedAgentActions",
+                    "description": "tools/functions legitimately available for workflow"
+                },
+                {
+                    "field": "AuthorizedAIDataFlows",
+                    "description": "allowed source\u2192tool\u2192destination relationships"
+                },
+                {
+                    "field": "AuthorizedAIOutputDestinations",
+                    "description": "permitted recipients/domains/tenants/repos/connectors"
+                },
+                {
+                    "field": "AIExfiltrationWindow",
+                    "description": "normal access\u2192transfer interval"
+                }
+            ]
+        }
+    ]
+}

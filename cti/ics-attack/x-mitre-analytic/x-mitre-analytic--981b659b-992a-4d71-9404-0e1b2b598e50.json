@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--3bcaba99-42c4-4f1b-837b-46e0a7d72f32",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--981b659b-992a-4d71-9404-0e1b2b598e50",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0736#AN1869",
+                    "external_id": "AN1869"
+                },
+                {
+                    "source_name": "University of Birmingham C2",
+                    "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved September 3, 2026.",
+                    "url": "https://arxiv.org/pdf/1408.1136"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:33.391Z",
+            "name": "Analytic 1869",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) host or server establishing outbound connections on a commonly-allowed port (e.g., 443, 80, 8080, 53, etc.) to a destination not in the approved vendor/business domain list, where that host's documented network role does not require external connectivity. Documented real-world use: Sandworm's 2015 Ukraine power grid attack used port 443 for Command and Control (C2) communications. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity. SNI and certificate attributes are TLS/session metadata; do not treat them as decrypted payload content. Encrypted application content requires a separate inspection point.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): egress flow on port 443/80/8080/53 from Industrial Control Systems (ICS) host in no-external-connectivity role list to destination not in approved vendor domains"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "zeek:ssl",
+                    "channel": "Transport Layer Security (TLS) Server Name Indication (SNI) or certificate issuer does not match approved vendor domains or recognized Content Delivery Network (CDN) serving vendor content"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedVendorDomains",
+                    "description": "Allowlist of legitimate vendor domains for software updates, licensing, or remote support."
+                },
+                {
+                    "field": "NoExternalConnectivityRoleList",
+                    "description": "Inventory of ICS hosts whose documented function never requires outbound internet connectivity."
+                }
+            ]
+        }
+    ]
+}

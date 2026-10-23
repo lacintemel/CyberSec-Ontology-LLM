@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--27d8c58f-1b9a-4994-b9a3-b2fd47f62a3e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f569160b-af34-4919-8cfc-0dce1762e87d",
+            "created": "2021-01-22T16:08:40.745Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "NIST 800-63-3",
+                    "description": "Temoshok, D., et al. (July 2025). SP 800-63-4, Digital Identity Guidelines. Retrieved July 29, 2026.",
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-4.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-29T14:01:32.458Z",
+            "description": "Refer to NIST guidelines when creating password policies for master passwords.(Citation: NIST 800-63-3)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--90c218c3-fbf8-4830-98a7-e8cfb7eaa485",
+            "target_ref": "attack-pattern--315f51f0-6b03-4c1e-bfb2-84740afb8e21",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

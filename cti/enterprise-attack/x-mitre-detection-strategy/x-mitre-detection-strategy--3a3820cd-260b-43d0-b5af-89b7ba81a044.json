@@ -1,0 +1,40 @@
+{
+    "type": "bundle",
+    "id": "bundle--d33d8d5c-fa3c-4328-94ea-1053878faf65",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--3a3820cd-260b-43d0-b5af-89b7ba81a044",
+            "created": "2026-04-16T17:13:38.727Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0900",
+                    "external_id": "DET0900"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:33.407Z",
+            "name": "Detection of Defense Impairment",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--7ec436a3-dd31-4d23-a51b-0e03d3c474bd",
+                "x-mitre-analytic--c6fb992c-387e-49ee-beaf-a1351aded262",
+                "x-mitre-analytic--f46639b5-4d99-4d52-8da9-112a468cc6d8",
+                "x-mitre-analytic--9df50fd3-bbad-43ce-b511-1bf995f1b583",
+                "x-mitre-analytic--47df93f9-b33f-4333-95b6-b3cca9418a4d"
+            ]
+        }
+    ]
+}

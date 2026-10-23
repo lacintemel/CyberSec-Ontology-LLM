@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--1221c73d-7d88-4621-a614-29205351a3db",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--441fa206-c1cf-40dd-850e-897adcf4776f",
+            "created": "2025-12-16T00:04:49.767Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AhnLab_SystemBC_Apr2022",
+                    "description": "AhnLab. (2022, April 4). SystemBC Being Used by Various Attackers . Retrieved June 18, 2025.",
+                    "url": "https://asec.ahnlab.com/en/33600/"
+                },
+                {
+                    "source_name": "Lumen_SystemBC_Sept2025",
+                    "description": "Black Lotus Labs . (2025, September 18). SystemBC: Bringing the noise. Retrieved December 15, 2025.",
+                    "url": "https://blog.lumen.com/systembc-bringing-the-noise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.018Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has the ability to decrypt RC4 encrypted packets and to decode obfuscated data before C2 communication.(Citation: AhnLab_SystemBC_Apr2022) Additionally, [SystemBC](https://attack.mitre.org/software/S9001) has decrypted its config file that was encoded with XOR and a hardcoded 40-byte key.(Citation: Lumen_SystemBC_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

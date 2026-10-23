@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7ef55e9b-da99-42d5-acf6-c6cf5bb4d2c9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f76dd26b-2aa3-4fc3-bdef-ddd0632d851b",
+            "created": "2026-04-22T13:30:44.280Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.261Z",
+            "description": "Utilize network allowlists to restrict unnecessary connections to network devices (e.g., comm servers, serial to ethernet converters) and services, especially in cases when devices have limits on the number of simultaneous sessions they support.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--aadac250-bcdc-44e3-a4ae-f52bd0a7a16a",
+            "target_ref": "attack-pattern--338f4364-2269-4f70-9079-b20384b16628",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

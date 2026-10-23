@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--3f180120-1c2d-4503-8aff-8c359a89b016",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--0099659c-6a20-4331-9d47-b1c0c380fd6b",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0749#AN1881",
+                    "external_id": "AN1881"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:43.395Z",
+            "name": "Analytic 1881",
+            "description": "Monitor Windows Security Event ID 4663 on explicitly audited ICS data paths and correlate repeated ReadData/ListDirectory access across multiple sensitive files or directories by an account/process outside the approved engineering, backup, or application baseline. This requires Object Access auditing and SACLs on the monitored paths; Sysmon does not provide generic file-read telemetry. Alert when the bulk-read pattern occurs outside an approved backup/export window or is followed by staging, compression, or network transfer.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Sequential file reads across multiple Industrial Control Systems (ICS) data paths by image not in authorized ICS applications, exceeding bulk access threshold within a short window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 of archive utility immediately following bulk file access pattern from same parent process tree"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedICSApplications",
+                    "description": "Allowlist of processes expected to perform legitimate bulk reads of ICS data."
+                },
+                {
+                    "field": "BulkAccessThreshold",
+                    "description": "Number of distinct files read within the detection window that constitutes bulk collection."
+                },
+                {
+                    "field": "ICSDataPaths",
+                    "description": "File system paths containing ICS configuration, project, and sensitive operational data."
+                }
+            ]
+        }
+    ]
+}

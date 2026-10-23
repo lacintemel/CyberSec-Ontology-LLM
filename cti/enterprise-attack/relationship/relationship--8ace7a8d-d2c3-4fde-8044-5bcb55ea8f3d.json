@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9cb4fcd2-08e1-4fbb-b065-d85e80fc1307",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8ace7a8d-d2c3-4fde-8044-5bcb55ea8f3d",
+            "created": "2026-04-23T23:13:24.293Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anthropic AI Orchestrated Campaign NOV 2025",
+                    "description": "Anthropic. (2025, November). Disrupting the first reported AI-orchestrated cyber espionage campaign. Retrieved April 20, 2026.",
+                    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.458Z",
+            "description": "During the [Anthropic AI-orchestrated Campaign](https://attack.mitre.org/campaigns/C0062), the adversary utilized Claude Code to generate a detailed summary report of collected data, which is then reviewed and approved by the adversary prior to exfiltration of data over Claude.(Citation: Anthropic AI Orchestrated Campaign NOV 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--590cd5b0-2421-4158-84a2-db13b5db02a3",
+            "target_ref": "attack-pattern--40597f16-0963-4249-bf4c-ac93b7fb9807",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

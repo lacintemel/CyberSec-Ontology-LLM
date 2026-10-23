@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4f3ef16c-a5b0-40ff-879a-e81a408b4164",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3a7a423a-2995-43f7-a152-99af5a552366",
+            "created": "2026-09-23T18:43:36.175Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T18:43:36.175Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has utilized the domain\u2019s NETLOGON share to distribute the malicious payload to all domain-joined systems.(Citation: TrendAI_TheGentlemen_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--c63a348e-ffc2-486a-b9d9-d7f11ec54d99",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

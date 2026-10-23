@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--5535a642-86c8-4cb0-8247-9c592ba1f1fa",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--2195ec67-7cea-4b0d-a678-18384089bf2c",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0741#AN1874",
+                    "external_id": "AN1874"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:04.902Z",
+            "name": "Analytic 1874",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol write to a controller's task/organization-block configuration from a source not in the approved engineering workstation list, correlated against post-modification cycle timing deviation. Documented precedent: Stuxnet infected Siemens OB1 (main execution cycle block) so its malicious payload ran every cycle, and infected OB35 (watchdog/interrupt block) to suppress error reporting. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--8ed4e6d0-56d7-4e6b-8fa6-41f41631f30d",
+                    "name": "assetinventory:ProgramDiff",
+                    "channel": "current task-to-block assignment table differs from last known-good baseline without corresponding change ticket"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "task/organization-block modification service from source not in engineering workstation list outside change control window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "device:VendorLog",
+                    "channel": "measured scan cycle time or interrupt response latency deviates from baseline cycle time by more than cycle timing deviation threshold following a task configuration change"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "BaselineCycleTime",
+                    "description": "Measured normal scan cycle time for the specific controller and program."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which task reconfiguration is authorized."
+                },
+                {
+                    "field": "CycleTimingDeviationThreshold",
+                    "description": "Percentage or absolute deviation from baseline cycle time indicating a task reassignment."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to modify controller task configuration."
+                }
+            ]
+        }
+    ]
+}

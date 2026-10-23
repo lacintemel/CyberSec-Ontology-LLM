@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d72a60a8-dd31-4ba9-abf7-182db5c3e3cd",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6ddcaca1-4fd9-4a9f-a4fe-2e5824958f8d",
+            "created": "2026-04-22T22:38:12.298Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.075Z",
+            "description": "[LazyWiper](https://attack.mitre.org/software/S9039) has used `[System.Net.Dns]::GetHostName()` and `$env:COMPUTERNAME` to enumerate the hostname of a system and determine if it is a domain controller.(Citation: CERT Polska)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e4160979-b9bc-4f58-acbe-1d921ebbc122",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

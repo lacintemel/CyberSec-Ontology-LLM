@@ -1,0 +1,256 @@
+{
+    "type": "bundle",
+    "id": "bundle--d2905dbc-f23c-495e-a8c4-5e9c12fe6722",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+            "created": "2026-03-11T16:00:13.775Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0123",
+                    "external_id": "DC0123"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:32.511Z",
+            "name": "Application State",
+            "description": "Application State represents the operational status and lifecycle context of a mobile application at a given point in time. This includes whether the application is running in the foreground or background, its activity state, recent user interaction, and transitions between lifecycle states.\n\nMonitoring application state helps defenders identify suspicious behavior where an application performs sensitive actions while inactive, in the background, or without recent user interaction.\n\nApplication state is particularly useful when detecting malicious activity that occurs outside normal user-driven workflows.\n\nExamples\nAndroid\n\n- Application transitions from foreground to background\n- Application running as a background service\n- Application started via broadcast receiver\n- Application launched automatically after device boot\n\niOS\n\n- Application entering active, inactive, or background state\n- Background task execution\n- Background fetch activity\n- Application wake events triggered by push notifications or system services\n\nData Collection Measures\n- Mobile EDR / MTD runtime monitoring\n- OS lifecycle event telemetry\n- Application runtime instrumentation\n- Mobile security platform behavioral monitoring\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "environment API reads occur before any user interaction at cold launch \u2014 precondition check timing"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "environment check API burst occurs at app cold-launch or in background before user interaction \u2014 precondition check timing distinguishes guardrail from feature use"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Newly installed or updated application launches background service, becomes active without recent user interaction, or executes immediately after update in a pattern inconsistent with baseline"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "pplication or service remains active, foregrounds, or overlays during device locked state or immediately at unlock transition with weak recent user interaction context"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application wakes, becomes active, refreshes, or foregrounds immediately after locked or inactive state transition with weak recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Foreground or background applications remain active while network-dependent activity stalls, retries, or transitions into repeated failure state"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application runs in foreground, service, or sustained background-active state while concentrated file transformation occurs with weak or no recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Updated or newly delivered application becomes active, launches background services, or executes shortly after install/update with minimal user interaction inconsistent with baseline"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Updated or newly delivered application wakes, foregrounds, refreshes, or becomes active shortly after version change with weak recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Protected resource use or privileged framework access occurs while device is locked, before normal setup completion, or from an app/service not in foreground and not on approved preload list"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Managed app or device-originated network activity occurs while the device is locked or before expected managed app initialization sequence, inconsistent with expected background refresh baseline"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Recently installed or updated trusted app begins background execution, persistent service activity, overlay-like behavior, or lock-state activity inconsistent with its historical baseline or expected first-run sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Recently installed or updated managed app begins background activity, persistent refresh, or lock-state-adjacent activity inconsistent with expected first-run behavior, user interaction timing, or historical baseline"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App communicating with external web service is backgrounded, persistent, recently awakened, or active while device is locked or without recent user interaction in a way inconsistent with expected app behavior"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Managed app shows background activity, refresh, or lock-state-adjacent execution temporally aligned to web-service communication without expected foreground use or recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "AppState=background or foreground_service active when resolver retrieval request occurred and pivot connection followed without foreground transition"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before resolver retrieval and subsequent pivot connection sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "DeviceLockState=locked or BackgroundRefresh active during resolver\u2192pivot sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before resolver request and pivot connection sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "AppState=background when bidirectional exchange with public web-service domain began and no foreground transition occurred between retrieval and outbound write"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "DeviceLockState=locked during inbound retrieval and subsequent outbound write sequence to public web-service platform"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before retrieve-then-write exchange to public web-service domain from same app identity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "BackgroundRefresh or background activity was active when retrieve-then-write exchange with public web-service domain occurred"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "AppState=background when repeated retrieval from public web-service domain began and no foreground transition occurred during the retrieval sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "DeviceLockState=locked during repeated inbound retrieval sequence from public web-service platform"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before repeated retrieval sequence from public web-service domain from same app identity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "AppState=background when non-standard-port session began and no foreground transition occurred during repeated or persistent connection sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "DeviceLockState=locked during outbound session using non-standard protocol-to-port pairing"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before app-attributed session using non-standard protocol-to-port pairing"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before camera session start and no foreground transition occurred during sustained capture interval"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Background activity, low-interaction device state, or DeviceLockState=locked was observed during sustained camera session or immediately before camera access from same bundle context"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Capturing app remained backgrounded or foreground-service-only while screen capture session occurred and another app was foregrounded during capture interval"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before screen capture session start and no expected foreground transition or consent-linked interaction occurred during capture interval"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Sensitive app category remained foregrounded during screen capture session from different app identity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Injecting app remained backgrounded or foreground-service-only while injected click, global action, or text insertion occurred in a different foreground app"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "LastUserInteractionDelta exceeded threshold before injected UI action and no matching touch interaction was observed for the target foreground app during injection sequence"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Sensitive app category remained foregrounded during injected UI sequence from different app identity"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Notification access event occurs while app_state=background AND device_state=locked OR no recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Crypto + data staging occurs while app_state=background OR device_locked=true OR no recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Asymmetric crypto operations occur while app_state=background OR device_locked=true OR no recent user interaction"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "TLS trust customization and outbound HTTPS session occur while app_state=background or device_locked=true or recent_user_interaction=false"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Managed app initiates or resumes network-capable execution while app_state=background or device_locked=true before opaque TLS session attempt"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Managed app enters background-capable execution or resumes processing immediately before archive-like file creation or upload behavior"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Persistent foreground-service notification is created, updated, or remains visible while app behavior or notification identity is inconsistent with declared function during the persistence interval"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Ingress transfer and local file creation occur while app_state=background or device_locked=true or recent_user_interaction=false during the acquisition phase"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Ingress retrieval and staging occur while app_state=background or device_locked=true or recent_user_interaction=false during the acquisition phase"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Native library load or JNI-backed execution occurs while app_state=background or device_locked=true or recent_user_interaction=false during the execution phase"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Modified or newly replaced application begins execution or persists while recent_user_interaction=false or device_locked=true or launch context is inconsistent with expected user-driven update flow"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "System event occurs (e.g., SMS received, device boot completed, network state changed) acting as trigger event for execution phase"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application remains inactive across normal execution windows and transitions into background or foreground activity burst only when qualifying device context, lock state, locale, or network condition exists"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application remains dormant, low-activity, or background-resident across non-qualifying locations and transitions into active execution only after geographic condition is met"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "application reduces or halts operational activity during periods of active user interaction and resumes background execution or periodic work only during low-motion or idle intervals"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "ecurity or monitoring application transitions to disabled, inactive, or non-reporting state while other applications remain active"
+                },
+                {
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                }
+            ]
+        }
+    ]
+}

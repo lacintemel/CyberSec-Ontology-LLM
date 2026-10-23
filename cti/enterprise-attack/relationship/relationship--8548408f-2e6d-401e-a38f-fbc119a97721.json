@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8aae6c73-838c-46fa-9592-1f6ff35d0201",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8548408f-2e6d-401e-a38f-fbc119a97721",
+            "created": "2026-10-01T18:16:44.834Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticore_May2026",
+                    "description": "Check Point. (2026, May 22). Fast and Furious \u2013 Nimbus Manticore Operations During the Iranian Conflict. Retrieved September 23, 2026.",
+                    "url": "https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T18:16:44.834Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has utilized Search Engine Optimization (SEO) poisoning to deliver malware to unsuspecting victims.(Citation: CheckPoint_NimbusManticore_May2026)  \n\n[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has also registered dozens of domains that link to a typosquatted domain to generate link-based reputation signals and incorporated keyword stuffing to improve search ranking.(Citation: CheckPoint_NimbusManticore_May2026) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

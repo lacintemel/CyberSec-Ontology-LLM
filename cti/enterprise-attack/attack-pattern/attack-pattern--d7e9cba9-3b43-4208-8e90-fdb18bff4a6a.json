@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--0a6286b1-d800-446d-ae66-95583c204f83",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--d7e9cba9-3b43-4208-8e90-fdb18bff4a6a",
+            "created": "2026-09-18T17:58:36.690Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1699",
+                    "external_id": "T1699"
+                },
+                {
+                    "source_name": "Gemini AI Misuse Jan 2025",
+                    "description": "Google Threat Intelligence Group. (2025, January). Adversarial Misuse of Generative AI. Retrieved September 18, 2026.",
+                    "url": "https://services.google.com/fh/files/misc/adversarial-misuse-generative-ai.pdf"
+                },
+                {
+                    "source_name": "NIST Direct Prompt Injection",
+                    "description": "NIST. (n.d.). direct prompt injection. Retrieved September 18, 2026.",
+                    "url": "https://csrc.nist.gov/glossary/term/direct_prompt_injection"
+                },
+                {
+                    "source_name": "OWASP Prompt Injection",
+                    "description": "OWASP. (n.d.). LLM01:2025 Prompt Injection. Retrieved September 18, 2026.",
+                    "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+                },
+                {
+                    "source_name": "Palo Alto Prompt Injection",
+                    "description": "Palo Alto Networks. (n.d.). What Is a Prompt Injection Attack? [Examples & Prevention]. Retrieved September 18, 2026.",
+                    "url": "https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack"
+                },
+                {
+                    "source_name": "Cybersec Guru Prompt Injection",
+                    "description": "The CyberSec Guru. (2026, June 7). The Meta AI exploit: how a prompt injection flaw bypassed 2FA to steal million-dollar Instagram accounts. Retrieved September 18, 2026.",
+                    "url": "https://thecybersecguru.com/news/instagram-meta-ai-vulnerability-account-recovery-exploit/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T13:44:19.807Z",
+            "name": "Direct Prompt Injection",
+            "description": "Adversaries may input malicious prompts directly into an LLM\u2019s user interface.(Citation: NIST Direct Prompt Injection) The prompts can be designed to bypass safeguards, manipulate context, override previous instructions, or coerce the LLM into unauthorized behavior.(Citation: OWASP Prompt Injection) \n\nAdversaries may use direct prompt injection to [Generate Content](https://attack.mitre.org/techniques/T1683) prohibited by the LLM's guardrails or to induce the system to utilize its capabilities in unintended or prohibited ways.(Citation: Gemini AI Misuse Jan 2025)(Citation: Palo Alto Prompt Injection) Adversaries may achieve this by instructing the LLM to ignore previous instructions or safety rules, or by impersonating a role such as a researcher or privileged user.(Citation: Cybersec Guru Prompt Injection) ",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "execution"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Windows",
+                "SaaS"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_remote_support": false
+        }
+    ]
+}

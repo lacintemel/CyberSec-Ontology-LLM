@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b02b219a-6c6a-405e-be89-68f430705ed4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f8e92dfb-d6c2-42bc-a56c-19f690d9b957",
+            "created": "2026-09-11T19:47:28.967Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Logpoint_StealerMalwareFamilies_2024",
+                    "description": "Khadgi, N. (n.d.). A Comprehensive Overview on Stealer Malware Families. Retrieved August 25, 2026.",
+                    "url": "https://web.archive.org/web/20240517205011/https://www.logpoint.com/wp-content/uploads/2024/03/logpoint-etpr-a-comprehensive-overview-on-stealer-malware-families-1.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T18:12:44.258Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has been distributed via malicious advertisements when users searched for \u201cNotepad++.\u201d(Citation: Logpoint_StealerMalwareFamilies_2024)\n",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--d742a578-d70e-4d0e-96a6-02a9c30204e6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--342d551d-2551-49c0-9b99-0f74615e694a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c6534574-cd90-4390-810d-0392c460e9f8",
+            "created": "2026-04-17T00:27:18.707Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google BRICKSTORM September 2025",
+                    "description": "Sarah Yoder, John Wolfram, Ashley Pearson, Doug Bienstock, Josh Madeley, Josh Murchie, Brad Slaybaugh, Matt Lin, Geoff Carstairs, Austin Larsen. (2025, September 24). Another BRICKSTORM: Stealthy Backdoor Enabling Espionage into Tech and Legal Sectors. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:56.958Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has leveraged DNS web services to resolve C2 IP addresses including sslip.io and nip.io.(Citation: Google BRICKSTORM September 2025)  [BRICKSTORM](https://attack.mitre.org/software/S9015) has also utilized Cloudflare Workers for C2 communications.(Citation: Google BRICKSTORM September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--830c9528-df21-472c-8c14-a036bf17d665",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

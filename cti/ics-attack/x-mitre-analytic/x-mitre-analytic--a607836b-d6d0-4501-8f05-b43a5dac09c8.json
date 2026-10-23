@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--b113e0d5-0e41-4493-be88-5ef1f22d07c3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a607836b-d6d0-4501-8f05-b43a5dac09c8",
+            "created": "2026-10-13T17:44:10.401Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0748#AN2112",
+                    "external_id": "AN2112"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:10.401Z",
+            "name": "Analytic 2112",
+            "description": "Real-time monitoring identifies modification of udev rules or autofs configuration that triggers script execution on removable media mount, where the triggered script path is not in the authorized Industrial Control System (ICS) software inventory. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: PATH record shows modification of udev/autofs configuration that references an executable or script outside the authorized ICS software inventory"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedICSSoftwareInventory",
+                    "description": "Inventory of binaries legitimately authorized to be referenced by autorun/startup mechanisms on ICS hosts."
+                },
+                {
+                    "field": "AutorunModificationWindow",
+                    "description": "Time window correlating removable media insertion with a subsequent autorun configuration change."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

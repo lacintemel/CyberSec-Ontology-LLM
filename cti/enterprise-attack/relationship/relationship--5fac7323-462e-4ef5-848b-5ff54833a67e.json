@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d789301c-bfc8-46fe-904f-8d60280e734f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5fac7323-462e-4ef5-848b-5ff54833a67e",
+            "created": "2025-12-16T00:00:33.284Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "HarmonProofpoint_SystemBC_Aug2019",
+                    "description": "Harmon, K., et al. (2019, August 1). SystemBC is like Christmas in July for SOCKS5 Malware and Exploit Kits . Retrieved June 13, 2025.",
+                    "url": "https://www.proofpoint.com/us/threat-insight/post/systembc-christmas-july-socks5-malware-and-exploit-kits"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:49.607Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has used DNS servers to resolve .bit domains to C2 infrastructure.(Citation: HarmonProofpoint_SystemBC_Aug2019)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--1996eef1-ced3-4d7f-bf94-33298cabbf72",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

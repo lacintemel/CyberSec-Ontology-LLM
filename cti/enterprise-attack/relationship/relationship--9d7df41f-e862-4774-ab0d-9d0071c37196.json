@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3a619448-c395-4225-8992-6d0c43439647",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9d7df41f-e862-4774-ab0d-9d0071c37196",
+            "created": "2026-10-01T21:35:57.208Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T21:35:57.208Z",
+            "description": "[POLLBLEND](https://attack.mitre.org/software/S9066) has utilized hardcoded C2 communications to download configuration data.(Citation: Mandiant_UNC1549_Nov2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--fa6cfe4c-e83b-4e19-b687-bd26e2b656e5",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

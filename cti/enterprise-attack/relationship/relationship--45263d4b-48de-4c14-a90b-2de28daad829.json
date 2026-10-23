@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--af35e296-cae6-4150-8719-0602c842496e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--45263d4b-48de-4c14-a90b-2de28daad829",
+            "created": "2026-04-16T14:03:23.850Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "Recorded Future TAG-144 AUG 2025",
+                    "description": "Insikt Group. (2025, August 26). TAG-144\u2019s Persistent Grip on South American Organizations. Retrieved April 16, 2026.",
+                    "url": "https://assets.recordedfuture.com/insikt-report-pdfs/2025/cta-2025-0826.pdf"
+                },
+                {
+                    "source_name": "LevelBlue Blind Eagle Proton66 JUN 2025",
+                    "description": "Melnyk, S. (2025, June 27). Tracing Blind Eagle to Proton66. Retrieved April 16, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/tracing-blind-eagle-to-proton66/"
+                },
+                {
+                    "source_name": "Zscaler BlindEagle DEC 2025",
+                    "description": "Pellegrino, G. (2025, December 16). BlindEagle Targets Colombian Government Agency with Caminho and DCRAT. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/blindeagle-targets-colombian-government-agency-caminho-and-dcrat"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.434Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has impersonated banks including Banco Davivienda, Bancolombia, and BBVA as well as government institutions such as Colombia\u2019s National Directorate of Taxes and Customs, Ministry of Foreign Affairs, and Office of the Attorney General.(Citation: Kaspersky BlindEagle AUG 2024)(Citation: LevelBlue Blind Eagle Proton66 JUN 2025)(Citation: Recorded Future TAG-144 AUG 2025)(Citation: Zscaler BlindEagle DEC 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--14dd55e2-670e-45a3-8088-2c6207637c41",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a3c7c24f-c630-4a0e-a095-8918a7092547",
+            "created": "2026-04-20T19:17:41.438Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anthropic AI Orchestrated Campaign NOV 2025",
+                    "description": "Anthropic. (2025, November). Disrupting the first reported AI-orchestrated cyber espionage campaign. Retrieved April 20, 2026.",
+                    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.558Z",
+            "description": "During the [Anthropic AI-orchestrated Campaign](https://attack.mitre.org/campaigns/C0062), the adversary operated dedicated penetration testing servers accessible via MCP to support remote command execution, simultaneous tool coordination, and persistent operational state maintenance across campaign sessions.(Citation: Anthropic AI Orchestrated Campaign NOV 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--590cd5b0-2421-4158-84a2-db13b5db02a3",
+            "target_ref": "attack-pattern--e196b5c5-8118-4a1c-ab8a-936586ce3db5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

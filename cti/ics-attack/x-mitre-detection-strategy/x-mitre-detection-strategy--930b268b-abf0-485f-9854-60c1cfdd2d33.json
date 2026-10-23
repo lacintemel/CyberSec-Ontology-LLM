@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--ddd1381b-05a2-415c-8ef9-8e48c39ce062",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--930b268b-abf0-485f-9854-60c1cfdd2d33",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0748",
+                    "external_id": "DET0748"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:42.798Z",
+            "name": "Detection of Autorun Image",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--2b751a3d-c680-46c9-b92b-55a9d24bd4f9",
+                "x-mitre-analytic--a607836b-d6d0-4501-8f05-b43a5dac09c8",
+                "x-mitre-analytic--87efd969-d991-49be-9e41-24f5dbcff9e8"
+            ]
+        }
+    ]
+}

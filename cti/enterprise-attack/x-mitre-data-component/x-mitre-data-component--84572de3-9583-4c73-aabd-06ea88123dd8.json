@@ -1,0 +1,698 @@
+{
+    "type": "bundle",
+    "id": "bundle--8ee27962-92ed-4325-8809-28e85ceac7ea",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+            "created": "2021-10-20T15:05:19.273Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0061",
+                    "external_id": "DC0061"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:40.092Z",
+            "name": "File Modification",
+            "description": "Changes made to a file, including updates to its contents, metadata, access permissions, or attributes. These modifications may indicate legitimate activity (e.g., software updates) or unauthorized changes (e.g., tampering, ransomware, or adversarial modifications). Examples: \n\n- Content Modifications: Changes to the content of a configuration file, such as modifying `/etc/ssh/sshd_config` on Linux or `C:\\Windows\\System32\\drivers\\etc\\hosts` on Windows.\n- Permission Changes: Altering file permissions to allow broader access, such as changing a file from `644` to `777` on Linux or modifying NTFS permissions on Windows.\n- Attribute Modifications: Changing a file's attributes to hidden, read-only, or system on Windows.\n- Timestamp Manipulation: Adjusting a file's creation or modification timestamp using tools like `touch` in Linux or timestomping tools on Windows.\n- Software or System File Changes: Modifying system files such as `boot.ini`, kernel modules, or application binaries.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack",
+                "enterprise-attack",
+                "mobile-attack"
+            ],
+            "x_mitre_version": "3.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "android:logcat",
+                    "channel": "INSERT or UPDATE of image/*, audio/*, video/* via ContentResolver with same URI re-written within short window; abnormal MIME/container change"
+                },
+                {
+                    "name": "AndroidLogs:FileSystem",
+                    "channel": "Modification to /system/etc/init/ or /vendor/etc/init/ boot-time scripts"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "Modification or deletion of /etc/audit/audit.rules or /etc/audit/audit.conf"
+                },
+                {
+                    "name": "auditd:FILE",
+                    "channel": "Modification of Display Manager configuration files (/etc/gdm3/*, /etc/lightdm/*)"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "/etc/passwd or /etc/group file write"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "write: Modification of /boot/grub/*, /boot/efi/EFI/*, or initramfs images"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "write or create events on *.pth, sitecustomize.py, usercustomize.py in site-packages or dist-packages"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "write: File modifications to /etc/systemd/sleep.conf or related power configuration files"
+                },
+                {
+                    "name": "auditd:PATH",
+                    "channel": "odification of ~/.ssh/authorized_keys or credential files"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write calls modifying ~/.bashrc, ~/.profile, or /etc/paths.d"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "AUDIT_SYSCALL (open, write, rename, unlink)"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "PATH"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve call for modification of /etc/sudoers or writing to /var/db/sudo"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write: File modifications under /etc/ssl/certs, /usr/local/share/ca-certificates, or /etc/pki/ca-trust/source/anchors"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, unlink, rename: Suspicious file access, deletion, or modification of sensitive paths"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write of .service unit files"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write/unlink"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write, rename"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write | PATH=/home/*/.ssh/authorized_keys"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write: Write operations targeting /dev/sda, /dev/nvme0n1, or EFI partition mounts"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write to /etc/pam.d/*"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write: Modification of structured stored data by suspicious processes"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "openat, write, rename, unlink"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write syscalls targeting /etc/ld.so.preload or binaries in /usr/bin"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "modification of existing .service file"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write: Modification of /boot/grub/* or /boot/efi/*"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "chmod"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "rename,chmod"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "Modification of user shell profile or trap registration via echo/redirection (e.g., echo \"trap 'malicious_cmd' INT\" >> ~/.bashrc)"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "chmod, write, create, open"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open, write: File writes to application binaries or libraries at runtime"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "file write operations in /Library/WebServer/Documents"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write operation on /etc/passwd or /etc/shadow"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "mount or losetup commands creating hidden or encrypted FS"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write to /proc/*/mem or /proc/*/maps"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "write or rename to /etc/systemd/system or /etc/init.d"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "modification of entrypoint scripts or init containers"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "chmod/chown to /etc/passwd or /etc/shadow"
+                },
+                {
+                    "name": "auditd:SYSCALL",
+                    "channel": "open/write syscalls targeting web directory files"
+                },
+                {
+                    "name": "azure:resource",
+                    "channel": "PATCH vm/authorized_keys"
+                },
+                {
+                    "name": "containerd:runtime",
+                    "channel": "file change monitoring within /etc/cron.*, /tmp, or mounted volumes"
+                },
+                {
+                    "name": "ebpf:syscalls",
+                    "channel": "file_write"
+                },
+                {
+                    "name": "esxi:cron",
+                    "channel": "manual edits to /etc/rc.local.d/local.sh or cron.d"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "boot"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "modification of crontab or local.sh entries"
+                },
+                {
+                    "name": "esxi:hostd",
+                    "channel": "binary or module replacement event"
+                },
+                {
+                    "name": "esxi:shell",
+                    "channel": "file write or edit"
+                },
+                {
+                    "name": "esxi:shell",
+                    "channel": "admin command usage"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "rename .vmdk to .*.locked|datastore write spike"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "Unauthorized file modifications within datastore volumes via shell access or vCLI"
+                },
+                {
+                    "name": "esxi:vmkernel",
+                    "channel": "/var/log/vmkernel.log"
+                },
+                {
+                    "name": "ESXiLogs:messages",
+                    "channel": "changes to /etc/motd or /etc/vmware/welcome"
+                },
+                {
+                    "name": "File",
+                    "channel": "None"
+                },
+                {
+                    "name": "FileIntegrity:ImageValidation",
+                    "channel": "Hash/checksum mismatch against baseline vendor-provided OS image versions"
+                },
+                {
+                    "name": "firmware:update",
+                    "channel": "Unexpected or unscheduled firmware updates, image overwrites, or failed signature validation"
+                },
+                {
+                    "name": "FirmwareLogs:Update",
+                    "channel": "Unexpected firmware or image updates modifying cryptographic modules"
+                },
+                {
+                    "name": "FirmwareLogs:Update",
+                    "channel": "Unexpected firmware updates that alter encryption libraries or disable hardware crypto modules"
+                },
+                {
+                    "name": "fs:fileevents",
+                    "channel": "/var/log/quarantine.log"
+                },
+                {
+                    "name": "fs:fileevents",
+                    "channel": "/var/log/install.log"
+                },
+                {
+                    "name": "fs:filesystem",
+                    "channel": "Modification or creation of files matching 'com.apple.loginwindow.*.plist' in ~/Library/Preferences/ByHost"
+                },
+                {
+                    "name": "fs:fsevents",
+                    "channel": "create/write/rename under user-writable paths"
+                },
+                {
+                    "name": "fs:fsevents",
+                    "channel": "file system events indicating permission, ownership, or extended attribute changes on critical paths. File system modification events with kFSEventStreamEventFlagItemChangeOwner, kFSEventStreamEventFlagItemXattrMod flags"
+                },
+                {
+                    "name": "fs:fsevents",
+                    "channel": "Extensions"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "unlink, write"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file access to /usr/lib/cron/tabs/ and cron output files"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file access to /usr/lib/cron/at and job execution path"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "modification of existing LaunchAgents plist"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "Filesystem Access Logging"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "truncate, unlink, write"
+                },
+                {
+                    "name": "fs:fsusage",
+                    "channel": "file write to launchd plist paths"
+                },
+                {
+                    "name": "fs:launchdaemons",
+                    "channel": "file_modify"
+                },
+                {
+                    "name": "fs:plist",
+                    "channel": "/var/root/Library/Preferences/com.apple.loginwindow.plist"
+                },
+                {
+                    "name": "fs:plist_monitoring",
+                    "channel": "/Users/*/Library/Mail/V*/MailData/RulesActiveState.plist"
+                },
+                {
+                    "name": "gcp:audit",
+                    "channel": "compute.instances.setMetadata"
+                },
+                {
+                    "name": "IntegrityCheck:ImageValidation",
+                    "channel": "Checksum or hash mismatch between running image and known-good vendor-provided image"
+                },
+                {
+                    "name": "iOS:unifiedlog",
+                    "channel": "Creation or modification of LaunchDaemon or LaunchAgent plist in /System/Library/LaunchDaemons, /Library/LaunchDaemons, or /Library/LaunchAgents"
+                },
+                {
+                    "name": "linux:fim",
+                    "channel": "Changes to /etc/rc.local.d/local.sh or creation of unexpected startup files in persistent partitions (/etc/init.d, /store, /locker)"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "linux:osquery",
+                    "channel": "New or modified kernel object files (.ko) within /lib/modules directory"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "rename"
+                },
+                {
+                    "name": "linux:syslog",
+                    "channel": "Unexpected log entries or malformed SQL operations in databases"
+                },
+                {
+                    "name": "m365:defender",
+                    "channel": "OfficeTelemetry or DLP"
+                },
+                {
+                    "name": "m365:office",
+                    "channel": "Anomalous editing of invoice or payment document templates"
+                },
+                {
+                    "name": "macos:auth",
+                    "channel": "~/.ssh/authorized_keys"
+                },
+                {
+                    "name": "macos:endpointsecurity",
+                    "channel": "ES_EVENT_TYPE_NOTIFY_WRITE, targeting .zshrc, .zlogin, .zprofile"
+                },
+                {
+                    "name": "macos:endpointsecurity",
+                    "channel": "write, rename"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "file_events"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "query: Enumeration of root certificates showing unexpected additions"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "File modifications in ~/Library/Preferences/"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "Changes to LSFileQuarantineEnabled field in Info.plist"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "CALCULATE: Mismatch in file integrity of critical macOS applications"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "Modifications to /var/db/SystemPolicyConfiguration/KextPolicy or kext_policy table"
+                },
+                {
+                    "name": "macos:osquery",
+                    "channel": "write"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File modification in /etc/paths.d or user shell rc files"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of ~/Library/LaunchAgents or /Library/LaunchDaemons plist"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Anomalous plist modifications or sensitive file overwrites by non-standard processes"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "loginwindow or desktopservices modified settings or files"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "SecurityAgentPlugins modification"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "write: File modifications to *.plist within LaunchAgents, LaunchDaemons, Application Support, or Preferences directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of backgrounditems.btm or creation of LoginItems subdirectory in .app bundle"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of plist with apple.awt.UIElement set to TRUE"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "replace existing dylibs"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of /Library/Security/SecurityAgentPlugins"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modifications to Mail.app plist files controlling message rules"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Unexpected creation or modification of stored data files in protected directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file encrypted|new file with .encrypted extension|disk write burst"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Mach-O binary modified or LC_LOAD_DYLIB segment inserted"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modified application plist or binary replacement in /Applications"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File creation or overwrite in common web-hosting folders"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "write of plist files in /Library/LaunchAgents or /Library/LaunchDaemons"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "write"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of /System/Library/CoreServices/boot.efi"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of LaunchAgents or LaunchDaemons plist files"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Plist modifications containing virtualization run configurations"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "binary modified or replaced"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification of /Library/Preferences/com.apple.loginwindow plist"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "File write or append to .zshrc, .bash_profile, .zprofile, etc."
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "write: File modification to com.apple.PowerManagement.plist or related system preference files"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "create/modify dylib in monitored directories"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "modification to /var/db/dslocal/nodes/Default/users/"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Hidden volume attachment or modification events"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Suspicious plist edits for volume mounting behavior"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "file writes"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Modification or replacement of /Library/Application Support/com.apple.TCC/TCC.db or ~/Library/Application Support/com.apple.TCC/TCC.db"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "rule definitions written to emond rule plists"
+                },
+                {
+                    "name": "macos:unifiedlog",
+                    "channel": "Terminal/Editor processes modifying web folder"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application inserts, updates, deletes, hides, or marks message records in SMS store or messaging database immediately after SMS receive or send event"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application inserts, updates, deletes, or rewrites call-log records immediately after call-control action to conceal, alter, or synthesize call history"
+                },
+                {
+                    "name": "network:runtime",
+                    "channel": "checksum or runtime memory verification failures"
+                },
+                {
+                    "name": "networkconfig",
+                    "channel": "unexpected OS image file upload or modification events"
+                },
+                {
+                    "name": "networkdevice:audit",
+                    "channel": "SNMP configuration changes, such as enabling read/write access or modifying community strings"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "config-change: timezone or ntp server configuration change after a time query command"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration changes to boot variables, startup image paths, or checksum verification failures"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration changes referencing 'crypto', 'key length', 'cipher', or downgrade of encryption settings"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration file modified or replaced on network device"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration change events referencing encryption, TLS/SSL, or IPSec settings"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration changes to startup image paths, boot loader parameters, or debug flags"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration changes referencing cryptographic hardware modules or disabling hardware acceleration"
+                },
+                {
+                    "name": "networkdevice:config",
+                    "channel": "Configuration changes referencing older image versions or unexpected boot parameters"
+                },
+                {
+                    "name": "networkdevice:firmware",
+                    "channel": "Unexpected firmware update or image modification affecting crypto modules"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "config"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "startup-config"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "Checksum/hash mismatch between device OS image and baseline known-good version"
+                },
+                {
+                    "name": "sysdig:file",
+                    "channel": "evt.type=write"
+                },
+                {
+                    "name": "WinEventLog:CodeIntegrity",
+                    "channel": "EventCode=3033"
+                },
+                {
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4663, 4670, 4656"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=2"
+                },
+                {
+                    "name": "WinEventLog:System",
+                    "channel": "Unexpected modification to lsass.exe or cryptdll.dll"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: write() to /sdcard/ path"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: ContentResolver.update() or write() to path owned by target_app IN $HighValueAppList$ by writer_app != target_app \u2014 cross-app data modification"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: write() to path IN $SystemBinaryPaths$ by process NOT IN $TrustedUpdateSources$"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: app version change detected in MDM inventory for app_package \u2014 update is the binary modification event"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: app version change in MDM inventory for bundle_id"
+                },
+                {
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: App inserts, updates, or deletes call log records via CallLog.Calls ContentProvider immediately after call-control action \u2014 call log tampering to conceal interception"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to Industrial Control Systems (ICS) alarm configuration file by User Identifier (UID) not in authorized alarm admin UIDs"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to /etc/ld.so.preload by User Identifier (UID) outside authorized admin list"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: PATH record shows modification of udev/autofs configuration that references an executable or script outside the authorized ICS software inventory"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: modification of bash_history file by uid not normally performing interactive shell sessions"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to alarm threshold config file by uid not in authorized alarm admin User Identifiers (UIDs)"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: PATH record shows modification of a serial-device configuration file by a UID not in the authorized serial-administration set"
+                },
+                {
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: write to Siemens project file path by User Identifier (UID) not in authorized Siemens engineering UIDs"
+                },
+                {
+                    "name": "networkdevice:syslog",
+                    "channel": "write erase or factory-reset command from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                },
+                {
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Siemens engineering tool opens project file from path not in approved project repository"
+                }
+            ]
+        }
+    ]
+}

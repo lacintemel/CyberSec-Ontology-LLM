@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--41f9445a-2396-442c-96e6-13c6e84dc4e9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--08271537-bd35-4141-a49e-c9c2efe09bed",
+            "created": "2026-09-25T16:55:20.768Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CyberAus_Vidar_May2026",
+                    "description": "Australian Signals Directorate\u2019s Australian Cyber Security Centre. (2026, May 7). ClickFix distributing Vidar Stealer via WordPress targeting Australian infrastructure. Retrieved May 8, 2026.",
+                    "url": "https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories/clickfix-distributing-vidar-stealer-via-wordpress-targeting-australian-infrastructure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T16:55:20.768Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has used fake CAPTCHAs to deliver and execute itself to victims.(Citation: CyberAus_Vidar_May2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--e261a979-f354-41a8-963e-6cadac27c4bf",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

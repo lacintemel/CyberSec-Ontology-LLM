@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6f7660b0-7eeb-43a6-8d42-8d6356830deb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--232bde84-f259-4159-bc53-cee3c18b6304",
+            "created": "2026-10-01T21:39:29.891Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549TTPsTools_Nov2025",
+                    "description": "El-Banna, M., et al. (2025, November 17). Frontline Intelligence: Analysis of UNC1549 TTPs, Custom Tools, and Malware Targeting the Aerospace and Defense Ecosystem. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/analysis-of-unc1549-ttps-targeting-aerospace-defense"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T21:39:29.891Z",
+            "description": "[NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059) has cleared RDP connection history registry keys to include `HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal  Server Client\\Default` and ` HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Servers`.(Citation: Mandiant_UNC1549TTPsTools_Nov2025)    ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "attack-pattern--3975dbb5-0e1e-4f5b-bae1-cf2ab84b46dc",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

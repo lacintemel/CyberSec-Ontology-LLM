@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--71c5d557-5ebd-4cd8-aec1-3bfec7cbd473",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--fe1b5de5-3919-480b-80b6-8914b6b1d098",
+            "created": "2026-10-13T17:46:04.726Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0795#AN2199",
+                    "external_id": "AN2199"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:04.726Z",
+            "name": "Analytic 2199",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) network device syslog recording unexpected restarts or crashes coinciding with anomalous traffic patterns on management interfaces. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "unexpected restart or crash coinciding with anomalous traffic pattern on management interface"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window correlating a memory access event with a subsequent crash."
+                },
+                {
+                    "field": "TrustedSecurityToolList",
+                    "description": "Allowlist of legitimate security/diagnostic tools authorized to perform cross-process memory access."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

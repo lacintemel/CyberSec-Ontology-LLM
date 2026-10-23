@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--cf3b4910-e5ab-4b4f-824f-7ba97f10a719",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dd394bf9-aecd-45b9-8547-477c7c8a7756",
+            "created": "2026-09-26T03:50:54.103Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Claroty-IOCONTROL",
+                    "description": "Claroty Team82. (2024, December 10). Inside a New OT/IoT Cyberweapon: IOCONTROL. Retrieved September 2, 2026.",
+                    "url": "https://claroty.com/team82/research/inside-a-new-ot-iot-cyber-weapon-iocontrol"
+                },
+                {
+                    "source_name": "Armis-IOCONTROL",
+                    "description": "Michael Freeman. (2024, December 16). IOControl Malware: What's New, What's Not?. Retrieved September 2, 2026.",
+                    "url": "https://www.armis.com/blog/iocontrol-malware-whats-new-whats-not/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-08T22:18:24.779Z",
+            "description": "IOCONTROL has used an RC script (`/etc/rc3.d/S93InitSystemd.sh`) to establish persistence on a system across restarts.(Citation: Claroty-IOCONTROL)(Citation: Armis-IOCONTROL)",
+            "relationship_type": "uses",
+            "source_ref": "malware--bcd0f2cd-0b21-4109-8310-8a90be320514",
+            "target_ref": "attack-pattern--dca670cf-eeec-438f-8185-fd959d9ef211",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

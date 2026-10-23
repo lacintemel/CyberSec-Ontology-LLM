@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--33b11d1e-9d22-4b13-8336-26acf0facb3b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--02085573-6f4a-495f-b3a7-81ac97ce3377",
+            "created": "2025-12-16T00:07:27.809Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SophosGnGal_SystemBC_Dec2020",
+                    "description": "Gallagher, S., Gn, S. (2020, December 16). Ransomware operators use SystemBC RAT as off-the-shelf Tor backdoor. Retrieved May 16, 2025.",
+                    "url": "https://news.sophos.com/en-us/2020/12/16/systembc/"
+                },
+                {
+                    "source_name": "TrumanKroll_SYSTEMBCServer_Jan2024",
+                    "description": "Truman, D. (2024, January 19). Inside the SYSTEMBC Command-and-Control Server. Retrieved June 18, 2025.",
+                    "url": "https://www.kroll.com/en/publications/cyber/inside-the-systembc-malware-server"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.905Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has executed a copy of itself as a scheduled task with the `start` command. The copy of [SystemBC](https://attack.mitre.org/software/S9001) has random file and directory names within the ProgramData directory.(Citation: SophosGnGal_SystemBC_Dec2020)(Citation: TrumanKroll_SYSTEMBCServer_Jan2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

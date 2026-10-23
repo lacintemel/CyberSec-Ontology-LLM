@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--115a46e7-311f-44cb-8846-ef98f7ed860f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--93adaeae-7fa2-4510-b377-19b82969ff3e",
+            "created": "2026-09-23T16:37:32.630Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                },
+                {
+                    "source_name": "TrendAI_TheGentlemen_Sept2025",
+                    "description": "Santos, J., et al. (2025, September 9). Unmasking The Gentlemen Ransomware: Tactics, Techniques, and Procedures Revealed . Retrieved September 18, 2026.",
+                    "url": "https://www.trendaisecurity.com/en-us/resources-insights/trendai-security-blog/unmasking-the-gentlemen-ransomware"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-23T21:06:06.445Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has deleted forensic artifacts to include prefetch files, defender diagnostic and support logs using both `del /f /q C:\\Windows\\Prefetch\\*.*` and `del /f /q C:\\ProgramData\\Microsoft\\Windows Defender\\Support\\*.*`.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: TrendAI_TheGentlemen_Sept2025)(Citation: CheckPointResearch_TheGentlemen_April2026) \n[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has also used a batch script named after itself (`<filename>.exe.bat`) to delete [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) and the batch script.(Citation: TrendAI_TheGentlemen_Sept2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

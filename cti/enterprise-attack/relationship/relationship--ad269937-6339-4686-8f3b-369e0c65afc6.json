@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1f0bb247-e0ef-4143-acc4-fd1684fbf657",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ad269937-6339-4686-8f3b-369e0c65afc6",
+            "created": "2024-09-23T17:57:20.793Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Sandfly BPFDoor 2022",
+                    "description": "The Sandfly Security Team. (2022, May 11). BPFDoor - An Evasive Linux Backdoor Technical Analysis. Retrieved September 29, 2023.",
+                    "url": "https://sandflysecurity.com/blog/bpfdoor-an-evasive-linux-backdoor-technical-analysis/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.160Z",
+            "description": "[BPFDoor](https://attack.mitre.org/software/S1161) starts a shell on a high TCP port starting at 42391 up to 43391, then changes the local `iptables` rules to redirect all packets from the attacker to the shell port.(Citation: Sandfly BPFDoor 2022) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--8d1f89fd-4dde-40ab-80e0-a7b80249162e",
+            "target_ref": "attack-pattern--eec096b8-c207-43df-b6c1-11523861e452",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

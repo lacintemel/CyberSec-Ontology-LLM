@@ -1,0 +1,93 @@
+{
+    "type": "bundle",
+    "id": "bundle--9da5c851-27bd-4c3e-aeb6-ff51e6cd60b4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a69604d3-2909-46bf-afd3-39b47ac5e5fd",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0599#AN1645",
+                    "external_id": "AN1645"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.381Z",
+            "name": "Analytic 1645",
+            "description": "The defender correlates SMS-relevant permission state or default SMS handler role with subsequent unauthorized SMS send, receive interception, message database modification, deletion, or concealment behavior by an application outside expected messaging workflows. The analytic prioritizes Android-observable control-plane effects: SEND_SMS or RECEIVE_SMS capability, default SMS handler change or exercise of SMS_DELIVER semantics, direct interaction with the SMS content provider or messaging database, and SMS activity occurring from background or locked-device state without recent user interaction.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:MDMLog",
+                    "channel": "Managed app granted SEND_SMS or RECEIVE_SMS permission, or app role/policy indicates SMS-capable behavior inconsistent with approved enterprise function before SMS control activity"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:MDMLog",
+                    "channel": "Default SMS handler changes to non-baselined application or managed app unexpectedly becomes or remains device default SMS app during SMS control phase"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application invokes SMS send, intercept, delete, or provider-write behavior, including handling SMS_DELIVER or interacting with SMS content provider during unauthorized message-control phase"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application inserts, updates, deletes, hides, or marks message records in SMS store or messaging database immediately after SMS receive or send event"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Correlation window between permission or role change, SMS control activity, message-store modification, and any follow-on network communication"
+                },
+                {
+                    "field": "AllowedAppList",
+                    "description": "Apps legitimately expected to send or manage SMS, such as default messaging apps, carrier tools, device migration apps, or approved enterprise communications apps"
+                },
+                {
+                    "field": "AllowedDefaultSMSHandlers",
+                    "description": "Approved packages allowed to become the default SMS handler on managed devices"
+                },
+                {
+                    "field": "AllowedDestinationList",
+                    "description": "Approved network destinations associated with legitimate messaging synchronization or carrier workflows"
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Whether SMS send or message modification should occur only during active user-driven workflows"
+                },
+                {
+                    "field": "MessageModificationThreshold",
+                    "description": "Number of insert, update, or delete operations against SMS store within a short interval required before alerting"
+                },
+                {
+                    "field": "SMSSendRateThreshold",
+                    "description": "Maximum expected SMS send frequency for legitimate app behavior"
+                },
+                {
+                    "field": "HighRiskNumberPatterns",
+                    "description": "Environment-specific list of premium-rate, adversary-known, or non-business SMS destination patterns"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9dacf3b3-01c8-4352-a063-69d0baf90ff8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--7156b090-9e7b-4da6-adc0-0bbe95a9079d",
+            "created": "2026-09-25T15:51:26.415Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "AI-Mexico-Govt-Compromise",
+                    "description": "Jay Deen. (2026, May). AI-Assisted Compromise of Mexican Water Utility with OT Implications. Retrieved September 2, 2026.",
+                    "url": "https://5943619.hs-sites.com/hubfs/116-Whitepapers/dragos-2026-ai-mexico-water-attack-intel-brief.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:56:40.966Z",
+            "description": "[BACKUPOSINT v9.0 APEX PREDATOR](https://attack.mitre.org/software/S9045) has a module that gathered Cloud Secrets Management Stores from password vaults within Microsoft Azure, Amazon Web Services (AWS) and Google Cloud Platform (GCP).(Citation: AI-Mexico-Govt-Compromise) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--ab183324-4634-45bc-98af-9458bb94bcef",
+            "target_ref": "attack-pattern--cfb525cc-5494-401d-a82b-2539ca46a561",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

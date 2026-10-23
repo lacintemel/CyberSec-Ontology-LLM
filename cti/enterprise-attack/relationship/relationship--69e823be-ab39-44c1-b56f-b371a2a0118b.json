@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--edf263db-28e8-419f-b242-d432291d0f8e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--69e823be-ab39-44c1-b56f-b371a2a0118b",
+            "created": "2025-12-16T00:01:04.539Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SophosGnGal_SystemBC_Dec2020",
+                    "description": "Gallagher, S., Gn, S. (2020, December 16). Ransomware operators use SystemBC RAT as off-the-shelf Tor backdoor. Retrieved May 16, 2025.",
+                    "url": "https://news.sophos.com/en-us/2020/12/16/systembc/"
+                },
+                {
+                    "source_name": "HarmonProofpoint_SystemBC_Aug2019",
+                    "description": "Harmon, K., et al. (2019, August 1). SystemBC is like Christmas in July for SOCKS5 Malware and Exploit Kits . Retrieved June 13, 2025.",
+                    "url": "https://www.proofpoint.com/us/threat-insight/post/systembc-christmas-july-socks5-malware-and-exploit-kits"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.069Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has checked if the last characters of DNS server names end in .bit before initializing C2 communication.(Citation: HarmonProofpoint_SystemBC_Aug2019) [SystemBC](https://attack.mitre.org/software/S9001) has identified running processes associated with anti-virus solutions to include `a2guard.exe` to determine whether it executes or not.(Citation: SophosGnGal_SystemBC_Dec2020)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--853c4192-4311-43e1-bfbb-b11b14911852",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

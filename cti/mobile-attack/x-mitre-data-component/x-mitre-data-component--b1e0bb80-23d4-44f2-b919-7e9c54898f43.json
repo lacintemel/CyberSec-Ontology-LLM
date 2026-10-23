@@ -1,0 +1,396 @@
+{
+    "type": "bundle",
+    "id": "bundle--90f57f0d-5d11-4424-b5ac-f7e1f42f0f89",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+            "created": "2023-03-13T20:00:08.487Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0114",
+                    "external_id": "DC0114"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:40:29.734Z",
+            "name": "Application Permission",
+            "description": "Represents the permissions, entitlements, or capability grants associated with a mobile application, including both permissions declared by the application and those granted or requested during runtime.\n\nMonitoring permission state helps defenders identify applications attempting to access protected device resources such as sensors, storage, communications interfaces, or system services.\n\nExamples include:\n\nAndroid\n\n- Permissions declared in AndroidManifest.xml\n- Runtime permission prompts\n- Special access privileges (AccessibilityService, overlay, device admin)\n\niOS\n\n- App entitlements in provisioning profiles\n- Privacy permission prompts\n- Capability grants for device services\n",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_version": "2.2",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "android:logcat",
+                    "channel": "READ_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE permission present or toggled at runtime"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "policy_violation WHERE install_unknown_apps changed to enabled + MobileEDR app_install with signing_cert NOT IN EnterpriseCertList within TimeWindow where enterprise policy does not permit this cert or install source"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "policy_violation WHERE unknown_sources=enabled OR play_protect_status=disabled + MobileEDR app_install event from non-com.android.vending source within PolicyViolationWindow where MDM policy does not permit unknown source installs"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "root_status=false AND MobileEDR reports UID=0 binary execution within ComplianceCheckWindow where MDM-reported state does not justify observed privilege"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application granted or retaining RECORD_AUDIO permission or privileged CAPTURE_AUDIO_OUTPUT capability"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application granted/retaining ACCESS_FINE_LOCATION and/or ACCESS_COARSE_LOCATION; background location capability present (ACCESS_BACKGROUND_LOCATION on Android 10+)"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Device inventory changes involving phone number/line identifier fields (when available), eSIM profile presence, or compliance signal indicating SIM profile change"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "New permission prompt, package install attempt, accessibility/overlay special access request, or other post-browse capability escalation following browser/WebView activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "ADB_DEBUGGING_ENABLED"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application gains or is observed with elevated interaction capability such as accessibility, overlay, device admin, notification access, or other authentication-adjacent special access"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Known application or newly updated version declares, gains, or activates expanded storage, sensor, communications, accessibility, or device-management capability inconsistent with prior baseline or app role"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Known application version declares, gains, or first exercises storage, communications, accessibility, advertising, analytics, overlay, or sensor-adjacent capability inconsistent with prior version baseline or business role"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Device enrollment or compliance event shows failed or degraded verified boot, hardware-backed attestation mismatch, patch/build/baseband inconsistency, or unexpected device property drift near first contact"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed or trusted app is newly installed or updated and presents changed package identity, signing relationship, version lineage, installer source, or permission posture inconsistent with approved baseline"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App communicating with legitimate web-service infrastructure is unmanaged, newly installed, recently updated, outside approved app list, or shows baseline drift in role, installer source, or expected capability profile"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App initiating resolver\u2192pivot sequence was unmanaged or not authorized to communicate with detected web-service class or external infrastructure"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App identity performing bidirectional exchange was unmanaged, outside approved app baseline, or not permitted to use detected public web-service class for read/write operations"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App identity performing repeated one-way retrieval was unmanaged, outside approved app baseline, or not permitted to use detected public web-service class for background content retrieval"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App identity performing camera session was unmanaged, recently granted camera permission, or not approved to use camera for video or interval image capture"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application granted or retaining the READ_CALL_LOG permission. "
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application granted or retaining the READ_CONTACTS permission."
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Application granted or retaining the READ_SMS or RECEIVE_SMS permission."
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App identity performing screen capture had unapproved accessibility posture, capture-related special access, unmanaged state, or was not approved for screen recording or assistive observation workflows"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "NotificationListenerService enabled OR notification access granted to app not in enterprise-approved list"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App not in enterprise-approved list performing network + crypto behavior inconsistent with declared functionality"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "App not in approved cryptographic or secure communication category performing keypair + encryption + transmission behavior"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app with undeclared secure transport behavior or app category mismatch initiates opaque TLS communications inconsistent with enterprise policy baseline"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed application with no declared backup, sync, export, or media-editing role performs bulk local packaging or encrypted archive generation"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app granted or retaining storage-related or elevated access inconsistent with declared function prior to local data access activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app without approved content-download, update, browser, or file-sync role performs remote payload retrieval and local tool staging"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed application without approved native-code role or expected high-performance/native dependency exhibits native execution behavior inconsistent with enterprise policy baseline"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed application package version, signer lineage, installer source, or app identity changes outside approved enterprise or store-mediated update workflow"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app granted SEND_SMS or RECEIVE_SMS permission, or app role/policy indicates SMS-capable behavior inconsistent with approved enterprise function before SMS control activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Default SMS handler changes to non-baselined application or managed app unexpectedly becomes or remains device default SMS app during SMS control phase"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app without approved VPN, enterprise tunneling, browser, or remote-access role exhibits proxy-like traffic handling inconsistent with policy baseline"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Managed app granted call-control-relevant permissions or telecom role state inconsistent with approved enterprise function before call-control activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "Default phone or telecom-handling role changes to non-baselined application or managed app unexpectedly becomes dialer/call-handling app during call-control phase"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "device transitions to non-compliant state + root detected or integrity attestation failure (SafetyNet/Play Integrity)"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application integrity mismatch or package signature inconsistency relative to expected deployment baseline"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application granted high-risk permission or special access (AccessibilityService, SYSTEM_ALERT_WINDOW, DeviceAdmin) with abnormal grant pattern (e.g., no recent user interaction or rapid sequence of grants)"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application granted Device Administrator privilege + abnormal activation pattern (e.g., rapid enablement after install or no recent user interaction)"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application holds permissions enabling environment validation (e.g., location, phone state, nearby device/network context) and subsequently delays protected activity until qualifying values are present"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application granted ACCESS_FINE_LOCATION and, when required for background operation, ACCESS_BACKGROUND_LOCATION + capability state sufficient for persistent geolocation monitoring before later guarded activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "managed app inventory or launcher-visible state changes show application remains installed but user-facing entry point or launcher component becomes disabled before later runtime activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "installed application remains present while launcher-visible activity or component discoverability changes to hidden, disabled, or synthesized-settings-entry state prior to later runtime activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "change to security-relevant device configuration or managed policy (e.g., accessibility enablement, app admin changes, security service state change) preceding telemetry degradation"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application enabled as device administrator, device owner, profile owner, or equivalent elevated management role before uninstall attempt"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application granted accessibility service privileges capable of screen observation or global action invocation before removal attempt"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application enabled as device administrator, device owner, or profile owner before screen-lock or password-control activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application granted accessibility service privileges capable of intercepting UI flow or sustaining user-interaction denial before lockout event"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "device posture changes to rooted, non-compliant, weakened security state, or elevated control role becomes active before security-tool degradation"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "security-relevant application package state, enabled status, administrator state, or managed protection setting changes immediately before monitoring degradation"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "device posture or compromise-state indicators change unexpectedly, including rooted or non-compliant status disappearance, after prior app or system activity suggesting persistence on device"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "managed application state changes unexpectedly through uninstall, disappearance from expected inventory, or install-state mismatch after prior suspicious activity"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application holds device-owner, profile-owner, or delegated app-management authority capable of package removal before uninstall event"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application has accessibility service privileges immediately before package-removal UI flow and subsequent application disappearance"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "device posture indicates rooted, compromised, or non-compliant state before package files disappear without standard managed uninstall workflow"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "application holds device administrator, device owner, or other managed authority capable of wipe or destructive device-level action before bulk file loss or wipe event"
+                },
+                {
+                    "name": "android:MDMLog",
+                    "channel": "device posture indicates rooted, compromised, or non-compliant state before protected or atypical filesystem deletion activity"
+                },
+                {
+                    "name": "android:MDMLog ",
+                    "channel": "Application granted or retaining the READ_CALENDAR or WRITE_CALENDAR permissions. "
+                },
+                {
+                    "name": "Application Vetting",
+                    "channel": "None"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "MDM integrity_check=fail AND jailbreak_status=true \u2014 active integrity failure on jailbroken device confirms exploitation beyond passive jailbreak presence"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "certificate trust status = user_trusted for cert NOT IN $EnterpriseCertList$ within $ProfileInstallWindow$"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "profile_install where install_initiator != MDM_SERVER + cert_trust_type=enterprise within ProfileInstallWindow where MDM provisioning does not justify out-of-band profile installation"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "compliance_status=pass AND MobileEDR dylib load event with lib_path matching KnownJailbreakLibPatterns within same device session where clean compliance does not justify jailbreak library presence"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Application installed with NSMicrophoneUsageDescription entitlement indicating microphone capability"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "App installed with location usage declarations (WhenInUse/Always usage description) and granted authorization level via managed policy state"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Managed device inventory change indicating cellular plan/eSIM profile updates (where available via supervised iOS + MDM reporting)"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Post-browse configuration profile prompt, managed/unmanaged app handoff anomaly, or compliance-relevant state change shortly after browser activity"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Compliance posture or restriction state relevant to accessory access, USB restricted mode, supervised trust policy, or backup/pairing restrictions"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Known application version declares, activates, or exhibits new entitlements, privacy permissions, or capability use inconsistent with prior baseline or business role"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised enrollment, activation, or inventory event reveals unexpected device property relationships, anomalous managed posture, unexplained configuration drift near first contact, or identity/inventory characteristics inconsistent with approved procurement baseline"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised managed app is newly installed or updated and presents unexpected version transition, inventory drift, managed-state change, or app attribute mismatch against approved procurement and release baseline"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Managed app communicating with legitimate web-service infrastructure is newly installed, recently updated, outside expected managed-app set, or displays baseline drift in app role, release path, or business justification"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Bundle performing resolver\u2192pivot sequence not present in approved managed-app baseline or lacks expected service relationship"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Bundle performing bidirectional exchange was not present in approved managed-app baseline or was not permitted to use detected public web-service class for read/write operations"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Bundle performing repeated one-way retrieval was not present in approved managed-app baseline or was not permitted to use detected public web-service class for background content retrieval"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "App identity using non-standard protocol-to-port pairing was unmanaged, outside approved app baseline, or not permitted to communicate using detected protocol/service over observed destination port"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Bundle performing camera session was not present in approved managed-app baseline or was not permitted to use camera for video or interval image capture"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised managed app with undeclared secure transport behavior or unexpected network role communicates with non-baselined destination over opaque TLS"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised managed app without expected export, backup, or sync role performs local data staging behavior followed by opaque upload activity"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised managed app without expected local export, sync, or forensic role accesses or stages local records inconsistent with policy baseline"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "Supervised managed app without approved update, browser, sync, or enterprise-content role retrieves and stages secondary content inconsistent with policy baseline"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "application has approved capabilities required for conditional execution (e.g., location/background modes) but observed behavior is deferred until target-specific state is present"
+                },
+                {
+                    "name": "iOS:MDMLog",
+                    "channel": "application authorized for when-in-use or always location access and, where relevant, background execution capability sufficient for continued geographic evaluation before later guarded behavior"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "App with network-, telephony-, Wi-Fi-, or location-adjacent capability is impacted by abrupt repeated service loss while permissions remain unchanged"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Network- or location-dependent app capability state remains unchanged while the app experiences sustained communication failure"
+                },
+                {
+                    "name": "MobileEDR:telemetry",
+                    "channel": "Application holds or is granted broad storage, document-provider, media, or file-management capability inconsistent with its expected role before or during bulk file transformation"
+                },
+                {
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--58c26f3c-46f6-4c5a-9173-148c69f9bacb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b6618b3a-370c-44af-86db-d4640799ed6e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0710#AN1835",
+                    "external_id": "AN1835"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:33.989Z",
+            "name": "Analytic 1835",
+            "description": "For Android, detect Disguise Root/Jailbreak Indicators by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate File Metadata via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: binary with file_permissions including setuid bit (mode & 04000) at path NOT IN $KnownSystemBinPaths$ \u2014 setuid outside system bin directories is the renamed-root-binary indicator]; Host Status via Android Enterprise DPC [DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported]; Process Metadata via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: process executing with effective UID=0]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: binary with file_permissions including setuid bit (mode & 04000) at path NOT IN $KnownSystemBinPaths$ \u2014 setuid outside system bin directories is the renamed-root-binary indicator"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--85a533a4-5fa4-4dba-b45d-f0717bedd6e6",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: process executing with effective UID=0"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "KnownSystemBinPaths",
+                    "description": "/system/bin, /system/xbin, /system/vendor/bin. Vary by Android version and OEM."
+                },
+                {
+                    "field": "PrivilegedAppList",
+                    "description": "System apps, MDM agent, OTA service."
+                }
+            ]
+        }
+    ]
+}

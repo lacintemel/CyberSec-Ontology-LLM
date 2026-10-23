@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--8b33dec4-b664-4451-8955-233179c010d3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--416a4073-3236-461c-ab0f-6c1e50d0a9f9",
+            "created": "2026-04-10T18:36:40.567Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Koi Glassworm New Tricks December 2025",
+                    "description": "Gal Hachamov. (2025, December 29). GlassWorm Goes Mac: Fresh Infrastructure, New Tricks. Retrieved April 10, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-goes-mac-fresh-infrastructure-new-tricks"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.014Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has used a timeout function set to `9e5` which delays execution 900,000 milliseconds or 15 minutes to avoid detection.(Citation: Koi Glassworm New Tricks December 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

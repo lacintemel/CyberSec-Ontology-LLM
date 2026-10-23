@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7ead29b9-9ac1-45a8-b4c5-5eb4169f96a6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2b8522af-942b-4781-aee5-3687786c7f49",
+            "created": "2026-09-21T22:41:47.115Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-21T22:41:47.115Z",
+            "description": "Prevent AI agents processing untrusted or externally controlled content from automatically exercising privileged permissions. Require additional authorization for sensitive operations derived from retrieved content.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--9bb9e696-bff8-4ae1-9454-961fc7d91d5f",
+            "target_ref": "attack-pattern--2e45d340-f00b-4bd6-b5c9-c2ef54b8894c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

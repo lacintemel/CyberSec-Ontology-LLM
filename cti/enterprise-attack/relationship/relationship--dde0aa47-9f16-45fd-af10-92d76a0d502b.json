@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--109945d3-05c9-47b3-b59d-9e383f00feb8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dde0aa47-9f16-45fd-af10-92d76a0d502b",
+            "created": "2026-04-13T16:26:13.220Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti April 2025",
+                    "description": "John Wolfram, Michael Edie, Jacob Thompson, Matt Lin, Josh Murchie. (2025, April 3). Suspected China-Nexus Threat Actor Actively Exploiting Critical Ivanti Connect Secure Vulnerability (CVE-2025-22457). Retrieved April 13, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-exploiting-critical-ivanti-vulnerability"
+                },
+                {
+                    "source_name": "Picus Security UNC5221 Ivanti May 2025",
+                    "description": "Sila Ozeren Hacioglu. (2025, May 5). UNC5221\u2019s Latest Exploit: Weaponizing CVE-2025-22457 in Ivanti Connect Secure. Retrieved April 13, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/unc5221-cve-2025-22457-ivanti-connect-secure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.228Z",
+            "description": "[BRUSHFIRE](https://attack.mitre.org/software/S9011) has executed its commands within memory and is not saved on disk.(Citation: Google UNC5221 Ivanti April 2025)(Citation: Picus Security UNC5221 Ivanti May 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e110c9c6-7691-4bcb-874d-3d83a63c06c2",
+            "target_ref": "attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

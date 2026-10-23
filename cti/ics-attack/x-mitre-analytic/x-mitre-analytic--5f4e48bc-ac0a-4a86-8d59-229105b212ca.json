@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--576b3bce-ce19-4a97-a887-e177fcf5e4e6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--5f4e48bc-ac0a-4a86-8d59-229105b212ca",
+            "created": "2026-10-13T17:46:49.771Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0909#AN2234",
+                    "external_id": "AN2234"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:49.771Z",
+            "name": "Analytic 2234",
+            "description": "Real-time monitoring identifies a new Internet Group Management Protocol (IGMP) group join or multicast subscription from a source Media Access Control (MAC)/Internet Protocol (IP) not in the approved device inventory, particularly for protection-relay Generic Object Oriented Substation Event (GOOSE) datasets. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "Internet Group Management Protocol (IGMP) join or Generic Object Oriented Substation Event (GOOSE) multicast subscription from source Media Access Control (MAC) address not in approved device inventory"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDeviceInventory",
+                    "description": "MAC address inventory of devices authorized to subscribe to ICS multicast groups."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

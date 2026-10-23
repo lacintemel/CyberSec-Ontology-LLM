@@ -1,0 +1,79 @@
+{
+    "type": "bundle",
+    "id": "bundle--960b7eeb-6bfa-4f98-9b0c-aab96997bccf",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c5274e54-6a55-4aae-b438-aed5c1ef8acd",
+            "created": "2026-10-13T17:47:19.423Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0731#AN2259",
+                    "external_id": "AN2259"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:19.423Z",
+            "name": "Analytic 2259",
+            "description": "Real-time monitoring identifies a vendor firmware update utility executing outside a scheduled maintenance window or invoked by an account not in the approved firmware management role, immediately followed by a network session to a field device IP on its firmware protocol port. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "engineeringworkstation:ApplicationLog",
+                    "channel": "firmware session initiated outside maintenance window schedule without change ticket reference"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 firmware-update utility spawned by an account outside the authorized firmware-management set or outside the approved maintenance window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFirmwareInventory",
+                    "description": "Cryptographic hash inventory of authorized firmware versions per device model."
+                },
+                {
+                    "field": "AuthorizedFirmwareManagers",
+                    "description": "Accounts authorized to perform firmware update operations."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which firmware updates are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform firmware updates."
+                },
+                {
+                    "field": "FirmwareSessionSizeThreshold",
+                    "description": "Minimum byte count for a session to be considered a firmware transfer rather than routine configuration traffic, derived from known firmware image sizes."
+                },
+                {
+                    "field": "FirmwareUpdateWindow",
+                    "description": "Time window within which a device reboot following a large session is considered part of the same firmware update event."
+                },
+                {
+                    "field": "MaintenanceWindowSchedule",
+                    "description": "Recurring scheduled periods when firmware updates are expected to occur."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

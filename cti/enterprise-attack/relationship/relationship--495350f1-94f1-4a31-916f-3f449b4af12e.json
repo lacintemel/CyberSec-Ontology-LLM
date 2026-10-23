@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--3bca3d4a-c5fb-46e8-94f3-befee1e4d1ee",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--495350f1-94f1-4a31-916f-3f449b4af12e",
+            "created": "2026-04-15T15:41:44.140Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SE - Hackers Target Workday",
+                    "description": "David Jones. (2025, August 19). Hackers target Workday in social engineering attack. Retrieved April 15, 2026.",
+                    "url": "https://www.cybersecuritydive.com/news/hackers-target-workday-in-social-engineering-attack/758095/#:~:text=Researchers%20cite%20increasing%20evidence%20of,told%20Cybersecurity%20Dive%20via%20email."
+                },
+                {
+                    "source_name": "SE SentinelOne 2",
+                    "description": "SentinelOne. (2025, August 19). 15 Types of Social Engineering Attacks. Retrieved April 15, 2026.",
+                    "url": "https://www.sentinelone.com/cybersecurity-101/threat-intelligence/types-of-social-engineering-attacks/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.025Z",
+            "description": "Adds verification for helpdesk resets, approvals, and app consents commonly targeted by impersonation.(Citation: SE SentinelOne 2)(Citation: SE - Hackers Target Workday)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--f9f9e6ef-bc0a-41ad-ba11-0924e5e84c4c",
+            "target_ref": "attack-pattern--41e4d77a-6275-4976-9e35-785985598519",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

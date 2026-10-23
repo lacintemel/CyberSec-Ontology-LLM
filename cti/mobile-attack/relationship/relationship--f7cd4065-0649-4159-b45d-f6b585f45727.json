@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--5e962209-c5bb-498e-92ad-f4e2a7648d8b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f7cd4065-0649-4159-b45d-f6b585f45727",
+            "created": "2026-05-13T20:25:31.073Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERTPL_NGate_Nov2025",
+                    "description": "Ratajczak, K. (2025, November 3). Analysis of NGate malware campaign (NFC relay). Retrieved November 10, 2025.",
+                    "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+                },
+                {
+                    "source_name": "ESETStefanko_NGateVariant_Apr2026",
+                    "description": "Stefanko, L. (2026, April 21). New NGate variant hides in a trojanized NFC payment app. Retrieved May 6, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/new-ngate-variant-hides-in-a-trojanized-nfc-payment-app/"
+                },
+                {
+                    "source_name": "ESETStefankoOsmani_NGate_Aug2024",
+                    "description": "Stefanko, L., Osmani, J. (2024, August 22). NGate Android malware relays NFC traffic to steal cash. Retrieved November 10, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/ngate-android-malware-relays-nfc-traffic-to-steal-cash/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-13T20:30:28.408Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has used NFC to send the victim's card information through a server to an adversary-controlled device.(Citation: ESETStefankoOsmani_NGate_Aug2024)(Citation: CERTPL_NGate_Nov2025)(Citation: ESETStefanko_NGateVariant_Apr2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--ec4c4baa-026f-43e8-8f56-58c36f3162dd",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

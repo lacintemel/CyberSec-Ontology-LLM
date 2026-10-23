@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--527c11fd-e4c0-4e7f-9b58-253e0e4d12bb",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d701cd5a-fa95-4c94-808b-ceb44120314d",
+            "created": "2026-09-24T00:11:33.623Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0927#AN2079",
+                    "external_id": "AN2079"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-24T00:16:13.847Z",
+            "name": "Analytic 2079",
+            "description": "An analyst observes an AI-associated process access data outside\u00a0$AuthorizedAIDataScope$, followed within\u00a0$EndpointExfilWindow$\u00a0by transfer-capable execution and an outbound connection to a destination outside\u00a0$AuthorizedAIEndpoints$\u00a0from the same process lineage.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4663, 4670, 4656"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9f387817-df83-432a-b56b-a8fb7f71eedd",
+                    "name": "WinEventLog:PowerShell",
+                    "channel": "EventCode=4103, 4104, 4105, 4106"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedAIDataScope",
+                    "description": "data paths/classes the AI application/service identity is permitted to access; derive from application design, IAM and data policy"
+                },
+                {
+                    "field": "ExpectedAIProcessTree",
+                    "description": "approved AI parent/child relationships from clean executions"
+                },
+                {
+                    "field": "AuthorizedAIEndpoints",
+                    "description": "legitimate service/repository/API destinations"
+                },
+                {
+                    "field": "EndpointExfilWindow",
+                    "description": "access\u2192execution\u2192egress timing derived from clean workflows"
+                }
+            ]
+        }
+    ]
+}

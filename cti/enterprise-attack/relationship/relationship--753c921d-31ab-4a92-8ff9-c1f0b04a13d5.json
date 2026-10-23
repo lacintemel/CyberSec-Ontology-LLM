@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b70f9b31-b0d5-4c3f-95e5-ce8c34f659e9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--753c921d-31ab-4a92-8ff9-c1f0b04a13d5",
+            "created": "2025-12-16T00:12:50.260Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "SophosGnGal_SystemBC_Dec2020",
+                    "description": "Gallagher, S., Gn, S. (2020, December 16). Ransomware operators use SystemBC RAT as off-the-shelf Tor backdoor. Retrieved May 16, 2025.",
+                    "url": "https://news.sophos.com/en-us/2020/12/16/systembc/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.085Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has the ability to enumerate running processes.(Citation: SophosGnGal_SystemBC_Dec2020)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

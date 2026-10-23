@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--349c7217-8f7b-43ff-8f17-244322054bad",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5ffaf382-3e91-409b-932f-24d107c59308",
+            "created": "2019-04-19T14:37:04.148Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Unit 42 BadPatch Oct 2017",
+                    "description": "Bar, T., Conant, S. (2017, October 20). BadPatch. Retrieved November 13, 2018.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2017/10/unit42-badpatch/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.056Z",
+            "description": "[BadPatch](https://attack.mitre.org/software/S0337) attempts to detect if it is being run in a Virtual Machine (VM) using a WMI query for disk drive name, BIOS, and motherboard information. (Citation: Unit 42 BadPatch Oct 2017)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9af05de0-bc09-4511-a350-5eb8b06185c1",
+            "target_ref": "attack-pattern--29be378d-262d-4e99-b00d-852d573628e6",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

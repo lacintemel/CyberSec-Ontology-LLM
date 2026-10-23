@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--2f00f317-f5c3-4559-a91e-f95d7c3d4d53",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--19dee45d-8c24-41ac-976f-aeb221c4f658",
+            "created": "2026-10-08T21:53:52.361Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Dragos Water Under Attack",
+                    "description": "Michael Rothschild. (2026, August 13). Water Under Attack: A Decade of Warnings, and the Same Gaps Still Open. Retrieved October 8, 2026.",
+                    "url": "https://www.dragos.com/blog/water-utility-attacks-decade-of-gaps"
+                },
+                {
+                    "source_name": "Tenable Minnesota Water Utilities",
+                    "description": "Research Special Operations. (2026, July 28). Coordinated \"cyberattack\" on U.S. water utilities: What you need to know. Retrieved September 26, 2026.",
+                    "url": "https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"
+                },
+                {
+                    "source_name": "Forescout Water Systems Attack",
+                    "description": "Sai Molige. (2026, August 5). OT Security Analysis: Exposed Devices Attacked in US Water Systems. Retrieved October 8, 2026.",
+                    "url": "https://www.forescout.com/blog/ot-security-analysis-exposed-devices-attacked-in-us-water-systems/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T02:43:26.360Z",
+            "description": "During the [2026 U.S. Water Utilities Attacks](https://attack.mitre.org/campaigns/C0066), the adversary denied operators the ability to control their systems by shutting down and disabling computerized water plant controls via malware over a wireless connection.(Citation: Tenable Minnesota Water Utilities)(Citation: Forescout Water Systems Attack)(Citation: Dragos Water Under Attack)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5cae2d7e-ce03-4a20-b7a7-32e846d26121",
+            "target_ref": "attack-pattern--e33c7ecc-5a38-497f-beb2-a9a2049a4c20",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

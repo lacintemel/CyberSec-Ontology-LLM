@@ -1,0 +1,73 @@
+{
+    "type": "bundle",
+    "id": "bundle--e9bac37e-1fe6-4e45-b2cc-3fff25389b68",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--fdb6acce-e069-4e35-8a4b-f4517924f092",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0712#AN1838",
+                    "external_id": "AN1838"
+                },
+                {
+                    "source_name": "Android-VerifiedBoot",
+                    "description": "Android. (n.d.). Verified Boot. Retrieved December 21, 2016.",
+                    "url": "https://source.android.com/security/verifiedboot/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:05.786Z",
+            "name": "Analytic 1838",
+            "description": "For Android, detect Compromise Client Software Binary from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate File Metadata via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: file hash changes for binary at $SystemBinaryPaths$ relative to known-good baseline \u2014 hash deviation confirms modification]; File Modification via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: write() to path IN $SystemBinaryPaths$ by process NOT IN $TrustedUpdateSources$]; Process Creation via Application Vetting / Managed Device Telemetry [execve() of modified binary (hash != baseline) \u2014 execution of modified binary is the persistence activation]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: file hash changes for binary at $SystemBinaryPaths$ relative to known-good baseline \u2014 hash deviation confirms modification"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: write() to path IN $SystemBinaryPaths$ by process NOT IN $TrustedUpdateSources$"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "execve() of modified binary (hash != baseline) \u2014 execution of modified binary is the persistence activation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "SystemBinaryPaths",
+                    "description": "/system/bin/, /system/xbin/, /system/vendor/bin/. Vary by OEM."
+                },
+                {
+                    "field": "TrustedUpdateSources",
+                    "description": "OTA update service, MDM agent. Derive from MDM platform documentation."
+                },
+                {
+                    "field": "BinaryHashBaseline",
+                    "description": "Known-good hash per binary per Android version. Update on each OS release."
+                }
+            ]
+        }
+    ]
+}

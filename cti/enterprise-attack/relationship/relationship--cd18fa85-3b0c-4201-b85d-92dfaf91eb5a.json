@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3a07da00-40c6-4e7c-8cd4-0a449799f6f8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cd18fa85-3b0c-4201-b85d-92dfaf91eb5a",
+            "created": "2026-04-23T23:10:31.442Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Anthropic AI Orchestrated Campaign NOV 2025",
+                    "description": "Anthropic. (2025, November). Disrupting the first reported AI-orchestrated cyber espionage campaign. Retrieved April 20, 2026.",
+                    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.729Z",
+            "description": "During the [Anthropic AI-orchestrated Campaign](https://attack.mitre.org/campaigns/C0062), the adversary tasked Claude Code to query databases and systems in order to identify proprietary information, including system configurations and database types.(Citation: Anthropic AI Orchestrated Campaign NOV 2025)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--590cd5b0-2421-4158-84a2-db13b5db02a3",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

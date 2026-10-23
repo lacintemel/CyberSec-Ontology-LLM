@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7cdb80d2-6e39-40c1-ae4a-ce5ba45c2ec7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6342f9f0-d7d7-4568-b5bb-33f775c0b0f2",
+            "created": "2026-10-07T18:11:34.127Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T18:11:34.127Z",
+            "description": "Disable ASP functionality where modern authentication is available. Microsoft specifically supports disabling users' ability to create app passwords and recommends disabling legacy authentication so existing app passwords no longer work.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--eb88d97c-32f1-40be-80f0-d61a4b0b4b31",
+            "target_ref": "attack-pattern--6c427a0d-e0df-41f8-b522-e59eaab44c47",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

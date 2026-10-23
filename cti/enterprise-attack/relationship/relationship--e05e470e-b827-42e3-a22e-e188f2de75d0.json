@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--47a37669-1de3-4227-a5aa-bc78d359add8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e05e470e-b827-42e3-a22e-e188f2de75d0",
+            "created": "2026-04-14T13:42:44.082Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Google UNC5221 Ivanti January 2025",
+                    "description": "John Wolfram, Josh Murchie, Matt Lin, Daniel Ainsworth, Robert Wallace, Dimiter Andonov, Dhanesh Kizhakkinan, Jacob Thompson. (2025, January 8). Ivanti Connect Secure VPN Targeted in New Zero-Day Exploitation. Retrieved April 14, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+                },
+                {
+                    "source_name": "Picus Security UNC5221 Ivanti May 2025",
+                    "description": "Sila Ozeren Hacioglu. (2025, May 5). UNC5221\u2019s Latest Exploit: Weaponizing CVE-2025-22457 in Ivanti Connect Secure. Retrieved April 13, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/unc5221-cve-2025-22457-ivanti-connect-secure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.231Z",
+            "description": "[DRYHOOK](https://attack.mitre.org/software/S9013) is a Python-based script that executes within the victim environment.(Citation: Google UNC5221 Ivanti January 2025)(Citation: Picus Security UNC5221 Ivanti May 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e9c72c02-b55a-4852-b2eb-c7031d215414",
+            "target_ref": "attack-pattern--cc3502b5-30cc-4473-ad48-42d51a6ef6d1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

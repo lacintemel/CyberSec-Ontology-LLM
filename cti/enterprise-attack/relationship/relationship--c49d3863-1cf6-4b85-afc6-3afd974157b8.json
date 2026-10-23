@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--c43b4495-dcd8-4089-83ae-0435bb425a69",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c49d3863-1cf6-4b85-afc6-3afd974157b8",
+            "created": "2026-10-01T20:11:07.281Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CheckPoint_NimbusManticoreEurope_Sept2025",
+                    "description": "Check Point. (2025, September 22). Nimbus Manticore Deploys New Malware Targeting Europe. Retrieved September 24, 2026.",
+                    "url": "https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-malware-targeting-europe/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T20:11:07.281Z",
+            "description": " [MiniBrowse](https://attack.mitre.org/software/S9062) has been affiliated with the cyber espionage threat group [NIMBUS MANTICORE](https://attack.mitre.org/groups/G1059).(Citation: CheckPoint_NimbusManticoreEurope_Sept2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--318cf2c8-160b-4de7-be51-ecc3ded2705f",
+            "target_ref": "malware--8c8b765a-fba0-4551-ae83-b12e2a8b8937",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

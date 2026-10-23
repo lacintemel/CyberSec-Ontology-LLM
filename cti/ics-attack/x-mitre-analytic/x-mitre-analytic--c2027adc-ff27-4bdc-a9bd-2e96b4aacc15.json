@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--51a5d4b0-cbb8-474d-ab17-74281927852d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c2027adc-ff27-4bdc-a9bd-2e96b4aacc15",
+            "created": "2026-10-13T17:47:44.553Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0751#AN2274",
+                    "external_id": "AN2274"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:44.553Z",
+            "name": "Analytic 2274",
+            "description": "Real-time monitoring identifies a process invoking screen capture Application Programming Interfaces (APIs) targeting an Human-Machine Interface (HMI) or operator workstation window, where the calling process is not a recognized Industrial Control System (ICS) vendor application or approved remote support tool, immediately followed by an image file write. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 by same process within capture to file window of the Application Programming Interface (API) call"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--c0a4a086-cc20-4e1e-b7cb-29d99dfa3fb1",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=7 of GDI32.dll/User32.dll by process not in authorized screen capture tools on Human-Machine Interface (HMI)-classified host"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedScreenCaptureTools",
+                    "description": "Allowlist of remote support, training, or documentation tools legitimately authorized to perform screen capture."
+                },
+                {
+                    "field": "CaptureToFileWindow",
+                    "description": "Time window correlating a screen capture API call with a subsequent image file write."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

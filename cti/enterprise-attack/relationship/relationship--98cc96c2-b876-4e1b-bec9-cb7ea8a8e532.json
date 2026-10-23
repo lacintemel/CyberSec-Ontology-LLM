@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1a381282-0769-46e1-9a2c-41b3d9de4687",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--98cc96c2-b876-4e1b-bec9-cb7ea8a8e532",
+            "created": "2021-10-18T13:21:38.008Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "cobaltstrike manual",
+                    "description": "Strategic Cyber LLC. (2017, March 14). Cobalt Strike Manual. Retrieved May 24, 2017.",
+                    "url": "https://web.archive.org/web/20210825130434/https://cobaltstrike.com/downloads/csmanual38.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T18:23:57.203Z",
+            "description": "[Cobalt Strike](https://attack.mitre.org/software/S0154) will break large data sets into smaller chunks for exfiltration.(Citation: cobaltstrike manual)",
+            "relationship_type": "uses",
+            "source_ref": "malware--a7881f21-e978-4fe4-af56-92c9416a2616",
+            "target_ref": "attack-pattern--c3888c54-775d-4b2f-b759-75a2ececcbfd",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

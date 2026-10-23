@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--5912d79b-f3ba-454e-b8bc-76005b455d98",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1c12b31e-7f17-4e00-a6b5-7eddb5828f34",
+            "created": "2018-10-17T00:14:20.652Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "US-CERT BADCALL",
+                    "description": "US-CERT. (2018, February 06). Malware Analysis Report (MAR) - 10135536-G. Retrieved June 7, 2018.",
+                    "url": "https://www.us-cert.gov/sites/default/files/publications/MAR-10135536-G.PDF"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:46.467Z",
+            "description": "(Citation: US-CERT BADCALL)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c93fccb1-e8e8-42cf-ae33-2ad1d183913a",
+            "target_ref": "malware--9dbdadb6-fdbf-490f-a35f-38762d06a0d2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

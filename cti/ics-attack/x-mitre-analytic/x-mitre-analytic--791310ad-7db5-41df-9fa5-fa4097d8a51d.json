@@ -1,0 +1,86 @@
+{
+    "type": "bundle",
+    "id": "bundle--602599f6-fac2-4130-a287-e3125c1a3b1e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--791310ad-7db5-41df-9fa5-fa4097d8a51d",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0725#AN1858",
+                    "external_id": "AN1858"
+                },
+                {
+                    "source_name": "Twitter ItsReallyNick Masquerading Update",
+                    "description": "Carr, N.. (2018, October 25). Nick Carr Status Update Masquerading. Retrieved September 12, 2024.",
+                    "url": "https://x.com/ItsReallyNick/status/1055321652777619457"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:23.840Z",
+            "name": "Analytic 1858",
+            "description": "Real-time monitoring identifies a process or scheduled task whose displayed name matches a known Industrial Control System (ICS) vendor application but whose on-disk binary hash or file path does not match the vendor-signed baseline. The mismatch -- name says one thing, binary integrity says another -- is the defining signal. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--f42df6f0-6395-4f0c-9376-525a031f00c3",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4698/4702: EventCode=4698 referencing Industrial Control Systems (ICS) vendor binary name from unauthorized process"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 matching Industrial Control Systems (ICS) vendor binary name in a path outside vendor install paths"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 where image filename matches Industrial Control Systems (ICS) vendor process names but hash not in vendor hash baseline or current directory outside vendor install paths"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--5297a638-1382-4f0c-8472-0d21830bf705",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=7045 where ServiceName/ImagePath references Industrial Control Systems (ICS) vendor application with hash/path mismatch"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AssetInventoryDeviceTypes",
+                    "description": "Maintained inventory of expected vendor/product identity strings per enrolled device IP."
+                },
+                {
+                    "field": "ICSDaemonNames",
+                    "description": "List of expected Linux ICS service daemon process names."
+                },
+                {
+                    "field": "ICSVendorProcessNames",
+                    "description": "List of known ICS vendor executable names used as the masquerade-target watchlist."
+                },
+                {
+                    "field": "VendorHashBaseline",
+                    "description": "Cryptographic hash inventory for all legitimate versions of vendor ICS binaries, updated on every patch cycle."
+                },
+                {
+                    "field": "VendorInstallPaths",
+                    "description": "Authorized installation directories for each ICS vendor application."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2a537999-d0ad-4a7f-92db-968a44f6198b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--dc4ea40d-059d-4952-a525-5f915c7f23ba",
+            "created": "2026-09-25T18:34:17.564Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Robert Falcone, Bryan Lee May 2016",
+                    "description": "Robert Falcone, Bryan Lee 2016, May 26 The OilRig Campaign: Attacks on Saudi Arabian Organizations Deliver Helminth Backdoor Retrieved. 2019/11/19 ",
+                    "url": "https://unit42.paloaltonetworks.com/the-oilrig-campaign-attacks-on-saudi-arabian-organizations-deliver-helminth-backdoor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T18:34:17.564Z",
+            "description": "[OilRig](https://attack.mitre.org/groups/G0049) has embedded a macro within spearphishing attachments that has been made up of both a VBScript and a PowerShell script.(Citation: Robert Falcone, Bryan Lee May 2016)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--4ca1929c-7d64-4aab-b849-badbfc0c760d",
+            "target_ref": "attack-pattern--e3496d05-0826-4187-a993-80f29aa5a40a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

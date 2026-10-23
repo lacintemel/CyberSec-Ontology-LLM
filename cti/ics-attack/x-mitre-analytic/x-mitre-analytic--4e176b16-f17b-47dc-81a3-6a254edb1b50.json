@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--11be4c24-13f2-47e9-99f7-aeb595c15ce5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4e176b16-f17b-47dc-81a3-6a254edb1b50",
+            "created": "2026-09-26T03:16:11.429Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0935#AN2101",
+                    "external_id": "AN2101"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T13:31:24.947Z",
+            "name": "Analytic 2101",
+            "description": "Real-time monitoring identifies a Linux ICS service or process initiating MQTT/AMQP/DDS communications outside its approved broker/client relationship or from an unauthorized runtime/tool. Require communication-matrix violation plus process/destination/protocol corroboration; suppress approved telemetry, historian, gateway, vendor, and maintenance activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "linux:osquery",
+                    "channel": "socket_events to broker/service, where deployed"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "MQTT/AMQP/DDS protocol and message metadata when visible"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "Client/broker flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedBrokers",
+                    "description": "Authorized brokers/services"
+                },
+                {
+                    "field": "AuthorizedICSApplications",
+                    "description": "Approved client processes/services"
+                },
+                {
+                    "field": "ApprovedTopics",
+                    "description": "Expected topics/queues where observable"
+                },
+                {
+                    "field": "ApprovedCommunicationMatrix",
+                    "description": "Allowed client/broker relationships"
+                },
+                {
+                    "field": "ExpectedReportingInterval",
+                    "description": "Expected telemetry cadence"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b75027ab-b1c5-416a-9f4e-1f87b27aa7cd",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9d44abc9-f1f3-4111-a474-7dd0b224dd46",
+            "created": "2020-12-14T13:06:31.206Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft AlwaysInstallElevated 2018",
+                    "description": "Microsoft. (2018, May 31). AlwaysInstallElevated. Retrieved December 14, 2020.",
+                    "url": "https://docs.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.139Z",
+            "description": "Consider disabling the <code>AlwaysInstallElevated</code> policy to prevent elevated execution of Windows Installer packages.(Citation: Microsoft AlwaysInstallElevated 2018)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--eb88d97c-32f1-40be-80f0-d61a4b0b4b31",
+            "target_ref": "attack-pattern--365be77f-fc0e-42ee-bac8-4faf806d9336",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

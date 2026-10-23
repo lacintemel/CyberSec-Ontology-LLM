@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--84f718e4-e09d-4050-bc09-9ec48652c086",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0bdfdf48-6d8b-4eeb-968d-fb3a73889d17",
+            "created": "2026-04-17T19:13:13.600Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Updates APR 2025",
+                    "description": "Hiroaki, H. (2025, April 30). Earth Kasha Updates TTPs in Latest Campaign Targeting Taiwan and Japan. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/d/earth-kasha-updates-ttps.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.919Z",
+            "description": "[ROAMINGHOUSE](https://attack.mitre.org/software/S9026) can decode and drop a malicious ZIP file prior to execution.(Citation: Trend Micro Earth Kasha Updates APR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--251f1715-fc97-4487-b939-5c8823ef7a39",
+            "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

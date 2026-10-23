@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--529b5f0a-15d1-42ed-ba0f-6da07657351b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8e48b90a-c107-41ed-89f1-11f559972b25",
+            "created": "2026-04-09T20:36:44.159Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Unit 42 Shai-Hulud November 2025",
+                    "description": "Justin Moore. (2025, November 25). \"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 26). Retrieved April 9, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.119Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has augmented its installation process by having its original install process exit cleanly to provide the user with the illusion that the service is installed normally.(Citation: Palo Alto Unit 42 Shai-Hulud November 2025)(Citation: Socket Shai-Hulud November 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--34a80bc4-80f2-46e6-94ff-f3265a4b657c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

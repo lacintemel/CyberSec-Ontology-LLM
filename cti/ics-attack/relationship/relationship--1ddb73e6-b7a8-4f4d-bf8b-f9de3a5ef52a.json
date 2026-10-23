@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d5140c6b-5ab1-4921-8092-d4f8e9455e8d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1ddb73e6-b7a8-4f4d-bf8b-f9de3a5ef52a",
+            "created": "2026-04-23T00:03:40.026Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "IEC February 2019",
+                    "description": "IEC 2019, February Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components Retrieved. 2020/09/25 ",
+                    "url": "https://webstore.iec.ch/publication/34421"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.945Z",
+            "description": "Provide the ability to verify the integrity of programs downloaded on a controller. While techniques like CRCs and checksums are commonly used, they are not cryptographically secure and can be vulnerable to collisions. Preferably cryptographic hash functions (e.g., SHA-2, SHA-3) should be used.(Citation: IEC February 2019)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--bcf91ebc-f316-4e19-b2f6-444e9940c697",
+            "target_ref": "attack-pattern--77015a55-eef8-4f71-a071-b152f82ec1ef",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

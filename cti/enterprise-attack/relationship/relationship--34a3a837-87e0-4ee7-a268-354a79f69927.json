@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--d822c300-b0f0-4b4e-93b5-2070d745b10a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--34a3a837-87e0-4ee7-a268-354a79f69927",
+            "created": "2026-04-10T19:21:48.531Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Koi Glassworm New Tricks December 2025",
+                    "description": "Gal Hachamov. (2025, December 29). GlassWorm Goes Mac: Fresh Infrastructure, New Tricks. Retrieved April 10, 2026.",
+                    "url": "https://www.koi.ai/blog/glassworm-goes-mac-fresh-infrastructure-new-tricks"
+                },
+                {
+                    "source_name": "Socket GlassWorm January 2026",
+                    "description": "Kirill Boychenko. (2026, January 31). GlassWorm Loader Hits Open VSX via Developer Account Compromise. Retrieved April 10, 2026.",
+                    "url": "https://socket.dev/blog/glassworm-loader-hits-open-vsx-via-suspected-developer-account-compromise"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.990Z",
+            "description": "[GlassWorm](https://attack.mitre.org/software/S9010) has gathered data pertaining to VPN configurations.(Citation: Koi Glassworm New Tricks December 2025)(Citation: Socket GlassWorm January 2026)  [GlassWorm](https://attack.mitre.org/software/S9010) has also targeted locally stored data on macOS located in `/Library/Application Support/Fortinet/FortiClient/conf/vpn.plist`.(Citation: Socket GlassWorm January 2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--809bc57b-4d4c-43de-b698-448334ed8185",
+            "target_ref": "attack-pattern--52759bf1-fe12-4052-ace6-c5b0cf7dd7fd",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--db4a220c-6ab7-4acb-b61b-772b1cc1cc59",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1bfece9c-8ba6-499d-a25e-fab239e63f0d",
+            "created": "2026-04-17T10:21:10.253Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler PureCrypter JUN 2022",
+                    "description": "Dumont, R. (2022, June 13). Technical Analysis of PureCrypter: A Fully-Functional Loader Distributing Remote Access Trojans and Information Stealers. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.943Z",
+            "description": "[PureCrypter](https://attack.mitre.org/software/S9019) can identify virtual machines by querying the WMI object Win32_ComputerSystem for manufacturer and model and check it against the regular expression Microsoft|VMWare|Virtual.(Citation: Zscaler PureCrypter JUN 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--6bc7f9aa-b91f-4b23-84b8-5e756eba68eb",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

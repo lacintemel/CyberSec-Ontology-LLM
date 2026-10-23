@@ -1,0 +1,83 @@
+{
+    "@context": {
+        "ex": "http://example.org/ontology/",
+        "kb": "http://example.org/kb/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+ 	"skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:concept-5",
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "kb:concept-6",
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "kb:concept-7",
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "kb:concept-8",
+            "@type": "skos:Concept"
+        },
+        {
+            "@id": "kb:list-1",
+            "@type": "rdf:List",
+            "rdfs:comment": "This will trigger a violation error.  An OWL Sequence must be a blank node.",
+            "rdf:first": {
+                "@id": "kb:concept-5"
+            },
+            "rdf:rest": {
+                "@type": "rdf:List",
+                "rdf:first": {
+                    "@id": "kb:concept-6"
+                },
+                "rdf:rest": {
+                    "@id": "rdf:nil"
+                }
+            }
+        },
+        {
+            "@type": "owl:AllDifferent",
+            "owl:distinctMembers": {
+                "@id": "kb:list-1"
+            }
+        },
+        {
+            "@type": "owl:AllDifferent",
+            "owl:distinctMembers": {
+                "@type": "rdf:List",
+                "rdf:first": {
+                    "@id": "kb:concept-7"
+                },
+                "rdf:rest": {
+                    "@id": "kb:list-4",
+                    "rdfs:comment": "This will trigger a violation error.  An OWL Sequence must be a blank node.",
+                    "@type": "rdf:List",
+                    "rdf:first": {
+                        "@id": "kb:concept-8"
+                    },
+                    "rdf:rest": {
+                        "@id": "rdf:nil"
+                    }
+                }
+            }
+        },
+        {
+            "@id": "ex:someDatatypeProperty",
+            "@type": "owl:DatatypeProperty"
+        },
+        {
+            "@id": "ex:IncorrectlyKeyedThing",
+            "@type": "owl:Class",
+            "rdfs:comment": "This will trigger a violation error.  owl:hasKey has OWL Sequences as its range.",
+            "owl:hasKey": {
+                "@id": "ex:someDatatypeProperty"
+            }
+        }
+    ]
+}

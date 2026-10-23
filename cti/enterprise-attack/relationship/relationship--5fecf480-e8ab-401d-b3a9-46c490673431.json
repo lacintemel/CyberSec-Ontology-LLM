@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--dd7197ed-0a7c-4aa4-92ab-5ab0ddeef0c0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--5fecf480-e8ab-401d-b3a9-46c490673431",
+            "created": "2026-04-21T21:12:18.953Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Checkpoint_MOISCyberCrime_Mar2026",
+                    "description": "CheckPoint Research. (2026, March 10). Iranian MOIS Actors & the Cyber Crime Connection. Retrieved March 12, 2026.",
+                    "url": "https://research.checkpoint.com/2026/iranian-mois-actors-the-cyber-crime-connection/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:29.859Z",
+            "description": "(Citation: Checkpoint_MOISCyberCrime_Mar2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "malware--18f5f8c6-bba5-4aba-93e7-3539fe565883",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--7c56566b-815d-4ebe-9773-92a63ca40021",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b03ff220-3bf8-41bd-a443-0ae287fa8e74",
+            "created": "2026-10-13T17:45:15.479Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0907#AN2161",
+                    "external_id": "AN2161"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:15.479Z",
+            "name": "Analytic 2161",
+            "description": "Real-time monitoring identifies execve of port scanning utilities on an Industrial Control System (ICS) Linux asset with arguments targeting ICS protocol port ranges. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve of nmap/masscan with arguments targeting Industrial Control Systems (ICS) protocol port ranges"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate sources."
+                },
+                {
+                    "field": "PortScanTimeWindow",
+                    "description": "Time window within which connections across multiple ports are considered a single scan event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

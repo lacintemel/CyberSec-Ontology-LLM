@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--02649a92-6a69-4786-91af-914d08840dce",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cb11ef49-78df-43e9-b2f2-a2914aa00c3f",
+            "created": "2026-04-17T09:33:35.673Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Zscaler PureCrypter JUN 2022",
+                    "description": "Dumont, R. (2022, June 13). Technical Analysis of PureCrypter: A Fully-Functional Loader Distributing Remote Access Trojans and Information Stealers. Retrieved April 16, 2026.",
+                    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.203Z",
+            "description": "[PureCrypter](https://attack.mitre.org/software/S9019) has used a .NET downloader named 63342221.BAT and has used .jpg, .png, and .log as false extensions for malicious files.(Citation: Zscaler PureCrypter JUN 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--6f22487c-dbbf-4a5b-85ca-a8c85e8f2f80",
+            "target_ref": "attack-pattern--208884f1-7b83-4473-ac22-4e1cf6c41471",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9b0ba060-0855-48c9-9773-e20e40a4fbb7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--698d6406-b2a9-4038-b3c7-37c0fff8999e",
+            "created": "2026-02-16T15:48:04.051Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "EnkiWhiteHat_KimsukyDOCSWAP_Dec2025",
+                    "description": "EnkiWhiteHat. (2025, December 16). Kimsuky Distributing Malicious Mobile App via QR Code. Retrieved January 8, 2026.",
+                    "url": "https://www.enki.co.kr/en/media-center/blog/kimsuky-distributing-malicious-mobile-app-via-qr-code"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.069Z",
+            "description": "[DocSwap](https://attack.mitre.org/software/S9005) has checked if the victim has accessed the malicious URL from a PC. If so, [DocSwap](https://attack.mitre.org/software/S9005) redirected the victim to scan the malicious QR code using a mobile device.(Citation: EnkiWhiteHat_KimsukyDOCSWAP_Dec2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--3dbef387-12df-4547-9dd3-075c7ffec9e3",
+            "target_ref": "attack-pattern--498e7b81-238d-404c-aa5e-332904d63286",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

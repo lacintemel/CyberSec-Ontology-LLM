@@ -1,0 +1,75 @@
+{
+    "type": "bundle",
+    "id": "bundle--2a7667e0-9af9-4c42-9fa3-6514207192b9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--8e055360-9991-43ef-bd20-2b3f40432c78",
+            "created": "2026-10-13T17:47:36.850Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0723#AN2268",
+                    "external_id": "AN2268"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:36.850Z",
+            "name": "Analytic 2268",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) Windows service (Open Platform Communications (OPC) server, historian, Supervisory Control and Data Acquisition (SCADA) polling service) consuming abnormal Central Processing Unit (CPU)/memory resources and becoming unresponsive following receipt of a high volume of connections to its application port, correlated with watchdog timeout or service crash events. OT operational-fidelity gate: Alert only when a device-specific traffic/resource threshold is exceeded and the same window shows service degradation, failed polling, device alarm/restart, resource exhaustion, or malformed/out-of-spec protocol behavior. Suppress planned load tests, maintenance, network convergence/failover, and known equipment faults after operator confirmation.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Microsoft-Windows-Sysmon/Operational Event ID 3 NetworkConnect: inbound connection rate to Industrial Control Systems (ICS) application port exceeds threshold per minute from unexpected sources"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--74fa567d-bc90-425c-8a41-3c703abb221c",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=7034, 7036 for Industrial Control Systems (ICS) service within detection window of connection flood"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "CPUUtilizationThreshold",
+                    "description": "Network device CPU utilization percentage above which sustained load suggests packet-processing strain from flood traffic."
+                },
+                {
+                    "field": "DoSConnectionThreshold",
+                    "description": "Connections-per-minute threshold exceeding normal SCADA polling cadence, derived from the device's actual configured scan rate."
+                },
+                {
+                    "field": "DoSDetectionWindow",
+                    "description": "Time window over which flood rate and subsequent device silence are correlated, typically 1-5 minutes."
+                },
+                {
+                    "field": "ExpectedPollInterval",
+                    "description": "Device-specific supervisory poll interval used to determine what counts as a process historian gap."
+                },
+                {
+                    "field": "InterfaceErrorThreshold",
+                    "description": "Deviation from baseline interface error/discard rate, tuned against historical interface health data."
+                },
+                {
+                    "field": "MalformedPacketThreshold",
+                    "description": "Number of malformed/out-of-spec PDUs within the detection window constituting a flood, set above the device's documented error-tolerance baseline."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

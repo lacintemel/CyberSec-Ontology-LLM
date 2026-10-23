@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0c515706-dcb5-4c2b-8e22-d71348389548",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--05615e68-064a-467c-99eb-e5d7b510afcc",
+            "created": "2026-04-21T12:51:15.061Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Splunk LAMEHUG SEP 2025",
+                    "description": "Conteras, T., Splunk Research Team. (2025, September 25). From Prompt to Payload: LAMEHUG\u2019s LLM-Driven Cyber Intrusion. Retrieved April 21, 2026.",
+                    "url": "https://www.splunk.com/en_us/blog/security/lamehug-ai-driven-malware-llm-cyber-intrusion-analysis.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.910Z",
+            "description": "[LAMEHUG](https://attack.mitre.org/software/S9035) can use wmic to collect system information.(Citation: Splunk LAMEHUG SEP 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--c55e0410-842d-4365-a2c8-26c0330f85b8",
+            "target_ref": "attack-pattern--01a5a209-b94c-450b-b7f9-946497d91055",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

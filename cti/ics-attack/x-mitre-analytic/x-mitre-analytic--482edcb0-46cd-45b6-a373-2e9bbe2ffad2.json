@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--54ec1436-861b-4fe9-9853-8c2af0ce7ab3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--482edcb0-46cd-45b6-a373-2e9bbe2ffad2",
+            "created": "2026-10-13T17:47:02.412Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0750#AN2245",
+                    "external_id": "AN2245"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:02.412Z",
+            "name": "Analytic 2245",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) field device event logs being cleared via ICS protocol commands from a source not in the approved engineering workstation list, occurring immediately following other suspicious ICS activity on the same device. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "event buffer clear or log clear service from source not in engineering workstation list, correlated with preceding suspicious activity on the same device"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedLogManagementTools",
+                    "description": "Allowlist of processes/accounts authorized to delete or truncate ICS application logs."
+                },
+                {
+                    "field": "LogClearLookbackWindow",
+                    "description": "Time window prior to a log-clear event within which other suspicious activity is considered correlated."
+                },
+                {
+                    "field": "ScheduledLogRotationWindow",
+                    "description": "Documented schedule for legitimate, automated log rotation/archival."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

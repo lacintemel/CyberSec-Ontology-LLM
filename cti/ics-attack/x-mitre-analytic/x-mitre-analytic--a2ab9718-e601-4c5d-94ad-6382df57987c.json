@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--7fc8b327-2587-4717-915f-26b3902c6c56",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a2ab9718-e601-4c5d-94ad-6382df57987c",
+            "created": "2026-10-13T17:44:55.885Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0780#AN2146",
+                    "external_id": "AN2146"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:55.885Z",
+            "name": "Analytic 2146",
+            "description": "Real-time monitoring identifies inconsistencies between auditd-recorded process activity and what /proc reports, or kernel module loads from non-standard paths on Industrial Control System (ICS) Linux assets. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--c0a4a086-cc20-4e1e-b7cb-29d99dfa3fb1",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=init_module/finit_module; kernel module loaded from a path or hash not in the authorized ICS host module baseline"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "FirmwareIntegrityScanSchedule",
+                    "description": "Frequency of out-of-band firmware integrity verification."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

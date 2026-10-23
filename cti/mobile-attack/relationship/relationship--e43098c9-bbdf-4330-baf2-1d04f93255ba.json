@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a86f1865-c386-4e18-bb40-30bab0e95dd5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e43098c9-bbdf-4330-baf2-1d04f93255ba",
+            "created": "2026-02-06T21:29:50.548Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_March2025",
+                    "description": "ThreatFabric. (2025, March 28). Exposing Crocodilus: New Device Takeover Malware Targeting Android Devices. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/exposing-crocodilus-new-device-takeover-malware-targeting-android-devices"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T21:49:27.120Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has the ability to collect a list of installed applications.(Citation: ThreatFabric_Crocodilus_March2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--198ce408-1470-45ee-b47f-7056050d4fc2",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

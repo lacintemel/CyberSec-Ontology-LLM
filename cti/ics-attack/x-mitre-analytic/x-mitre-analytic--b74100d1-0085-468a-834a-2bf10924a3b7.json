@@ -1,0 +1,77 @@
+{
+    "type": "bundle",
+    "id": "bundle--ef806235-14df-4416-9070-209907b445f0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b74100d1-0085-468a-834a-2bf10924a3b7",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0752#AN1884",
+                    "external_id": "AN1884"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:05.622Z",
+            "name": "Analytic 1884",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol session consistent with a program download to a field device from a source not in the approved engineering workstation list, correlated with a device mode-change alarm transitioning to PROGRAM/STOP immediately preceding the transfer. Documented in Stuxnet (code/data block download to alter programmable logic controller behavior) and Triton (TriStation protocol program download to the Triconex Safety Instrumented System). OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b05a614b-033c-4578-b4f2-c63a9feee706",
+                    "name": "assetinventory:ProgramHash",
+                    "channel": "post-transfer program hash does not match last authorized program baseline"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device_ip transitions to PROGRAM/STOP mode without operator_ack and without corresponding open change ticket reference"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "S7comm Download Block / Common Industrial Protocol (CIP) Download Program / Distributed Network Protocol (DNP3) program file transfer to device_ip from source not in engineering workstation list within mode change to download window of mode-change event"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "engineeringworkstation:ApplicationLog",
+                    "channel": "program download session logged without corresponding change ticket reference"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which program downloads are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform program downloads."
+                },
+                {
+                    "field": "ModeChangeToDownloadWindow",
+                    "description": "Time window within which a mode-change event and subsequent download session are considered the same engineering action."
+                },
+                {
+                    "field": "ProgramDownloadSizeThreshold",
+                    "description": "Minimum byte count distinguishing a full program download from routine traffic."
+                }
+            ]
+        }
+    ]
+}

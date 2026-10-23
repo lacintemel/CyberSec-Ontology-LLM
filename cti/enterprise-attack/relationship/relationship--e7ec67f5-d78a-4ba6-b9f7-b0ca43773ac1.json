@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--5d500421-cce1-47f7-b853-499b556718e1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e7ec67f5-d78a-4ba6-b9f7-b0ca43773ac1",
+            "created": "2026-04-16T16:46:46.861Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Recorded Future TAG-144 AUG 2025",
+                    "description": "Insikt Group. (2025, August 26). TAG-144\u2019s Persistent Grip on South American Organizations. Retrieved April 16, 2026.",
+                    "url": "https://assets.recordedfuture.com/insikt-report-pdfs/2025/cta-2025-0826.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.872Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used compromised Google Drive accounts including one associated with a  Colombian government organization.(Citation: Recorded Future TAG-144 AUG 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

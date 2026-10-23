@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--51547622-b85a-4c31-bb30-9ea481c26f5b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c6fd30bf-8d96-4da0-855d-84a05fae3be8",
+            "created": "2026-04-21T21:14:15.842Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET_MuddyWater_Dec2025",
+                    "description": "ESET Research. (2025, December 2). MuddyWater: Snakes by the riverbank. Retrieved February 17, 2026.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.197Z",
+            "description": "[LP-Notes](https://attack.mitre.org/software/S9036) has impersonated the security context of the taskhostw.exe process via the `ImpersonateLoggedOnUser` API.(Citation: ESET_MuddyWater_Dec2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7fbf1f1e-cbd8-4060-8e3b-7ca0e56ce3fe",
+            "target_ref": "attack-pattern--86850eff-2729-40c3-b85e-c4af26da4a2d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

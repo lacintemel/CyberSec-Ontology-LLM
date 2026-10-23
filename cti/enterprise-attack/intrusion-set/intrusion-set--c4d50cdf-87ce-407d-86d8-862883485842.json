@@ -1,0 +1,80 @@
+{
+    "type": "bundle",
+    "id": "bundle--b444b361-96ce-441b-a8dd-02ccfdb62f52",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "created": "2020-05-05T18:53:08.166Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/groups/G0099",
+                    "external_id": "G0099"
+                },
+                {
+                    "source_name": "Blind Eagle",
+                    "description": "(Citation: QiAnXin APT-C-36 Feb2019)(Citation: Recorded Future TAG-144 AUG 2025)"
+                },
+                {
+                    "source_name": "TAG-144",
+                    "description": "(Citation: Recorded Future TAG-144 AUG 2025)"
+                },
+                {
+                    "source_name": "AguilaCiega",
+                    "description": "(Citation: Recorded Future TAG-144 AUG 2025)"
+                },
+                {
+                    "source_name": "APT-Q-98",
+                    "description": "(Citation: Recorded Future TAG-144 AUG 2025)"
+                },
+                {
+                    "source_name": "Check Point Blind Eagle MAR 2025",
+                    "description": "Check Point Research. (2025, March 10). Blind Eagle: \u2026And Justice for All. Retrieved April 16, 2026.",
+                    "url": "https://research.checkpoint.com/2025/blind-eagle-and-justice-for-all/"
+                },
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "Recorded Future TAG-144 AUG 2025",
+                    "description": "Insikt Group. (2025, August 26). TAG-144\u2019s Persistent Grip on South American Organizations. Retrieved April 16, 2026.",
+                    "url": "https://assets.recordedfuture.com/insikt-report-pdfs/2025/cta-2025-0826.pdf"
+                },
+                {
+                    "source_name": "QiAnXin APT-C-36 Feb2019",
+                    "description": "QiAnXin Threat Intelligence Center. (2019, February 18). APT-C-36: Continuous Attacks Targeting Colombian Government Institutions and Corporations. Retrieved May 5, 2020.",
+                    "url": "https://web.archive.org/web/20190625182633if_/https://ti.360.net/blog/articles/apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corporations-en/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:17.693Z",
+            "name": "APT-C-36",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) is a suspected South American threat group that has engaged in espionage and financially motivated operations since at least 2018. [APT-C-36](https://attack.mitre.org/groups/G0099) has targeted government institutions and entities in the financial, energy, and professional manufacturing sectors across Colombia and other Latin American countries.(Citation: QiAnXin APT-C-36 Feb2019)(Citation: Kaspersky BlindEagle AUG 2024)(Citation: Check Point Blind Eagle MAR 2025)(Citation: Recorded Future TAG-144 AUG 2025)",
+            "aliases": [
+                "APT-C-36",
+                "Blind Eagle",
+                "TAG-144",
+                "AguilaCiega",
+                "APT-Q-98"
+            ],
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "2.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_contributors": [
+                "Jose Luis S\u00e1nchez Martinez"
+            ]
+        }
+    ]
+}

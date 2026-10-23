@@ -1,0 +1,69 @@
+{
+    "type": "bundle",
+    "id": "bundle--40fae1c4-e1e5-43e9-a648-80196a363244",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--98b0a8a6-881d-4f00-84c3-3f70d368067e",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0712#AN1839",
+                    "external_id": "AN1839"
+                },
+                {
+                    "source_name": "Android-VerifiedBoot",
+                    "description": "Android. (n.d.). Verified Boot. Retrieved December 21, 2016.",
+                    "url": "https://source.android.com/security/verifiedboot/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:06.465Z",
+            "name": "Analytic 1839",
+            "description": "For iOS, detect Compromise Client Software Binary by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate File Metadata via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: MDM supervised integrity_check=fail following jailbreak detection \u2014 integrity check failure on supervised Jamf/Intune enrolled device indicates filesystem modifications beyond passive jailbreak presence]; Host Status via Apple MDM [DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries]; Network Traffic Flow via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: MDM supervised integrity_check=fail following jailbreak detection \u2014 integrity check failure on supervised Jamf/Intune enrolled device indicates filesystem modifications beyond passive jailbreak presence"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--85a533a4-5fa4-4dba-b45d-f0717bedd6e6",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AppBaselineDomains",
+                    "description": "Per-device CDN baseline."
+                },
+                {
+                    "field": "PostModificationWindow",
+                    "description": "Default 900s \u2014 MDM check-in interval."
+                }
+            ]
+        }
+    ]
+}

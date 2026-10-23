@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--7cd0573d-6659-4c4a-8662-3ea2cddbe042",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4a1b6793-4389-40f7-a7d3-8ad98cba738e",
+            "created": "2026-10-13T17:46:52.508Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0759#AN2237",
+                    "external_id": "AN2237"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:52.508Z",
+            "name": "Analytic 2237",
+            "description": "Real-time monitoring identifies a field device or serial gateway receiving Industrial Control System (ICS) protocol traffic relayed through an intermediate host, identifiable by protocol-level timing anomalies or L2 source address changes where the device Internet Protocol (IP) address responds from a Media Access Control (MAC) address different from its enrolled hardware address. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "protocol-level latency inconsistent with direct communication, or Media Access Control (MAC)/Internet Protocol (IP) address binding change for device_ip"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "RelayCorrelationWindow",
+                    "description": "Time window and byte-count proportionality tolerance used to determine whether concurrent flows represent a relay pattern."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

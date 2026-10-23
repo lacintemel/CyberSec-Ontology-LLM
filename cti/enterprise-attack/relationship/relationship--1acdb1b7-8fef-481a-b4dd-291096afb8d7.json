@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--43087350-ca24-444d-abdd-0bb578454b5c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1acdb1b7-8fef-481a-b4dd-291096afb8d7",
+            "created": "2026-04-16T22:11:42.262Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "NaumaanProofpoint_GlobalClickFix_April2025",
+                    "description": "Naumaan, S., et al. (2025, April 17). Around the World in 90 Days: State-Sponsored Actors Try ClickFix . Retrieved January 21, 2026.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:29.652Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has leveraged ClickFix type tactics enticing victims to copy and paste malicious PowerShell code.(Citation: NaumaanProofpoint_GlobalClickFix_April2025) ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--e261a979-f354-41a8-963e-6cadac27c4bf",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

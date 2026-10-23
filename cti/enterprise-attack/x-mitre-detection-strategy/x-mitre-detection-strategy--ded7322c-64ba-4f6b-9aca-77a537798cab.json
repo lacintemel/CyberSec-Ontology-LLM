@@ -1,0 +1,38 @@
+{
+    "type": "bundle",
+    "id": "bundle--a03672df-f66a-4a13-8895-2bc011e84d90",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--ded7322c-64ba-4f6b-9aca-77a537798cab",
+            "created": "2026-04-23T18:44:43.178Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0920",
+                    "external_id": "DET0920"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:39.114Z",
+            "name": "Detection Strategy for Invisible Unicode",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--1a9f097a-d5b9-424d-ae20-19ed73eb9dcf",
+                "x-mitre-analytic--a32c4f38-feaf-4291-9dad-3043114b4d37",
+                "x-mitre-analytic--6195e912-ed73-4ec7-a03b-097631ec0b26"
+            ]
+        }
+    ]
+}

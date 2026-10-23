@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--f9b91dfc-a668-4d4c-a6ee-91f821db2213",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a0c69c57-549d-4cdd-82eb-0654d8df364e",
+            "created": "2026-10-13T17:46:45.467Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0745#AN2229",
+                    "external_id": "AN2229"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:45.467Z",
+            "name": "Analytic 2229",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol file-transfer service placing a file on a field device from a source not in the approved engineering workstation list, where the transferred filename pattern matches firmware images or executable payloads inconsistent with the device's normal data exchange profile. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "otids:ProtocolDecoder",
+                    "channel": "Decoded DNP3/IEC 61850 file-transfer transaction: source/destination and file/object identifier where exposed; correlate with approved engineering source and change window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFileSources",
+                    "description": "Allowlist of network shares/hosts authorized to write executable or script files to ICS Windows assets."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform file transfers to field devices."
+                },
+                {
+                    "field": "SuspiciousFilePatterns",
+                    "description": "Filename/extension patterns inconsistent with the device's normal configuration exchange profile."
+                },
+                {
+                    "field": "ToolTransferWindow",
+                    "description": "Time window after file creation within which execution is considered directly connected to the transfer event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

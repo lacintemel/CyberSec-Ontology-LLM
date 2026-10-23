@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--06450f92-57d9-42e3-82ae-e56ea7c2f210",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--74cb9e26-6ec1-41e8-9da8-ed30504f9c39",
+            "created": "2026-10-13T17:46:16.686Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0776#AN2209",
+                    "external_id": "AN2209"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:16.686Z",
+            "name": "Analytic 2209",
+            "description": "Real-time monitoring identifies a process on an Industrial Control System (ICS) Windows host writing setpoint values to Open Platform Communications (OPC) Data Access (DA)/Unified Architecture (UA) tags or historian writable tags without being the recognized Supervisory Control and Data Acquisition (SCADA) or Distributed Control System (DCS) control application, with values falling outside the normal operating range. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "opc:applog",
+                    "channel": "write to setpoint tag from client not in approved Open Platform Communications (OPC) clients with value outside baseline value range"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWriteSources",
+                    "description": "IP allowlist of sources authorized to write to parameter/setpoint registers."
+                },
+                {
+                    "field": "BaselineValueRange",
+                    "description": "Documented safe operating range for each monitored parameter."
+                },
+                {
+                    "field": "ParameterDriftThreshold",
+                    "description": "Percentage deviation from rolling baseline considered significant drift."
+                },
+                {
+                    "field": "SetpointAddressRange",
+                    "description": "Register/address ranges corresponding to parameter and setpoint values for the device type."
+                },
+                {
+                    "field": "TimeWindow",
+                    "description": "Time window over which post-write drift is measured."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

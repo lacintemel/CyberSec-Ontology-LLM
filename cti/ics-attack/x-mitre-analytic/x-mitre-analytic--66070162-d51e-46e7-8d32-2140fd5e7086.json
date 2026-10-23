@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--285dbe0b-e9bd-4113-8a8a-ae0bd3c01edc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--66070162-d51e-46e7-8d32-2140fd5e7086",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0751#AN1883",
+                    "external_id": "AN1883"
+                },
+                {
+                    "source_name": "CopyFromScreen .NET",
+                    "description": "Microsoft. (n.d.). Graphics.CopyFromScreen Method. Retrieved March 24, 2020.",
+                    "url": "https://docs.microsoft.com/en-us/dotnet/api/system.drawing.graphics.copyfromscreen?view=netframework-4.8"
+                },
+                {
+                    "source_name": "Antiquated Mac Malware",
+                    "description": "Thomas Reed. (2017, January 18). New Mac backdoor using antiquated code. Retrieved July 5, 2017.",
+                    "url": "https://blog.malwarebytes.com/threat-analysis/2017/01/new-mac-backdoor-using-antiquated-code/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:44.933Z",
+            "name": "Analytic 1883",
+            "description": "Real-time monitoring identifies execution of screenshot utilities (scrot, import, xwd) on an Industrial Control System (ICS) Linux Human-Machine Interface (HMI), from a User Identifier (UID) that does not normally perform display operations. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): execve of screenshot utility (scrot, import, xwd) on Industrial Control Systems (ICS) Human-Machine Interface (HMI) by User Identifier (UID) not in approved operator UIDs"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedScreenCaptureTools",
+                    "description": "Allowlist of remote support, training, or documentation tools legitimately authorized to perform screen capture."
+                },
+                {
+                    "field": "CaptureToFileWindow",
+                    "description": "Time window correlating a screen capture API call with a subsequent image file write."
+                }
+            ]
+        }
+    ]
+}

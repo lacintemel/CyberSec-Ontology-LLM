@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--7fea13fb-fd99-4a0a-a6cb-dcca51c9cfbc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--4be2c353-ef8d-4bb4-b973-4cae602f627f",
+            "created": "2026-10-13T17:44:34.793Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0737#AN2130",
+                    "external_id": "AN2130"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:34.793Z",
+            "name": "Analytic 2130",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) Linux service process making write Application Programming Interface (API) calls to field device Input/Output (I/O) at a rate exceeding the configured scan rate, from a User Identifier (UID) associated with the Supervisory Control and Data Acquisition (SCADA)/control application but exhibiting anomalous write volume. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): write Application Programming Interface (API) invocation rate to single Input/Output (I/O) point from Industrial Control Systems (ICS) service User Identifier (UID) exceeds max write rate per point"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "BruteForceDetectionWindow",
+                    "description": "Time window over which write rate is measured for threshold comparison."
+                },
+                {
+                    "field": "MaxNormalStateChangeRate",
+                    "description": "Maximum rate at which the physical process value is expected to legitimately change state."
+                },
+                {
+                    "field": "MaxWriteQueueDepth",
+                    "description": "Maximum legitimate write queue depth for SCADA/DCS write operations to a single point."
+                },
+                {
+                    "field": "MaxWriteRatePerPoint",
+                    "description": "Maximum legitimate write rate to a single I/O point, derived from the device's configured scan cycle and physical process response time."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

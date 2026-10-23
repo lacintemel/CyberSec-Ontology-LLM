@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7db46d5f-4591-4729-bb1e-424fa7757ad8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ee8b12b7-fd0f-4a6c-b075-57052267513c",
+            "created": "2026-04-20T20:16:59.501Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FBI IC3 Flash VOID MANTICORE Handala Hack March 2026",
+                    "description": "FBI. (2026, March 20). FBI Flash: FLASH-20260320-001:Government of Iran Cyber Actors Deploy Telegram C2 to  Push Malware to Identified Targets. Retrieved April 20, 2026.",
+                    "url": "https://www.ic3.gov/CSA/2026/260320.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:26.193Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has masqueraded as commonly used programs and services on Windows hosts.(Citation: FBI IC3 Flash VOID MANTICORE Handala Hack March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--7bdca9d5-d500-4d7d-8c52-5fd47baf4c0c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

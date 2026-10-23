@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--06cf59f6-a28a-46ad-87d5-3099445442cf",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--f238e0f3-7354-4304-9101-69cefd8446fc",
+            "created": "2026-04-16T16:23:55.764Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0899#AN2033",
+                    "external_id": "AN2033"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.383Z",
+            "name": "Analytic 2033",
+            "description": "Detects suspicious inbound communications or collaboration requests followed by rapid sensitive user actions such as file sharing changes, macro enablement, OAuth consent, credential submission, or financial workflow approvals that deviate from historical relationships or normal approval patterns.\n      ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Office Suite"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "m365:unified",
+                    "channel": "MailItemsAccessed; AddedInboxRule; ConsentToApplication; SharingSet"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "m365:exchange",
+                    "channel": "External sender message followed by user action involving links or attachments"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "m365:teams",
+                    "channel": "External chat request or new tenant communication preceding approval activity"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ActionAfterMessageWindow",
+                    "description": "Time window between inbound communication and sensitive action"
+                },
+                {
+                    "field": "TrustedDomainAllowlist",
+                    "description": "Known legitimate vendors or partner domains"
+                },
+                {
+                    "field": "ApprovalAmountThreshold",
+                    "description": "Monetary threshold for finance workflows"
+                }
+            ]
+        }
+    ]
+}

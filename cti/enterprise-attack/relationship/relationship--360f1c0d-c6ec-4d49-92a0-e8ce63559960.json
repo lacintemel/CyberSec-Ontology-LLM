@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--c0a2300d-5095-414a-b46e-1ff0266c514b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--360f1c0d-c6ec-4d49-92a0-e8ce63559960",
+            "created": "2019-06-24T19:05:41.430Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Kaspersky BlindEagle AUG 2024",
+                    "description": "Global Research & Analysis Team, Kaspersky. (2024, August 19). BlindEagle flying high in Latin America. Retrieved April 16, 2026.",
+                    "url": "https://securelist.com/blindeagle-apt/113414/"
+                },
+                {
+                    "source_name": "GitHub QuasarRAT",
+                    "description": "MaxXor. (n.d.). QuasarRAT. Retrieved July 10, 2018.",
+                    "url": "https://github.com/quasar/QuasarRAT"
+                },
+                {
+                    "source_name": "Volexity Patchwork June 2018",
+                    "description": "Meltzer, M, et al. (2018, June 07). Patchwork APT Group Targets US Think Tanks. Retrieved July 16, 2018.",
+                    "url": "https://www.volexity.com/blog/2018/06/07/patchwork-apt-group-targets-us-think-tanks/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.993Z",
+            "description": "[QuasarRAT](https://attack.mitre.org/software/S0262) can obtain passwords from common web browsers.(Citation: GitHub QuasarRAT)(Citation: Volexity Patchwork June 2018)(Citation: Kaspersky BlindEagle AUG 2024)\n",
+            "relationship_type": "uses",
+            "source_ref": "tool--da04ac30-27da-4959-a67d-450ce47d9470",
+            "target_ref": "attack-pattern--58a3e6aa-4453-4cc8-a51f-4befe80b31a8",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--155f4575-fab1-4a48-af6e-94fea3a1aa04",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--c779ee07-ee85-42fe-a2c1-14ce25766cdf",
+            "created": "2026-04-22T21:48:05.256Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0910",
+                    "external_id": "DET0910"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:36.169Z",
+            "name": "Detection of Block Communications",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--3f052beb-d384-4ebe-b942-2c4ddeb95833",
+                "x-mitre-analytic--2b726f82-bb4f-4889-b6a0-4587f438cd83",
+                "x-mitre-analytic--4ea5942d-fa95-484d-9acb-fe205a3960a3",
+                "x-mitre-analytic--13d41f06-6c14-4b45-8c66-bc0fdd878419"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--cd6aa737-1658-460c-b237-5a967d2c6b89",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f85d7fd3-e997-4a28-acd6-d5416346f051",
+            "created": "2025-12-15T23:40:49.942Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BlackBasta",
+                    "description": "Antonio Cocomazzi and Antonio Pirozzi. (2022, November 3). Black Basta Ransomware | Attacks Deploy Custom EDR Evasion Tools Tied to FIN7 Threat Actor. Retrieved March 14, 2023.",
+                    "url": "https://www.sentinelone.com/labs/black-basta-ransomware-attacks-deploy-custom-edr-evasion-tools-tied-to-fin7-threat-actor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:32.301Z",
+            "description": "(Citation: BlackBasta)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc",
+            "target_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

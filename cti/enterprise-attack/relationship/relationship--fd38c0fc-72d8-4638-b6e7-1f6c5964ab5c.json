@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--58c6debf-25bf-4231-b32a-7252c498f576",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fd38c0fc-72d8-4638-b6e7-1f6c5964ab5c",
+            "created": "2020-01-23T18:30:11.132Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.269Z",
+            "description": "CMSTP.exe may not be necessary within a given environment (unless using it for VPN connection installation).",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--eb88d97c-32f1-40be-80f0-d61a4b0b4b31",
+            "target_ref": "attack-pattern--4cbc6a62-9e34-4f94-8a19-5c1a11392a49",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

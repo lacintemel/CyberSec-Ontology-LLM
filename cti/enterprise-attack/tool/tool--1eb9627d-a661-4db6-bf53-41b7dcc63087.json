@@ -1,0 +1,61 @@
+{
+    "type": "bundle",
+    "id": "bundle--2353c3ac-45e9-4133-bd31-d02cef0d32a0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "tool",
+            "id": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "created": "2026-01-30T20:15:05.674Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/software/S9003",
+                    "external_id": "S9003"
+                },
+                {
+                    "source_name": "Sophos Evilginx MAR 2025",
+                    "description": "Everts, M. (2025, March 28). Stealing user credentials with evilginx. Retrieved January 27, 2026.",
+                    "url": "https://www.sophos.com/en-us/blog/stealing-user-credentials-with-evilginx"
+                },
+                {
+                    "source_name": "Breakdev Evilginx 2.1 SEP 2018",
+                    "description": "Gretzky, K. (2018, September 10). Evilginx 2.1 - The First Post-Release Update. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-2-1-the-first-post-release-update/"
+                },
+                {
+                    "source_name": "Evilginx 2 July 2018",
+                    "description": "Gretzky, K.. (2018, July 26). Evilginx 2 - Next Generation of Phishing 2FA Tokens. Retrieved October 14, 2019.",
+                    "url": "https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-23T02:18:02.821Z",
+            "name": "evilginx2",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) is an open-source adversary-in-the-middle (AiTM) attack framework based on the open-source nginx web server. [evilginx2](https://attack.mitre.org/software/S9003) can be used as a reverse proxy between victims and legitimate web services to intercept and capture credentials, authentication tokens, and session cookies.(Citation: Evilginx 2 July 2018)(Citation: Breakdev Evilginx 2.1 SEP 2018)(Citation: Sophos Evilginx MAR 2025)\n ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "IaaS",
+                "Identity Provider",
+                "Office Suite",
+                "SaaS"
+            ],
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_aliases": [
+                "evilginx2"
+            ],
+            "labels": [
+                "tool"
+            ]
+        }
+    ]
+}

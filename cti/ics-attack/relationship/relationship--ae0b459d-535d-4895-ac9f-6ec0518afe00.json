@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--6b383acf-baf9-42c2-85b5-ee8afd2d5f06",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ae0b459d-535d-4895-ac9f-6ec0518afe00",
+            "created": "2026-04-22T16:32:26.132Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.162Z",
+            "description": "Ensure embedded controls and network devices are protected through access management, as these devices often have insecure credentials which could be used to gain unauthorized access.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--3992ce42-43e9-4bea-b8db-a102ec3ec1e3",
+            "target_ref": "attack-pattern--3e9b182e-e493-49e1-9a9b-bd0dfcd34a7c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

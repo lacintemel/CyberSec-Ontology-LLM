@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--e301090f-8dd0-4a57-8093-5671606d991a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--6cc7ee03-da28-4445-acd3-ce787b0ae61e",
+            "created": "2026-09-30T17:56:03.762Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft CYBERWARCON NOV 2024",
+                    "description": "Microsoft Threat Intelligence. (2024, November 22). Microsoft shares latest intelligence on North Korean and Chinese threat actors at CYBERWARCON. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T17:56:03.762Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has impersonated recruiters and venture capitalists to lure victims into connecting to malicious skills assessments or online business meetings.(Citation: Microsoft CYBERWARCON NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--cd92d2b8-ce43-4666-9472-f1b4b9f4f8be",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

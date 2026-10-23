@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--9c7fd12f-7d2d-4abc-9c73-e7f78b80f10e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--840d01e8-e401-413b-bdc8-f47122c5661d",
+            "created": "2026-02-04T19:32:20.394Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Breakdev Evilginx 2.4 SEP 2020",
+                    "description": "Gretzky, K. (2020, September 14). Evilginx 2.4 - Gone Phishing. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-2-4-gone-phishing/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-08T20:15:04.768Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can randomly generate and Base64 encode parameters in phishing links to defeat static detection.(Citation: Breakdev Evilginx 2.4 SEP 2020)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--cc7b8c4e-9be0-47ca-b0bb-83915ec3ee2f",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

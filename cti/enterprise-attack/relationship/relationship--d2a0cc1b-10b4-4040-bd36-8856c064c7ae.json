@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--ff6fff88-7eb0-4c96-ac7b-d5e3534c4732",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d2a0cc1b-10b4-4040-bd36-8856c064c7ae",
+            "created": "2026-04-22T22:11:46.638Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CERT Polska",
+                    "description": "CERT Polska. (2026, January 30). Energy Sector Incident  Report \u2013 29 December. Retrieved April 22, 2026.",
+                    "url": "https://cert.pl/uploads/docs/CERT_Polska_Energy_Sector_Incident_Report_2025.pdf"
+                },
+                {
+                    "source_name": "ESET DynoWiper JAN 2026",
+                    "description": "ESET. (2026, January 30). Russian Sandworm group attacks energy company in Poland with DynoWiper, ESET Research discovers. Retrieved April 22, 2026.",
+                    "url": "https://www.eset.com/us/about/newsroom/research/eset-research-russian-sandwormapt-attacks-energy-company-poland-with-dynowiper/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:19.999Z",
+            "description": "[DynoWiper](https://attack.mitre.org/software/S9038) was used for destructive attacks during the [2025 Poland Wiper Attacks](https://attack.mitre.org/campaigns/C0063).(Citation: CERT Polska)(Citation: ESET DynoWiper JAN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a6aba167-5ada-4812-9da1-912c0e73335d",
+            "target_ref": "malware--34057cb6-0a56-48a3-92e5-3af1357808da",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

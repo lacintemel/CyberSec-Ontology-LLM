@@ -1,0 +1,55 @@
+{
+    "type": "bundle",
+    "id": "bundle--9465f5e9-9291-4cba-9c55-39e78519b635",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--23a1b062-847e-4912-8e5e-5b69867af4a4",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0598#AN1644",
+                    "external_id": "AN1644"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:49.563Z",
+            "name": "Analytic 1644",
+            "description": "For Android, detect Prevent Application Removal from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application Permission via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App invokes accessibility global actions (back, home, recents) or DevicePolicyManager removal-resistance operations when package-management or uninstall UI is in foreground \u2014 active uninstall interference]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App invokes accessibility global actions (back, home, recents) or DevicePolicyManager removal-resistance operations when package-management or uninstall UI is in foreground \u2014 active uninstall interference"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "RemovalResistanceAllowList",
+                    "description": "MDM agent (legitimate Device Admin that cannot be removed by user is expected). Any other app using removal-resistance mechanisms should be flagged. Derive from MDM enrollment policy."
+                }
+            ]
+        }
+    ]
+}

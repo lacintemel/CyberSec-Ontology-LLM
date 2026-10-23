@@ -1,0 +1,63 @@
+{
+    "type": "bundle",
+    "id": "bundle--a58bc0b9-8c0e-4e02-ba8f-af2243c7d36f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--322ac45b-d540-4d2a-84a1-cde200238b95",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0739#AN1872",
+                    "external_id": "AN1872"
+                },
+                {
+                    "source_name": "Elastic - Koadiac Detection with EQL",
+                    "description": "Stepanic, D.. (2020, January 13). Embracing offensive tooling: Building detections against Koadic using EQL. Retrieved November 17, 2024.",
+                    "url": "https://www.elastic.co/security-labs/embracing-offensive-tooling-building-detections-against-koadic-using-eql"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:40.667Z",
+            "name": "Analytic 1872",
+            "description": "Real-time monitoring identifies execution of network discovery tools (nmap, PLCScan, redpoint NSE scripts) or Industrial Control System (ICS)-specific scanners from an Industrial Control System (ICS) Windows host, from a process not associated with a recognized network management or engineering tool. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 of network discovery tool (nmap, PLCScan) from process not in authorized network tools list"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP allowlist of legitimate engineering and SCADA systems."
+                },
+                {
+                    "field": "AuthorizedNetworkTools",
+                    "description": "Allowlist of network management/diagnostic tools authorized for use on ICS hosts."
+                },
+                {
+                    "field": "DiscoveryTimeWindow",
+                    "description": "Time window within which sequential connections across the address range are considered a single discovery sweep event."
+                }
+            ]
+        }
+    ]
+}

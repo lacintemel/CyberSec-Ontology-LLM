@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--d362a64d-02e0-4aa9-8a63-0b992adab2f3",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f7f5185d-3e7a-4b5c-8a54-44eac8083780",
+            "created": "2026-01-26T18:52:58.619Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Halcyon_CloakRansomware_Dec2024",
+                    "description": "Halcyon RISE Team. (2024, December 12). Cloak Ransomware Variant Exhibits Advanced Persistence, Evasion and VHD Extraction Capabilities. Retrieved December 23, 2025.",
+                    "url": "https://www.halcyon.ai/blog/cloak-ransomware-variant-exhibits-advanced-persistence-evasion-and-vhd-extraction-capabilities"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.262Z",
+            "description": "If executed with elevated privileges, [Diskpart](https://attack.mitre.org/software/S9002) can list all volumes, including virtual disks.(Citation: Halcyon_CloakRansomware_Dec2024)   ",
+            "relationship_type": "uses",
+            "source_ref": "tool--080f872e-f1a3-4d42-bb00-9eb55949f6a9",
+            "target_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

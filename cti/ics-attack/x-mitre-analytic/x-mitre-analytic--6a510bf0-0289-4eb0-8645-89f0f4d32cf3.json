@@ -1,0 +1,55 @@
+{
+    "type": "bundle",
+    "id": "bundle--c41684eb-0392-4d4c-ac2c-1cd53e5fd545",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6a510bf0-0289-4eb0-8645-89f0f4d32cf3",
+            "created": "2026-04-22T17:53:18.908Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0906#AN2049",
+                    "external_id": "AN2049"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:59.527Z",
+            "name": "Analytic 2049",
+            "description": "Configured Windows object-access monitoring identifies a write to a Siemens project file by a process that is not the Siemens Totally Integrated Automation (TIA) Portal or Step7 engineering software, or by the legitimate Siemens tool immediately after loading a project from an untrusted path. Directly documented as a Stuxnet mechanism. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance. Collection requirement: use Windows Security Event ID 4663 with Object Access auditing and SACLs on approved project repositories; Sysmon FileCreate events can corroborate writes/overwrites but do not report generic file-open/read activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--235b7491-2d2b-4617-9a52-3c0783680f71",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4663 (requires Object Access auditing/SACL): Siemens engineering process reads/opens project file from unapproved repository/removable-media/network-share path"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "Siemens engineering tool opens project file from path not in approved project repository"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedProjectRepository",
+                    "description": "Documented, trusted source location(s) for Siemens project files."
+                }
+            ]
+        }
+    ]
+}

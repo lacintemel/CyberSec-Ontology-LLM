@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--bb5d88ab-452c-4fd4-a292-9d9d88227958",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fc9e2b69-f0f6-4279-ab07-ea18eef19740",
+            "created": "2026-09-25T20:35:14.655Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:35:14.655Z",
+            "description": "Limit retrieval and execution of untrusted web or document-based active content on ICS workstations and jump hosts, especially where those systems can reach control assets. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--143b4398-3222-480a-b6a4-e131bc2d3144",
+            "target_ref": "attack-pattern--d0225461-2610-469e-8c52-56ec12ac0c71",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

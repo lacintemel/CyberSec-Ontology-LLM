@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--944d0631-f621-4065-91d7-d76b33419f0e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9ed67778-6277-4e12-aa3e-29f39a81e67a",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0602#AN1650",
+                    "external_id": "AN1650"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:48.808Z",
+            "name": "Analytic 1650",
+            "description": "For Android, detect Call Log by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate API Calls via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: ContentResolver.query(CallLog.Calls) with query_count > $CallLogQueryThreshold$ by app NOT IN $ApprovedDialerApps$]; Network Traffic Flow via Android Enterprise Network Logging / Enterprise VPN [DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata]; Permissions Request via Android Enterprise DPC / Application Vetting [DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "2.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--5ae32c6a-2d12-4b8f-81ca-f862f2be0962",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: ContentResolver.query(CallLog.Calls) with query_count > $CallLogQueryThreshold$ by app NOT IN $ApprovedDialerApps$"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "android:EnterpriseNetworkLog",
+                    "channel": "DevicePolicyManager.retrieveNetworkLogs(): DnsEvent / ConnectEvent; VPN flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--e2f72131-14d1-411f-8e8c-aa3453dd5456",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager.getPermissionGrantState(); PackageManager manifest/requested-permission review"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDialerApps",
+                    "description": "Default dialer, approved call backup apps. Minimal."
+                },
+                {
+                    "field": "CallLogQueryThreshold",
+                    "description": "Default 10 queries/2min \u2014 low threshold; call log has minimal legitimate background access."
+                },
+                {
+                    "field": "CallLogUplinkThreshold",
+                    "description": "Default 20KB \u2014 call records are small; even 200 records fit in ~20KB."
+                },
+                {
+                    "field": "AppCDNList",
+                    "description": "Per-app CDN. Derive by measurement."
+                },
+                {
+                    "field": "ExfilWindow",
+                    "description": "Default 120s."
+                }
+            ]
+        }
+    ]
+}

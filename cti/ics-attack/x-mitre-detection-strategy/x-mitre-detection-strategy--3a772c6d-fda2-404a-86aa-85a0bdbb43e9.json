@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--76f88957-4713-40df-8fb0-f0b6d3df5db0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--3a772c6d-fda2-404a-86aa-85a0bdbb43e9",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0749",
+                    "external_id": "DET0749"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:01.722Z",
+            "name": "Detection of Data from Local System",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--0099659c-6a20-4331-9d47-b1c0c380fd6b",
+                "x-mitre-analytic--346fbf4f-5fc5-4acb-9d2f-cd30c3c22226",
+                "x-mitre-analytic--b41c2b27-08ce-4f3c-a810-484f100422a3",
+                "x-mitre-analytic--2d784f76-a3e0-46ed-8ce2-d9dcd531fa52"
+            ]
+        }
+    ]
+}

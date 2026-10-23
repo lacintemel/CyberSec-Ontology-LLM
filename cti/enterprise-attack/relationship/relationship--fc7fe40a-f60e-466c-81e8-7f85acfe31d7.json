@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--28fe3ec2-898d-4e47-8ada-51f40f20a698",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fc7fe40a-f60e-466c-81e8-7f85acfe31d7",
+            "created": "2026-09-25T17:45:05.446Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Unit42_Vidar_July2026",
+                    "description": "Nannaka, B., Chhaparwal, P. (2026, July 7). Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation. Retrieved July 8, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T17:45:05.446Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has collected the victim's public IP address.(Citation: Unit42_Vidar_July2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

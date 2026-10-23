@@ -1,0 +1,74 @@
+{
+    "type": "bundle",
+    "id": "bundle--7097dc08-a6cf-49bb-92fb-1972d3a30e52",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6829c203-6543-4489-bab8-422a41ac82a1",
+            "created": "2026-10-13T17:45:32.900Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0731#AN2170",
+                    "external_id": "AN2170"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:32.900Z",
+            "name": "Analytic 2170",
+            "description": "Real-time monitoring identifies vendor-specific firmware-update protocol traffic to ICS device IP addresses from a source not in the approved engineering-workstation or firmware-management baseline. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): Trivial File Transfer Protocol (TFTP) session to device Internet Protocol (IP) address from source not in engineering workstation list followed by device reboot syslog within firmware transfer window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFirmwareInventory",
+                    "description": "Cryptographic hash inventory of authorized firmware versions per device model."
+                },
+                {
+                    "field": "AuthorizedFirmwareManagers",
+                    "description": "Accounts authorized to perform firmware update operations."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which firmware updates are authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform firmware updates."
+                },
+                {
+                    "field": "FirmwareSessionSizeThreshold",
+                    "description": "Minimum byte count for a session to be considered a firmware transfer rather than routine configuration traffic, derived from known firmware image sizes."
+                },
+                {
+                    "field": "FirmwareUpdateWindow",
+                    "description": "Time window within which a device reboot following a large session is considered part of the same firmware update event."
+                },
+                {
+                    "field": "MaintenanceWindowSchedule",
+                    "description": "Recurring scheduled periods when firmware updates are expected to occur."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

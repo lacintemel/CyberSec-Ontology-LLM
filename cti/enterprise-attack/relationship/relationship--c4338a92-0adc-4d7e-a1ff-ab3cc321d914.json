@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--2622c6f9-930e-4545-8469-849d06af0600",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c4338a92-0adc-4d7e-a1ff-ab3cc321d914",
+            "created": "2026-04-20T19:47:09.965Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026",
+                    "description": "DomainTools Investigations. (2026, April 6). Handala: MOIS Linked Cyber Influence Ecosystem Threat Intelligence Assessment. Retrieved April 20, 2026.",
+                    "url": "https://dti.domaintools.com/research/handala-mois-linked-cyber-influence-ecosystem-threat-intelligence-assessment"
+                },
+                {
+                    "source_name": "SEC 8K Palo Alto Statement Stryker Corp Handala March 2026",
+                    "description": "Troy Bettencourt. (2026, March 20). SEC 8k: Stryker Corporation Partner and Customer Connections to the Stryker Environment. Retrieved April 20, 2026.",
+                    "url": "https://www.sec.gov/Archives/edgar/data/310764/000119312526118634/d94012dex991.htm"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:25.951Z",
+            "description": "[VOID MANTICORE](https://attack.mitre.org/groups/G1055) has leveraged access to administrative control systems to achieve disruptive effects, consistent with administrative account abuse or privilege escalation within existing access.(Citation: Domain Tools Handala Hack Karma Homeland Justice MOIS April 2026)(Citation: SEC 8K Palo Alto Statement Stryker Corp Handala March 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ebd7ce77-c9ba-4fba-bb28-58296ac66559",
+            "target_ref": "attack-pattern--a10641f4-87b4-45a3-a906-92a149cb2c27",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

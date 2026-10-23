@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--78539b02-e89d-42c6-8cd2-a0a43fb40478",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--d67feaac-73ac-47b1-91ec-f537105afc58",
+            "created": "2026-04-22T17:51:33.089Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "National Institute of Standards and Technology April 2013",
+                    "description": "National Institute of Standards and Technology 2013, April Security and Privacy Controls for Federal Information Systems and Organizations Retrieved. 2020/09/17 ",
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.218Z",
+            "description": "When at rest, project files should be encrypted to prevent unauthorized changes.(Citation: National Institute of Standards and Technology April 2013)",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--9f99fcfd-772e-4e63-9d39-e45612e546dc",
+            "target_ref": "attack-pattern--354ca909-b54d-4c41-b597-9c296b344a43",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

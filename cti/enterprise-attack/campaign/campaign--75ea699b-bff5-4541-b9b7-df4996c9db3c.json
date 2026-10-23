@@ -1,0 +1,46 @@
+{
+    "type": "bundle",
+    "id": "bundle--8921510c-f519-4e1b-bdc6-6221de018649",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--75ea699b-bff5-4541-b9b7-df4996c9db3c",
+            "created": "2026-04-19T18:07:20.152Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0061",
+                    "external_id": "C0061"
+                },
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:23.901Z",
+            "name": "Operation Digital Eye",
+            "description": "[Operation Digital Eye](https://attack.mitre.org/campaigns/C0061) was conducted in June and July of 2024 by suspected People's Republic of China (PRC)-nexus threat actors targeting business-to-business IT service providers in Southern Europe. [Operation Digital Eye](https://attack.mitre.org/campaigns/C0061) activity included the use of Visual Studio Code tunnels for command and control (C2) and custom lateral movement capabilities. Overlaps in tooling between Digital Eye and previous China-nexus campaigns, Operation Soft Cell and Operation Tainted Love, indicate the potential use of shared vendors or digital quartermasters.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "aliases": [
+                "Operation Digital Eye"
+            ],
+            "first_seen": "2024-06-01T04:00:00.000Z",
+            "last_seen": "2024-07-01T04:00:00.000Z",
+            "x_mitre_first_seen_citation": "(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "x_mitre_last_seen_citation": "(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

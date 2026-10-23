@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--20cd0b07-5c29-4238-a4fa-16224c91d37a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--40066e48-f70c-4fbb-a2cf-d7a385171edb",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0702#AN1820",
+                    "external_id": "AN1820"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:41:26.923Z",
+            "name": "Analytic 1820",
+            "description": "For Android, detect Remote Device Management Services by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Cloud Service Enumeration via Application Vetting / Cloud Service Audit [Instrumented app API trace and corresponding cloud-service audit/API telemetry]; Protected Configuration via Android Enterprise DPC [DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported]; User Account Authentication via Application Vetting / Identity Provider Telemetry [App authentication flow instrumentation or IdP sign-in/audit events]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--8c826308-2760-492f-9e36-4f0f7e23bcac",
+                    "name": "cloud:AuditLog",
+                    "channel": "Instrumented app API trace and corresponding cloud-service audit/API telemetry"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--6c62144a-cd5c-401c-ada9-58c4c74cd9d2",
+                    "name": "android:DevicePolicyManager",
+                    "channel": "DevicePolicyManager policy/compliance/security-state queries and SecurityLog events where supported"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a953ca55-921a-44f7-9b8d-3d40141aa17e",
+                    "name": "idp:AuditLog",
+                    "channel": "App authentication flow instrumentation or IdP sign-in/audit events"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AdminAllowedIPs",
+                    "description": "IT office IPs, VPN egress IPs, known admin workstation IPs. Derive from IT network documentation."
+                },
+                {
+                    "field": "LocationQueryThreshold",
+                    "description": "Default 10 device queries per session. Single queries are normal; bulk is anomalous."
+                },
+                {
+                    "field": "LocationQueryWindow",
+                    "description": "Default 300s."
+                },
+                {
+                    "field": "AuthCorrelationWindow",
+                    "description": "Default 3600s between auth event and location query."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "bundle",
+    "id": "bundle--a44b1603-e2e9-42da-b44b-84aa2329a021",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c14544a4-5ca1-4523-97eb-4a9840d74c6d",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0743#AN1876",
+                    "external_id": "AN1876"
+                },
+                {
+                    "source_name": "Nzyme Alerts Intro",
+                    "description": "Koopmann, Lennart. (n.d.). Nzyme Alerts Introduction. Retrieved November 17, 2024.",
+                    "url": "https://docs.nzyme.org/wifi/monitoring/network-monitoring/"
+                },
+                {
+                    "source_name": "Wireless Intrusion Detection",
+                    "description": "Tomko, A.; Rieser, C; Buell, H.; Zeret, D.; Turner, W.. (2007, March). Wireless Intrusion Detection. Retrieved September 26, 2022.",
+                    "url": "https://apps.dtic.mil/sti/pdfs/ADA466332.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:04.063Z",
+            "name": "Analytic 1876",
+            "description": "Real-time monitoring identifies indirect evidence of passive RF capture on Industrial Control System (ICS) wireless frequencies -- an unassociated device's RF signature detected without a completed association sequence, or a known device's Media Access Control (MAC) address detected from a location/signal strength inconsistent with its registered installation point. OT operational-fidelity gate: Do not alert on novelty, scan/read volume, or enumeration alone. Alert when the source role is not authorized for discovery/polling and the target scope, address/tag range, protocol, or rate deviates from the established operational baseline. Suppress normal SCADA/HMI/historian polling, commissioning, asset inventory, backup, diagnostics, and approved engineering activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "wireless:spectrum",
+                    "channel": "Radio Frequency (RF) signal detected on Industrial Control Systems (ICS) wireless frequencies from Media Access Control (MAC) address not in approved wireless device inventory without completed association sequence"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedWirelessDeviceInventory",
+                    "description": "MAC/identity inventory of all devices authorized on the ICS wireless segment."
+                },
+                {
+                    "field": "DesignatedWirelessManagementStations",
+                    "description": "Hosts authorized to legitimately enable wireless capture for diagnostics."
+                }
+            ]
+        }
+    ]
+}

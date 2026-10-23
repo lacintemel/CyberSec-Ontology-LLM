@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--f02d9bae-bf1a-445e-af61-b7a3efcfcb9f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a61fa979-f701-4dbe-b040-397b152ac14f",
+            "created": "2026-04-23T00:37:53.519Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.151Z",
+            "description": "Authenticate all access to field controllers before authorizing access to, or modification of, a device's state, logic, or programs. Centralized authentication techniques can help manage the large number of field controller accounts needed across the ICS.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--3992ce42-43e9-4bea-b8db-a102ec3ec1e3",
+            "target_ref": "attack-pattern--d85a6ee9-820c-4adf-8a64-2392ee70c83c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--668f235b-391d-40e6-9a9f-52d286abdef1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fc6b549d-3f8a-447f-bc6f-a8133334dc15",
+            "created": "2026-03-25T20:06:37.830Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "PaloAlto Unit42 ContagiousInterview BeaverTail InvisibileFerret October 2024",
+                    "description": "Unit42. (2024, October 9). Contagious Interview: DPRK Threat Actors Lure Tech Industry Job Seekers to Install New Variants of BeaverTail and InvisibleFerret Malware. Retrieved October 17, 2025.",
+                    "url": "https://unit42.paloaltonetworks.com/north-korean-threat-actors-lure-tech-job-seekers-as-fake-recruiters/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:54.988Z",
+            "description": "[Contagious Interview](https://attack.mitre.org/groups/G1052) has used AI to clone video-conferencing applications to distribute their [BeaverTail](https://attack.mitre.org/software/S1246) malware. They have also used AI to create deepfake videos. (Citation: PaloAlto Unit42 ContagiousInterview BeaverTail InvisibileFerret October 2024)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--46599a4a-77ee-4697-9474-2683b6464859",
+            "target_ref": "attack-pattern--8f452cb4-cbf4-4522-8b11-448787be95c4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

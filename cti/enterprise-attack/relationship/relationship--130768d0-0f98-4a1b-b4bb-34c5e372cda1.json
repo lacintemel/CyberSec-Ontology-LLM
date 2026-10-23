@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--c48adbba-5a39-45bb-b4ed-7ec9cf331b8f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--130768d0-0f98-4a1b-b4bb-34c5e372cda1",
+            "created": "2026-04-17T00:12:38.146Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Picus Security BRICKSTORM UNC5221 October 2025",
+                    "description": "Huseyin Can Yuceel. (2025, October 1). BRICKSTORM Malware: UNC5221 Targets Tech and Legal Sectors in the United States. Retrieved April 16, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/brickstorm-malware-unc5221-targets-tech-and-legal-sectors-in-the-united-states"
+                },
+                {
+                    "source_name": "Google BRICKSTORM September 2025",
+                    "description": "Sarah Yoder, John Wolfram, Ashley Pearson, Doug Bienstock, Josh Madeley, Josh Murchie, Brad Slaybaugh, Matt Lin, Geoff Carstairs, Austin Larsen. (2025, September 24). Another BRICKSTORM: Stealthy Backdoor Enabling Espionage into Tech and Legal Sectors. Retrieved April 16, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.930Z",
+            "description": "[BRICKSTORM](https://attack.mitre.org/software/S9015) has utilized Go libraries to include Garble to obfuscate code.(Citation: Picus Security BRICKSTORM UNC5221 October 2025)(Citation: Google BRICKSTORM September 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--0450ed20-e9a7-4799-b601-2f2710300796",
+            "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

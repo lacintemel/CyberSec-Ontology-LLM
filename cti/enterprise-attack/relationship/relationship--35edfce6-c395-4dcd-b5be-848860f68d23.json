@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--b641da98-9e4e-4573-864d-ec40afa0098d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--35edfce6-c395-4dcd-b5be-848860f68d23",
+            "created": "2017-12-14T16:46:06.044Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "TechNet Netsh",
+                    "description": "Microsoft. (n.d.). Using Netsh. Retrieved February 13, 2017.",
+                    "url": "https://technet.microsoft.com/library/bb490939.aspx"
+                },
+                {
+                    "source_name": "TechNet Netsh Firewall",
+                    "description": "Microsoft. (2009, June 3). Netsh Commands for Windows Firewall. Retrieved April 20, 2016.",
+                    "url": "https://technet.microsoft.com/en-us/library/cc771046(v=ws.10).aspx"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.993Z",
+            "description": "[netsh](https://attack.mitre.org/software/S0108) can be used to disable local firewall settings.(Citation: TechNet Netsh)(Citation: TechNet Netsh Firewall)",
+            "relationship_type": "uses",
+            "source_ref": "tool--5a63f900-5e7e-4928-a746-dd4558e1df71",
+            "target_ref": "attack-pattern--eec096b8-c207-43df-b6c1-11523861e452",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

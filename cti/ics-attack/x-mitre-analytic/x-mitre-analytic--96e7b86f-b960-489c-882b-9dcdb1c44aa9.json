@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--bab59cf8-af65-45d2-9f9f-d5c8643749a4",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--96e7b86f-b960-489c-882b-9dcdb1c44aa9",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0802#AN1934",
+                    "external_id": "AN1934"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:24.377Z",
+            "name": "Analytic 1934",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) protocol message sequence placing a field device into firmware-update mode from a source not in the approved engineering workstation list, correlated with the device's alarm telemetry going silent within a short grace period without acknowledgment. Documented precedent: Industroyer exploited CVE-2015-5374 by sending a crafted packet that initiated an incomplete firmware update sequence on Siemens Protection Technology (SIPROTEC) relays. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device_ip alarm telemetry goes silent within alarm silence grace period of the mode-activation message without operator acknowledgment"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:Content",
+                    "channel": "firmware-update-mode activation service from source not in engineering workstation list outside change control window"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "engineeringworkstation:ApplicationLog",
+                    "channel": "firmware update mode entry logged without corresponding change ticket reference"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmSilenceGracePeriod",
+                    "description": "Time window within which alarm telemetry going silent following a mode-change message is considered directly connected."
+                },
+                {
+                    "field": "AuthorizedFirmwareManagers",
+                    "description": "Accounts authorized to perform firmware update mode activation."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which firmware update mode activation is authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to activate firmware update mode."
+                },
+                {
+                    "field": "MaintenanceWindowSchedule",
+                    "description": "Recurring scheduled periods when firmware update activities are expected."
+                }
+            ]
+        }
+    ]
+}

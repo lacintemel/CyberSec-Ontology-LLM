@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--17b972dc-3694-4026-beb7-fc946409ab71",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ef10f1da-2388-4404-97aa-bcfa9bcd27ec",
+            "created": "2026-04-17T15:41:26.175Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESET MirrorFace DEC 2022",
+                    "description": "Breitenbacher, D. (2022, December 14). Unmasking MirrorFace: Operation LiberalFace targeting Japanese political entities. Retrieved April 17, 2026.",
+                    "url": "https://www.welivesecurity.com/2022/12/14/unmasking-mirrorface-operation-liberalface-targeting-japanese-political-entities/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.250Z",
+            "description": "[LODEINFO](https://attack.mitre.org/software/S9020) can list the contents of `%LocalAppData%\\Google\\Chrome\\User Data\\` and `%LocalAppData%\\Microsoft\\Edge\\User Data\\` to obtain cookies.(Citation: ESET MirrorFace DEC 2022)",
+            "relationship_type": "uses",
+            "source_ref": "malware--7908f855-5b5b-4d6a-acbc-af6b45ec27ad",
+            "target_ref": "attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

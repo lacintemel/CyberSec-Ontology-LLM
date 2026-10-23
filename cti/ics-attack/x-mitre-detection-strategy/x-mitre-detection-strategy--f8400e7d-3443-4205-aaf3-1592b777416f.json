@@ -1,0 +1,36 @@
+{
+    "type": "bundle",
+    "id": "bundle--7d34a2c2-748b-4903-b3d2-5c0b7334ec38",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--f8400e7d-3443-4205-aaf3-1592b777416f",
+            "created": "2026-09-25T17:56:20.465Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0929",
+                    "external_id": "DET0929"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T18:45:14.263Z",
+            "name": "Behavioral Detection of PowerShell Execution in ICS",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--8c95b5df-75bb-4fea-8a3e-a6b9f2ddf64e"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "bundle",
+    "id": "bundle--6184a768-f623-477f-aded-a9fe18651af6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--af14d56d-c96c-4ab4-8377-a3ecfba26962",
+            "created": "2026-10-13T17:44:41.445Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0745#AN2135",
+                    "external_id": "AN2135"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:41.445Z",
+            "name": "Analytic 2135",
+            "description": "Real-time monitoring identifies execution on an ICS Linux asset of an executable or script from a path commonly used for inbound file transfer or staging, by a UID outside the approved deployment/administration baseline. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "auditd:SYSCALL+PATH",
+                    "channel": "Linux Audit SYSCALL+PATH records: file transfer (scp, sftp, rsync, etc.) placing executable on Industrial Control Systems (ICS) Linux asset, followed by execve of the transferred file within tool transfer window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFileSources",
+                    "description": "Allowlist of network shares/hosts authorized to write executable or script files to ICS Windows assets."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform file transfers to field devices."
+                },
+                {
+                    "field": "SuspiciousFilePatterns",
+                    "description": "Filename/extension patterns inconsistent with the device's normal configuration exchange profile."
+                },
+                {
+                    "field": "ToolTransferWindow",
+                    "description": "Time window after file creation within which execution is considered directly connected to the transfer event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

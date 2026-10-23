@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--7db03183-0ed0-4b0a-b0b8-88f8788097e1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8d204453-9efc-4e91-8385-5be0e038a7e3",
+            "created": "2026-04-16T21:27:58.901Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto HeartCrypt DEC 2024",
+                    "description": "Tujague, J., Bunce, D. (n.d.). Crypted Hearts: Exposing the HeartCrypt Packer-as-a-Service Operation. Retrieved April 16, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/packer-as-a-service-heartcrypt-malware/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.118Z",
+            "description": "[HeartCrypt](https://attack.mitre.org/software/S9018) can set the `CurrentVersion\\Run` key to establish persistence.(Citation: Palo Alto HeartCrypt DEC 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--148f947c-aabd-4ba8-b6a3-22b296855119",
+            "target_ref": "attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

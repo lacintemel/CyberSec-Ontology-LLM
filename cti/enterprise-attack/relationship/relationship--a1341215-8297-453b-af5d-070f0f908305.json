@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--0b00ddbc-fead-457c-879c-720d281a84b7",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a1341215-8297-453b-af5d-070f0f908305",
+            "created": "2026-04-22T21:26:00.784Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "LevelBlue Blind Eagle Proton66 JUN 2025",
+                    "description": "Melnyk, S. (2025, June 27). Tracing Blind Eagle to Proton66. Retrieved April 16, 2026.",
+                    "url": "https://www.levelblue.com/blogs/spiderlabs-blog/tracing-blind-eagle-to-proton66/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:48:18.622Z",
+            "description": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used phishing pages appearing like legitimate banking login portals to compromise credentials.(Citation: LevelBlue Blind Eagle Proton66 JUN 2025)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c4d50cdf-87ce-407d-86d8-862883485842",
+            "target_ref": "attack-pattern--8f452cb4-cbf4-4522-8b11-448787be95c4",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

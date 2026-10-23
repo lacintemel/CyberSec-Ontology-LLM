@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--7787f0b6-92c3-4c54-8521-ed03fe1e9363",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cc3e8998-6bb1-4e18-a2a4-f4ae1ccba3fe",
+            "created": "2026-09-11T19:44:02.608Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Logpoint_StealerMalwareFamilies_2024",
+                    "description": "Khadgi, N. (n.d.). A Comprehensive Overview on Stealer Malware Families. Retrieved August 25, 2026.",
+                    "url": "https://web.archive.org/web/20240517205011/https://www.logpoint.com/wp-content/uploads/2024/03/logpoint-etpr-a-comprehensive-overview-on-stealer-malware-families-1.pdf"
+                },
+                {
+                    "source_name": "Unit42_Vidar_July2026",
+                    "description": "Nannaka, B., Chhaparwal, P. (2026, July 7). Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation. Retrieved July 8, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T20:41:38.206Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has modified Windows Defender\u2019s list of excluded file extensions, ensuring that .exe, .dll and .bat files are ignored during scans.(Citation: Logpoint_StealerMalwareFamilies_2024) \n\n[Vidar](https://attack.mitre.org/software/S9050) has loaded amsi.dll, which resolves the `AmsiScanBuffer` variable to return `E_INVALIDARG`, which may disable Windows Antimalware Scan Interface (AMSI).(Citation: Unit42_Vidar_July2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--bbde9781-60aa-4b8a-a911-895b0c1b3872",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

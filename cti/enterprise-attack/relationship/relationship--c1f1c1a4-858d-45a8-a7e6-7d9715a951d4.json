@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--65b60413-4fb6-4643-98c4-23126af49e75",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--c1f1c1a4-858d-45a8-a7e6-7d9715a951d4",
+            "created": "2021-09-21T15:02:49.122Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Wevtutil Microsoft Documentation",
+                    "description": "Microsoft. (n.d.). wevtutil. Retrieved September 14, 2021.",
+                    "url": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil"
+                },
+                {
+                    "source_name": "Crowdstrike DNC June 2016",
+                    "description": "Alperovitch, D.. (2016, June 15). Bears in the Midst: Intrusion into the Democratic National Committee. Retrieved August 3, 2016.",
+                    "url": "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.190Z",
+            "description": "[Wevtutil](https://attack.mitre.org/software/S0645) can be used to clear system and security event logs from the system.(Citation: Wevtutil Microsoft Documentation)(Citation: Crowdstrike DNC June 2016)",
+            "relationship_type": "uses",
+            "source_ref": "tool--f91162cc-1686-4ff8-8115-bf3f61a4cc7a",
+            "target_ref": "attack-pattern--75b9a4d2-d4e2-4ca1-9aab-1badd9e05fd0",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

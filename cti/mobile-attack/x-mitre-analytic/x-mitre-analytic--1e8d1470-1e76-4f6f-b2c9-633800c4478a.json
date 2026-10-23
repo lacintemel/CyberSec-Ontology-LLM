@@ -1,0 +1,88 @@
+{
+    "type": "bundle",
+    "id": "bundle--6bcf53b1-6e92-4a3b-88d6-386c11e47f55",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--1e8d1470-1e76-4f6f-b2c9-633800c4478a",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0639#AN1714",
+                    "external_id": "AN1714"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:20.300Z",
+            "name": "Analytic 1714",
+            "description": "For iOS, detect Network Denial of Service from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application State via Apple MDM [InstalledApplicationList / ManagedApplicationList]; Protected Configuration via Apple MDM [DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries]; System Settings via Apple MDM [DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "iOS:MDM",
+                    "channel": "InstalledApplicationList / ManagedApplicationList"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--6c62144a-cd5c-401c-ada9-58c4c74cd9d2",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--56c2b384-77f8-461f-a71a-76f7888ebfb6",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "TimeWindow",
+                    "description": "Maximum span for correlating app activity, posture stability, and repeated network failure into a single denial event."
+                },
+                {
+                    "field": "SupervisedOnly",
+                    "description": "Whether the analytic should only apply to supervised devices with high-confidence MDM policy telemetry."
+                },
+                {
+                    "field": "AllowedAppList",
+                    "description": "Apps expected to retry aggressively or queue offline work during routine coverage degradation."
+                },
+                {
+                    "field": "ForegroundStateRequired",
+                    "description": "Whether the app should be foreground or recently active for the analytic to be treated as high confidence."
+                },
+                {
+                    "field": "RecentUserInteractionWindow",
+                    "description": "Time threshold for determining whether the denial occurred during active user use versus background idle periods."
+                },
+                {
+                    "field": "FailureBurstThreshold",
+                    "description": "Threshold for repeated session failures, resets, timeouts, or DNS failures within the correlation window."
+                },
+                {
+                    "field": "ExpectedCoverageZones",
+                    "description": "Known sites or geographies where benign poor service should be baseline-adjusted."
+                },
+                {
+                    "field": "TrustedDestinationAllowList",
+                    "description": "Expected enterprise destinations whose temporary maintenance or outage should not be treated as device-targeted denial."
+                }
+            ]
+        }
+    ]
+}

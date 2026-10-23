@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--c731abbb-5c11-40e8-aa3b-d9c1e4881318",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--fd395e10-4062-4f79-a510-886bd6264771",
+            "created": "2026-09-22T14:44:47.461Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "BradyUnit42_TheGentlemen_July2026",
+                    "description": "Brady, M. (2026, July 10). No Manners Here: The Ruthless Rise of The Gentlemen Ransomware. Retrieved September 18, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"
+                },
+                {
+                    "source_name": "CarveyODonnellWelchHuntress_TheGentlemen_May2026",
+                    "description": "Carvey, H., O'Donnell-Welch, L. (2026, May 21). The Gentlemen (Ransomware) in Disguise: Defense Evasion and other TTPs. Retrieved September 18, 2026.",
+                    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+                },
+                {
+                    "source_name": "Intel471_TheGentlemen_Aug2026",
+                    "description": "Intel 471. (2026, August 11). Threat Hunting Case Study: The Gentlemen. Retrieved September 18, 2026.",
+                    "url": "https://www.intel471.com/blog/threat-hunting-case-study-the-gentlemen"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-22T18:26:26.078Z",
+            "description": "[The Gentlemen](https://attack.mitre.org/groups/G1058) has leveraged compromised user credentials to gain access to victim hosts.(Citation: Intel471_TheGentlemen_Aug2026)(Citation: BradyUnit42_TheGentlemen_July2026)(Citation: CarveyODonnellWelchHuntress_TheGentlemen_May2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--973abd91-322f-4756-94b6-67381c4089b3",
+            "target_ref": "attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

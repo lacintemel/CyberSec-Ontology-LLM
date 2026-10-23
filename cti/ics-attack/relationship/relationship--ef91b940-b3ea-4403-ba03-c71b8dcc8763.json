@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--abf7b4b2-29f1-419f-acab-1efe030e6f2c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ef91b940-b3ea-4403-ba03-c71b8dcc8763",
+            "created": "2026-10-08T21:33:02.119Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FBI Water and Wastewater",
+                    "description": "FBI Press Office. (2026, July 30). Malicious Cyber Actors Targeting Water and Wastewater Sector Internet- Facing Programmable Logic Controllers, Causing Operational Disruptions. Retrieved October 8, 2026.",
+                    "url": "https://www.fbi.gov/investigate/cyber/alerts/2026/malicious-cyber-actors-targeting-water-and-wastewater-sector-internet--facing-programmable-logic-controllers-causing-operational-disruptions"
+                },
+                {
+                    "source_name": "Tenable Minnesota Water Utilities",
+                    "description": "Research Special Operations. (2026, July 28). Coordinated \"cyberattack\" on U.S. water utilities: What you need to know. Retrieved September 26, 2026.",
+                    "url": "https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"
+                },
+                {
+                    "source_name": "Forescout Water Systems Attack",
+                    "description": "Sai Molige. (2026, August 5). OT Security Analysis: Exposed Devices Attacked in US Water Systems. Retrieved October 8, 2026.",
+                    "url": "https://www.forescout.com/blog/ot-security-analysis-exposed-devices-attacked-in-us-water-systems/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-09T00:18:32.638Z",
+            "description": "During the [2026 U.S. Water Utilities Attacks](https://attack.mitre.org/campaigns/C0066), the adversary located internet-exposed PLCs (e.g., Rockwell Automation/Allen-Bradley MicroLogix 1100 and 1400 PLCs, etc.) at water and wastewater utilities, including cellular-connected water towers and sewer lift stations, and logged in to them directly.(Citation: Tenable Minnesota Water Utilities)(Citation: Forescout Water Systems Attack)(Citation: FBI Water and Wastewater)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5cae2d7e-ce03-4a20-b7a7-32e846d26121",
+            "target_ref": "attack-pattern--f8df6b57-14bc-425f-9a91-6f59f6799307",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

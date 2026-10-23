@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--0db93621-89b0-4e69-af6b-21643d3c3330",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--a97db312-a06f-4020-aef2-b28bb8d78c56",
+            "created": "2026-10-13T17:46:10.320Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0911#AN2204",
+                    "external_id": "AN2204"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:10.320Z",
+            "name": "Analytic 2204",
+            "description": "Real-time monitoring identifies a switch interface transitioning to administratively-down state on a port connected to an Industrial Control System (ICS) field device, from a configuration change source not in the approved network administration list. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "interface shutdown command on Industrial Control Systems (ICS) device port from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet outside change control window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedNMSCIDR",
+                    "description": "IP ranges authorized for switch configuration changes."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which interface configuration changes are authorized."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

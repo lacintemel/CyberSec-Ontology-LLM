@@ -1,0 +1,96 @@
+{
+    "type": "bundle",
+    "id": "bundle--a05e482c-afdb-45e1-93ce-df0f2433bbea",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-data-component",
+            "id": "x-mitre-data-component--9d56be63-3501-4dd3-bb5f-63c580833298",
+            "created": "2022-05-11T16:22:58.802Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/datacomponents/DC0108",
+                    "external_id": "DC0108"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:43:39.111Z",
+            "name": "Device Alarm",
+            "description": "This includes alarms associated with unexpected device functions, such as shutdowns, restarts, failures, or configuration changes",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_version": "2.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_log_sources": [
+                {
+                    "name": "Operational Databases",
+                    "channel": "None"
+                },
+                {
+                    "name": "alarmserver:ApplicationLog",
+                    "channel": "alarm suppression Application Programming Interface (API) call logged without operator session identifier (ID)"
+                },
+                {
+                    "name": "alarmserver:ApplicationLog",
+                    "channel": "alarm class disabled or suppressed Application Programming Interface (API) event logged without operator_id field populated"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device reboot/restart alarm within firmware update window of the flagged transfer session"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device reboot within firmware update window of the flagged transfer session"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device receives commands from two distinct master identities within a short window"
+                },
+                {
+                    "name": "device:VendorLog",
+                    "channel": "measured scan cycle time or interrupt response latency deviates from baseline cycle time by more than cycle timing deviation threshold following a task configuration change"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device_ip transitions to PROGRAM/STOP mode without operator_ack and without corresponding open change ticket reference"
+                },
+                {
+                    "name": "device:VendorLog",
+                    "channel": "measurable change in scan cycle timing or Input/Output (I/O) update pattern following a flagged program write"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device mode-change alarm generated without corresponding operator_id entry within mode change ack window"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "alarm threshold configuration changed without operator_ack or change ticket reference"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "more than one device generates restart/offline alarm within bulk restart time window without open maintenance ticket"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device_ip alarm telemetry goes silent within alarm silence grace period of the mode-activation message without operator acknowledgment"
+                },
+                {
+                    "name": "operationaldb:AlarmEvent",
+                    "channel": "device offline alarm coinciding with switch port admin-down syslog for that port"
+                },
+                {
+                    "name": "processsensor:RedundantComparison",
+                    "channel": "device-reported value for a tag diverges from independently measured value for same physical quantity by more than sensor tolerance threshold"
+                }
+            ]
+        }
+    ]
+}

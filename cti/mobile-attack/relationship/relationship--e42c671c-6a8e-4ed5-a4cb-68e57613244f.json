@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4d73e6f3-bd7c-40fc-84dc-edd5a5da4792",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e42c671c-6a8e-4ed5-a4cb-68e57613244f",
+            "created": "2026-02-16T15:48:49.812Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "EnkiWhiteHat_KimsukyDOCSWAP_Dec2025",
+                    "description": "EnkiWhiteHat. (2025, December 16). Kimsuky Distributing Malicious Mobile App via QR Code. Retrieved January 8, 2026.",
+                    "url": "https://www.enki.co.kr/en/media-center/blog/kimsuky-distributing-malicious-mobile-app-via-qr-code"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T22:10:25.182Z",
+            "description": "[DocSwap](https://attack.mitre.org/software/S9005) has sent a POST request to downcat.php while recording the access time and APK URL path.(Citation: EnkiWhiteHat_KimsukyDOCSWAP_Dec2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--3dbef387-12df-4547-9dd3-075c7ffec9e3",
+            "target_ref": "attack-pattern--2282a98b-5049-4f61-9381-55baca7c1add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

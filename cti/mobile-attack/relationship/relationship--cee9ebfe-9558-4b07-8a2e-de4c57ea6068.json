@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f191dd3c-3c2e-44c0-a3ce-abec36841756",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--cee9ebfe-9558-4b07-8a2e-de4c57ea6068",
+            "created": "2026-05-13T20:25:04.478Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ESETStefankoOsmani_NGate_Aug2024",
+                    "description": "Stefanko, L., Osmani, J. (2024, August 22). NGate Android malware relays NFC traffic to steal cash. Retrieved November 10, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/ngate-android-malware-relays-nfc-traffic-to-steal-cash/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T22:13:13.032Z",
+            "description": "[NGate](https://attack.mitre.org/software/S9040) has displayed a fake website to collect the user\u2019s banking information.(Citation: ESETStefankoOsmani_NGate_Aug2024) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--9a3315e6-667d-4b64-b789-5e01653110a5",
+            "target_ref": "attack-pattern--4c58b7c6-a839-4789-bda9-9de33e4d4512",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

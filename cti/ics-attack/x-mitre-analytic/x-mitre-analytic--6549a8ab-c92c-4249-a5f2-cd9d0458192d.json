@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--d9cbf5a6-4442-4901-9643-db52f75bf681",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--6549a8ab-c92c-4249-a5f2-cd9d0458192d",
+            "created": "2026-10-13T17:45:57.863Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0750#AN2192",
+                    "external_id": "AN2192"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:57.863Z",
+            "name": "Analytic 2192",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) network device syslog showing a gap in expected event sequence numbers, or syslog forwarding interruption from a device coinciding with a period of suspicious activity on that device. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "networkdevice:syslog",
+                    "channel": "syslog sequence number gap or forwarding interruption coinciding with suspicious activity window for the same device"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedLogManagementTools",
+                    "description": "Allowlist of processes/accounts authorized to delete or truncate ICS application logs."
+                },
+                {
+                    "field": "LogClearLookbackWindow",
+                    "description": "Time window prior to a log-clear event within which other suspicious activity is considered correlated."
+                },
+                {
+                    "field": "ScheduledLogRotationWindow",
+                    "description": "Documented schedule for legitimate, automated log rotation/archival."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

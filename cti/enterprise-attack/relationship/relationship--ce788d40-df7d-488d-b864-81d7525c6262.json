@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--3483b60b-ed39-4492-b91b-eacfd4721a60",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ce788d40-df7d-488d-b864-81d7525c6262",
+            "created": "2026-04-19T19:07:20.049Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.207Z",
+            "description": "[PHPsert](https://attack.mitre.org/software/S9028) can use multiple obfuscation techniques including XOR encoding, hexadecimal character representation, string concatenation, and randomized variable names.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9491a623-5861-4d0a-9958-8c05d0d17442",
+            "target_ref": "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

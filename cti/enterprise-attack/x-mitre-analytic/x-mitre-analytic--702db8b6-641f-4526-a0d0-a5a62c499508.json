@@ -1,0 +1,100 @@
+{
+    "type": "bundle",
+    "id": "bundle--95e2bf3d-9c64-4984-b722-d68a5a6b686f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--702db8b6-641f-4526-a0d0-a5a62c499508",
+            "created": "2026-04-16T17:34:13.876Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0901#AN2043",
+                    "external_id": "AN2043"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.378Z",
+            "name": "Analytic 2043",
+            "description": "Detects processes or users modifying Windows Defender Firewall profiles, policies, or rules followed by measurable network exposure changes. Correlates firewall management execution, registry/policy mutation, service state changes, and subsequent inbound or outbound connectivity inconsistent with baseline administration.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=4688"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--da85d358-741a-410d-9433-20d6269a6170",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=13, 14"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--7f70fae7-a68d-4730-a83a-f260b9606129",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=12"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--5297a638-1382-4f0c-8472-0d21830bf705",
+                    "name": "WinEventLog:System",
+                    "channel": "EventCode=7036"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=3, 22"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Security",
+                    "channel": "EventCode=5156, 5157"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedAdminAccounts",
+                    "description": "Known administrators allowed to manage host firewall settings"
+                },
+                {
+                    "field": "MaintenanceWindow",
+                    "description": "Approved change windows where firewall modifications are expected"
+                },
+                {
+                    "field": "ExposureCorrelationWindow",
+                    "description": "Time window to correlate firewall change with new connections/listeners"
+                },
+                {
+                    "field": "SensitivePorts",
+                    "description": "Ports of concern such as RDP, SMB, WinRM, SSH, custom admin ports"
+                },
+                {
+                    "field": "AllowedManagementParents",
+                    "description": "Expected parent processes such as SCCM, Intune agent, GPO client"
+                },
+                {
+                    "field": "RuleScopeThreshold",
+                    "description": "Detect widening from subnet/local scope to Any/0.0.0.0/0"
+                }
+            ]
+        }
+    ]
+}

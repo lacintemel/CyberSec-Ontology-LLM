@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--f038b48f-1a3f-4a05-9dc6-68a325e683ee",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--303e4d4b-2dcb-4cce-8962-427353ee456c",
+            "created": "2026-10-01T15:26:53.166Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Mandiant_UNC1549_Feb2024",
+                    "description": "Rozmann, O., et al. (2024, February 27). When Cats Fly: Suspected Iranian Threat Actor UNC1549 Targets Israeli and Middle East Aerospace and Defense Sectors. Retrieved September 28, 2026.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/suspected-iranian-unc1549-targets-israel-middle-east"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-01T15:26:53.166Z",
+            "description": "[MiniBus](https://attack.mitre.org/software/S9060) has the ability to download files from the C2.(Citation: Mandiant_UNC1549_Feb2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--8b325e28-6ea1-4094-929b-966d5db4ee4c",
+            "target_ref": "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

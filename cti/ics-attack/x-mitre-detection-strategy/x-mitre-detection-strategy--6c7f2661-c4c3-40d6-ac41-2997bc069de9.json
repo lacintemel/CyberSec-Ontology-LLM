@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--5f3681d7-b3d9-48ce-8800-603e74f95ba8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--6c7f2661-c4c3-40d6-ac41-2997bc069de9",
+            "created": "2026-09-26T03:28:48.440Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0935",
+                    "external_id": "DET0935"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:28:48.440Z",
+            "name": "Behavioral Detection of Publish/Subscribe Protocol Misuse for Command and Control",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--5e0fd666-e460-4627-83ef-f7390752692e",
+                "x-mitre-analytic--4e176b16-f17b-47dc-81a3-6a254edb1b50",
+                "x-mitre-analytic--dab4f5e6-0560-4a00-96eb-41301b836ea4",
+                "x-mitre-analytic--1532258f-43d7-41e9-ad80-aac5abdfcdc3"
+            ]
+        }
+    ]
+}

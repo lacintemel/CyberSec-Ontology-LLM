@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--2aff27c6-ac6c-468f-b8b7-8570eb0599e2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--636329e6-32b9-4a71-acf8-ae6d01a6b4ef",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0787",
+                    "external_id": "DET0787"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:07.632Z",
+            "name": "Detection of Remote System Information Discovery",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--f123f13f-b6f4-4e86-96cd-14df0e855e0f",
+                "x-mitre-analytic--35b0fba9-70c7-420b-a9eb-b3caf6b9d87e",
+                "x-mitre-analytic--736619f9-f636-4308-843b-83d38813982b",
+                "x-mitre-analytic--4062a3b7-6859-4b28-b0d3-b0f71dc62f6a"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "bundle",
+    "id": "bundle--61193df3-2cf0-440b-bb27-1fdbfecd7d21",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1d8442ee-ca18-4c12-a784-3094c85ae5e7",
+            "created": "2026-04-21T14:39:10.616Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CAL_MuddyWater_Mar2026",
+                    "description": "Ctrl-Alt-Intel. (2026, March 4). MuddyWater Exposed: Inside an Iranian APT operation . Retrieved April 6, 2026.",
+                    "url": "https://ctrlaltintel.com/research/MuddyWater/"
+                },
+                {
+                    "source_name": "SecureListUbiedo_Tsundere_Nov2025",
+                    "description": "Ubiedo, L. (2025, November 20). Blockchain and Node.js abused by Tsundere: an emerging botnet. Retrieved April 6, 2026.",
+                    "url": "https://securelist.com/tsundere-node-js-botnet-uses-ethereum-blockchain/117979/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:53.137Z",
+            "description": "[Tsundere Botnet](https://attack.mitre.org/software/S9034) has obtained the WebSocket C2 address by making remote procedure call (RPC) APIs to Ethereum blockchain nodes.(Citation: SecureListUbiedo_Tsundere_Nov2025)(Citation: CAL_MuddyWater_Mar2026)  ",
+            "relationship_type": "uses",
+            "source_ref": "malware--18f5f8c6-bba5-4aba-93e7-3539fe565883",
+            "target_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

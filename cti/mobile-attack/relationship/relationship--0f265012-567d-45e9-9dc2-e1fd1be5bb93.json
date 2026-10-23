@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--6fb4b687-746c-4e4e-8c7b-93183b4839c9",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--0f265012-567d-45e9-9dc2-e1fd1be5bb93",
+            "created": "2026-02-06T21:35:25.736Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "ThreatFabric_Crocodilus_June2025",
+                    "description": "ThreatFabric. (2025, June 3). Crocodilus Mobile Malware: Evolving Fast, Going Global. Retrieved November 24, 2025.",
+                    "url": "https://www.threatfabric.com/blogs/crocodilus-mobile-malware-evolving-fast-going-global"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T20:46:40.889Z",
+            "description": "[Crocodilus](https://attack.mitre.org/software/S9004) has masqueraded as legitimate applications to include applications related to financial institutions, cryptocurrency, gambling, browser updates and occasionally geo-specific themes.(Citation: ThreatFabric_Crocodilus_June2025) ",
+            "relationship_type": "uses",
+            "source_ref": "malware--eed7b988-0279-4c4f-bfa9-d81f5444a04b",
+            "target_ref": "attack-pattern--f856eaab-e84a-4265-a8a2-7bf37e5dc2fc",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

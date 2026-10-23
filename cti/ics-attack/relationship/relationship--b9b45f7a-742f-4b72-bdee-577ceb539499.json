@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--14ba35be-d6b4-417e-aeb4-178f491057ec",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b9b45f7a-742f-4b72-bdee-577ceb539499",
+            "created": "2026-04-23T14:16:22.262Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Spenneberg, Ralf, Maik Brggemann, and Hendrik Schwartke March 2016",
+                    "description": "Spenneberg, Ralf, Maik Brggemann, and Hendrik Schwartke 2016, March 31 Plc-blaster: A worm living solely in the plc. Retrieved. 2017/09/19 ",
+                    "url": "https://www.blackhat.com/docs/asia-16/materials/asia-16-Spenneberg-PLC-Blaster-A-Worm-Living-Solely-In-The-PLC-wp.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.178Z",
+            "description": "[PLC-Blaster](https://attack.mitre.org/software/S1006) scans the network to find other Siemens S7 PLC devices to infect. It locates these devices by checking for a service listening on TCP port 102.(Citation: Spenneberg, Ralf, Maik Brggemann, and Hendrik Schwartke March 2016)",
+            "relationship_type": "uses",
+            "source_ref": "malware--4dcff507-5af8-47ce-964a-8d9569e9ccfe",
+            "target_ref": "attack-pattern--5d24bb1d-4487-4923-ae3a-8e679092ac7a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

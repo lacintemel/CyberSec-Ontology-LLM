@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--b9f3989c-d9cd-4fdc-a807-cc8fe4063c2e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3df5e4b3-a26b-4c8f-bf77-8ae3c602f958",
+            "created": "2026-09-23T14:36:10.662Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CarveyODonnellWelchHuntress_TheGentlemen_May2026",
+                    "description": "Carvey, H., O'Donnell-Welch, L. (2026, May 21). The Gentlemen (Ransomware) in Disguise: Defense Evasion and other TTPs. Retrieved September 18, 2026.",
+                    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps"
+                },
+                {
+                    "source_name": "CheckPointResearch_TheGentlemen_April2026",
+                    "description": "Check Point Research. (2026, April 20). DFIR Report \u2013 The Gentlemen & SystemBC: A Sneak Peek Behind the Proxy. Retrieved September 18, 2026.",
+                    "url": "https://research.checkpoint.com/2026/dfir-report-the-gentlemen/"
+                },
+                {
+                    "source_name": "MSTI_GentelmenRansomware_May2026",
+                    "description": "Microsoft Threat Intelligence. (2026, May 28). The Gentlemen ransomware: Dissecting a self-propagating Go encryptor . Retrieved September 18, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T20:27:27.748Z",
+            "description": "[The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has leveraged scheduled tasks to execute itself as system.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026)(Citation: CarveyODonnellWelchHuntress_TheGentlemen_May2026) [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has also established persistence through the creation of scheduled tasks to include `schtasks /Create /SC ONSTART /TN UpdateSystem /TR \u201c<malware_path>\u201d /RU SYSTEM` and `schtasks /Create /SC ONSTART /TN UpdateUser /TR \u201c<malware_path>\u201d`. [The Gentlemen Ransomware](https://attack.mitre.org/software/S9051) has deleted pre-existing scheduled tasks using `schtasks /Delete /TN UpdateSystem /F` and `schtasks /Delete /TN UpdateUser /F`.(Citation: MSTI_GentelmenRansomware_May2026)(Citation: CheckPointResearch_TheGentlemen_April2026)",
+            "relationship_type": "uses",
+            "source_ref": "malware--73526d60-8813-4895-88ac-915c68dfe8dd",
+            "target_ref": "attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

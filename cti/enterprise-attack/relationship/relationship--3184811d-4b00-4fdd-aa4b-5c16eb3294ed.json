@@ -1,0 +1,42 @@
+{
+    "type": "bundle",
+    "id": "bundle--c6d052fa-8305-4512-b15b-779ba3850cb5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--3184811d-4b00-4fdd-aa4b-5c16eb3294ed",
+            "created": "2026-04-09T20:28:31.523Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Palo Alto Unit 42 Shai-Hulud November 2025",
+                    "description": "Justin Moore. (2025, November 25). \"Shai-Hulud\" Worm Compromises npm Ecosystem in Supply Chain Attack (Updated November 26). Retrieved April 9, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"
+                },
+                {
+                    "source_name": "Microsoft Shai-Hulud December 2025",
+                    "description": "Microsoft Defender Security Team. (n.d.). Shai-Hulud 2.0: Guidance for detecting, investigating, and defending against the supply chain attack. Retrieved April 9, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/"
+                },
+                {
+                    "source_name": "Socket Shai-Hulud November 2025",
+                    "description": "Socket Research Team. (2025, November 24). Shai Hulud Strikes Again (v2). Retrieved April 9, 2026.",
+                    "url": "https://socket.dev/blog/shai-hulud-strikes-again-v2"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.981Z",
+            "description": "[Shai-Hulud](https://attack.mitre.org/software/S9008) has destroyed the victim\u2019s home directory by overwriting and deleting every writable file within the user's home folder.(Citation: Palo Alto Unit 42 Shai-Hulud November 2025)(Citation: Socket Shai-Hulud November 2025) [Shai-Hulud](https://attack.mitre.org/software/S9008) has also utilized the `shred` command on Linux devices.(Citation: Microsoft Shai-Hulud December 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--de376fb9-1093-4f59-8d13-aed61042701d",
+            "target_ref": "attack-pattern--d45a3d09-b3cf-48f4-9f0f-f521ee5cb05c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

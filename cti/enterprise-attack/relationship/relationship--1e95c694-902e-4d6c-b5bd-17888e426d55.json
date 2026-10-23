@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--fe6e3710-798b-4d1d-b6a8-1b6d8a4f9a07",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1e95c694-902e-4d6c-b5bd-17888e426d55",
+            "created": "2026-02-03T20:39:15.585Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Breakdev Evilginx 2.3 JAN 2019",
+                    "description": "Gretzky, K. (2019, January 18). Evilginx 2.3 - Phisherman's Dream. Retrieved January 27, 2026.",
+                    "url": "https://breakdev.org/evilginx-2-3-phishermans-dream/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.946Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) can inject JavaScript code into HTML content to customize phishing attacks.(Citation: Breakdev Evilginx 2.3 JAN 2019)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--0f4a0c76-ab2d-4cb0-85d3-3f0efb8cba0d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

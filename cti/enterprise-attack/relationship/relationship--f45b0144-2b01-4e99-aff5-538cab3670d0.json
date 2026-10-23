@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--b764ec00-29ac-48c5-b693-26e3195c81b1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f45b0144-2b01-4e99-aff5-538cab3670d0",
+            "created": "2026-04-17T18:02:39.841Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha NOV 2024",
+                    "description": "Trend Micro. (2024, November 19). Spot the Difference: Earth Kasha's New LODEINFO Campaign And The Correlation Analysis With The APT10 Umbrella. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/k/lodeinfo-campaign-of-earth-kasha.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.257Z",
+            "description": "[HiddenFace](https://attack.mitre.org/software/S9023) can check for the presence of specific analysis tools and will terminate itself if they are found.(Citation: Trend Micro Earth Kasha NOV 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9edc41d1-a13d-4acf-b400-d47fb2f6809d",
+            "target_ref": "attack-pattern--853c4192-4311-43e1-bfbb-b11b14911852",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

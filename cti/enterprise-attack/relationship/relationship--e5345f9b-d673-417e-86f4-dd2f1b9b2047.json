@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--45f3fc45-0512-4136-9872-7db19acea06f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--e5345f9b-d673-417e-86f4-dd2f1b9b2047",
+            "created": "2026-04-17T18:14:34.165Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro Earth Kasha Updates APR 2025",
+                    "description": "Hiroaki, H. (2025, April 30). Earth Kasha Updates TTPs in Latest Campaign Targeting Taiwan and Japan. Retrieved April 17, 2026.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/d/earth-kasha-updates-ttps.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-03T19:46:56.892Z",
+            "description": "[HiddenFace](https://attack.mitre.org/software/S9023) can hide its IP lookup by using DNS over HTTPS (DoH) for C2.(Citation: Trend Micro Earth Kasha Updates APR 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9edc41d1-a13d-4acf-b400-d47fb2f6809d",
+            "target_ref": "attack-pattern--4fe28b27-b13c-453e-a386-c2ef362a573b",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

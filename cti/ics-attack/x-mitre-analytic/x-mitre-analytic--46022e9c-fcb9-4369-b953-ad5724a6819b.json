@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--a0bef397-7915-430c-86fc-a570a1a11443",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--46022e9c-fcb9-4369-b953-ad5724a6819b",
+            "created": "2026-10-13T17:45:11.655Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0802#AN2158",
+                    "external_id": "AN2158"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:11.655Z",
+            "name": "Analytic 2158",
+            "description": "Real-time monitoring identifies a firmware update tool on an Industrial Control System (ICS) Linux engineering host initiating firmware-update mode activation outside a scheduled maintenance window, by a User Identifier (UID) not in the approved firmware manager UIDs. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): syscall=execve; firmware-update utility invoked outside the approved maintenance window or by a UID not in the authorized firmware-management set"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AlarmSilenceGracePeriod",
+                    "description": "Time window within which alarm telemetry going silent following a mode-change message is considered directly connected."
+                },
+                {
+                    "field": "AuthorizedFirmwareManagers",
+                    "description": "Accounts authorized to perform firmware update mode activation."
+                },
+                {
+                    "field": "ChangeControlWindow",
+                    "description": "Scheduled maintenance periods during which firmware update mode activation is authorized."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to activate firmware update mode."
+                },
+                {
+                    "field": "MaintenanceWindowSchedule",
+                    "description": "Recurring scheduled periods when firmware update activities are expected."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

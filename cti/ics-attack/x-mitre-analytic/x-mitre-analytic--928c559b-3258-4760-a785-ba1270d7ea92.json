@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--76c7aa73-cd33-4b27-a136-afbd12ccf45f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--928c559b-3258-4760-a785-ba1270d7ea92",
+            "created": "2026-10-13T17:46:00.102Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0758#AN2194",
+                    "external_id": "AN2194"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:00.102Z",
+            "name": "Analytic 2194",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) network device receiving a configuration erase command from a source not in the approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet, or outside a change-control window. OT operational-fidelity gate: Alert only when the action is not attributable to an authorized operator/engineering source for the specific target and function, and it is either outside an approved change/maintenance window or lacks matching change-control context; where telemetry permits, require corroborating device, configuration, or process-state effect. Suppress activity that fully matches approved maintenance, commissioning, failover, recovery, or tested control procedures.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--84572de3-9583-4c73-aabd-06ea88123dd8",
+                    "name": "networkdevice:syslog",
+                    "channel": "write erase or factory-reset command from source not in approved Network Management System (NMS) Classless Inter-Domain Routing (CIDR) subnet"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedDataManagementTools",
+                    "description": "Allowlist of backup/archival/retention management tools authorized to perform bulk file operations."
+                },
+                {
+                    "field": "BulkDeletionThreshold",
+                    "description": "File count threshold across monitored directories that distinguishes bulk destruction from routine cleanup."
+                },
+                {
+                    "field": "DataDestructionTimeWindow",
+                    "description": "Time window over which bulk deletion activity is measured."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to issue memory erase commands."
+                },
+                {
+                    "field": "WiperCrashWindow",
+                    "description": "Time window after bulk deletion within which a system crash is considered part of the same destructive event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

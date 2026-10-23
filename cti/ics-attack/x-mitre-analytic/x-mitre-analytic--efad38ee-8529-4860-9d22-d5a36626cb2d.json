@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--eb9723bb-7573-4d0a-9ab9-1aeca0390f20",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--efad38ee-8529-4860-9d22-d5a36626cb2d",
+            "created": "2026-10-13T17:44:35.996Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0738#AN2131",
+                    "external_id": "AN2131"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:44:35.996Z",
+            "name": "Analytic 2131",
+            "description": "Real-time monitoring identifies a process owned by an Industrial Control System (ICS) service User Identifier (UID) executing a Set User Identifier (SUID) binary or exploiting a kernel vulnerability to obtain root privileges, detected via unexpected setuid/setgid syscalls from a process not invoked via sudo. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
+                    "name": "auditd:SYSCALL",
+                    "channel": "Linux Audit SYSCALL/EXECVE/SOCKADDR records (configured audit rule): setuid/setgid to root from a process owned by Industrial Control Systems (ICS) service User Identifier (UID) that was not invoked via sudo"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window within which a device/process crash and subsequent privileged action are considered correlated."
+                },
+                {
+                    "field": "KnownVulnerableDriverSignatures",
+                    "description": "Documented hash/name signatures of known vulnerable drivers exploitable for privilege escalation (BYOVD technique)."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

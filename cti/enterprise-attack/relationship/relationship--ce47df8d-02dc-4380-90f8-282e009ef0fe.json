@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--dcc856c7-6b1d-44c1-bb10-2ed65b55a058",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--ce47df8d-02dc-4380-90f8-282e009ef0fe",
+            "created": "2020-01-23T19:42:16.786Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.207Z",
+            "description": "Regsvcs and Regasm may not be necessary within a given environment.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--eb88d97c-32f1-40be-80f0-d61a4b0b4b31",
+            "target_ref": "attack-pattern--c48a67ee-b657-45c1-91bf-6cdbe27205f8",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

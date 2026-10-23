@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--f42d2c81-9284-4628-816c-7a35cc42dd6e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b880fc5d-236d-44b5-90ec-46ce43c330ed",
+            "created": "2026-09-11T19:33:37.060Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Cyfirma_Vidar_June2024",
+                    "description": "CYFIRMA. (2024, June 3). Vidar Stealer: An In-depth Analysis of an Information-Stealing Malware. Retrieved August 13, 2026.",
+                    "url": "https://www.cyfirma.com/research/vidar-stealer-an-in-depth-analysis-of-an-information-stealing-malware/"
+                },
+                {
+                    "source_name": "Logpoint_StealerMalwareFamilies_2024",
+                    "description": "Khadgi, N. (n.d.). A Comprehensive Overview on Stealer Malware Families. Retrieved August 25, 2026.",
+                    "url": "https://web.archive.org/web/20240517205011/https://www.logpoint.com/wp-content/uploads/2024/03/logpoint-etpr-a-comprehensive-overview-on-stealer-malware-families-1.pdf"
+                },
+                {
+                    "source_name": "Unit42_Vidar_July2026",
+                    "description": "Nannaka, B., Chhaparwal, P. (2026, July 7). Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation. Retrieved July 8, 2026.",
+                    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/"
+                },
+                {
+                    "source_name": "QuorumCyber_Vidar_March2023",
+                    "description": "Quorum Cyber. (n.d.). Malware Analysis Report Vidar - Stealerware. Retrieved August 28, 2026.",
+                    "url": "https://www.quorumcyber.com/wp-content/uploads/2023/01/Malware-Analysis-Vidar.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-28T18:53:00.771Z",
+            "description": "[Vidar](https://attack.mitre.org/software/S9050) has gathered hardware IDs (HWIDs) regarding the victim machine.(Citation: Unit42_Vidar_July2026) [Vidar](https://attack.mitre.org/software/S9050) has used `GetEnvironmentStringsW` and `GetModuleHandleExW` to gather information about the victim machine.(Citation: Cyfirma_Vidar_June2024) [Vidar](https://attack.mitre.org/software/S9050) has collected OS data from the victim machine.(Citation: QuorumCyber_Vidar_March2023)(Citation: Logpoint_StealerMalwareFamilies_2024)\n",
+            "relationship_type": "uses",
+            "source_ref": "malware--947119be-4875-49aa-8247-776c34233063",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

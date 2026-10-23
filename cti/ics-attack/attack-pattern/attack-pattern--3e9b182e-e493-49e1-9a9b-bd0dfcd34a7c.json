@@ -1,0 +1,66 @@
+{
+    "type": "bundle",
+    "id": "bundle--1851759f-37c7-48f4-a214-bacf2be5181a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--3e9b182e-e493-49e1-9a9b-bd0dfcd34a7c",
+            "created": "2026-04-20T20:50:35.222Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1694",
+                    "external_id": "T1694"
+                },
+                {
+                    "source_name": "ICS-ALERT-13-164-01",
+                    "description": "Cybersecurity and Infrastructure Security Agency (CISA). (2013, October 29). Medical Devices Hard-Coded Passwords. Retrieved April 23, 2026.",
+                    "url": "https://www.cisa.gov/news-events/ics-alerts/ics-alert-13-164-01"
+                },
+                {
+                    "source_name": "OT IceFall",
+                    "description": "Forescout Vedere Labs. (2022, June). OT: IceFall Report. Retrieved April 23, 2026.",
+                    "url": "https://www.forescout.com/resources/ot-icefall-report/"
+                },
+                {
+                    "source_name": "NIST SP 800-82r3",
+                    "description": "Keith Stouffer. (2023, September). Guide to Operational Technology  (OT) Security. Retrieved April 22, 2026.",
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:48:56.454Z",
+            "name": "Insecure Credentials",
+            "description": "Adversaries may target insecure credentials as a means to persist on a system or device or move laterally from one system or device to another. Insecure credentials may appear as default credentials which are pre-configured credentials on a system, device, or software that are well-known in documentation or hard-coded credentials which are built into the system, device, or software that cannot be changed or not easily changed because of the impact on control processes.(Citation: NIST SP 800-82r3)(Citation: ICS-ALERT-13-164-01)(Citation: OT IceFall)\n Adversaries often times use insecure credentials to evade detection as they are typically forgotten about by system and device owners.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-ics-attack",
+                    "phase_name": "persistence"
+                },
+                {
+                    "kill_chain_name": "mitre-ics-attack",
+                    "phase_name": "lateral-movement"
+                }
+            ],
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_deprecated": false,
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_platforms": [
+                "Embedded",
+                "Windows",
+                "Linux",
+                "Network Devices"
+            ],
+            "x_mitre_version": "1.0"
+        }
+    ]
+}

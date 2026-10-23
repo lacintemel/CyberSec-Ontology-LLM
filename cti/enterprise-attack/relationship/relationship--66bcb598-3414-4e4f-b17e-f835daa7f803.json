@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--40055219-ff46-4924-85a3-f17d2b321ec8",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--66bcb598-3414-4e4f-b17e-f835daa7f803",
+            "created": "2020-02-21T21:00:49.029Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.065Z",
+            "description": "Ensure proper user permissions are in place to prevent adversaries from disabling or modifying firewall settings.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--93e7968a-9074-4eac-8ae9-9f5200ec3317",
+            "target_ref": "attack-pattern--eec096b8-c207-43df-b6c1-11523861e452",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

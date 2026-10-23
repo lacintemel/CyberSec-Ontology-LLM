@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--7b7d8380-460a-4c1f-abcb-08a70c023e99",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--f710e99a-dfe9-4b2b-8b1b-97ab1c9d65f3",
+            "created": "2026-04-22T17:50:53.396Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.261Z",
+            "description": "Review the integrity of project files to verify they have not been modified by adversary behavior. Verify a cryptographic hash for the file with a known trusted version, or look for other indicators of modification (e.g., timestamps).",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--bcf91ebc-f316-4e19-b2f6-444e9940c697",
+            "target_ref": "attack-pattern--354ca909-b54d-4c41-b597-9c296b344a43",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

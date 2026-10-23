@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--614a10a4-bef1-46a8-9b1a-d423625fb93d",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--e8b537e6-04eb-4168-a206-88cc041edf50",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0750",
+                    "external_id": "DET0750"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:02.579Z",
+            "name": "Detection of Indicator Removal on Host",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--55544bb8-440f-4b67-aa35-7e7af5952aca",
+                "x-mitre-analytic--b26ae113-36e8-4ff4-94bb-bf058788979c",
+                "x-mitre-analytic--6549a8ab-c92c-4249-a5f2-cd9d0458192d",
+                "x-mitre-analytic--482edcb0-46cd-45b6-a373-2e9bbe2ffad2"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--4ccb83a8-094b-4f09-a479-9a035a217fc6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--a2a81a97-a8ce-447b-9c8a-3029a96a7e65",
+            "created": "2026-02-03T20:11:41.989Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Evilginx 2 July 2018",
+                    "description": "Gretzky, K.. (2018, July 26). Evilginx 2 - Next Generation of Phishing 2FA Tokens. Retrieved October 14, 2019.",
+                    "url": "https://breakdev.org/evilginx-2-next-generation-of-phishing-2fa-tokens/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.146Z",
+            "description": "[evilginx2](https://attack.mitre.org/software/S9003) has obtained a valid SSL/TLS certificate from LetsEncrypt to provide responses to Automatic Certificate Management Environment (ACME) challenges.(Citation: Evilginx 2 July 2018)",
+            "relationship_type": "uses",
+            "source_ref": "tool--1eb9627d-a661-4db6-bf53-41b7dcc63087",
+            "target_ref": "attack-pattern--c615231b-f253-4f58-9d47-d5b4cbdb6839",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

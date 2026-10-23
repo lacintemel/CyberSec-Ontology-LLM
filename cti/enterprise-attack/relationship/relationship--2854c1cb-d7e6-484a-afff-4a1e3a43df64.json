@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--30a036d9-d94c-4774-b78a-6586b2093930",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--2854c1cb-d7e6-484a-afff-4a1e3a43df64",
+            "created": "2026-04-21T17:48:52.509Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CloudSEK_RustyWater_Jan2026",
+                    "description": "Awasthi, P. (2026, January 8). Reborn in Rust: Muddy Water Evolves Tooling with RustyWater Implant. Retrieved March 19, 2026.",
+                    "url": "https://www.cloudsek.com/blog/reborn-in-rust-muddywater-evolves-tooling-with-rustywater-implant"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.960Z",
+            "description": "[RustyWater](https://attack.mitre.org/software/S9037) has gathered the victim machine\u2019s computer name.(Citation: CloudSEK_RustyWater_Jan2026)\u202f\u202f\u202f ",
+            "relationship_type": "uses",
+            "source_ref": "malware--50be4e81-db74-41a2-a9aa-423314082bea",
+            "target_ref": "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

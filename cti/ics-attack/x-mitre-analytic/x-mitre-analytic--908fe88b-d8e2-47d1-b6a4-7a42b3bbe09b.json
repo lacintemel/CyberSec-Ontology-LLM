@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--5bfa923c-11c1-4837-b0d0-75bdd45b4d9f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--908fe88b-d8e2-47d1-b6a4-7a42b3bbe09b",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0803#AN1935",
+                    "external_id": "AN1935"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:42.856Z",
+            "name": "Analytic 1935",
+            "description": "Real-time monitoring identifies authentication to an external remote access gateway using credentials associated with Industrial Control System (ICS)-role accounts, from a source geolocation or Autonomous System Number (ASN) inconsistent with the account's established usage pattern, immediately followed by that session establishing connectivity into the ICS network zone. Documented in VPNFilter, which specifically targeted routers and network edge devices. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): connection from Virtual Private Network (VPN)-assigned Internet Protocol (IP) address into device subnet within remote access to Industrial Control Systems (ICS) window of the anomalous authentication"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "vpn:applog",
+                    "channel": "session duration or command activity inconsistent with documented vendor support session profiles"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--39b9db72-8b48-4595-a18d-db5bbba3091b",
+                    "name": "vpn:authlog",
+                    "channel": "Industrial Control Systems (ICS)-role account authentication from source geolocation/Autonomous System Number (ASN) not in approved remote access origins or outside expected session pattern"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedRemoteAccessOrigins",
+                    "description": "Documented geographic regions/ASNs from which legitimate ICS-role remote access is expected."
+                },
+                {
+                    "field": "ExpectedSessionPattern",
+                    "description": "Baseline of normal session timing/duration for each ICS-role account's remote access usage."
+                },
+                {
+                    "field": "RemoteAccessToICSWindow",
+                    "description": "Time window correlating VPN authentication with subsequent ICS-zone network access."
+                }
+            ]
+        }
+    ]
+}

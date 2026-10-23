@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--2bf99973-859f-44ef-bc1f-71129bc7c3e0",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--93499a37-35b3-4b66-8275-b53542c4341f",
+            "created": "2026-10-07T18:06:07.663Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-07T18:06:07.663Z",
+            "description": "Ensuring that LLM/AI systems are contained to only within the organizational network with no outside access can contain the exfiltration of sensitive data to within an organizational network.  ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--b9f0c069-abbe-4a07-a245-2481219a1463",
+            "target_ref": "attack-pattern--c0a6e9ec-9ef1-46b6-8a71-cc73863e8985",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

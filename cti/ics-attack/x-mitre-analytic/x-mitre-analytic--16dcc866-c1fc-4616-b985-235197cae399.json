@@ -1,0 +1,58 @@
+{
+    "type": "bundle",
+    "id": "bundle--935217dc-1002-429b-995b-24bb435f93f5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--16dcc866-c1fc-4616-b985-235197cae399",
+            "created": "2026-10-13T17:47:52.823Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0792#AN2278",
+                    "external_id": "AN2278"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:52.823Z",
+            "name": "Analytic 2278",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) protocol master-role traffic originating from a Windows host that is not the authorized Supervisory Control and Data Acquisition (SCADA) or Distributed Control System (DCS) server. OT operational-fidelity gate: Alert only when the master/station identity or source is not authorized for the target device and command function, or when a normally authorized master violates its configured role/sequence and produces a corroborating device/process-state change. Suppress legitimate redundancy/failover, hot-standby promotion, commissioning, and approved engineering master activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=3 unexpected Windows host opening Industrial Control Systems (ICS) protocol connections to multiple field device Internet Protocol (IP) addresses in polling pattern characteristic of master station"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedSCADAServers",
+                    "description": "IP/identity allowlist of legitimate master/control server systems."
+                },
+                {
+                    "field": "RegisteredMasterAddresses",
+                    "description": "Inventory of authorized station/master addresses for protocols using logical addressing distinct from IP."
+                },
+                {
+                    "field": "RogueMasterTimeWindow",
+                    "description": "Time window within which command traffic to multiple devices from a single unrecognized source is considered a coordinated rogue master event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

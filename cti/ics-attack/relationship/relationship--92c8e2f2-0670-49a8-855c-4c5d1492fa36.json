@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--f61eb638-3514-4241-bf85-b8b891a8fdd6",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--92c8e2f2-0670-49a8-855c-4c5d1492fa36",
+            "created": "2026-09-25T16:51:18.467Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T16:51:18.467Z",
+            "description": "Consider the use of application isolation and sandboxing to restrict specific operating system interactions such as access through user accounts, services, system calls, registry, and network access. This may be even more useful in cases where the source of the executed script is unknown.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--059ba11e-e3dc-49aa-84ca-88197f40d4ea",
+            "target_ref": "attack-pattern--abc2529d-70c0-4971-b25f-0dce8cffb427",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

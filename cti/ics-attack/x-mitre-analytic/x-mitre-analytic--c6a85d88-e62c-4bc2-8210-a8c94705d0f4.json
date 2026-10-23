@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--73a1335f-4440-48a4-b1cb-d12cb1ea039a",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c6a85d88-e62c-4bc2-8210-a8c94705d0f4",
+            "created": "2026-10-13T17:47:54.751Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0795#AN2279",
+                    "external_id": "AN2279"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:54.751Z",
+            "name": "Analytic 2279",
+            "description": "Real-time monitoring identifies an Industrial Control System (ICS) vendor process crashing unexpectedly, immediately preceded by an unusual cross-process memory access event from a process outside the recognized security/diagnostic tool allowlist. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--1887a270-576a-4049-84de-ef746b2572d6",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=10 cross-process memory access into Industrial Control Systems (ICS) vendor process from image not in trusted security tool list, followed by unexpected termination within exploit crash correlation window"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window correlating a memory access event with a subsequent crash."
+                },
+                {
+                    "field": "TrustedSecurityToolList",
+                    "description": "Allowlist of legitimate security/diagnostic tools authorized to perform cross-process memory access."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

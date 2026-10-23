@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--483701c8-5e98-4691-a025-dce8637f9086",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--28b06a92-2933-49f5-887e-c09cf1bb861f",
+            "created": "2026-04-22T22:52:28.627Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.960Z",
+            "description": "Implement network allowlists to minimize network access to only authorized hosts.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--aadac250-bcdc-44e3-a4ae-f52bd0a7a16a",
+            "target_ref": "attack-pattern--71f2d49e-65dd-4fb6-a4cc-0d2b19d427fa",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

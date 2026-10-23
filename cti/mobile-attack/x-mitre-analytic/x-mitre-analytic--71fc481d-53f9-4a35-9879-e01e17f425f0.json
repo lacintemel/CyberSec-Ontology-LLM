@@ -1,0 +1,68 @@
+{
+    "type": "bundle",
+    "id": "bundle--a666bee6-28c3-417d-82ff-4e7913b5528b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--71fc481d-53f9-4a35-9879-e01e17f425f0",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0629#AN1700",
+                    "external_id": "AN1700"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:10.419Z",
+            "name": "Analytic 1700",
+            "description": "For iOS, detect Exploitation for Client Execution by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Host Status via Apple MDM [DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries]; Network Connection Creation via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]; Process Creation via Application Vetting / Managed Device Telemetry [com.apple.WebContent or com.apple.imagent process shows unexpected child spawn or memory fault at level=fault in Unified Log \u2014 kernel fault in message-processing subsystem is exploit execution signal]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--85a533a4-5fa4-4dba-b45d-f0717bedd6e6",
+                    "name": "iOS:MDM",
+                    "channel": "DeviceInformation / SecurityInfo / ProfileList / restrictions and compliance queries"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "com.apple.WebContent or com.apple.imagent process shows unexpected child spawn or memory fault at level=fault in Unified Log \u2014 kernel fault in message-processing subsystem is exploit execution signal"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AppleSystemBaseline",
+                    "description": "Known Apple CDN, update, and push notification server IP ranges. Derive from Apple published IP lists."
+                },
+                {
+                    "field": "PostExploitWindow",
+                    "description": "Default 60s between fault and C2 connection."
+                },
+                {
+                    "field": "MinSecureVersion",
+                    "description": "Latest Apple security release. Update from Apple security advisories."
+                }
+            ]
+        }
+    ]
+}

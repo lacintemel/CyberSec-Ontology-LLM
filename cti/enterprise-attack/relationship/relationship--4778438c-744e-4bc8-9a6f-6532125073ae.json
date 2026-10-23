@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--bcf4b039-0c44-4395-beec-beb5e78ee888",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--4778438c-744e-4bc8-9a6f-6532125073ae",
+            "created": "2026-09-30T17:59:39.418Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Microsoft CYBERWARCON NOV 2024",
+                    "description": "Microsoft Threat Intelligence. (2024, November 22). Microsoft shares latest intelligence on North Korean and Chinese threat actors at CYBERWARCON. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2024/11/22/microsoft-shares-latest-intelligence-on-north-korean-and-chinese-threat-actors-at-cyberwarcon/"
+                },
+                {
+                    "source_name": "Microsoft Axios Compromise APR 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, April 1). Mitigating the Axios npm supply chain compromise. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/"
+                },
+                {
+                    "source_name": "Microsoft Sapphire Sleet APR 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, April 16). Dissecting Sapphire Sleet\u2019s macOS intrusion from lure to compromise. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/04/16/dissecting-sapphire-sleets-macos-intrusion-from-lure-to-compromise/"
+                },
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T17:59:39.418Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has used professional platforms such as LinkedIn to contact potential victims.(Citation: Microsoft CYBERWARCON NOV 2024)(Citation: Microsoft Axios Compromise APR 2026)(Citation: Microsoft Sapphire Sleet APR 2026)(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--b1ccd744-3f78-4a0e-9bb2-2002057f7928",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

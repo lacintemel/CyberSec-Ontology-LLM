@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--021d3110-385f-4df5-b264-b635ac53df13",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--0d22c60c-fd0b-47f8-abe4-2d661a73c653",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0647#AN1727",
+                    "external_id": "AN1727"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:44.655Z",
+            "name": "Analytic 1727",
+            "description": "For Android, detect Event Triggered Execution from documented management, network, or vetting evidence; treat state queries as periodic observations rather than real-time events. Correlate Application State via Android Enterprise / EMM [Managed package inventory/status and package metadata]; OS API Execution via Application Vetting / Instrumented Dynamic Analysis [Dynamic API/runtime trace: App registers BroadcastReceiver or schedules job for system events (BOOT_COMPLETED, SMS_RECEIVED, ACTION_PACKAGE_REPLACED, CONNECTIVITY_CHANGE, ACTION_USER_PRESENT) NOT IN $ApprovedEventTriggerApps$ \u2014 sensitive system event registration is ]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.1",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "Android"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
+                    "name": "android:EMM",
+                    "channel": "Managed package inventory/status and package metadata"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
+                    "name": "mobile:DynamicAnalysis",
+                    "channel": "Dynamic API/runtime trace: App registers BroadcastReceiver or schedules job for system events (BOOT_COMPLETED, SMS_RECEIVED, ACTION_PACKAGE_REPLACED, CONNECTIVITY_CHANGE, ACTION_USER_PRESENT) NOT IN $ApprovedEventTriggerApps$ \u2014 sensitive system event registration is"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedEventTriggerApps",
+                    "description": "MDM agent (BOOT_COMPLETED for policy enforcement), approved enterprise apps with documented event trigger need. Derive from MDM catalog. Tightening: MDM agent and system apps only."
+                },
+                {
+                    "field": "EventInteractionThreshold",
+                    "description": "Default 60s. App execution within 60s of system event with no user touch is event-triggered. After 60s, user may have interacted."
+                }
+            ]
+        }
+    ]
+}

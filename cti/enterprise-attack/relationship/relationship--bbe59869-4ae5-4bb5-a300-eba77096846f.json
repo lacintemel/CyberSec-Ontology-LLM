@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--a4c684ea-64b6-4488-a35e-5a02d9568a2c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--bbe59869-4ae5-4bb5-a300-eba77096846f",
+            "created": "2026-04-17T18:22:55.969Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "JPCERT MirrorFace JUL 2024",
+                    "description": "Tomonaga, S. (2024, July 16). MirrorFace Attack against Japanese Organisations. Retrieved April 17, 2026.",
+                    "url": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.182Z",
+            "description": "[HiddenFace](https://attack.mitre.org/software/S9023) can inject code directly into legitimate applications.(Citation: JPCERT MirrorFace JUL 2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--9edc41d1-a13d-4acf-b400-d47fb2f6809d",
+            "target_ref": "attack-pattern--43e7dc91-05b2-474c-b9ac-2ed4fe101f4d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

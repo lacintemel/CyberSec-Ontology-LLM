@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--714066fb-0137-40c9-9dfb-2e1292128f92",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b7c5abca-63d7-4ea0-8403-cadf61f4916a",
+            "created": "2026-09-21T22:42:06.400Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-21T22:42:06.400Z",
+            "description": "Restrict network resources and external destinations accessible to AI agents that process untrusted content. Limit outbound communication and access to unrelated internal services to reduce exfiltration and lateral effects following successful injection. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--86598de0-b347-4928-9eb0-0acbfc21908c",
+            "target_ref": "attack-pattern--2e45d340-f00b-4bd6-b5c9-c2ef54b8894c",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

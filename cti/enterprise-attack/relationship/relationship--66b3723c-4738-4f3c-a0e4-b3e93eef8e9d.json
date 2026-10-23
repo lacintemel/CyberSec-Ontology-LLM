@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2bd54d78-6497-4c07-8cb6-55376ceb39e2",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--66b3723c-4738-4f3c-a0e4-b3e93eef8e9d",
+            "created": "2026-04-19T18:39:01.467Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "sentinelone operationDigitalEye Dec 2024",
+                    "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T18:47:24.588Z",
+            "description": "During [Operation Digital Eye](https://attack.mitre.org/campaigns/C0061), threat actors targeted memory from the LSASS process to extract credentials.(Citation: sentinelone operationDigitalEye Dec 2024)",
+            "relationship_type": "uses",
+            "source_ref": "campaign--75ea699b-bff5-4541-b9b7-df4996c9db3c",
+            "target_ref": "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

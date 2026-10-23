@@ -1,0 +1,50 @@
+{
+    "type": "bundle",
+    "id": "bundle--8b193af3-43b7-4fa3-a961-da5ec17711dc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--073153c5-a2dc-4985-b5f0-b0ee35f5457c",
+            "created": "2026-10-13T17:45:38.485Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0759#AN2175",
+                    "external_id": "AN2175"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:38.485Z",
+            "name": "Analytic 2175",
+            "description": "Real-time monitoring identifies a host simultaneously maintaining an inbound connection on an Industrial Control System (ICS) protocol port and an outbound connection to a destination outside the ICS network zone, detectable as correlated dual flows with matching timing and approximate byte-count proportionality. OT operational-fidelity gate: Alert only when the asset's documented role does not permit the connection and the destination/proxy/service is outside the approved communications profile, with process/service identity used as corroboration where available. Suppress approved vendor support, update repositories, remote operations, failover paths, and documented temporary connectivity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Network Devices"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): host maintains simultaneous flows to device subnet and external destination with timing/byte-count correlation indicating relay"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "RelayCorrelationWindow",
+                    "description": "Time window and byte-count proportionality tolerance used to determine whether concurrent flows represent a relay pattern."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}

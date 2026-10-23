@@ -1,0 +1,55 @@
+{
+    "type": "bundle",
+    "id": "bundle--7e9cf03d-8daa-4c76-b9b1-ce709af30836",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--2b990a38-dedf-4a9a-9bd2-9a805c2f1b46",
+            "created": "2026-04-20T18:22:06.178Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0497#AN2044",
+                    "external_id": "AN2044"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-05-12T16:30:18.376Z",
+            "name": "Analytic 2044",
+            "description": "Detects esxcli commands disabling syslog, firewall, lockdown mode, or stopping hostd/vpxa; correlates command execution with reduced forwarding activity.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "enterprise-attack"
+            ],
+            "x_mitre_platforms": [
+                "ESXi"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "esxi:shell",
+                    "channel": "esxcli system syslog config set/reload, services.sh restart/stop"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--66531bc6-a509-4868-8314-4d599e91d222",
+                    "name": "esxi:hostd",
+                    "channel": "service state change"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExpectedAdminIPs",
+                    "description": "Authorized management sources."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1a31cad0-d8a3-4bb2-acca-ed007c283060",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--b7999bd1-4704-489d-8fc3-80661592b6dc",
+            "created": "2019-06-07T16:34:21.050Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Trend Micro IXESHE 2012",
+                    "description": "Sancho, D., et al. (2012, May 22). IXESHE An APT Campaign. Retrieved June 7, 2019.",
+                    "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp_ixeshe.pdf"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.176Z",
+            "description": "[Ixeshe](https://attack.mitre.org/software/S0015) can list file and directory information.(Citation: Trend Micro IXESHE 2012)",
+            "relationship_type": "uses",
+            "source_ref": "malware--8beac7c2-48d2-4cd9-9b15-6c452f38ac06",
+            "target_ref": "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

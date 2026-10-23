@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--228437f8-9df8-49ff-905f-dbe7879d6743",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--1d4ecf70-a573-4a8d-889d-c0f296399977",
+            "created": "2026-04-16T22:30:23.047Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "FalconFeeds_Iran_Mar2026",
+                    "description": "FalconFeeds.io. (2026, March 5). The Digital Redoubt: Iran\u2019s National Information Network and the Asymmetry of Modern Cyber Conflict. Retrieved March 9, 2026.",
+                    "url": "https://falconfeeds.io/blogs/the-digital-redoubt-irans-national-information-network-cyber-conflict"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-07-31T20:48:29.670Z",
+            "description": "[MuddyWater](https://attack.mitre.org/groups/G0069) has used compromised mailboxes within target organizations to send spearphishing emails.(Citation: FalconFeeds_Iran_Mar2026)   ",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--269e8108-68c6-4f99-b911-14b2e765dec2",
+            "target_ref": "attack-pattern--9e7452df-5144-4b6e-b04a-b66dd4016747",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--2b250009-da53-46e9-8149-89346e5a8207",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--8befb9c9-cff9-472c-8fbb-561466a13944",
+            "created": "2025-12-16T00:12:11.265Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "TrumanKroll_SYSTEMBCServer_Jan2024",
+                    "description": "Truman, D. (2024, January 19). Inside the SYSTEMBC Command-and-Control Server. Retrieved June 18, 2025.",
+                    "url": "https://www.kroll.com/en/publications/cyber/inside-the-systembc-malware-server"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:06.116Z",
+            "description": "[SystemBC](https://attack.mitre.org/software/S9001) has downloaded a text file into memory and set the area of memory via the VirtualProtect call. Then, [SystemBC](https://attack.mitre.org/software/S9001) has executed the file via the CreateThread call.(Citation: TrumanKroll_SYSTEMBCServer_Jan2024)",
+            "relationship_type": "uses",
+            "source_ref": "malware--39643fb9-00c1-4a45-85e5-801a3f2665d1",
+            "target_ref": "attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

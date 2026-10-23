@@ -1,0 +1,72 @@
+{
+    "type": "bundle",
+    "id": "bundle--6211c539-75bd-4595-b8be-b01d32ce30f5",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--930aae7c-e8f0-4594-8e3f-f0e71d7e1640",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0745#AN1878",
+                    "external_id": "AN1878"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:25.745Z",
+            "name": "Analytic 1878",
+            "description": "Real-time monitoring identifies a file written to an Industrial Control System (ICS) host from a remote network share, where the file has an executable or script extension, immediately followed by execution of that file from the same path. Documented in the PIPEDREAM toolkit's modular design, where components transfer files to compromised Programmable Logic Controllers (PLCs) and engineering workstations. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--f5468e67-51c7-4756-9b4f-65707708e7fa",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 5140/5145: EventCode=5145 for file write to Industrial Control Systems (ICS) host, source not in authorized file sources"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=11 with executable/script extension from remote-sourced write operation"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "WinEventLog:Sysmon",
+                    "channel": "EventCode=1 of the newly-created file within tool transfer window of its creation"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "AuthorizedFileSources",
+                    "description": "Allowlist of network shares/hosts authorized to write executable or script files to ICS Windows assets."
+                },
+                {
+                    "field": "EngineeringWorkstationList",
+                    "description": "IP allowlist of workstations authorized to perform file transfers to field devices."
+                },
+                {
+                    "field": "SuspiciousFilePatterns",
+                    "description": "Filename/extension patterns inconsistent with the device's normal configuration exchange profile."
+                },
+                {
+                    "field": "ToolTransferWindow",
+                    "description": "Time window after file creation within which execution is considered directly connected to the transfer event."
+                }
+            ]
+        }
+    ]
+}

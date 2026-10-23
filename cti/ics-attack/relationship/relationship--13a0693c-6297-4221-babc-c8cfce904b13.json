@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--dee5fc0e-7758-4670-a6b9-1c8adfa9c432",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--13a0693c-6297-4221-babc-c8cfce904b13",
+            "created": "2026-09-25T20:12:44.653Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-25T20:12:44.653Z",
+            "description": "Restrict interactive and scripted shell execution on Linux, network, and embedded ICS assets to approved accounts, management paths, commands, and vendor workflows. Where full application control is unavailable, constrain SSH/Telnet access and privileged shell use to dedicated administration paths. ",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--4fa717d9-cabe-47c8-8cdd-86e9e2e37f30",
+            "target_ref": "attack-pattern--26659f1a-7557-4833-a42e-b6dba9104f4a",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

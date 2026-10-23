@@ -1,0 +1,47 @@
+{
+    "type": "bundle",
+    "id": "bundle--7907d3ce-84cb-43d7-a4f8-557a4ab22bfc",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--9ea5c70d-6f04-4530-925a-5fa0c3521b79",
+            "created": "2021-09-29T22:24:15.706Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "CISA AA20-239A BeagleBoyz August 2020",
+                    "description": "DHS/CISA. (2020, August 26). FASTCash 2.0: North Korea's BeagleBoyz Robbing Banks. Retrieved September 29, 2021.",
+                    "url": "https://us-cert.cisa.gov/ncas/alerts/aa20-239a"
+                },
+                {
+                    "source_name": "Microsoft Axios Compromise APR 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, April 1). Mitigating the Axios npm supply chain compromise. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/04/01/mitigating-the-axios-npm-supply-chain-compromise/"
+                },
+                {
+                    "source_name": "Microsoft Sapphire Sleet APR 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, April 16). Dissecting Sapphire Sleet\u2019s macOS intrusion from lure to compromise. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/04/16/dissecting-sapphire-sleets-macos-intrusion-from-lure-to-compromise/"
+                },
+                {
+                    "source_name": "MIcrosoft Mastra npm Compromise JUN 2026",
+                    "description": "Microsoft Threat Intelligence. (2026, June 17). From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet. Retrieved September 30, 2026.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-30T19:55:14.761Z",
+            "description": "[APT38](https://attack.mitre.org/groups/G0082) has prepended a space to all of their terminal commands to operate without leaving traces in the HISTCONTROL environment.(Citation: CISA AA20-239A BeagleBoyz August 2020)\n[APT38](https://attack.mitre.org/groups/G0082) has prevented logging and muted error logs through the use of `/dev/null 2>&1 &`. (Citation: Microsoft Axios Compromise APR 2026)(Citation: Microsoft Sapphire Sleet APR 2026)\n[APT38](https://attack.mitre.org/groups/G0082) has also executed scripts to delete the PowerShell command history file and to prevent future history recording using `-Force Set-PSReadLineOption -HistorySaveStyle SaveNothing`.(Citation: MIcrosoft Mastra npm Compromise JUN 2026)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+            "target_ref": "attack-pattern--b831f51c-d22f-4724-bbab-60d056bd1150",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

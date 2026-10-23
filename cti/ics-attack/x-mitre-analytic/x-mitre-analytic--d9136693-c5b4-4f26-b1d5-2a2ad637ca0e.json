@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--395f40c6-9430-4674-899e-03c5e671b184",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--d9136693-c5b4-4f26-b1d5-2a2ad637ca0e",
+            "created": "2026-09-26T02:11:00.777Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0934#AN2096",
+                    "external_id": "AN2096"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:46:15.444Z",
+            "name": "Analytic 2096",
+            "description": "Real-time monitoring identifies an embedded OT/IoT device sending DNS to a resolver not defined for its role, tunneling-like native DNS, or direct HTTPS/TLS to an unapproved DoH endpoint. Because many embedded devices have fixed communications, require deviation from the device-specific resolver/destination profile and corroborating query or destination evidence.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:TLS/HTTP",
+                    "channel": "SNI/HTTP host or resolver endpoint identification when observable"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
+                    "name": "NSM:DNS",
+                    "channel": "Device DNS query/response content"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "NSM:Flow",
+                    "channel": "Device-to-resolver/DoH destination flow"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "DeviceResolverProfile",
+                    "description": "Expected DNS resolver(s) per device/model/site"
+                },
+                {
+                    "field": "ApprovedVendorDomains",
+                    "description": "Vendor/cloud domains required for operation"
+                },
+                {
+                    "field": "ApprovedDoHProviders",
+                    "description": "Permitted encrypted DNS, normally empty for fixed-function devices"
+                },
+                {
+                    "field": "NoExternalConnectivityRoleList",
+                    "description": "Devices that should not resolve externally"
+                },
+                {
+                    "field": "QueryPattern",
+                    "description": "Tunneling characteristics used as corroboration, not sole trigger"
+                }
+            ]
+        }
+    ]
+}

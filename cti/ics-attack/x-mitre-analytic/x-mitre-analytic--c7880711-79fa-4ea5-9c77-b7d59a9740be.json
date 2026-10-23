@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--e8340328-98f0-4fbb-ba97-f5e75280ca9c",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--c7880711-79fa-4ea5-9c77-b7d59a9740be",
+            "created": "2026-09-25T17:21:55.307Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0928#AN2085",
+                    "external_id": "AN2085"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:25:14.907Z",
+            "name": "Analytic 2085",
+            "description": "Real-time monitoring identifies a session (Telnet, SSH, proprietary, etc.) opened to an embedded field device from a source not in the approved administrative CIDR, immediately followed by configuration-mode entry or high-risk commands (firmware operations, config write/erase, reload) or identifies sequences of Industrial Control System (ICS) protocol commands arriving at field devices that follow a scripted, deterministic pattern -- identical inter-command timing, systematic address iteration -- rather than the variable, operator-driven timing of legitimate engineering sessions. Operational Technology (OT) operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance. ",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
+                    "name": "device:cli",
+                    "channel": "Shell command"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "HighRiskCLICommands",
+                    "description": "List of CLI command patterns considered high-risk warranting elevated scrutiny."
+                },
+                {
+                    "field": "LOLBinAbusePatterns",
+                    "description": "Documented command-line argument patterns for living-off-the-land binary abuse."
+                }
+            ]
+        }
+    ]
+}

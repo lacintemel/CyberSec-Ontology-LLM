@@ -1,0 +1,71 @@
+{
+    "type": "bundle",
+    "id": "bundle--cf9f1dfc-c9a7-486c-bdf1-82d065d9969e",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--bffafc31-542c-45f0-9af1-73e2a789f782",
+            "created": "2026-09-25T22:00:20.938Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0933#AN2095",
+                    "external_id": "AN2095"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-05T19:31:18.686Z",
+            "name": "Analytic 2095",
+            "description": "Real-time monitoring identifies python/python3 execution by unexpected users/services, from unapproved script paths, or from cron/systemd contexts not associated with documented automation, particularly when followed by OT communications, sensitive file access, persistence, or child-shell activity. Alert only when the interpreter/shell is not expected for the asset role or user/service context, or when its parent, path, arguments, remote-session source, or follow-on behavior violates the approved OT baseline. Suppress approved engineering scripts, vendor support, diagnostics, backup, patching, and maintenance windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--3d20385b-24ef-40e1-9f56-f39750379077",
+                    "name": "auditd:SYSCALL",
+                    "channel": "execve for python/python3 and script path/arguments"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "linux:osquery",
+                    "channel": "socket_events for Python-originated connections, where deployed"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedPythonInstallations",
+                    "description": "Expected interpreter paths and vendor-embedded Python"
+                },
+                {
+                    "field": "ScriptDir",
+                    "description": "Approved automation paths versus /tmp, /var/tmp, hidden/user paths"
+                },
+                {
+                    "field": "ScheduledContext",
+                    "description": "Approved cron/systemd jobs"
+                },
+                {
+                    "field": "UserContext",
+                    "description": "Expected service/engineering accounts"
+                },
+                {
+                    "field": "ApprovedDestinations",
+                    "description": "Expected OT/external communications"
+                }
+            ]
+        }
+    ]
+}

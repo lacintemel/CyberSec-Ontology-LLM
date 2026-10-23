@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--1c7ba585-af06-4195-8e06-6f553b31abbe",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--683d7d6b-687c-468c-a156-7d1b0187d890",
+            "created": "2026-04-13T16:26:51.893Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Picus Security UNC5221 Ivanti May 2025",
+                    "description": "Sila Ozeren Hacioglu. (2025, May 5). UNC5221\u2019s Latest Exploit: Weaponizing CVE-2025-22457 in Ivanti Connect Secure. Retrieved April 13, 2026.",
+                    "url": "https://www.picussecurity.com/resource/blog/unc5221-cve-2025-22457-ivanti-connect-secure"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-02T18:35:03.272Z",
+            "description": "[BRUSHFIRE](https://attack.mitre.org/software/S9011) has the ability to exfiltrate data on-demand through executing commands obtained via monitoring for specially crafted packets and sending output back in an embedded SSL response.(Citation: Picus Security UNC5221 Ivanti May 2025)",
+            "relationship_type": "uses",
+            "source_ref": "malware--e110c9c6-7691-4bcb-874d-3d83a63c06c2",
+            "target_ref": "attack-pattern--8e350c1d-ac79-4b5c-bd4e-7476d7e84ec5",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

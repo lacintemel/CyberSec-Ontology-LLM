@@ -1,0 +1,39 @@
+{
+    "type": "bundle",
+    "id": "bundle--16674309-e03a-4322-98c5-0b5dcbdf888b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-detection-strategy",
+            "id": "x-mitre-detection-strategy--732d2487-3241-4866-8bb5-044bb4acdd3b",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0799",
+                    "external_id": "DET0799"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:56.723Z",
+            "name": "Detection of Standard Application Layer Protocol",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_analytic_refs": [
+                "x-mitre-analytic--d271c7fc-d76a-4fb0-a645-5db2c1223a32",
+                "x-mitre-analytic--62facfaa-0d19-4479-8cd7-cfef4c30898c",
+                "x-mitre-analytic--f95ebff8-48ae-409a-adfb-8230d870768b",
+                "x-mitre-analytic--154de82d-e589-4dab-ae2a-42a61dc1443a"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "type": "bundle",
+    "id": "bundle--f5286241-dcb9-45c1-8dd1-11d7a2ea3e29",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--155b0dfd-15d5-45bd-a8c4-249adc52f20d",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0609#AN1662",
+                    "external_id": "AN1662"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:42:09.093Z",
+            "name": "Analytic 1662",
+            "description": "For iOS, detect Match Legitimate Name or Location by correlating analyst-visible device/network evidence and management state; use streaming or batched telemetry only where the documented collector is deployed. Correlate Application Permission via Application Vetting [Code-signing entitlements and Info.plist privacy usage-description keys]; File Metadata via Application Vetting / Forensic Acquisition [Dynamic filesystem trace or acquired app-container/filesystem artifacts: display_name Levenshtein distance <= $NameDistanceThreshold$ from $KnownIOSAppCatalog$ entry]; Network Traffic Flow via Apple Network Extension / Enterprise VPN [NEFilterFlow / per-app VPN / secure-web-gateway flow metadata]. Alert on a sequence or state change inconsistent with the device/app baseline, approved management policy, or expected user workflow; do not infer unobserved API calls, file/process activity, or payload content from management state alone.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "mobile-attack"
+            ],
+            "x_mitre_platforms": [
+                "iOS"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
+                    "name": "mobile:ApplicationVetting",
+                    "channel": "Code-signing entitlements and Info.plist privacy usage-description keys"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--639e87f3-acb6-448a-9645-258f20da4bc5",
+                    "name": "mobile:ForensicArtifacts",
+                    "channel": "Dynamic filesystem trace or acquired app-container/filesystem artifacts: display_name Levenshtein distance <= $NameDistanceThreshold$ from $KnownIOSAppCatalog$ entry"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "iOS:NetworkExtension",
+                    "channel": "NEFilterFlow / per-app VPN / secure-web-gateway flow metadata"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "NameDistanceThreshold",
+                    "description": "Default Levenshtein distance 2."
+                },
+                {
+                    "field": "KnownIOSAppCatalog",
+                    "description": "Enterprise app display names + Apple system app names."
+                },
+                {
+                    "field": "ImpersonatedAppPermissionProfile",
+                    "description": "Permission set of each known app that could be impersonated. Derive from MDM catalog."
+                },
+                {
+                    "field": "ImpersonatedAppCDN",
+                    "description": "Known CDN for each enterprise app that could be impersonated."
+                },
+                {
+                    "field": "PostInstallWindow",
+                    "description": "Default 3600s after install."
+                }
+            ]
+        }
+    ]
+}

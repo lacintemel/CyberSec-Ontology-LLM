@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--e25b7fd5-34b0-41da-b5fc-c7b410dbe5e1",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b6fb91d0-28f6-447d-ba25-e7b26116ebfe",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0738#AN1871",
+                    "external_id": "AN1871"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:46:37.455Z",
+            "name": "Analytic 1871",
+            "description": "Real-time monitoring identifies Industrial Control System (ICS) protocol commands succeeding against protected device functions from a source or session context that the device's documented access control model should reject, indicating exploitation of a vulnerability to bypass the device's privilege model. Documented as the core mechanism of the Triton attack, which exploited a zero-day in Triconex firmware while in PROGRAM mode. OT operational-fidelity gate: Alert only when execution violates an approved signer/hash/path/parent/process or tool allowlist, or originates from an unauthorized user/tool, and is tied to an OT asset or follow-on OT-relevant action. Suppress vendor-signed software, approved engineering utilities, diagnostics, patching, backup, and documented maintenance.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Embedded"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
+                    "name": "NSM:Connections",
+                    "channel": "device process crash or unexpected restart immediately followed by privileged protocol command succeeding from same source session"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "device:VendorLog",
+                    "channel": "protected function (firmware write, memory protection mode change) succeeds for a session that did not complete the documented authentication/privilege-elevation sequence"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ExploitCrashCorrelationWindow",
+                    "description": "Time window within which a device/process crash and subsequent privileged action are considered correlated."
+                },
+                {
+                    "field": "KnownVulnerableDriverSignatures",
+                    "description": "Documented hash/name signatures of known vulnerable drivers exploitable for privilege escalation (BYOVD technique)."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "bundle",
+    "id": "bundle--40db2574-f239-4bed-9fca-9a7f3ab5338b",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--89923285-812d-4a09-8536-bf41943e8229",
+            "created": "2026-09-26T05:29:35.355Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "Tenable Minnesota Water Utilities",
+                    "description": "Research Special Operations. (2026, July 28). Coordinated \"cyberattack\" on U.S. water utilities: What you need to know. Retrieved September 26, 2026.",
+                    "url": "https://www.tenable.com/blog/coordinated-cyberattack-on-minnesota-water-utilities-what-you-need-to-know"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T05:29:35.355Z",
+            "description": "During the [2026 Iranian Water Campaign](https://attack.mitre.org/campaigns/C0065), [CyberAv3ngers](https://attack.mitre.org/groups/G1027) degraded operations across at least seven states that resulted in reported incidents, pressure loss and flooding.(Citation: Tenable Minnesota Water Utilities)",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--a07a367a-146c-45a8-a830-d3d337b9befa",
+            "target_ref": "attack-pattern--b5b9bacb-97f2-4249-b804-47fd44de1f95",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

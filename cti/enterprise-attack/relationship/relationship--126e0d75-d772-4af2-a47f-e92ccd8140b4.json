@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--a78cbf29-0e7e-42d9-b7a7-2dd174140673",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--126e0d75-d772-4af2-a47f-e92ccd8140b4",
+            "created": "2025-09-22T18:39:56.500Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-04-29T14:23:05.929Z",
+            "description": "Ensure the network firewall is up to date with security patches.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--e5d930e9-775a-40ad-9bdb-b941d8dfe86b",
+            "target_ref": "attack-pattern--a29aa77c-a88d-4f19-bab9-7751941b2e2d",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

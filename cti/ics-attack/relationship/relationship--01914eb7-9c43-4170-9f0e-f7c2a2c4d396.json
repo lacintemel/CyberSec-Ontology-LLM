@@ -1,0 +1,25 @@
+{
+    "type": "bundle",
+    "id": "bundle--669dd56b-eb7c-410f-a0d1-3816654d2e84",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "relationship",
+            "id": "relationship--01914eb7-9c43-4170-9f0e-f7c2a2c4d396",
+            "created": "2026-09-26T03:00:41.787Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-09-26T03:00:41.787Z",
+            "description": "Use network security controls to identify and, where operationally safe, block DNS tunneling, unauthorized resolver use, suspicious DoH/DoT destinations, and known malicious DNS infrastructure at controlled ICS egress points.",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--3172222b-4983-43f7-8983-753ded4f13bc",
+            "target_ref": "attack-pattern--1aa2bf29-6015-4c8f-a15a-21ae0aff64de",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_attack_spec_version": "3.3.0"
+        }
+    ]
+}

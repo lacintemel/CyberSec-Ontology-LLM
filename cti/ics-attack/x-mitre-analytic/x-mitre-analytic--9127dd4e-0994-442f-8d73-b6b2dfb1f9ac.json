@@ -1,0 +1,59 @@
+{
+    "type": "bundle",
+    "id": "bundle--f4db45f2-07db-4c82-af49-b8fc8dcf6c67",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--9127dd4e-0994-442f-8d73-b6b2dfb1f9ac",
+            "created": "2025-10-21T15:10:28.402Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0744#AN1877",
+                    "external_id": "AN1877"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:45:36.505Z",
+            "name": "Analytic 1877",
+            "description": "Real-time monitoring identifies a device establishing its first network connection to Industrial Control System (ICS) application servers from an Internet Protocol (IP) address or Media Access Control (MAC) address not previously seen in the environment, immediately following a new device association event on the network. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_deprecated": false,
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
+                    "name": "netflow:ipfix",
+                    "channel": "IPFIX/NetFlow flow record (src/dst IP, src/dst port, protocol, packets/bytes/time): connection from newly-observed device to Industrial Control Systems (ICS) application server within new device window of first network appearance"
+                },
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9ce98c86-8d30-4043-ba54-0784d478d0b5",
+                    "name": "WinEventLog:Security",
+                    "channel": "Windows Security Event ID 4624/4625: EventCode=4624 from a device Media Access Control (MAC) address/hardware-ID first observed on the network, not in approved device inventory"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDeviceInventory",
+                    "description": "Hardware ID inventory of all devices authorized to connect to the ICS network, ideally enforced via NAC/802.1X."
+                },
+                {
+                    "field": "NewDeviceWindow",
+                    "description": "Time window after first network appearance within which access to ICS systems is considered part of the same onboarding/intrusion event."
+                }
+            ]
+        }
+    ]
+}

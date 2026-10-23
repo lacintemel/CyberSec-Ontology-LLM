@@ -1,0 +1,54 @@
+{
+    "type": "bundle",
+    "id": "bundle--9cf94989-5c00-48f0-88fe-7d0ba4aa771f",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "x-mitre-analytic",
+            "id": "x-mitre-analytic--b1b08627-62b0-4ede-b07d-478be9721f5a",
+            "created": "2026-10-13T17:47:13.564Z",
+            "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "revoked": false,
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/detectionstrategies/DET0744#AN2254",
+                    "external_id": "AN2254"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ],
+            "modified": "2026-10-13T17:47:13.564Z",
+            "name": "Analytic 2254",
+            "description": "Real-time monitoring identifies an Secure Shell (SSH) connection to an Industrial Control System (ICS) Linux asset from a source Internet Protocol (IP) address that appeared on the ICS network within a short window and is not in the approved device inventory. OT operational-fidelity gate: Alert only when the account/device/session violates the approved identity + source host/jump path/zone policy and is corroborated by access to a protected OT asset, execution, configuration change, or another security-relevant follow-on event. Suppress approved shift activity, vendor support, break-glass use, commissioning, and documented remote-access windows.",
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "x_mitre_version": "1.0",
+            "x_mitre_attack_spec_version": "3.3.0",
+            "x_mitre_domains": [
+                "ics-attack"
+            ],
+            "x_mitre_platforms": [
+                "Linux"
+            ],
+            "x_mitre_log_source_references": [
+                {
+                    "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
+                    "name": "syslog:auth",
+                    "channel": "Secure Shell (SSH) connection from source Internet Protocol (IP) address that appeared on Industrial Control Systems (ICS) network within new device window, not in approved device inventory"
+                }
+            ],
+            "x_mitre_mutable_elements": [
+                {
+                    "field": "ApprovedDeviceInventory",
+                    "description": "Hardware ID inventory of all devices authorized to connect to the ICS network, ideally enforced via NAC/802.1X."
+                },
+                {
+                    "field": "NewDeviceWindow",
+                    "description": "Time window after first network appearance within which access to ICS systems is considered part of the same onboarding/intrusion event."
+                }
+            ],
+            "x_mitre_deprecated": false
+        }
+    ]
+}
